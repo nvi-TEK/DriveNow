@@ -52,6 +52,15 @@ function SideBar() {
             <Link href={"/views/Drivers/DriverKyc"} as="">
               <List icon={push} name={"Driver KYC"} />
             </Link>
+            <Link href={"/views/Transactions/payments"} as="">
+              <List icon={push} name={"Payments"} />
+            </Link>
+            <Link href={"/views/Transactions/DrivenowInvoices"} as="">
+              <List icon={push} name={"DriveNow Invoices"} />
+            </Link>
+            <Link href={"/views/Vehicles/ListofVehicles"} as="">
+              <List icon={push} name={"List of Vehicles"} />
+            </Link>
 
             <div className="flex justify-center ">
               <hr className="h-px my-6 w-[80%] bg-[#E6E6E6] border-0" />

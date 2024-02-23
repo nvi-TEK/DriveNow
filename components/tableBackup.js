@@ -1,7 +1,7 @@
-/*eslint no-use-before-define: 2*/
+/* eslint-disable */
 
 import React, { useMemo } from "react";
-import { useTable } from "react-table";
+import { useTable, usePagination } from "react-table";
 import MOCK_DATA from "./MOCK_DATA.json";
 import { COLUMNS } from "./columns";
 
@@ -16,19 +16,27 @@ export const BasicTable = () => {
     footerGroups,
     rows,
     prepareRow,
-  } = useTable({
-    columns,
-    data,
-  });
+  } = useTable(
+    {
+      columns,
+      data,
+    },
+    usePagination
+  );
 
   return (
     <>
-      <table {...getTableProps()}>
+      <table {...getTableProps()} className="mt-7 ml-5 w-[96.4%]">
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()}>{column.render("Header")}</th>
+                <th
+                  {...column.getHeaderProps()}
+                  className="text-left text-sm font-normal leading-[18px] h-[48px] bg-[#FAFAFA] "
+                >
+                  {column.render("Header")}
+                </th>
               ))}
             </tr>
           ))}
@@ -40,7 +48,9 @@ export const BasicTable = () => {
               <tr {...row.getRowProps()}>
                 {row.cells.map((cell) => {
                   return (
-                    <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+                    <td {...cell.getCellProps()} className=" border-y p-2 ">
+                      {cell.render("Cell")}
+                    </td>
                   );
                 })}
               </tr>

@@ -10,7 +10,10 @@ import Head from "next/head";
 import Layout from "../../../../components/layout";
 import blueline from "../../../../assets/Line 11.png";
 import greyline from "../../../../assets/greyline.png";
+import greenline from "../../../../assets/greenline.png";
+
 import StyledDropzone from "../../../../components/dropzone";
+import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import TableData from "../../../../components/Drivers/AllDriversTable";
 import AllDriverTiles from "@/components/Drivers/DriverTiles";
@@ -29,21 +32,19 @@ import { Grid } from "@mui/material";
 // import { gridSpacing } from "../components/revenueChart/constant";
 import BasicStacking from "@/components/stackedChart";
 
-type PersonalProps = {
-  firstName: string;
-  lastName: string;
+type RelativeProps = {
+  houseAddress: string;
   phone: string;
-  email: number | string;
   ghanaCardName: string;
   ghanaCardNumber: string;
-  checked: any;
+  gpsAddress: string;
 };
 
 type UploadModel = {
   documents?: any;
 };
 
-export default function PersonalDetails(prop: PersonalProps) {
+export default function RelativeDetails(prop: RelativeProps) {
   const phoneRegExp =
     /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
@@ -70,75 +71,68 @@ export default function PersonalDetails(prop: PersonalProps) {
 
               {/* Timeline */}
               <div className="flex mx-4 py-10 px-[44px] border-y items-center">
-                <div className="bg-[#007AF5] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
-                  1
+                <div className="bg-[#0C9064] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
+                  <CheckOutlinedIcon fontSize="small" />
                 </div>
-                <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#007AF5]">
+                <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#0C9064]">
                   Personal Details
                 </p>
                 <Image
-                  src={blueline}
+                  src={greenline}
                   alt="blue timeline"
                   className="w-[100px] ml-1"
                 />
-                <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
-                  2
+                <div className="bg-[#0C9064] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
+                  <CheckOutlinedIcon fontSize="small" />
                 </div>
-                <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#8C8C8C]">
+                <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#0C9064]">
                   Residence Details{" "}
                 </p>
                 <Image
-                  src={greyline}
+                  src={greenline}
                   alt="blue timeline"
                   className="w-[100px] ml-1"
                 />
-                <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
-                  3
+                <div className="bg-[#0C9064] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
+                  <CheckOutlinedIcon fontSize="small" />
                 </div>
-                <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#8C8C8C]">
+                <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#0C9064]">
                   Guarantor Details{" "}
                 </p>
                 <Image
-                  src={greyline}
+                  src={greenline}
                   alt="blue timeline"
                   className="w-[100px] ml-1"
                 />
-                <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
+                <div className="bg-[#007AF5] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                   4
                 </div>
-                <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#8C8C8C]">
+                <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#007AF5]">
                   Relative Details{" "}
                 </p>
               </div>
 
               <h3 className="font-medium leading-[30px] text-lg text-[#262626] ">
-                Personal Details (Driver)
+                Identification Details (Relative)
               </h3>
 
               <div className="mt-10 mb-12 border-0 shadow mx-">
-                <Formik<PersonalProps>
+                <Formik<RelativeProps>
                   initialValues={{
-                    firstName: "",
-                    lastName: "",
                     phone: "",
-                    email: "",
                     ghanaCardName: "",
+                    gpsAddress: "",
+                    houseAddress: "",
                     ghanaCardNumber: "",
-                    checked: [],
                   }}
                   validationSchema={Yup.object({
-                    firstName: Yup.string()
-                      .max(20, "Must be 40 characters or less")
-                      .required("Required field"),
-                    lastName: Yup.string().required("Required field"),
                     phone: Yup.string()
                       .matches(phoneRegExp, "Invalid Phone number")
                       .required("Required Field"),
-                    email: Yup.string()
-                      .email("Invalid email")
-                      .required("Required field"),
-                    ghanaCardName: Yup.string().required("Required field"),
+                    houseAddress: Yup.string().required("Required field"),
                     ghanaCardNumber: Yup.string().required("Required field"),
+                    gpsAddress: Yup.string().required("Required field"),
+                    ghanaCardName: Yup.string().required("Required field"),
                   })}
                   onSubmit={async (values) => {
                     alert(JSON.stringify(values, null, 2));
@@ -151,50 +145,51 @@ export default function PersonalDetails(prop: PersonalProps) {
                     >
                       <section className="border-b">
                         <div className="flex w-full">
-                          {/* First Name */}
+                          {/* Ghana Card Name */}
                           <div className="mt-[1.875rem]">
                             <label
-                              htmlFor="firstName"
+                              htmlFor="ghanaCardName"
                               className="block mb-2 text-sm font-normal text-gray-900"
                             >
-                              First Name
+                              Ghana Card Name{" "}
                             </label>
                             <Field
                               type="text"
-                              id="firstName"
+                              id="ghanaCardName"
                               className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
-                              placeholder="First Name"
-                              value={values.firstName}
+                              placeholder="Full name"
+                              value={values.ghanaCardName}
                               onChange={handleChange}
                             />
-                            <p className="font-medium text-red-700">
-                              <ErrorMessage name="firstName" />
+                            <p className="font-medium text-xs text-red-700">
+                              <ErrorMessage name="ghanaCardName" />
                             </p>
                           </div>
 
-                          {/* Last Name */}
+                          {/* Ghana Card Number */}
                           <div className="mt-[1.875rem]">
                             <label
-                              htmlFor="lastName"
+                              htmlFor="ghanaCardNumber"
                               className="block mb-2 text-sm font-normal text-gray-900"
                             >
-                              Last Name
+                              Street Name{" "}
                             </label>
                             <Field
                               type="text"
-                              id="lastName"
+                              id="ghanaCardNumber"
                               className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
-                              placeholder="Last Name"
-                              value={values.lastName}
+                              placeholder="GHA-12345678-42"
+                              value={values.ghanaCardNumber}
                               onChange={handleChange}
                             />
-                            <p className="font-medium text-red-700">
-                              <ErrorMessage name="lastName" />
+                            <p className="font-medium text-xs text-red-700">
+                              <ErrorMessage name="ghanaCardNumber" />
                             </p>
                           </div>
                         </div>
 
                         <div className="flex">
+                          {/* Phone Number */}
                           <div className="mt-[1.25rem]">
                             <label
                               htmlFor="phone"
@@ -215,134 +210,123 @@ export default function PersonalDetails(prop: PersonalProps) {
                             </p>
                           </div>
 
-                          <div className="mt-[1.25rem]">
+                          {/* House Address */}
+                          <div className="mt-[1.875rem]">
                             <label
-                              htmlFor="email"
-                              className="block mb-3 text-sm font-medium leading-[1.195rem] text-[#04030F]"
+                              htmlFor="houseAddress"
+                              className="block mb-2 text-sm font-normal text-gray-900"
                             >
-                              Email address
+                              House Address{" "}
                             </label>
                             <Field
                               type="text"
-                              id="email"
-                              className="border border-gray-300 text-gray-900 text-sm rounded block w-[480px] p-2.5"
-                              placeholder="example@email.com"
-                              value={values.email}
+                              id="houseAddress"
+                              className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
+                              placeholder="Address"
+                              value={values.houseAddress}
                               onChange={handleChange}
                             />
-                            <p className="font-medium text-red-700">
-                              <ErrorMessage name="email" />
+                            <p className="font-medium text-xs text-red-700">
+                              <ErrorMessage name="houseAddress" />
                             </p>
                           </div>
                         </div>
                       </section>
 
-                      <h3 className="font-medium text-[#262626] text-lg ">
-                        Identification Details
-                      </h3>
-
-                      <div className="flex">
-                        <div className="mt-[1.875rem]">
-                          <label
-                            htmlFor="ghanaCardName"
-                            className="block mb-2 font-medium text-base leading-[30px] text-[#262626]"
-                          >
-                            Ghana Card Name
-                          </label>
-                          <Field
-                            type="text"
-                            id="ghanaCardName"
-                            className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
-                            placeholder="Full name"
-                            value={values.ghanaCardName}
-                            onChange={handleChange}
-                          />
-                          <p className="font-medium text-xs text-red-700">
-                            <ErrorMessage name="ghanaCardNumber" />
-                          </p>
-                        </div>
-
-                        <div className="mt-[1.875rem]">
-                          <label
-                            htmlFor="ghanaCardNumber"
-                            className="block mb-2 text-sm font-normal text-gray-900"
-                          >
-                            Ghana Card Number
-                          </label>
-                          <Field
-                            type="text"
-                            id="ghanaCardNumber"
-                            className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
-                            placeholder="GHA-12345678-42"
-                            value={values.ghanaCardNumber}
-                            onChange={handleChange}
-                          />
-                          <p className="font-medium text-xs text-red-700">
-                            <ErrorMessage name="ghanaCardNumber" />
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="mt-5">
-                        <h4 className="text-sm font-medium leading-[30px] text-[#262626] ">
-                          Upload Selfie image
-                        </h4>
-                        <StyledDropzone />
-                        <p className="pl-[30px] text-[#262626] text-base font-medium leading-[30px] pt-2 ">
-                          Profile Picture
-                        </p>
-                        <div className="flex items-center">
-                          <Image
-                            src={info}
-                            alt="info icon"
-                            className="w-4 h-4"
-                          />
-                          <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
-                            Ensure that images uploaded are clear and details
-                            are clearly captured.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4 className="font-medium text-base leading-[30px] text-[#262626] ">
-                          Upload Ghana Card
-                        </h4>
-                        <div className="flex">
-                          <StyledDropzone />
-                          <StyledDropzone />
-                        </div>
-                        <div className="flex items-center">
-                          <Image
-                            src={info}
-                            alt="info icon"
-                            className="w-4 h-4"
-                          />
-                          <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
-                            Ensure that images uploaded are clear and details
-                            are clearly captured.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex justify-between ">
-                        <button
-                          type="button"
-                          className="text-[#FFFFFF] border mt-[57px] bg-[#A6A6A6] rounded-[4px] w-[85px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mb-2 " disabled
+                      {/* GPS Address */}
+                      <div className=" mt-[1.875rem]">
+                        <label
+                          htmlFor="gpsAddress"
+                          className="block mb-2 text-sm font-normal text-gray-900"
                         >
-                          Previous
-                        </button>
+                          GPS Address
+                        </label>
+                        <Field
+                          type="text"
+                          id="gpsAddress"
+                          className="border border-gray-300 text-gray-900 w-[95%] text-sm rounded2 block p-2"
+                          placeholder="GT-123-456"
+                          value={values.gpsAddress}
+                          onChange={handleChange}
+                        />
+                        <p className="font-medium text-xs text-red-700">
+                          <ErrorMessage name="gpsAddress" />
+                        </p>
+                      </div>
 
+                      {/* Relative dropzone */}
+                      <section>
+                        <p className="text-[#262626] font-medium text-base leading-[30px] ">
+                          Upload Image of Relative
+                        </p>
+                        <StyledDropzone />
+                        <div className="flex items-center">
+                          <Image
+                            src={info}
+                            alt="info icon"
+                            className="w-4 h-4"
+                          />
+                          <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
+                            Ensure that images uploaded are clear and details
+                            are clearly captured.
+                          </p>
+                        </div>
+                      </section>
+
+                      {/* Ghana Card dropzone */}
+                      <section>
+                        <h3 className="text-[#262626] font-medium text-base leading-[30px] ">
+                          Upload Ghana Card
+                        </h3>
+
+                        <div className="flex mt-4 space-x-7">
+                          <div>
+                            <StyledDropzone />
+                            <p className="text-[#262626] font-medium text-base leading-[30px] ml-[38%] pt-2 ">
+                              Front
+                            </p>
+                          </div>
+                          <div>
+                            <StyledDropzone />
+                            <p className="text-[#262626] font-medium text-base leading-[30px] ml-[40%] pt-2 ">
+                              Back
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center">
+                          <Image
+                            src={info}
+                            alt="info icon"
+                            className="w-4 h-4"
+                          />
+                          <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
+                            Ensure that images uploaded are clear and details
+                            are clearly captured.
+                          </p>
+                        </div>
+                      </section>
+
+                      <div className="flex justify-between">
                         <Link
-                          href={
-                            "/views/Drivers/AddNewDriver/ResidentialDetails"
-                          }
+                          href={"/views/Drivers/AddNewDriver/GuarantorDetails"}
                         >
                           <button
                             type="button"
-                            className="text-[#FFFFFF] border mt-[57px] bg-[#007AF5] rounded-[4px] w-[63px] border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
+                            className="text-[#FFFFFF] border mt-[57px] bg-[#007AF5] ml-auto rounded-[4px] w-[85px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
                           >
-                            Next
+                            Previous
+                          </button>
+                        </Link>
+
+                        <Link
+                          href={""}
+                        >
+                          <button
+                            type="button"
+                            className="text-[#FFFFFF] border mt-[57px] bg-[#007AF5] ml-auto rounded-[4px] w-[63px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
+                          >
+                            Submit
                           </button>
                         </Link>
                       </div>
