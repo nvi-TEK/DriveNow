@@ -9,6 +9,7 @@ import push from "../assets/push.png";
 import settings from "../assets/settings.png";
 import help from "../assets/help.png";
 import darkmode from "../assets/moon-star.png";
+import expense from "../assets/expense_icon.png";
 // import Support from "../assets/support.png";
 // import Transaction from "../assets/transactions.png";
 // import loan from "../assets/loan.svg";
@@ -60,6 +61,15 @@ function SideBar() {
             </Link>
             <Link href={"/views/Vehicles/ListofVehicles"} as="">
               <List icon={push} name={"List of Vehicles"} />
+            </Link>
+            <Link href={"/views/Vehicles/VehicleIssuesLogs"} as="">
+              <List icon={push} name={"Vehicle Issues Logs"} />
+            </Link>
+            <Link href={"/views/Vehicles/VehicleTracker"} as="">
+              <List icon={push} name={"Vehicle Tracker"} />
+            </Link>
+            <Link href={"/views/expense"} as="">
+              <List icon={expense} name={"Expense"} />
             </Link>
 
             <div className="flex justify-center ">

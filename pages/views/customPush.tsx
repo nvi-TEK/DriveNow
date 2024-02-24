@@ -12,7 +12,7 @@ import sendlogo from "../../assets/send.png";
 import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import SingleInputDateRangePicker from "@/components/datePicker";
+// import SingleInputDateRangePicker from "@/components/datePicker";
 import driver from "../../assets/driver_icon.png";
 import vehicle from "../../assets/vehicle_icon.png";
 import payment from "../../assets/payments.png";
