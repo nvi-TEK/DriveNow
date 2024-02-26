@@ -15,7 +15,6 @@ import greenline from "../../../../assets/greenline.png";
 import StyledDropzone from "../../../../components/dropzone";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import TableData from "../../../../components/Drivers/AllDriversTable";
 import AllDriverTiles from "@/components/Drivers/DriverTiles";
 import Link from "next/link";
 import Image from "next/image";
@@ -31,6 +30,7 @@ import AccountMenu from "@/components/headerDropdown";
 import { Grid } from "@mui/material";
 // import { gridSpacing } from "../components/revenueChart/constant";
 import BasicStacking from "@/components/stackedChart";
+import Header from "@/components/header";
 
 type GuarantorProps = {
   houseAddress: string;
@@ -50,6 +50,7 @@ export default function GuarantorDetails(prop: GuarantorProps) {
 
   return (
     <>
+      <Header name="" />
       <Layout>
         <Head>
           <title>Add New Driver</title>

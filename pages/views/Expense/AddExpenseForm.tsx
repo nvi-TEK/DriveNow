@@ -4,7 +4,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import KYC from "@/components/driverKYC";
 import Head from "next/head";
-import Datatable from "../../../components/customPush/table";
 import Layout from "../../../components/layout";
 import Link from "next/link";
 import info from "../../../assets/info_icon.png";
@@ -15,6 +14,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import BasicDatePicker from "../../../components/datepicker";
 import StyledDropzone from "@/components/dropzone";
+import Header from "@/components/header";
 
 type AddExpenseProp = {
   expenseCategory: string;
@@ -29,6 +29,8 @@ type AddExpenseProp = {
 export default function AddExpense() {
   return (
     <>
+      <Header name="Add Expense" />
+
       <Layout>
         <Head>
           <title>Add Expense</title>

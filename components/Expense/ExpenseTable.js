@@ -165,13 +165,12 @@ export const ExpenseTable = () => {
                 {row.cells.map((cell) => {
                   return (
                     <>
-                      <td {...cell.getCellProps()} className=" border-y p-2 ">
+                      <td {...cell.getCellProps()} className="border-y p-2 ">
                         {cell.render("Cell")}
                       </td>
                     </>
                   );
                 })}
-                {/* <td>abc</td> */}
               </tr>
             );
           })}

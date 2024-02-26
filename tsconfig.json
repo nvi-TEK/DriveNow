@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/revenueChart/totalRevenueChart.js", "components/revenueChart/chartdata.js", "components/revenueChart/constant.js", "components/revenueChart/totalGrowthBarChart.js", "components/customPush/table1.jsx", "components/datePickerRange.js", "pages/views/Drivers/AddNewDriver", "components/datepicker.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/revenueChart/totalRevenueChart.js", "components/revenueChart/chartdata.js", "components/revenueChart/constant.js", "components/revenueChart/totalGrowthBarChart.js", "components/customPush/table1.jsx", "components/datePickerRange.js", "pages/views/Drivers/AddNewDriver", "components/datepicker.js", "components/Expense/ExpenseColumns.js", "components/headerDropdown.js"],
   "exclude": ["node_modules"]
 }

@@ -19,10 +19,13 @@ import AccountMenu from "@/components/headerDropdown";
 import { Grid } from "@mui/material";
 // import { gridSpacing } from "../components/revenueChart/constant";
 import BasicStacking from "@/components/stackedChart";
+import Header from "@/components/header";
 
 export default function Expense() {
   return (
     <>
+            <Header name="Expense" />
+
       <Layout>
         <Head>
           <title>Expense</title>

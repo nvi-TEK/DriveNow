@@ -23,6 +23,7 @@ import bell from "../../../assets/bell_icon.png";
 import plus from "../../../assets/plus.png";
 
 import BasicStacking from "@/components/stackedChart";
+import Header from "@/components/header";
 
 export default function VehicleTracker() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -56,6 +57,8 @@ export default function VehicleTracker() {
 
   return (
     <>
+      <Header name="Vehicle Tracker" />
+
       <Layout>
         <Head>
           <title>Vehicle Tracker</title>
@@ -95,15 +98,7 @@ export default function VehicleTracker() {
                 <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pl-[10px] pt-4 ">
                   Vehicle Tracker
                 </h4>
-                <Link href={"AddVehicleIssue"}>
-                  <button
-                    type="button"
-                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] rounded-[4px] w-[] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
-                  >
-                    <Image src={plus} alt="plus sign" className="ml-0 mr-1" />
-                    Add Vehicle Issue Log
-                  </button>
-                </Link>
+                
               </div>
               <VehicleTrackerTable />
             </div>

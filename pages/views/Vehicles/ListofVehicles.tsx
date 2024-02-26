@@ -23,6 +23,7 @@ import bell from "../../../assets/bell_icon.png";
 import plus from "../../../assets/plus.png";
 
 import BasicStacking from "@/components/stackedChart";
+import Header from "@/components/header";
 
 export default function ListOfVehicles() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -56,6 +57,8 @@ export default function ListOfVehicles() {
 
   return (
     <>
+            <Header name="Vehicles" />
+
       <Layout>
         <Head>
           <title>List of Vehicles</title>

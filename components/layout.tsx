@@ -10,7 +10,7 @@ export default function Layout({ children }: layoutType) {
   return (
     <>
       <section className=" w-full bg-[#FAFAFA]">
-        <Header />
+        
 
         <div
           className="flex flex-grow bg-[#FAFAFA] 

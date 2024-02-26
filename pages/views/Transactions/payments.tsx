@@ -19,10 +19,13 @@ import bell from "../../../assets/bell_icon.png";
 
 // import { gridSpacing } from "../components/revenueChart/constant";
 import BasicStacking from "@/components/stackedChart";
+import Header from "@/components/header";
 
 export default function AllDrivers() {
   return (
     <>
+      <Header name="Payments" />
+
       <Layout>
         <Head>
           <title>All Drivers</title>

@@ -137,7 +137,6 @@ export const BasicTable = () => {
                   </span>
                 </th>
               ))}
-              <th className="bg-[#FAFAFA]">abc</th>
             </tr>
           ))}
         </thead>
@@ -155,23 +154,11 @@ export const BasicTable = () => {
                     </>
                   );
                 })}
-                {/* <td>abc</td> */}
               </tr>
             );
           })}
         </tbody>
       </table>
-      {/* <pre>
-        <code>
-          {JSON.stringify(
-            {
-              selectedFlatRows: selectedFlatRows.map((row) => row.original),
-            },
-            null,
-            2
-          )}
-        </code>
-      </pre> */}
 
       <div className="flex mt-5 justify-end pr-5 gap-x-2">
         <button

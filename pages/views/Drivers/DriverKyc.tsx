@@ -7,7 +7,7 @@ import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import TableData from "../../../components/Drivers/AllDriversTable";
+import {DriverKycTable} from "../../../components/Drivers/DriverKyc/DriverKycTable"
 import AllDriverTiles from "@/components/Drivers/DriverTiles";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,10 +21,13 @@ import AccountMenu from "@/components/headerDropdown";
 import { Grid } from "@mui/material";
 // import { gridSpacing } from "../components/revenueChart/constant";
 import BasicStacking from "@/components/stackedChart";
+import Header from "@/components/header";
 
-export default function AllDrivers() {
+export default function DriverKyc() {
   return (
     <>
+      <Header name="Drivers" />
+
       <Layout>
         <Head>
           <title>All Drivers</title>
@@ -34,8 +37,8 @@ export default function AllDrivers() {
 
         {/* Code goes into the main tag */}
         <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
-          {/* Bottom menu */}
-          <section className="w-full ">
+      
+          <section className="w-full pb-[130px] ">
             <div className="flex space-x-4 grow m-5">
               <AllDriverTiles
                 icon={vehicle}
@@ -72,283 +75,11 @@ export default function AllDrivers() {
             </div>
 
             {/* Table */}
-            <div className=" bg-white mx-5 mt-[24px]">
-              <div className="flex">
-                <div className="pt-[35px] mr-auto pl-[]">
-                  <label htmlFor="simple-search" className="sr-only">
-                    Search
-                  </label>
-                  <div className="relative m-5 w-full">
-                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                      <svg
-                        aria-hidden="true"
-                        className="w-5 h-5 text-gray-500 dark:text-gray-400"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                          clipRule="evenodd"
-                        ></path>
-                      </svg>
-                    </div>
-                    <input
-                      type="text"
-                      id="simple-search"
-                      className="bg-white border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block  w-[353px] pl-10 p-1.5"
-                      placeholder="Search by Name, Email or Phone Number"
-                      required
-                    />
-                  </div>
-                </div>
+            <div className="rounded-lg bg-white mx-5 mt-[24px]">
 
-                {/* Add driver button */}
-                <Link href={"/views/Drivers/AddNewDriver/PersonalDetails"}>
-                  <button
-                    type="button"
-                    className="text-[#FFFFFF] border mt-[57px] bg-[#007AF5] ml-auto rounded-[4px] w-[154px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
-                  >
-                    <Image src={plus} alt="Plus sign" className="mr-1" /> Add New Driver
-                  </button>
-                </Link>
-              </div>
-              <div className="relative overflow-x-auto mx-[19px] bg-white sm:rounded-t-md">
-                <table className="w-full text-center text-sm text-black ">
-                  <thead className="bg-[#FAFAFA] text-xs text-[#262626]">
-                    <tr>
-                      <th scope="col" className="h-12 w-4 p-4">
-                        <div className="flex items-center">
-                          <input
-                            id="checkbox-table-1"
-                            type="checkbox"
-                            className="h-4 w-4 rounded  bg-gray-100 text-[#FA790F]"
-                          />
-                          <label htmlFor="checkbox-table-1" className="sr-only">
-                            checkbox
-                          </label>
-                        </div>
-                      </th>
-
-                      <th scope="col" className="pl-0 py-4">
-                        ID
-                      </th>
-                      <th scope="col" className="px-6 py-4">
-                        Full Name
-                      </th>
-                      <th scope="col" className="px-6 py-4">
-                        Mobile Number
-                      </th>
-                      <th scope="col" className="pl-6 py-4">
-                        Status
-                      </th>
-                      <th scope="col" className="pl-6 py-4">
-                        Agreed
-                      </th>
-                      <th scope="col" className="pl-6 py-4">
-                        App Version
-                      </th>
-                      <th scope="col" className="pl-6 py-4">
-                        Engine Control
-                      </th>
-                      <th scope="col" className="pl-6 py-4">
-                        Location Updated
-                      </th>
-                      <th scope="col" className="pl-6 py-4">
-                        Active Hours
-                      </th>
-                      <th scope="col" className="pl-6 py-4">
-                        Action
-                      </th>
-                    </tr>
-                  </thead>
-
-                  <tbody className="text-[#2E2D37]">
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={1}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Offline"}
-                        Agreed={"Yes"}
-                        appVersion={"Android"}
-                        EngineControl="OFF"
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-                    {/* Second row */}
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={2}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Online"}
-                        Agreed={"Yes"}
-                        appVersion={"Android"}
-                        EngineControl="OFF"
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-
-                    {/* Third row */}
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={3}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Online"}
-                        Agreed={"Yes"}
-                        appVersion={"Android"}
-                        EngineControl="OFF"
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={4}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Online"}
-                        Agreed={"Yes"}
-                        appVersion={"Android"}
-                        EngineControl="OFF"
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={5}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Online"}
-                        Agreed={"Yes"}
-                        appVersion={"Android"}
-                        EngineControl="OFF"
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={6}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Online"}
-                        Agreed={"Yes"}
-                        appVersion={"Android"}
-                        EngineControl="OFF"
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={7}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Online"}
-                        Agreed={"Yes"}
-                        appVersion={"Android"}
-                        EngineControl="OFF"
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={8}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Online"}
-                        Agreed={"Yes"}
-                        appVersion={"Android"}
-                        EngineControl="OFF"
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={9}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Online"}
-                        Agreed={"Yes"}
-                        appVersion={"Android"}
-                        EngineControl="OFF"
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={10}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Online"}
-                        Agreed={"Yes"}
-                        appVersion={"Android"}
-                        EngineControl="OFF"
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={11}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Online"}
-                        Agreed={"Yes"}
-                        appVersion={"Android"}
-                        EngineControl="OFF"
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={12}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Online"}
-                        Agreed={"Yes"}
-                        appVersion={"Android"}
-                        EngineControl="OFF"
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-
-                    <tr className="border-b bg-white hover:bg-gray-50">
-                      <TableData
-                        ID={13}
-                        fullName={"Louis Nusenu"}
-                        mobileNumber="0123456789"
-                        Status={"Online"}
-                        Agreed={"No"}
-                        appVersion={"Android"}
-                        EngineControl={"ON"}
-                        locationUpdate="2 mins ago"
-                        activeHours="10 hrs"
-                      />
-                    </tr>
-                  </tbody>
-                </table>
+              
+              <div className="relative overflow-x-auto bg-white sm:rounded-t-md">
+              <DriverKycTable />
               </div>
             </div>
           </section>

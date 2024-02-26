@@ -4,7 +4,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import KYC from "@/components/driverKYC";
 import Head from "next/head";
-import Datatable from "../../components/customPush/table"
 import Layout from "../../components/layout";
 import Link from "next/link";
 import logo from "../../assets/logo.png";
@@ -12,6 +11,7 @@ import sendlogo from "../../assets/send.png";
 import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import {CustomPushTable} from "../../components/customPush/CustomPushTable"
 // import SingleInputDateRangePicker from "@/components/datePicker";
 import driver from "../../assets/driver_icon.png";
 import vehicle from "../../assets/vehicle_icon.png";
@@ -22,7 +22,7 @@ import revenue from "../../assets/revenue_icon.png";
 import { Grid } from "@mui/material";
 // import { gridSpacing } from "../../components/revenueChart/constant";
 import BasicStacking from "@/components/stackedChart";
-import Table1 from "@/components/customPush/table1";
+import Header from "@/components/header";
 
 type PushProp = {
   title: string;
@@ -35,6 +35,7 @@ type PushProp = {
 export default function customPush() {
   return (
     <>
+      <Header name="Custom Push/SMS" />
       <Layout>
         <Head>
           <title>Custom Push/SMS</title>
@@ -46,13 +47,23 @@ export default function customPush() {
         <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
           {/* Bottom menu */}
           <section className="w- ">
-            <div className="flex">
+            <div className="flex justify-between items-center">
               <p className="pt-[23px] pl-[21px] text-[22px] leading-[30px] font-medium text-[#262626] ">
                 Custom Push/SMS
               </p>
+
+              <Link href={""}>
+                      <button
+                        type="button"
+                        className="text-[#FFFFFF] border bg-[#007AF5] mt-[23px] rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-xs py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2"
+                      >
+                        Send
+                        <Image className="ml-[4px]" src={sendlogo} alt={""} />
+                      </button>
+                    </Link>
             </div>
 
-            <div className="mt-10 h-[368px] mb-12 shadow mx-6">
+            <div className="mt-3 rounded-lg  h-[368px] mb-[33px] shadow mx-6">
               <Formik<PushProp>
                 initialValues={{
                   title: "",
@@ -78,7 +89,7 @@ export default function customPush() {
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
                   <Form
                     onSubmit={handleSubmit}
-                    className="bg-white h-[368px] shadow-lg px-[1rem] pb-10"
+                    className="bg-white h-[368px] rounded-lg shadow-lg px-[1rem] pb-10"
                   >
                     <div className="flex space-x-5">
                       <section className="grow ">
@@ -159,7 +170,7 @@ export default function customPush() {
                       </section>
                     </div>
 
-{/* <SingleInputDateRangePicker /> */}
+                    {/* <SingleInputDateRangePicker /> */}
 
                     <div className="mt-[24px]">
                       <label
@@ -216,11 +227,11 @@ export default function customPush() {
               </Formik>
             </div>
 
-            <div className="mb-0 mx-20 h-[730px] bg-white ">
-              <Table1 />
+            <div className="mb-[50px] mx-5 rounded-lg pb-4 pt-3 bg-white ">
+              <h3 className="text-[#262626] font-medium text-[22px] pt-4 pl-[10px] leading-[30px]">Custom Push History</h3>
+              <CustomPushTable />
             </div>
           </section>
-          
         </main>
       </Layout>
     </>

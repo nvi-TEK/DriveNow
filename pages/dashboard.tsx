@@ -7,6 +7,7 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import Link from "next/link";
 import Image from "next/image";
+import { BarChart } from "@/components/mainChart";
 import driver from "../assets/driver_icon.png";
 import vehicle from "../assets/vehicle_icon.png";
 import payment from "../assets/payments.png";
@@ -17,10 +18,12 @@ import AccountMenu from "@/components/headerDropdown";
 import { Grid } from "@mui/material";
 // import { gridSpacing } from "../components/revenueChart/constant";
 import BasicStacking from "@/components/stackedChart";
+import Header from "@/components/header";
 
 export default function Dashboard() {
   return (
     <>
+    <Header name="Dashboard" />
       <Layout>
         <Head>
           <title>Dashboard</title>
@@ -175,6 +178,8 @@ export default function Dashboard() {
               </div>
             </div>
           </section>
+
+          <BarChart />
         </main>
       </Layout>
     </>

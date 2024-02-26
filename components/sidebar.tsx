@@ -1,5 +1,5 @@
 /* eslint-disable require-jsdoc */
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import List, { Title } from "./sidebarList";
 import logo from "../assets/logo.png";
@@ -10,6 +10,11 @@ import settings from "../assets/settings.png";
 import help from "../assets/help.png";
 import darkmode from "../assets/moon-star.png";
 import expense from "../assets/expense_icon.png";
+import vehicle from "../assets/vehicleSidebar.png";
+import downarrow from "../assets/arrowdown.png";
+import uparrow from "../assets/arrowup.png";
+import driverside from "../assets/driverSidebar.png";
+import transactionside from "../assets/transactionSide.png";
 // import Support from "../assets/support.png";
 // import Transaction from "../assets/transactions.png";
 // import loan from "../assets/loan.svg";
@@ -28,48 +33,133 @@ function SideBar() {
     console.log(`${value} is ${checked}`);
   };
 
+  const [showDriver, setShowDriver] = useState(false);
+  const [showTransaction, setShowTransaction] = useState(false);
+  const [showVehicle, setShowVehicle] = useState(false);
+
+  const DriverArrow = showDriver ? uparrow : downarrow;
+  const TransactionArrow = showTransaction ? uparrow : downarrow;
+  const VehicleArrow = showVehicle ? uparrow : downarrow;
+
   return (
     <>
       <aside
-        className="h-[50rem] border-r shadow-[0_0_60px_0_rgba(0,0,0,0.1)] mt-[1px] rounded-r-lg  w-[15rem] flex-shrink-0"
+        className="h-[63rem] border-r shadow-[0_0_60px_0_rgba(0,0,0,0.1)] mt-[1px] rounded-r-lg  w-[15rem] flex-shrink-0"
         aria-label="Sidebar"
       >
         <aside className="sidecolor py-4 overflow-x-visible rounded-r-lg overflow-y-scroll scroll-smooth lg:h-full no-scrollbar">
           <ul className="space-y-2 text-white">
             <Link href={"/dashboard"} as="">
-              <List icon={dashboard} name={"Dashboard"} />
+              <List icon={dashboard} name={"Dashboard"} url="/dashboard" />
             </Link>
 
             <Link href={"/views/heatmap"} as="">
-              <List icon={heatmap} name={"Heat Map"} />
+              <List icon={heatmap} name={"Heat Map"} url="/views/heatmap" />
             </Link>
 
             <Link href={"/views/customPush"} as="">
-              <List icon={push} name={"Custom Push/SMS"} />
+              <List
+                icon={push}
+                name={"Custom Push/SMS"}
+                url="/views/customPush"
+              />
             </Link>
-            <Link href={"/views/Drivers/AllDrivers"} as="">
-              <List icon={push} name={"All Drivers"} />
-            </Link>
-            <Link href={"/views/Drivers/DriverKyc"} as="">
-              <List icon={push} name={"Driver KYC"} />
-            </Link>
-            <Link href={"/views/Transactions/payments"} as="">
-              <List icon={push} name={"Payments"} />
-            </Link>
-            <Link href={"/views/Transactions/DrivenowInvoices"} as="">
-              <List icon={push} name={"DriveNow Invoices"} />
-            </Link>
-            <Link href={"/views/Vehicles/ListofVehicles"} as="">
-              <List icon={push} name={"List of Vehicles"} />
-            </Link>
-            <Link href={"/views/Vehicles/VehicleIssuesLogs"} as="">
-              <List icon={push} name={"Vehicle Issues Logs"} />
-            </Link>
-            <Link href={"/views/Vehicles/VehicleTracker"} as="">
-              <List icon={push} name={"Vehicle Tracker"} />
-            </Link>
+
+            <div
+              className="flex ml-6 cursor-pointer justify-between items-center text-black"
+              onClick={() => setShowDriver(!showDriver)}
+            >
+              <div className="flex py-2">
+                <Image src={driverside} className="mr-2" alt="tool icon" />
+                Drivers
+              </div>
+              <Image className="mr-4 h-2 w-3" src={DriverArrow} alt="arrow" />
+            </div>
+            <div className="pl-6">
+              {showDriver ? (
+                <>
+                  <Link href={"/views/Drivers/AllDrivers"} as="">
+                    <List
+                      name={"All Drivers"}
+                      url="/views/Drivers/AllDrivers"
+                    />
+                  </Link>
+                  <Link href={"/views/Drivers/DriverKyc"} as="">
+                    <List name={"Driver KYC"} url="/views/Drivers/DriverKyc" />
+                  </Link>
+                </>
+              ) : null}
+            </div>
+
+            <div
+              className="flex ml-6 cursor-pointer justify-between items-center text-black"
+              onClick={() => setShowTransaction(!showTransaction)}
+            >
+              <div className="flex py-2">
+                <Image src={transactionside} className="mr-2" alt="tool icon" />
+                Transactions
+              </div>
+              <Image
+                className="mr-4 h-2 w-3"
+                src={TransactionArrow}
+                alt="arrow"
+              />
+            </div>
+            <div className="pl-6">
+              {showTransaction ? (
+                <>
+                  <Link href={"/views/Transactions/payments"} as="">
+                    <List
+                      name={"Payments"}
+                      url="/views/Transactions/payments"
+                    />
+                  </Link>
+                  <Link href={"/views/Transactions/DrivenowInvoices"} as="">
+                    <List
+                      name={"DriveNow Invoices"}
+                      url="/views/Transactions/DrivenowInvoices"
+                    />
+                  </Link>
+                </>
+              ) : null}
+            </div>
+
+            <div
+              className="flex ml-6 cursor-pointer justify-between items-center text-black"
+              onClick={() => setShowVehicle(!showVehicle)}
+            >
+              <div className="flex py-2">
+                <Image src={vehicle} className="mr-2" alt="tool icon" />
+                Vehicle
+              </div>
+              <Image className="mr-4 h-2 w-3" src={VehicleArrow} alt="arrow" />
+            </div>
+            <div className="pl-6">
+              {showVehicle ? (
+                <>
+                  <Link href={"/views/Vehicles/ListofVehicles"} as="">
+                    <List
+                      name={"List of Vehicles"}
+                      url="/views/Vehicles/ListofVehicles"
+                    />
+                  </Link>
+                  <Link href={"/views/Vehicles/VehicleIssuesLogs"} as="">
+                    <List
+                      name={"Vehicle Issues Logs"}
+                      url="/views/Vehicles/VehicleIssuesLogs"
+                    />
+                  </Link>
+                  <Link href={"/views/Vehicles/VehicleTracker"} as="">
+                    <List
+                      name={"Vehicle Tracker"}
+                      url="/views/Vehicles/VehicleTracker"
+                    />
+                  </Link>
+                </>
+              ) : null}
+            </div>
             <Link href={"/views/expense"} as="">
-              <List icon={expense} name={"Expense"} />
+              <List icon={expense} name={"Expense"} url="/views/expense" />
             </Link>
 
             <div className="flex justify-center ">
@@ -78,11 +168,11 @@ function SideBar() {
 
             <div>
               <Link href={""}>
-                <List icon={settings} name={"Settings"} />
+                <List icon={settings} name={"Settings"} url="" />
               </Link>
 
               <Link href={"/views/dashboard"} as="">
-                <List icon={help} name={"Help"} />
+                <List icon={help} name={"Help"} url="" />
               </Link>
             </div>
 
