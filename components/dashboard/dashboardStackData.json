@@ -1,0 +1,86 @@
+[
+  {
+    "label": "Jan",
+    "value1": 40,
+    "value2": 60,
+    "value3": 40,
+    "value4": 140
+  },
+  {
+    "label": "Feb",
+    "value1": 22,
+    "value2": 40,
+    "value3": 40,
+    "value4": 40
+  },
+  {
+    "label": "Mar",
+    "value1": 45,
+    "value2": 40,
+    "value3": 40,
+    "value4": 40
+  },
+  {
+    "label": "Apr",
+    "value1": 16,
+    "value2": 40,
+    "value3": 40,
+    "value4": 40
+  },
+  {
+    "label": "May",
+    "value1": 84,
+    "value2": 40,
+    "value3": 40,
+    "value4": 40
+  },
+  {
+    "label": "Jun",
+    "value1": 32,
+    "value2": 40,
+    "value3": 40,
+    "value4": 40
+  },
+  {
+    "label": "Jul",
+    "value1": 85,
+    "value2": 40,
+    "value3": 40,
+    "value4": 40
+  },
+  {
+    "label": "Aug",
+    "value1": 85,
+    "value2": 40,
+    "value3": 40,
+    "value4": 40
+  },
+  {
+    "label": "Sep",
+    "value1": 85,
+    "value2": 40,
+    "value3": 40,
+    "value4": 40
+  },
+  {
+    "label": "Oct",
+    "value1": 85,
+    "value2": 40,
+    "value3": 40,
+    "value4": 40
+  },
+  {
+    "label": "Nov",
+    "value1": 85,
+    "value2": 40,
+    "value3": 40,
+    "value4": 40
+  },
+  {
+    "label": "Dec",
+    "value1": 85,
+    "value2": 40,
+    "value3": 40,
+    "value4": 40
+  }
+]

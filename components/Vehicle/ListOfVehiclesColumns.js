@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Menu from "@mui/material/Menu";
+import Modal from "react-modal";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import pencil from "../../assets/pencil.png";
 import fileicon from "../../assets/fileicon.png";
 import recycle from "../../assets/recycle.png";
+import modalclose from "../../assets/modalclose.png";
 import deleteicon from "../../assets/blockvehicle.png";
 
 const ITEM_HEIGHT = 56;
+
 
 export default function LongMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -19,6 +23,36 @@ export default function LongMenu() {
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "60%",
+      right: "20%",
+      bottom: "auto",
+      marginRight: "-80%",
+      transform: "translate(-80%, -55%)",
+      padding: "0",
+      width: "308px",
+      height: "183px",
+      border: "0",
+      borderRadius: "8px 8px 8px 8px",
+      backgroundColor: "",
+    },
+    overlay: {
+      backgroundColor: "#0000008F",
+    },
   };
 
   return (
@@ -53,10 +87,75 @@ export default function LongMenu() {
           <Image src={pencil} className="mr-2" alt="checkmark" />
           Edit Vehicle{" "}
         </MenuItem>
-        <MenuItem className="flex" onClick={handleClose}>
-          <Image src={fileicon} className="mr-2 w-5 " alt="x" />
-          Update Sim{" "}
-        </MenuItem>
+        <Link href={""}>
+        <button onClick={openModal}>
+          <MenuItem className="flex" >
+          
+            <Image src={fileicon} className="mr-2 w-5 " alt="x" />
+            Update Sim{" "}
+          </MenuItem>
+          </button>
+          <Modal
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            ariaHideApp={false}
+            shouldCloseOnOverlayClick={false}
+            overlayClassName=""
+            style={customStyles}
+          >
+            <div className="w-[306px] h-[181px] rounded-lg bg-white">
+              <section className="flex items-center h-[50px] rounded-t-lg">
+                <p className="mr-auto text-black font-bold ml-[20px]">
+                  Update Sim for GT 9999
+                </p>
+                <div
+                  onClick={closeModal}
+                  className="flex cursor-pointer rounded-full w-[20px] h-[20px] mr-4"
+                >
+                  <Image
+                    className=" self-center ml-[4.5px]"
+                    src={modalclose}
+                    width={10}
+                    alt={"close button"}
+                  />
+                </div>
+              </section>
+
+              <section>
+                <div className="mt-2 px-6  ">
+                  <label
+                    htmlFor="simNumber"
+                    className="block mb-1 font-normal leading-[18px] text-[#262626] text-sm"
+                  >
+                    <span className="text-[#DC4A41] ">*</span>Sim Number:
+                  </label>
+                  <input
+                    type="text"
+                    id="simNumber"
+                    className="border border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                    placeholder="Enter"
+                    // value={values.simNumber}
+                    // onChange={handleChange}
+                  />
+                  
+                </div>
+              </section>
+              <section className="flex justify-end mt-4 pr-6" >
+                <Link href={""}>
+                  <button className="rounded-[4px] px-4 py-1.5 text-[14px] text-[#595959] font-normal leading-[18px] bg-[#FAFAFA] ">
+                    Cancel
+                  </button>
+                </Link>
+                <Link href={""}>
+                  <button className="rounded-[4px] ml-4 px-4 py-1.5 text-[14px] text-white font-normal bg-[#007AF5] leading-[18px]">
+                    Update
+                  </button>
+                </Link>
+              </section>
+            </div>
+          </Modal>
+        </Link>
+
         <MenuItem className="flex" onClick={handleClose}>
           <Image src={recycle} className="mr-2 w-5 " alt="x" />
           Update Status{" "}

@@ -121,7 +121,7 @@ export const BasicTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-sm font-normal leading-[18px] h-[48px] bg-[#FAFAFA] "
+                  className="text-left text-sm font-normal leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -148,7 +148,7 @@ export const BasicTable = () => {
                 {row.cells.map((cell) => {
                   return (
                     <>
-                      <td {...cell.getCellProps()} className=" border-y p-2 ">
+                      <td {...cell.getCellProps()} className="text-[#595959] pl-2 text-sm font-normal leading-[18px] border-y h-[48px]">
                         {cell.render("Cell")}
                       </td>
                     </>

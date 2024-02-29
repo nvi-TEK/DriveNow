@@ -63,7 +63,7 @@ export default function customPush() {
                     </Link>
             </div>
 
-            <div className="mt-3 rounded-lg  h-[368px] mb-[33px] shadow mx-6">
+            <div className="mt-3 rounded-lg  h-[368px] mb-[33px] mx-6">
               <Formik<PushProp>
                 initialValues={{
                   title: "",
@@ -89,7 +89,7 @@ export default function customPush() {
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
                   <Form
                     onSubmit={handleSubmit}
-                    className="bg-white h-[368px] rounded-lg shadow-lg px-[1rem] pb-10"
+                    className="bg-white h-[368px] rounded-lg px-[1rem] pb-10"
                   >
                     <div className="flex space-x-5">
                       <section className="grow ">

@@ -14,7 +14,7 @@ type KYCProp = {
 
 function KYC(props: KYCProp) {
   return (
-    <div className="border-b h-[80px] flex items-center w-[290px] bg-white border-[#E6E6E6]">
+    <div className="border-b h-[80px] flex items-center grow bg-white border-[#E6E6E6]">
       <div>
         <p className="text-[#595959] font-normal leading-[18px] ">
           {props.name}
@@ -23,8 +23,10 @@ function KYC(props: KYCProp) {
           {props.description}
         </p>
       </div>
-      <div className="ml-[24%]">
-        <p className="text-[#8C8C8C] font-normal text-xs leading-4 ">{props.date}</p>
+      <div className="ml-[6%]">
+        <p className="text-[#8C8C8C] font-normal text-xs leading-4 ">
+          {props.date}
+        </p>
         <p>{props.status}</p>
       </div>
     </div>

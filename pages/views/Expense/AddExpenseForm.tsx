@@ -5,15 +5,18 @@ import { useEffect, useState } from "react";
 import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
-import Link from "next/link";
 import info from "../../../assets/info_icon.png";
 import yellowinfo from "../../../assets/yellowinfo.png";
 import DatePicker from "../../../components/datepicker1";
 import Image from "next/image";
+import Link from "next/link";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import Modal from "react-modal";
+import closebutton from "../../../assets/darkclose.png";
 import BasicDatePicker from "../../../components/datepicker";
-import StyledDropzone from "@/components/dropzone";
+import StyledDropzone from "@/components/dropzones/AddExpenseDropzone";
+import attach from "../../../assets/attachment_icon.png";
 import Header from "@/components/header";
 
 type AddExpenseProp = {
@@ -27,6 +30,34 @@ type AddExpenseProp = {
 };
 
 export default function AddExpense() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      padding: "0",
+      width: "645px",
+      height: "347px",
+      borderRadius: "8px",
+      backgroundColor: "white",
+    },
+    overlay: {
+      backgroundColor: "#0000008C",
+    },
+  };
   return (
     <>
       <Header name="Add Expense" />
@@ -158,32 +189,81 @@ export default function AddExpense() {
                         Add Expense information to the expense line.
                       </p>
 
-                      <div className="mt-5 grow">
-                        <label
-                          htmlFor="expenseLine"
-                          className="block mb-2 text-sm font-medium text-gray-900"
-                        >
-                          Expense Line
-                        </label>
-                        <Field
-                          id="expenseLine"
-                          as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-[500px] p-1.5 "
-                          value={values.expenseLine}
-                          onChange={handleChange}
-                        >
-                          <option disabled={true} value={""}>
-                            Choose an expense line
-                          </option>
-                          <option>Business Expense</option>
-                          <option>General & Administration</option>
-                          <option>Employee Cost</option>
-                          <option>Current Provision for Tax</option>
-                        </Field>
-                        <p className="font-medium text-xs text-red-700">
-                          <ErrorMessage name="expenseLine" />
-                        </p>
-                      </div>
+                      <section className="flex">
+                        <div className="mt-5 grow">
+                          <label
+                            htmlFor="expenseLine"
+                            className="block mb-2 text-sm font-medium text-gray-900"
+                          >
+                            Expense Line
+                          </label>
+                          <Field
+                            id="expenseLine"
+                            as="select"
+                            className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-[500px] p-1.5 "
+                            value={values.expenseLine}
+                            onChange={handleChange}
+                          >
+                            <option disabled={true} value={""}>
+                              Choose an expense line
+                            </option>
+                            <option>Car Insurance</option>
+                            <option>Part Replacement</option>
+                            <option>Vehicle Maintenance</option>
+                            <option>Driver Support</option>
+                          </Field>
+                          <p className="font-medium text-xs text-red-700">
+                            <ErrorMessage name="expenseLine" />
+                          </p>
+                        </div>
+
+                        <Link href={""}>
+                          <div
+                            onClick={openModal}
+                            className="flex items-center cursor-pointer pl-2 border border-dashed h-[34px] w-[500px] rounded-lg ml-5 mt-12 border-[#BFBFBF]"
+                          >
+                            <Image src={attach} alt="attachment icon" />
+                            <p className="text-[#BFBFBF] font-medium text-sm pl-1 leading-[18px]">
+                              Attachment
+                            </p>
+                          </div>
+                          <Modal
+                            isOpen={modalIsOpen}
+                            onRequestClose={closeModal}
+                            ariaHideApp={false}
+                            shouldCloseOnOverlayClick={false}
+                            overlayClassName=""
+                            style={customStyles}
+                          >
+                            <div className="w-[643px] h-[345px] border rounded-lg px-[32px] bg-white">
+                              <section className="flex justify-between mb-[40] items-center h-[50px] rounded-t-lg">
+                                <p className="mr-auto text-[#404040] text-[22px] leading-[18px] font-bold">
+                                  Upload Invoice
+                                </p>
+                                <div
+                                  onClick={closeModal}
+                                  className="flex cursor-pointer rounded-full w-[20px] h-[20px] mr-4"
+                                >
+                                  <Image
+                                    className="self-center ml-[4.5px]"
+                                    src={closebutton}
+                                    
+                                    alt={"close button"}
+                                  />
+                                </div>
+                                
+
+                              </section>
+                              <StyledDropzone />
+
+                              <div className="flex mt-3 justify-between">
+                                <p className="font-medium text-xs leading-[18px] text-[#8C8C8C] ">Supported formats: png, jpeg, pdf</p>
+                                <p className="font-medium text-xs leading-[18px] text-[#8C8C8C] ">Maximum file size: 20 MB</p>
+                              </div>
+                            </div>
+                          </Modal>
+                        </Link>
+                      </section>
 
                       <div className="flex mt-5 gap-x-5 border-b pb-7 ">
                         <div>

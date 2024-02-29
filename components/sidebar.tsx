@@ -176,10 +176,10 @@ function SideBar() {
               </Link>
             </div>
 
-            <div className="flex h-[52px] pt-[432px] pl-6">
+            <div className="flex  h-[52px] pt-[432px] pl-6">
               <div>
                 <Image src={darkmode} alt="darkmode switch" />
-              </div>
+              </div>4
 
               <p className="text-[#262626] ml-2 ">Dark mode</p>
 

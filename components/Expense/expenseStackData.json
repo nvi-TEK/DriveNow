@@ -1,0 +1,62 @@
+[
+  {
+    "label": "Jan",
+    "value1": 140,
+    "value2": 160
+  },
+  {
+    "label": "Feb",
+    "value1": 122,
+    "value2": 140
+  },
+  {
+    "label": "Mar",
+    "value1": 145,
+    "value2": 140
+  },
+  {
+    "label": "Apr",
+    "value1": 116,
+    "value2": 40
+  },
+  {
+    "label": "May",
+    "value1": 84,
+    "value2": 140
+  },
+  {
+    "label": "Jun",
+    "value1": 32,
+    "value2": 50
+  },
+  {
+    "label": "Jul",
+    "value1": 185,
+    "value2": 100
+  },
+  {
+    "label": "Aug",
+    "value1": 135,
+    "value2": 140
+  },
+  {
+    "label": "Sep",
+    "value1": 85,
+    "value2": 40
+  },
+  {
+    "label": "Oct",
+    "value1": 185,
+    "value2": 125
+  },
+  {
+    "label": "Nov",
+    "value1": 90,
+    "value2": 170
+  },
+  {
+    "label": "Dec",
+    "value1": 8,
+    "value2": 100
+  }
+]

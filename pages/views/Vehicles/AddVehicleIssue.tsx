@@ -4,7 +4,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import KYC from "@/components/driverKYC";
 import Head from "next/head";
-import Datatable from "../../../components/customPush/table";
 import Layout from "../../../components/layout";
 import Link from "next/link";
 import info from "../../../assets/info_icon.png";

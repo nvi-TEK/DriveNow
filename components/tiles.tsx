@@ -63,7 +63,7 @@ function DashboardTiles(props: tileProp1) {
 
 function DashboardTiles1(props: tileProp2) {
   return (
-    <div className="border h-[8rem] p-4 pt-3  rounded-lg w-[20.85rem] bg-white  flex rounded-t-lg border-[#E9ECEF]">
+    <div className="border h-[8rem] p-4 pt-3 rounded-lg w-[20.85rem] bg-white flex grow rounded-t-lg border-[#E9ECEF]">
       <div>
         <Image src={props.icon} width={30} height={10} alt="" />
 
@@ -77,7 +77,7 @@ function DashboardTiles1(props: tileProp2) {
         </div>
       </div>
 
-      <div className="ml-[10%]">
+      <div className="ml-[14%]">
         <p className="font-normal pt-12 text-sm leading-5 text-[#8C8C8C]">
           {props.entity2}
         </p>
@@ -88,7 +88,7 @@ function DashboardTiles1(props: tileProp2) {
         </div>
       </div>
 
-      <div className="ml-[10%]">
+      <div className="ml-[19%]">
         <p className="font-normal pt-12 text-sm leading-5 text-[#8C8C8C]">
           {props.entity3}
         </p>

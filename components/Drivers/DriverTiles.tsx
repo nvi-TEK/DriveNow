@@ -20,7 +20,7 @@ type driverTileProp1 = {
 
 export default function AllDriverTiles(props: driverTileProp1) {
   return (
-    <div className="border h-[8rem] p-4 pt-3  rounded-lg w-[30px] bg-white flex grow rounded-t-lg border-[#E9ECEF]">
+    <div className="border h-[8rem] p-4 pt-3 rounded-lg w-[30px] bg-white flex grow rounded-t-lg border-[#E9ECEF]">
       <div>
         <Image src={props.icon} width={30} height={10} alt="" />
 

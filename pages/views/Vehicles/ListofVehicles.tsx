@@ -9,7 +9,6 @@ import Layout from "../../../components/layout";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import TableData from "../../../components/Drivers/AllDriversTable";
 import ListOfVehiclesTiles from "../../../components/Vehicle/ListOfVehiclesTiles";
 import { ListOfVehiclesTable } from "../../../components/Vehicle/ListOfVehiclesTable";
 import Link from "next/link";
@@ -57,7 +56,7 @@ export default function ListOfVehicles() {
 
   return (
     <>
-            <Header name="Vehicles" />
+      <Header name="Vehicles" />
 
       <Layout>
         <Head>

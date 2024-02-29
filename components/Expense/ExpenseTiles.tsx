@@ -34,7 +34,7 @@ export default function ExpenseTiles(props: ExpenseProp1) {
         </div>
       </div>
 
-      <div className="ml-[14%]">
+      <div className="ml-[21%]">
         <p className="font-normal pt-[45px] text-sm leading-5 text-[#8C8C8C]">
           {props.entity2}
         </p>
