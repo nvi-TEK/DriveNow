@@ -6,15 +6,15 @@ import Image from 'next/image';
 
 const baseStyle = {
     flex: 1,
-    display: 'flex',
+    display: '',
     width:'160px',
     alignItems: 'center',
     padding: '50px',
     justifyItems: 'center',
     paddingLeft: '58px',
     borderWidth: 2,
-    borderRadius: 2,
-    borderColor: '#eeeeee',
+    borderRadius: 8,
+    borderColor: '#BFBFBF',
     borderStyle: 'dashed',
     backgroundColor: '#fafafa',
     color: '#bdbdbd',
@@ -59,9 +59,9 @@ export default function StyledDropzone() {
 
   return (
     <div className="container">
-      <div {...getRootProps({style})}>
+      <div className='cursor-pointer' {...getRootProps({style})}>
         <input {...getInputProps()} />
-        <Image className="w-[2.625rem] h-[2.625rem] " src={plus} alt={"drag n drop image"} />
+        <Image className="w-[2.625rem] h-[2.625rem]" src={plus} alt={"plus icon"} />
       </div>
     </div>
   );

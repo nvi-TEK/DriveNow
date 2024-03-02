@@ -21,15 +21,18 @@ function Header(prop: pageProp) {
   return (
     <>
       <header className="flex w-full h-[4rem] shadow-lg items-center border-b border-[#E6E6E6] pr-4 bg-Grey/50">
-        <Link href={"/dashboard"}>
+        <Link href={"/views/dashboard"}>
           <Image
             src={logo}
             alt={"DriveNow logo"}
             className=" ml-[62.5px] h-[18px]"
           />
         </Link>
-        <p className="ml-[6%] mr-auto text-[#595959] font-normal  ">
-          Dashboard / {prop.name} / {prop.secondName}
+        <p className="ml-[6%] mr-auto text-[#595959] font-normal">
+          Dashboard /{" "}
+          <span className="text-[#262626] text-sm leading-[18px] font-normal">
+            {prop.name}
+          </span>
         </p>
 
         <div className="flex w-[550px] justify-end items-center">

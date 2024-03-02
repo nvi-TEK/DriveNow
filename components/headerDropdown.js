@@ -71,6 +71,7 @@ export default function LongMenu() {
         <MenuItem className="flex" onClick={handleClose}>
           Help Documentation
         </MenuItem>
+
         <MenuItem className="flex" onClick={handleClose}>
           <p className="text-[#DC4A41]">Log Out</p>
         </MenuItem>

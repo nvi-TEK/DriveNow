@@ -44,13 +44,13 @@ function SideBar() {
   return (
     <>
       <aside
-        className="h-[63rem] border-r shadow-[0_0_60px_0_rgba(0,0,0,0.1)] mt-[1px] rounded-r-lg  w-[15rem] flex-shrink-0"
+        className="h-[960px] border-r shadow-[0_0_60px_0_rgba(0,0,0,0.1)] mt-[1px] rounded-r-lg  w-[15rem] flex-shrink-0"
         aria-label="Sidebar"
       >
-        <aside className="sidecolor py-4 overflow-x-visible rounded-r-lg overflow-y-scroll scroll-smooth lg:h-full no-scrollbar">
+        <aside className="sidecolor py-4 overflow-x-visible overflow-y-scroll h-[960px] rounded-r-lg scroll-smooth no-scrollbar">
           <ul className="space-y-2 text-white">
-            <Link href={"/dashboard"} as="">
-              <List icon={dashboard} name={"Dashboard"} url="/dashboard" />
+            <Link href={"/views/dashboard"} as="">
+              <List icon={dashboard} name={"Dashboard"} url="/views/dashboard" />
             </Link>
 
             <Link href={"/views/heatmap"} as="">
@@ -82,6 +82,12 @@ function SideBar() {
                     <List
                       name={"All Drivers"}
                       url="/views/Drivers/AllDrivers"
+                    />
+                  </Link>
+                  <Link href={"/views/Drivers/DriverMapView"} as="">
+                    <List
+                      name={"Driver Map View"}
+                      url="/views/Drivers/DriverMapView"
                     />
                   </Link>
                   <Link href={"/views/Drivers/DriverKyc"} as="">
@@ -176,10 +182,10 @@ function SideBar() {
               </Link>
             </div>
 
-            <div className="flex  h-[52px] pt-[432px] pl-6">
+            <div className="flex h-[52px] pt-[394px] pl-6">
               <div>
                 <Image src={darkmode} alt="darkmode switch" />
-              </div>4
+              </div>
 
               <p className="text-[#262626] ml-2 ">Dark mode</p>
 

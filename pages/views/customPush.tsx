@@ -1,27 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable require-jsdoc */
+
 import React from "react";
-import { useEffect, useState } from "react";
-import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../components/layout";
 import Link from "next/link";
-import logo from "../../assets/logo.png";
 import sendlogo from "../../assets/send.png";
 import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import {CustomPushTable} from "../../components/customPush/CustomPushTable"
-// import SingleInputDateRangePicker from "@/components/datePicker";
-import driver from "../../assets/driver_icon.png";
-import vehicle from "../../assets/vehicle_icon.png";
-import payment from "../../assets/payments.png";
-import { DashboardTiles1 } from "@/components/tiles";
-import DashboardTiles from "@/components/tiles";
-import revenue from "../../assets/revenue_icon.png";
-import { Grid } from "@mui/material";
-// import { gridSpacing } from "../../components/revenueChart/constant";
-import BasicStacking from "@/components/stackedChart";
+import { CustomPushTable } from "../../components/customPush/CustomPushTable";
+import SingleInputDateRangePickerWithAdornment from "../../components/datePickerRange";
 import Header from "@/components/header";
 
 type PushProp = {
@@ -53,14 +42,14 @@ export default function customPush() {
               </p>
 
               <Link href={""}>
-                      <button
-                        type="button"
-                        className="text-[#FFFFFF] border bg-[#007AF5] mt-[23px] rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-xs py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2"
-                      >
-                        Send
-                        <Image className="ml-[4px]" src={sendlogo} alt={""} />
-                      </button>
-                    </Link>
+                <button
+                  type="button"
+                  className="text-[#FFFFFF] border bg-[#007AF5] mt-[23px] rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-xs py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2"
+                >
+                  Send
+                  <Image className="ml-[4px]" src={sendlogo} alt={""} />
+                </button>
+              </Link>
             </div>
 
             <div className="mt-3 rounded-lg  h-[368px] mb-[33px] mx-6">
@@ -91,8 +80,8 @@ export default function customPush() {
                     onSubmit={handleSubmit}
                     className="bg-white h-[368px] rounded-lg px-[1rem] pb-10"
                   >
-                    <div className="flex space-x-5">
-                      <section className="grow ">
+                    <div className="flex w-full space-x-5">
+                      <section className="w-[33%] ">
                         <label
                           htmlFor="group"
                           className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
@@ -102,7 +91,7 @@ export default function customPush() {
                         <Field
                           id="group"
                           as="select"
-                          className="bg-[#FFFFFF] border grow border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-[320px] py-1.5 "
+                          className="bg-[#FFFFFF] border grow border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
                           value={values.group}
                           onChange={handleChange}
                         >
@@ -114,11 +103,11 @@ export default function customPush() {
                           <option>Offline Drivers</option>
                           <option>DriveNow Drivers</option>
                         </Field>
-                        <p className="font-medium text-red-700">
+                        <p className="font-medium text-xs text-red-700">
                           <ErrorMessage name="group" />
                         </p>
                       </section>
-                      <section className=" grow">
+                      <section className="w-[33%]">
                         <label
                           htmlFor="notification"
                           className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
@@ -128,7 +117,7 @@ export default function customPush() {
                         <Field
                           id="notification"
                           as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-[320px] p-1.5 "
+                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.notification}
                           onChange={handleChange}
                         >
@@ -139,11 +128,11 @@ export default function customPush() {
                           <option>PUSH Notification</option>
                           <option>SMS/PUSH Notification</option>
                         </Field>
-                        <p className="font-medium text-red-700">
+                        <p className="font-medium text-xs text-red-700">
                           <ErrorMessage name="notification" />
                         </p>
                       </section>
-                      <section className=" grow">
+                      <section className="w-[33%]">
                         <label
                           htmlFor="device"
                           className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
@@ -153,7 +142,7 @@ export default function customPush() {
                         <Field
                           id="device"
                           as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-[320px] p-1.5 "
+                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.device}
                           onChange={handleChange}
                         >
@@ -164,34 +153,43 @@ export default function customPush() {
                           <option>IOS</option>
                           <option>Both</option>
                         </Field>
-                        <p className="font-medium text-red-700">
+                        <p className="font-medium text-xs text-red-700">
                           <ErrorMessage name="device" />
                         </p>
                       </section>
                     </div>
+                    <div className="flex gap-x-4">
+                      <div className="">
+                        <label
+                          htmlFor="title"
+                          className="block mb-2 text-sm font-normal  text-[#000000]"
+                        >
+                          Select Date Range
+                        </label>
+                        <SingleInputDateRangePickerWithAdornment />
 
-                    {/* <SingleInputDateRangePicker /> */}
+                      </div>
 
-                    <div className="mt-[24px]">
-                      <label
-                        htmlFor="title"
-                        className="block mb-2 text-sm font-normal  text-[#000000]"
-                      >
-                        Message Title
-                      </label>
-                      <Field
-                        type="text"
-                        id="title"
-                        className="border border-gray-300 text-gray-900 text-sm rounded  block w-[40%] p-1.5"
-                        placeholder="Title"
-                        value={values.title}
-                        onChange={handleChange}
-                      />
-                      <p className="font-medium text-red-700">
-                        <ErrorMessage name="title" />
-                      </p>
+                      <div className="w-[50%]">
+                        <label
+                          htmlFor="title"
+                          className="block mb-2 text-sm font-normal  text-[#000000]"
+                        >
+                          Message Title
+                        </label>
+                        <Field
+                          type="text"
+                          id="title"
+                          className="border border-gray-300 text-gray-900 text-sm rounded block w-full p-1.5"
+                          placeholder="Title"
+                          value={values.title}
+                          onChange={handleChange}
+                        />
+                        <p className="font-medium text-xs text-red-700">
+                          <ErrorMessage name="title" />
+                        </p>
+                      </div>
                     </div>
-
                     <div className="mt-2">
                       <label
                         htmlFor="message"
@@ -208,7 +206,7 @@ export default function customPush() {
                         value={values.message}
                         onChange={handleChange}
                       />
-                      <p className="font-medium text-xs  text-red-700">
+                      <p className="font-medium text-xs text-red-700">
                         <ErrorMessage name="message" />
                       </p>
                     </div>
@@ -228,7 +226,9 @@ export default function customPush() {
             </div>
 
             <div className="mb-[50px] mx-5 rounded-lg pb-4 pt-3 bg-white ">
-              <h3 className="text-[#262626] font-medium text-[22px] pt-4 pl-[10px] leading-[30px]">Custom Push History</h3>
+              <h3 className="text-[#262626] font-medium text-[22px] pt-4 pl-[10px] leading-[30px]">
+                Custom Push History
+              </h3>
               <CustomPushTable />
             </div>
           </section>

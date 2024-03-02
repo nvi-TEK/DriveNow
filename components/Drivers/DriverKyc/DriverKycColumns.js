@@ -46,7 +46,6 @@ export default function LongMenu() {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "20ch",
             position: "absolute",
-  
           },
         }}
       >

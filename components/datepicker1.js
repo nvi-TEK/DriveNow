@@ -9,7 +9,7 @@ export default function Datepicker() {
     color: "black",
     backgroundColor: "",
     padding: "",
-    width: "500px",
+    width: "100%",
   };
 
   return (
@@ -24,7 +24,7 @@ export default function Datepicker() {
             disabled
             value={date}
             onChange={onDateChange}
-            className="rounded-[4px] border w-[500px] py-1 px-2 "
+            className="rounded-[4px] border border-[#D9D9D9] bg-[#F0F0F0] text-[#BFBFBF] w-[100%] py-1 px-2 "
           />
         </div>
       </div>

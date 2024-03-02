@@ -77,7 +77,7 @@ export const CustomPushTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border rounded px-1 py-1 "
+      className="border text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
       abc
@@ -93,7 +93,7 @@ export const CustomPushTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border rounded px-1 py-1 "
+      className="border text-[#BFBFBF] rounded px-1 py-1 "
       aria-placeholder=""
     >
       abc

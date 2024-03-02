@@ -76,7 +76,7 @@ export const VehicleIssuesLogsTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border rounded px-1 py-1 "
+      className="border text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
       abc
@@ -92,7 +92,7 @@ export const VehicleIssuesLogsTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border rounded px-1 py-1 "
+      className="border text-[#BFBFBF] rounded px-1 py-1 "
       aria-placeholder=""
     >
       abc
@@ -155,7 +155,10 @@ export const VehicleIssuesLogsTable = () => {
                 {row.cells.map((cell) => {
                   return (
                     <>
-                      <td {...cell.getCellProps()} className="text-[#595959] pl-2 text-sm font-normal leading-[18px] border-y h-[48px]">
+                      <td
+                        {...cell.getCellProps()}
+                        className="text-[#595959] pl-2 text-sm font-normal leading-[18px] border-y h-[48px]"
+                      >
                         {cell.render("Cell")}
                       </td>
                     </>

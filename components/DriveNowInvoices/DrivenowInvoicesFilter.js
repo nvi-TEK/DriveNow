@@ -7,7 +7,7 @@ export const DriveNowInvoicesFilter = ({ filter, setFilter }) => {
       <input
         value={filter || ""}
         onChange={(e) => setFilter(e.target.value)}
-        className="border text-sm w-[353px] pl-3 py-1 border-[#D9D9D9] rounded text-black"
+        className="border text-sm placeholder-[#BFBFBF] w-[353px] pl-3 py-1 border-[#D9D9D9] rounded text-black"
         placeholder="Search by Name, Email or Phone Number"
       />
     </span>

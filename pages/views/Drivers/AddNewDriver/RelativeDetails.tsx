@@ -50,7 +50,7 @@ export default function RelativeDetails(prop: RelativeProps) {
 
   return (
     <>
-            <Header name="All Drivers / Drivers KYC" />
+      <Header name="All Drivers / Drivers KYC" />
 
       <Layout>
         <Head>
@@ -62,280 +62,275 @@ export default function RelativeDetails(prop: RelativeProps) {
         {/* Code goes into the main tag */}
         <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
           {/* Bottom menu */}
-          <section className="w-full ">
-            <div className="bg-[#FFFFFF] mx-[19px] mt-[18px] ">
-              <h3>Driver KYC</h3>
-              <p>
+          <section className="bg-white rounded-lg m-[19px] p-4 mb-[47px]">
+            <div className="pb-4">
+              <h3 className="font-medium text-[22px] leading-[30px] text-[#262626]">
+                Driver KYC
+              </h3>
+              <p className="text-[#737373] font-medium leading-[30px] text-base">
                 Complete this form to initiate background checks, ensuring we
                 meet regulatory requirements and protect our business from
                 potential risks.
               </p>
-
-              {/* Timeline */}
-              <div className="flex mx-4 py-10 px-[44px] border-y items-center">
-                <div className="bg-[#0C9064] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
-                  <CheckOutlinedIcon fontSize="small" />
-                </div>
-                <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#0C9064]">
-                  Personal Details
-                </p>
-                <Image
-                  src={greenline}
-                  alt="blue timeline"
-                  className="w-[100px] ml-1"
-                />
-                <div className="bg-[#0C9064] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
-                  <CheckOutlinedIcon fontSize="small" />
-                </div>
-                <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#0C9064]">
-                  Residence Details{" "}
-                </p>
-                <Image
-                  src={greenline}
-                  alt="blue timeline"
-                  className="w-[100px] ml-1"
-                />
-                <div className="bg-[#0C9064] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
-                  <CheckOutlinedIcon fontSize="small" />
-                </div>
-                <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#0C9064]">
-                  Guarantor Details{" "}
-                </p>
-                <Image
-                  src={greenline}
-                  alt="blue timeline"
-                  className="w-[100px] ml-1"
-                />
-                <div className="bg-[#007AF5] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
-                  4
-                </div>
-                <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#007AF5]">
-                  Relative Details{" "}
-                </p>
+            </div>
+            {/* Timeline */}
+            <div className="flex py-10 px-[44px] border-y items-center">
+              <div className="bg-[#0C9064] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
+                <CheckOutlinedIcon fontSize="small" />
               </div>
+              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#0C9064]">
+                Personal Details
+              </p>
+              <Image
+                src={greenline}
+                alt="blue timeline"
+                className="w-[100px] ml-1"
+              />
+              <div className="bg-[#0C9064] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
+                <CheckOutlinedIcon fontSize="small" />
+              </div>
+              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#0C9064]">
+                Residence Details{" "}
+              </p>
+              <Image
+                src={greenline}
+                alt="blue timeline"
+                className="w-[100px] ml-1"
+              />
+              <div className="bg-[#0C9064] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
+                <CheckOutlinedIcon fontSize="small" />
+              </div>
+              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#0C9064]">
+                Guarantor Details{" "}
+              </p>
+              <Image
+                src={greenline}
+                alt="blue timeline"
+                className="w-[100px] ml-1"
+              />
+              <div className="bg-[#007AF5] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
+                4
+              </div>
+              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#007AF5]">
+                Relative Details{" "}
+              </p>
+            </div>
 
-              <h3 className="font-medium leading-[30px] text-lg text-[#262626] ">
-                Identification Details (Relative)
-              </h3>
+            <h3 className="font-medium leading-[30px] pt-4 text-lg text-[#262626]">
+              Identification Details (Relative)
+            </h3>
 
-              <div className="mt-10 mb-12 border-0 shadow mx-">
-                <Formik<RelativeProps>
-                  initialValues={{
-                    phone: "",
-                    ghanaCardName: "",
-                    gpsAddress: "",
-                    houseAddress: "",
-                    ghanaCardNumber: "",
-                  }}
-                  validationSchema={Yup.object({
-                    phone: Yup.string()
-                      .matches(phoneRegExp, "Invalid Phone number")
-                      .required("Required Field"),
-                    houseAddress: Yup.string().required("Required field"),
-                    ghanaCardNumber: Yup.string().required("Required field"),
-                    gpsAddress: Yup.string().required("Required field"),
-                    ghanaCardName: Yup.string().required("Required field"),
-                  })}
-                  onSubmit={async (values) => {
-                    alert(JSON.stringify(values, null, 2));
-                  }}
-                >
-                  {({ handleSubmit, values, handleChange, setFieldValue }) => (
-                    <Form
-                      onSubmit={handleSubmit}
-                      className="bg-white border-0 shadow-lg px-[2rem]  pb-10"
-                    >
-                      <section className="border-b">
-                        <div className="flex w-full">
-                          {/* Ghana Card Name */}
-                          <div className="mt-[1.875rem]">
-                            <label
-                              htmlFor="ghanaCardName"
-                              className="block mb-2 text-sm font-normal text-gray-900"
-                            >
-                              Ghana Card Name{" "}
-                            </label>
-                            <Field
-                              type="text"
-                              id="ghanaCardName"
-                              className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
-                              placeholder="Full name"
-                              value={values.ghanaCardName}
-                              onChange={handleChange}
-                            />
-                            <p className="font-medium text-xs text-red-700">
-                              <ErrorMessage name="ghanaCardName" />
-                            </p>
-                          </div>
-
-                          {/* Ghana Card Number */}
-                          <div className="mt-[1.875rem]">
-                            <label
-                              htmlFor="ghanaCardNumber"
-                              className="block mb-2 text-sm font-normal text-gray-900"
-                            >
-                              Street Name{" "}
-                            </label>
-                            <Field
-                              type="text"
-                              id="ghanaCardNumber"
-                              className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
-                              placeholder="GHA-12345678-42"
-                              value={values.ghanaCardNumber}
-                              onChange={handleChange}
-                            />
-                            <p className="font-medium text-xs text-red-700">
-                              <ErrorMessage name="ghanaCardNumber" />
-                            </p>
-                          </div>
+            <div className="mb-12 border-0">
+              <Formik<RelativeProps>
+                initialValues={{
+                  phone: "",
+                  ghanaCardName: "",
+                  gpsAddress: "",
+                  houseAddress: "",
+                  ghanaCardNumber: "",
+                }}
+                validationSchema={Yup.object({
+                  phone: Yup.string()
+                    .matches(phoneRegExp, "Invalid Phone number")
+                    .required("Required Field"),
+                  houseAddress: Yup.string().required("Required field"),
+                  ghanaCardNumber: Yup.string().required("Required field"),
+                  gpsAddress: Yup.string().required("Required field"),
+                  ghanaCardName: Yup.string().required("Required field"),
+                })}
+                onSubmit={async (values) => {
+                  alert(JSON.stringify(values, null, 2));
+                }}
+              >
+                {({ handleSubmit, values, handleChange, setFieldValue }) => (
+                  <Form
+                    onSubmit={handleSubmit}
+                    className="bg-white border-0 pb-10"
+                  >
+                    <section className="">
+                      <div className="flex mt-3 gap-x-4 w-full">
+                        {/* Ghana Card Name */}
+                        <div className="w-[50%]">
+                          <label
+                            htmlFor="ghanaCardName"
+                            className="block mb-2 text-sm font-medium text-gray-900"
+                          >
+                            Ghana Card Name
+                          </label>
+                          <Field
+                            type="text"
+                            id="ghanaCardName"
+                            className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            placeholder="Full name"
+                            value={values.ghanaCardName}
+                            onChange={handleChange}
+                          />
+                          <p className="font-medium text-xs text-red-700">
+                            <ErrorMessage name="ghanaCardName" />
+                          </p>
                         </div>
 
-                        <div className="flex">
-                          {/* Phone Number */}
-                          <div className="mt-[1.25rem]">
-                            <label
-                              htmlFor="phone"
-                              className="block mb-3 text-sm font-medium leading-[1.195rem] text-[#04030F]"
-                            >
-                              Phone
-                            </label>
-                            <Field
-                              type="text"
-                              id="phone"
-                              className="border border-gray-300 text-gray-900 text-sm rounded block w-[480px] p-2.5"
-                              placeholder="+233 123 456 789"
-                              value={values.phone}
-                              onChange={handleChange}
-                            />
-                            <p className="font-medium text-red-700">
-                              <ErrorMessage name="phone" />
-                            </p>
-                          </div>
-
-                          {/* House Address */}
-                          <div className="mt-[1.875rem]">
-                            <label
-                              htmlFor="houseAddress"
-                              className="block mb-2 text-sm font-normal text-gray-900"
-                            >
-                              House Address{" "}
-                            </label>
-                            <Field
-                              type="text"
-                              id="houseAddress"
-                              className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
-                              placeholder="Address"
-                              value={values.houseAddress}
-                              onChange={handleChange}
-                            />
-                            <p className="font-medium text-xs text-red-700">
-                              <ErrorMessage name="houseAddress" />
-                            </p>
-                          </div>
+                        {/* Ghana Card Number */}
+                        <div className="w-[50%]">
+                          <label
+                            htmlFor="ghanaCardNumber"
+                            className="block mb-2 text-sm font-medium text-gray-900"
+                          >
+                            Street Name{" "}
+                          </label>
+                          <Field
+                            type="text"
+                            id="ghanaCardNumber"
+                            className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            placeholder="GHA-12345678-42"
+                            value={values.ghanaCardNumber}
+                            onChange={handleChange}
+                          />
+                          <p className="font-medium text-xs text-red-700">
+                            <ErrorMessage name="ghanaCardNumber" />
+                          </p>
                         </div>
-                      </section>
-
-                      {/* GPS Address */}
-                      <div className=" mt-[1.875rem]">
-                        <label
-                          htmlFor="gpsAddress"
-                          className="block mb-2 text-sm font-normal text-gray-900"
-                        >
-                          GPS Address
-                        </label>
-                        <Field
-                          type="text"
-                          id="gpsAddress"
-                          className="border border-gray-300 text-gray-900 w-[95%] text-sm rounded2 block p-2"
-                          placeholder="GT-123-456"
-                          value={values.gpsAddress}
-                          onChange={handleChange}
-                        />
-                        <p className="font-medium text-xs text-red-700">
-                          <ErrorMessage name="gpsAddress" />
-                        </p>
                       </div>
 
-                      {/* Relative dropzone */}
-                      <section>
-                        <p className="text-[#262626] font-medium text-base leading-[30px] ">
-                          Upload Image of Relative
-                        </p>
+                      <div className="flex mt-5 gap-x-4">
+                        {/* Phone Number */}
+                        <div className="w-[50%]">
+                          <label
+                            htmlFor="phone"
+                            className="block mb-2 text-sm font-medium text-[#04030F]"
+                          >
+                            Phone
+                          </label>
+                          <Field
+                            type="text"
+                            id="phone"
+                            className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            placeholder="+233 123 456 789"
+                            value={values.phone}
+                            onChange={handleChange}
+                          />
+                          <p className="font-medium text-xs text-red-700">
+                            <ErrorMessage name="phone" />
+                          </p>
+                        </div>
+
+                        {/* House Address */}
+                        <div className="w-[50%]">
+                          <label
+                            htmlFor="houseAddress"
+                            className="block mb-2 text-sm font-medium text-gray-900"
+                          >
+                            House Address{" "}
+                          </label>
+                          <Field
+                            type="text"
+                            id="houseAddress"
+                            className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            placeholder="Address"
+                            value={values.houseAddress}
+                            onChange={handleChange}
+                          />
+                          <p className="font-medium text-xs text-red-700">
+                            <ErrorMessage name="houseAddress" />
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+
+                    {/* GPS Address */}
+                    <div className="w-full mt-4">
+                      <label
+                        htmlFor="gpsAddress"
+                        className="block mb-2 text-sm font-normal text-gray-900"
+                      >
+                        GPS Address
+                      </label>
+                      <Field
+                        type="text"
+                        id="gpsAddress"
+                        className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 w-full text-sm rounded block p-2"
+                        placeholder="GT-123-456"
+                        value={values.gpsAddress}
+                        onChange={handleChange}
+                      />
+                      <p className="font-medium text-xs text-red-700">
+                        <ErrorMessage name="gpsAddress" />
+                      </p>
+                    </div>
+
+                    {/* Relative dropzone */}
+                    <section className="mt-5">
+                      <p className="text-[#262626] pb-5 font-medium text-base leading-[30px] ">
+                        Upload Image of Relative
+                      </p>
+
+                      <div className="ml-2">
                         <StyledDropzone />
-                        <div className="flex items-center">
-                          <Image
-                            src={info}
-                            alt="info icon"
-                            className="w-4 h-4"
-                          />
-                          <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
-                            Ensure that images uploaded are clear and details
-                            are clearly captured.
-                          </p>
-                        </div>
-                      </section>
-
-                      {/* Ghana Card dropzone */}
-                      <section>
-                        <h3 className="text-[#262626] font-medium text-base leading-[30px] ">
-                          Upload Ghana Card
-                        </h3>
-
-                        <div className="flex mt-4 space-x-7">
-                          <div>
-                            <StyledDropzone />
-                            <p className="text-[#262626] font-medium text-base leading-[30px] ml-[38%] pt-2 ">
-                              Front
-                            </p>
-                          </div>
-                          <div>
-                            <StyledDropzone />
-                            <p className="text-[#262626] font-medium text-base leading-[30px] ml-[40%] pt-2 ">
-                              Back
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-center">
-                          <Image
-                            src={info}
-                            alt="info icon"
-                            className="w-4 h-4"
-                          />
-                          <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
-                            Ensure that images uploaded are clear and details
-                            are clearly captured.
-                          </p>
-                        </div>
-                      </section>
-
-                      <div className="flex justify-between">
-                        <Link
-                          href={"/views/Drivers/AddNewDriver/GuarantorDetails"}
-                        >
-                          <button
-                            type="button"
-                            className="text-[#FFFFFF] border mt-[57px] bg-[#007AF5] ml-auto rounded-[4px] w-[85px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
-                          >
-                            Previous
-                          </button>
-                        </Link>
-
-                        <Link
-                          href={""}
-                        >
-                          <button
-                            type="button"
-                            className="text-[#FFFFFF] border mt-[57px] bg-[#007AF5] ml-auto rounded-[4px] w-[63px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
-                          >
-                            Submit
-                          </button>
-                        </Link>
                       </div>
-                    </Form>
-                  )}
-                </Formik>
-              </div>
+
+                      <div className="flex mt-4 items-center">
+                        <Image src={info} alt="info icon" className="w-4 h-4" />
+                        <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
+                          Ensure that images uploaded are clear and details are
+                          clearly captured.
+                        </p>
+                      </div>
+                    </section>
+
+                    {/* Ghana Card dropzone */}
+                    <section className="mt-5">
+                      <h3 className="text-[#262626] font-medium text-base leading-[30px] ">
+                        Upload Ghana Card
+                      </h3>
+
+                      <div className="flex mt-4 space-x-5">
+                        <div className="ml-2">
+                          <StyledDropzone />
+                          <p className="text-[#262626] font-medium text-base leading-[30px] ml-[38%] pt-2 ">
+                            Front
+                          </p>
+                        </div>
+                        <div className="ml-2">
+                          <StyledDropzone />
+                          <p className="text-[#262626] font-medium text-base leading-[30px] ml-[40%] pt-2 ">
+                            Back
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex mt-3 items-center">
+                        <Image src={info} alt="info icon" className="w-4 h-4" />
+                        <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
+                          Ensure that images uploaded are clear and details are
+                          clearly captured.
+                        </p>
+                      </div>
+                    </section>
+
+                    <div className="flex mt-5 justify-between">
+                      <Link
+                        href={"/views/Drivers/AddNewDriver/GuarantorDetails"}
+                      >
+                        <button
+                          type="button"
+                          className="text-[#FFFFFF] border mt-[57px] bg-[#007AF5] ml-auto rounded-[4px] w-[85px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
+                        >
+                          Previous
+                        </button>
+                      </Link>
+
+                      <Link href={""}>
+                        <button
+                          type="button"
+                          className="text-[#FFFFFF] border mt-[57px] bg-[#007AF5] ml-auto rounded-[4px] w-[63px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mb-2"
+                        >
+                          Submit
+                        </button>
+                      </Link>
+                    </div>
+                  </Form>
+                )}
+              </Formik>
             </div>
           </section>
         </main>

@@ -1,27 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable require-jsdoc */
 import React from "react";
-import "flowbite";
-import { useEffect, useState } from "react";
 import KYC from "@/components/driverKYC";
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
 import Link from "next/link";
 import Image from "next/image";
-import { DashChart } from "../components/dashboard/dashboardColumnChart";
-import driver from "../assets/driver_icon.png";
-import vehicle from "../assets/vehicle_icon.png";
-import payment from "../assets/payments.png";
+import { DashChart } from "../../components/dashboard/dashboardColumnChart";
+import driver from "../../assets/driver_icon.png";
+import vehicle from "../../assets/vehicle_icon.png";
+import payment from "../../assets/payments.png";
 import { DashboardTiles1 } from "@/components/tiles";
 import DashboardStack from "@/components/stackedChart";
 import DashboardTiles from "@/components/tiles";
 import MouseOverPopover from "@/components/popover";
-import revenue from "../assets/revenue_icon.png";
-import AccountMenu from "@/components/headerDropdown";
-import { Grid } from "@mui/material";
-// import Chart1 from "../components/dashboard/dashboardColumnChart";
-// import { gridSpacing } from "../components/revenueChart/constant";
-import BasicStacking from "@/components/stackedChart";
+import revenue from "../../assets/revenue_icon.png";
 import Header from "@/components/header";
 
 export default function Dashboard() {
@@ -152,7 +145,7 @@ export default function Dashboard() {
                     Contracts
                   </h4>
                 </div>
-                <div className="h-[]">
+                <div className="pl-5">
                   <DashChart />
                 </div>
               </div>

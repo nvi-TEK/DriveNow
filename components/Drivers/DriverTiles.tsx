@@ -24,7 +24,7 @@ export default function AllDriverTiles(props: driverTileProp1) {
       <div>
         <Image src={props.icon} width={30} height={10} alt="" />
 
-        <p className="font-normal mt-4 text-sm leading-5 text-[#8C8C8C] ">
+        <p className="font-normal mt-5 text-sm leading-5 text-[#8C8C8C] ">
           {props.entity1}
         </p>
         <div className="flex items-center pt-2">
@@ -42,7 +42,7 @@ export default function AllDriverTiles(props: driverTileProp1) {
           {props.entity2}
         </p>
         <div className="flex items-center pt-2">
-          <p className="text-[#262626]   leading-7 font-medium text-xl">
+          <p className="text-[#262626] leading-7 font-medium text-xl">
             {props.entity2value}
           </p>
           <p className="text-xs font-normal pl-2 text-[#0EA371] ">
@@ -51,7 +51,7 @@ export default function AllDriverTiles(props: driverTileProp1) {
         </div>
       </div>
 
-      <div className="ml-[5%]">
+      <div className="ml-[12%]">
         <p className="font-normal pt-12 text-sm leading-5 text-[#8C8C8C]">
           {props.entity3}
         </p>

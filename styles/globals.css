@@ -56,5 +56,11 @@ a {
 }
 
 .sidecolor {
-  background: #FFFFFF;
+  background: #ffffff;
+}
+
+#signin{
+  background: url('../assets/signin.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

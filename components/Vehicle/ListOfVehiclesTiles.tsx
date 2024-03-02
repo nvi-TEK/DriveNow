@@ -15,6 +15,7 @@ type ListOfVehiclesProp1 = {
   entity3value?: number;
   entity1differential?: string;
   entity2differential?: string;
+  entity3differential?: string;
 };
 
 export default function ListOfVehiclesTiles(props: ListOfVehiclesProp1) {
@@ -54,9 +55,12 @@ export default function ListOfVehiclesTiles(props: ListOfVehiclesProp1) {
         <p className="font-normal pt-[45px] text-sm leading-5 text-[#8C8C8C]">
           {props.entity3}
         </p>
-        <div className="items-center pt-2">
-          <p className="text-[#262626]   leading-7 font-medium text-xl">
+        <div className="items-center flex pt-2">
+          <p className="text-[#262626]  leading-7 font-medium text-xl">
             {props.entity3value}
+          </p>
+          <p className="text-xs font-normal pl-2 text-[#DC4A41] ">
+            {props.entity3differential}
           </p>
         </div>
       </div>

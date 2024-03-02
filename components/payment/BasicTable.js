@@ -72,10 +72,10 @@ export const BasicTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border rounded px-1 py-1 "
+      className="border text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
-      abc
+      
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
           {pageSize}

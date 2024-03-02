@@ -8,7 +8,7 @@ export const DriverKycFilter = ({ filter, setFilter }) => {
       <input
         value={filter || ''}
         onChange={(e) => setFilter(e.target.value)} 
-        className='border w-[353px] pl-3 py-1 text-sm border-[#D9D9D9] rounded text-black'
+        className='border placeholder-[#BFBFBF] w-[353px] pl-3 py-1 text-sm border-[#D9D9D9] rounded text-black'
         placeholder='Search by Name, Email or Phone Number'
       />
     </span>
