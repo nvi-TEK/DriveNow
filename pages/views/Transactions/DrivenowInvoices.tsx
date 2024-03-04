@@ -6,8 +6,6 @@ import { useEffect, useState } from "react";
 import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import WrappedSingleInputDateRangePicker from "../../../components/datePickerRange";
 import DrivenowInvoicesTiles from "../../../components/DriveNowInvoices/DrivenowTiles";
 import { DrivenowInvoicesTable } from "../../../components/DriveNowInvoices/DrivenowInvoices";
 import Link from "next/link";
@@ -16,10 +14,6 @@ import driver from "../../../assets/driver_icon.png";
 import revenue from "../../../assets/revenue_icon.png";
 import vehicle from "../../../assets/vehicle_icon.png";
 import payment from "../../../assets/payments.png";
-import bell from "../../../assets/bell_icon.png";
-
-// import { gridSpacing } from "../components/revenueChart/constant";
-import BasicStacking from "@/components/stackedChart";
 import Header from "@/components/header";
 
 export default function DriveNowInvoices() {
@@ -77,7 +71,7 @@ export default function DriveNowInvoices() {
                   Invoice Generated History
                 </h4>
                 <div className="mr-5 h-[10px]">
-                  {/* <WrappedSingleInputDateRangePicker /> */}
+
                 </div>
               </div>
               <DrivenowInvoicesTable />

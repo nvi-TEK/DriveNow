@@ -8,11 +8,9 @@ import Layout from "../../../components/layout";
 import Link from "next/link";
 import info from "../../../assets/info_icon.png";
 import yellowinfo from "../../../assets/yellowinfo.png";
-
 import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import BasicDatePicker from "../../../components/datepicker";
 import StyledDropzone from "@/components/dropzone";
 import Header from "@/components/header";
 
@@ -162,7 +160,7 @@ export default function AddVehicleIssue() {
                         </p>
                       </div>
                       <div className="w-[50%]">
-                        {/* <BasicDatePicker /> */}
+                  
                       </div>
                     </section>
 

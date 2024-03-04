@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable require-jsdoc */
-
 import React from "react";
 import Head from "next/head";
 import Layout from "../../components/layout";
@@ -10,7 +9,6 @@ import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { CustomPushTable } from "../../components/customPush/CustomPushTable";
-import SingleInputDateRangePickerWithAdornment from "../../components/datePickerRange";
 import Header from "@/components/header";
 
 type PushProp = {
@@ -166,7 +164,7 @@ export default function customPush() {
                         >
                           Select Date Range
                         </label>
-                        {/* <SingleInputDateRangePickerWithAdornment /> */}
+                        
                       </div>
 
                       <div className="w-[50%]">

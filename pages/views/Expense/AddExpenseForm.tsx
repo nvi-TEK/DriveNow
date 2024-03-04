@@ -7,14 +7,12 @@ import Head from "next/head";
 import Layout from "../../../components/layout";
 import info from "../../../assets/info_icon.png";
 import yellowinfo from "../../../assets/yellowinfo.png";
-import DatePicker from "../../../components/datepicker1";
 import Image from "next/image";
 import Link from "next/link";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Modal from "react-modal";
 import closebutton from "../../../assets/darkclose.png";
-import BasicDatePicker from "../../../components/datepicker";
 import StyledDropzone from "@/components/dropzones/AddExpenseDropzone";
 import attach from "../../../assets/attachment_icon.png";
 import Header from "@/components/header";
@@ -130,7 +128,7 @@ export default function AddExpense() {
                         />
                       </div>
                       <div className="w-[50%]">
-                        {/* <DatePicker /> */}
+                        
                       </div>
                     </div>
 

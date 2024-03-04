@@ -2,24 +2,14 @@
 
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import { useEffect, useState } from "react";
-import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { AllDriversTable } from "../../../components/Drivers/AllDriversTable";
 import AllDriverTiles from "@/components/Drivers/DriverTiles";
-import Link from "next/link";
-import Image from "next/image";
 import driver from "../../../assets/driver_icon.png";
 import vehicle from "../../../assets/vehicle_icon.png";
 import payment from "../../../assets/payments.png";
-import { DashboardTiles1 } from "@/components/tiles";
-import DashboardTiles from "@/components/tiles";
-import AccountMenu from "@/components/headerDropdown";
-import { Grid } from "@mui/material";
-// import { gridSpacing } from "../components/revenueChart/constant";
-import BasicStacking from "@/components/stackedChart";
+
 import Header from "@/components/header";
 
 export default function AllDrivers() {

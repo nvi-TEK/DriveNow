@@ -3,26 +3,19 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
-import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import TableData from "../../../components/Drivers/AllDriversTable";
 import ListOfVehiclesTiles from "../../../components/Vehicle/ListOfVehiclesTiles";
 import { VehicleTrackerTable } from "../../../components/Vehicle/VehicleTracker/VehicleTrackerTable";
 import Link from "next/link";
 import Image from "next/image";
-import driver from "../../../assets/driver_icon.png";
-import revenue from "../../../assets/revenue_icon.png";
+
 import vehicle from "../../../assets/vehicle_icon.png";
 import repair from "../../../assets/repair.png";
 import payment from "../../../assets/payments.png";
 import bell from "../../../assets/bell_icon.png";
 import plus from "../../../assets/plus.png";
 
-import BasicStacking from "@/components/stackedChart";
 import Header from "@/components/header";
 
 export default function VehicleTracker() {

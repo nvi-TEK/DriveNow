@@ -1,9 +1,6 @@
 /* eslint-disable require-jsdoc */
-
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import { useEffect, useState } from "react";
-import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
@@ -15,12 +12,9 @@ import driver from "../../../assets/driver_icon.png";
 import vehicle from "../../../assets/vehicle_icon.png";
 import payment from "../../../assets/payments.png";
 import bell from "../../../assets/bell_icon.png";
-
-// import { gridSpacing } from "../components/revenueChart/constant";
-import BasicStacking from "@/components/stackedChart";
 import Header from "@/components/header";
 
-export default function AllDrivers() {
+export default function Payments() {
   return (
     <>
       <Header name="Payments" />
