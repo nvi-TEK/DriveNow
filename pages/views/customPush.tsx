@@ -91,7 +91,7 @@ export default function customPush() {
                         <Field
                           id="group"
                           as="select"
-                          className="bg-[#FFFFFF] border grow border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
+                          className="bg-[#FFFFFF] border grow border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
                           value={values.group}
                           onChange={handleChange}
                         >
@@ -117,7 +117,7 @@ export default function customPush() {
                         <Field
                           id="notification"
                           as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
+                          className="bg-[#FFFFFF] border border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.notification}
                           onChange={handleChange}
                         >
@@ -142,7 +142,7 @@ export default function customPush() {
                         <Field
                           id="device"
                           as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
+                          className="bg-[#FFFFFF] border border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.device}
                           onChange={handleChange}
                         >
@@ -158,29 +158,28 @@ export default function customPush() {
                         </p>
                       </section>
                     </div>
-                    <div className="flex gap-x-4">
-                      <div className="">
+                    <div className="flex mt-4 gap-x-4">
+                      <div className="w-[50%]">
                         <label
                           htmlFor="title"
-                          className="block mb-2 text-sm font-normal  text-[#000000]"
+                          className="block mb-2 text-sm font-medium text-[#000000]"
                         >
                           Select Date Range
                         </label>
-                        <SingleInputDateRangePickerWithAdornment />
-
+                        {/* <SingleInputDateRangePickerWithAdornment /> */}
                       </div>
 
                       <div className="w-[50%]">
                         <label
                           htmlFor="title"
-                          className="block mb-2 text-sm font-normal  text-[#000000]"
+                          className="block mb-2 text-sm font-medium text-[#000000]"
                         >
                           Message Title
                         </label>
                         <Field
                           type="text"
                           id="title"
-                          className="border border-gray-300 text-gray-900 text-sm rounded block w-full p-1.5"
+                          className="border border-gray-300 placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
                           placeholder="Title"
                           value={values.title}
                           onChange={handleChange}

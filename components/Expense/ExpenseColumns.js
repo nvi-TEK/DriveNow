@@ -7,6 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import tableaction from "../../assets/tableaction.png";
 import approve from "../../assets/approvecheck.png";
+import details from "../../assets/viewdetails.png";
 import decline from "../../assets/x.png";
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
@@ -43,20 +44,26 @@ export default function LongMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        disableScrollLock={true}
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
-            width: "20ch",
-            position: "absolute",
+            width: "25ch",
+            position: "sticky",
+            marginRight: "60px"
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="flex">
+      <MenuItem onClick={handleClose} className="py-2 flex">
+          <Image src={details} className="mr-2" alt="checkmark" />
+          View Details
+        </MenuItem>
+        <MenuItem onClick={handleClose} className="flex py-2">
           <Image src={approve} className="mr-2" alt="checkmark" />
           Approve
         </MenuItem>
         <MenuItem
-          className="text-[#DC4A41] text-sm font-normal leading-[18px]"
+          className="text-[#DC4A41] text-sm font-normal py-2 leading-[18px]"
           onClick={handleClose}
         >
           <Image src={decline} className="mr-2" alt="x" />

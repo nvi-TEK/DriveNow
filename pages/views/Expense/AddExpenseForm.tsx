@@ -84,16 +84,16 @@ export default function AddExpense() {
                   accountNumber: "",
                 }}
                 validationSchema={Yup.object({
-                  vehicleRegistration: Yup.string().required(
-                    "Vehicle Registration required"
+                  expenseLine: Yup.string().required("Expense Line required"),
+                  expenseCategory: Yup.string().required(
+                    "Expense Category required"
                   ),
-
-                  issueCategory: Yup.string().required(
-                    "Issue Category required"
-                  ),
+                  bank: Yup.string().required("Bank Name required"),
                   amount: Yup.number().required("Amount rquired"),
-                  payTo: Yup.string().required("Required field"),
-                  accountNumber: Yup.number().required("Amount rquired"),
+                  payTo: Yup.string().required("Required"),
+                  accountNumber: Yup.number().required(
+                    "Account Number rquired"
+                  ),
                 })}
                 onSubmit={async (values) => {
                   alert(JSON.stringify(values, null, 2));
@@ -130,7 +130,7 @@ export default function AddExpense() {
                         />
                       </div>
                       <div className="w-[50%]">
-                        <DatePicker />
+                        {/* <DatePicker /> */}
                       </div>
                     </div>
 
@@ -221,11 +221,17 @@ export default function AddExpense() {
                           </p>
                         </div>
 
-                        <div className="w-[50%]">
+                        <div className="w-[50%] mt-5">
+                          <label
+                            htmlFor="attachment"
+                            className="block mb-2 text-sm font-medium text-[#404040]"
+                          >
+                            Upload Invoice (.png, .jpeg, .pdf)
+                          </label>
                           <Link href={""}>
                             <div
                               onClick={openModal}
-                              className="flex items-center cursor-pointer pl-2 border w-full border-dashed h-[34px] rounded-lg mt-12 border-[#BFBFBF]"
+                              className="flex items-center cursor-pointer pl-2 border w-full border-dashed h-[34px] rounded-lg   border-[#BFBFBF]"
                             >
                               <Image src={attach} alt="attachment icon" />
                               <p className="text-[#BFBFBF] font-medium text-sm pl-1 leading-[18px]">
@@ -309,7 +315,7 @@ export default function AddExpense() {
                             value={values.amount}
                             onChange={handleChange}
                           />
-                          <p className="font-medium text-red-700">
+                          <p className="font-medium text-xs text-red-700">
                             <ErrorMessage name="amount" />
                           </p>
                         </div>
@@ -411,7 +417,7 @@ export default function AddExpense() {
                               Money
                             </p>
                           </div>
-                          <p className="font-medium text-red-700">
+                          <p className="font-medium text-xs text-red-700">
                             <ErrorMessage name="accountNumber" />
                           </p>
                         </div>

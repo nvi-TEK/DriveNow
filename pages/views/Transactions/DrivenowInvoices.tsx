@@ -7,7 +7,7 @@ import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import WrappedSingleInputDateRangePicker from "../../../components/datePickerRange"
+import WrappedSingleInputDateRangePicker from "../../../components/datePickerRange";
 import DrivenowInvoicesTiles from "../../../components/DriveNowInvoices/DrivenowTiles";
 import { DrivenowInvoicesTable } from "../../../components/DriveNowInvoices/DrivenowInvoices";
 import Link from "next/link";
@@ -76,8 +76,9 @@ export default function DriveNowInvoices() {
                 <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pl-[10px] pt-4 ">
                   Invoice Generated History
                 </h4>
-                <div className="mr-5 h-[10px]">                <WrappedSingleInputDateRangePicker />
-</div>
+                <div className="mr-5 h-[10px]">
+                  {/* <WrappedSingleInputDateRangePicker /> */}
+                </div>
               </div>
               <DrivenowInvoicesTable />
             </div>

@@ -68,7 +68,7 @@ export default function AddVehicleIssue() {
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
                   <Form
                     onSubmit={handleSubmit}
-                    className="bg-white shadow-lg rounded-lg px-[1rem] pb-4"
+                    className="bg-white shadow-lg rounded-lg px-4 pb-4"
                   >
                     <h3 className="font-medium pt-4 text-[22px] leading-[30px] text-[#262626]">
                       Add Vehicle Issues
@@ -78,8 +78,8 @@ export default function AddVehicleIssue() {
                       vehicle issue logs are recorded effectively.
                     </p>
 
-                    <section className="border-t pt-4 mt-4 flex">
-                      <div className=" grow">
+                    <section className="border-t gap-x-4 pt-4 mt-4 flex">
+                      <div className="w-[50%]">
                         <label
                           htmlFor="vehicleRegistration"
                           className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
@@ -89,7 +89,7 @@ export default function AddVehicleIssue() {
                         <Field
                           id="vehicleRegistration"
                           as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-[510px] p-1.5 "
+                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.vehicleRegistration}
                           onChange={handleChange}
                         >
@@ -107,7 +107,7 @@ export default function AddVehicleIssue() {
                         </p>
                       </div>
 
-                      <div className=" grow">
+                      <div className="w-[50%]">
                         <label
                           htmlFor="issueCategory"
                           className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
@@ -117,7 +117,7 @@ export default function AddVehicleIssue() {
                         <Field
                           id="issueCategory"
                           as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm ml-4 rounded-[4px] block w-[510px] p-1.5 "
+                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.issueCategory}
                           onChange={handleChange}
                         >
@@ -141,8 +141,8 @@ export default function AddVehicleIssue() {
                       </div>
                     </section>
 
-                    <section className="flex border-b pb-4 mt-[24px] justify-between">
-                      <div className="">
+                    <section className="flex border-b pb-4 mt-[24px] gap-x-4">
+                      <div className="w-[50%]">
                         <label
                           htmlFor="amount"
                           className="block mb-2 text-sm font-normal  text-[#000000]"
@@ -152,7 +152,7 @@ export default function AddVehicleIssue() {
                         <Field
                           type="text"
                           id="amount"
-                          className="border border-gray-300 text-gray-900 text-sm rounded block w-[420px] p-1.5"
+                          className="border border-gray-300 text-gray-900 text-sm rounded block w-full p-1.5"
                           placeholder="Amount"
                           value={values.amount}
                           onChange={handleChange}
@@ -161,8 +161,8 @@ export default function AddVehicleIssue() {
                           <ErrorMessage name="amount" />
                         </p>
                       </div>
-                      <div>
-                        <BasicDatePicker />
+                      <div className="w-[50%]">
+                        {/* <BasicDatePicker /> */}
                       </div>
                     </section>
 

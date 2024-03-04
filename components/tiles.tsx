@@ -3,6 +3,7 @@
 
 import React from "react";
 import Image from "next/image";
+import driver from "../assets/driver_icon.png"
 import Link from "next/link";
 
 type tileProp1 = {
@@ -65,8 +66,11 @@ function DashboardTiles1(props: tileProp2) {
   return (
     <div className="border h-[8rem] p-4 pt-3 rounded-lg w-[20.85rem] bg-white flex grow rounded-t-lg border-[#E9ECEF]">
       <div>
+        <div className="">
         <Image src={props.icon} width={30} height={10} alt="" />
+   
 
+        </div>
         <p className="font-normal pt-4 text-sm leading-5 text-[#8C8C8C] ">
           {props.entity1}
         </p>

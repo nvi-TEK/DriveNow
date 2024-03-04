@@ -50,7 +50,11 @@ function SideBar() {
         <aside className="sidecolor py-4 overflow-x-visible overflow-y-scroll h-[960px] rounded-r-lg scroll-smooth no-scrollbar">
           <ul className="space-y-2 text-white">
             <Link href={"/views/dashboard"} as="">
-              <List icon={dashboard} name={"Dashboard"} url="/views/dashboard" />
+              <List
+                icon={dashboard}
+                name={"Dashboard"}
+                url="/views/dashboard"
+              />
             </Link>
 
             <Link href={"/views/heatmap"} as="">

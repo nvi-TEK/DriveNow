@@ -8,7 +8,6 @@ import question from "../assets/forgotpassword.png";
 import Image from "next/image";
 import logo from "../assets/signinlogo.png";
 import Link from "next/link";
-// import signin from "../assets/signin.jpg";
 
 type SignInProp = {
   email?: string;
@@ -52,8 +51,12 @@ export default function SignIn() {
                 checked: [],
               }}
               validationSchema={Yup.object({
-                email: Yup.string().email("Oops! That email address doesn't seem right. Please double-check and try again.").required("Required"),
-                password: Yup.string().required("Required"),
+                email: Yup.string()
+                  .email(
+                    "Oops! That email address doesn't seem right. Please double-check and try again."
+                  )
+                  .required("Required"),
+                password: Yup.string().required(" Password Required"),
               })}
               onSubmit={(values) => {
                 alert(JSON.stringify(values));
@@ -74,7 +77,6 @@ export default function SignIn() {
                         placeholder="Mail"
                         value={values.email}
                         onChange={handleChange}
-                      
                       />
                       <p className="font-medium text-xs text-[#DC4A41]">
                         <ErrorMessage name="email" />

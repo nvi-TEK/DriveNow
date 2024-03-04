@@ -37,7 +37,7 @@ export default function AllDriverTiles(props: driverTileProp1) {
         </div>
       </div>
 
-      <div className="ml-[5%]">
+      <div className="ml-[6%]">
         <p className="font-normal pt-12 text-sm leading-5 text-[#8C8C8C]">
           {props.entity2}
         </p>
@@ -51,7 +51,7 @@ export default function AllDriverTiles(props: driverTileProp1) {
         </div>
       </div>
 
-      <div className="ml-[12%]">
+      <div className="ml-[6%]">
         <p className="font-normal pt-12 text-sm leading-5 text-[#8C8C8C]">
           {props.entity3}
         </p>

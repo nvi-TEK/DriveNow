@@ -75,11 +75,13 @@ export default function LongMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        disableScrollLock= {true}
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
-            width: "20ch",
-            position: "absolute",
+            width: "25ch",
+            position: "sticky",
+            marginRight: "100px"
           },
         }}
       >

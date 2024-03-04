@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import { Avatar, Box, ButtonBase } from "@mui/material";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-
 import LongMenu from "./headerDropdown";
 import NotificationsNoneSharpIcon from "@mui/icons-material/NotificationsNoneSharp";
 import KeyboardArrowDownSharpIcon from "@mui/icons-material/KeyboardArrowDownSharp";
@@ -20,7 +19,7 @@ type pageProp = {
 function Header(prop: pageProp) {
   return (
     <>
-      <header className="flex w-full h-[4rem] shadow-lg items-center border-b border-[#E6E6E6] pr-4 bg-Grey/50">
+      <header className="flex w-full h-[4rem] items-center border-b border-[#E6E6E6] pr-4 bg-Grey/50">
         <Link href={"/views/dashboard"}>
           <Image
             src={logo}

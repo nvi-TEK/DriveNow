@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import pencil from "../assets/pencil.png";
@@ -35,6 +36,7 @@ export default function LongMenu() {
         <KeyboardArrowDownIcon />
       </IconButton>
       <Menu
+      className="rounded-lg mr-2 mt-9"
         id="long-menu"
         MenuListProps={{
           "aria-labelledby": "long-button",
@@ -42,16 +44,17 @@ export default function LongMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        disableScrollLock={true}
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "25ch",
-            position: "absolute",
+            position: "sticky",
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="flex ">
-          <Image src={pencil} className="mr-2" alt="checkmark" />
+        <MenuItem onClick={handleClose} className="flex">
+          <Image src={pencil} className="mr-2" alt="pencil" />
           User Profile
         </MenuItem>
         <MenuItem className="flex" onClick={handleClose}>
@@ -72,7 +75,12 @@ export default function LongMenu() {
           Help Documentation
         </MenuItem>
 
-        <MenuItem className="flex" onClick={handleClose}>
+        <MenuItem
+          className="flex"
+          component={Link}
+          href="/"
+          onClick={handleClose}
+        >
           <p className="text-[#DC4A41]">Log Out</p>
         </MenuItem>
       </Menu>

@@ -71,14 +71,14 @@ export const CustomPushTable = () => {
     }
   );
 
-  const { pageIndex, pageSize } = state;
+  const { pageSize } = state;
 
   const dropdown = [
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
       className="border text-[#BFBFBF] rounded px-1 py-1 "
-      place
+      placeholder=""
     >
       abc
       {[5, 10, 15, 20].map((pageSize) => (

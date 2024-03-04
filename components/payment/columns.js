@@ -43,11 +43,13 @@ export default function LongMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        disableScrollLock= {true}
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
-            width: "20ch",
-            position: "absolute",
+            width: "26ch",
+            position: "sticky",
+            marginRight: "55px"
           },
         }}
       >
@@ -56,39 +58,39 @@ export default function LongMenu() {
           Driver Profile
         </MenuItem>
         <MenuItem
-          className="flex"
+          className="flex py-2"
           onClick={handleClose}
         >
           <Image src={reassign} className="mr-2 w-5 " alt="x" />
           Re-assign Vehicle
         </MenuItem>
         <MenuItem
-          className="flex"
+          className="flex py-2"
           onClick={handleClose}
         >
           <Image src={invoice} className="mr-2 w-5 " alt="x" />
           Invoice History
         </MenuItem>
         <MenuItem
-          className="flex"
+          className="flex py-2"
           onClick={handleClose}
         >
           <Image src={off} className="mr-2 w-5 " alt="off icon" />
           Turn Off Engine Control
         </MenuItem>
         <MenuItem
-          className="flex"
+          className="flex py-2"
           onClick={handleClose}
         >
-          <Image src={restore} className="mr-2 w-10 " alt="x" />
+          <Image src={restore} className="mr-2 w-5 " alt="x" />
           Restore Engine Control
         </MenuItem>
         <MenuItem
-          className="text-[#DC4A41] flex text-sm font-normal leading-[18px]"
+          className="text-[#DC4A41] flex py-2 text-sm font-normal leading-[18px]"
           onClick={handleClose}
         >
           <Image src={block} className="mr-2 w-5 " alt="x" />
-          <p className="text-[#DC4A41] font-normal">Block Vehicle</p>
+          <p className="text-[#DC4A41] text-base font-normal">Block Vehicle</p>
         </MenuItem>
       </Menu>
     </>
