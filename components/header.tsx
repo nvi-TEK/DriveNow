@@ -1,7 +1,6 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Image from "next/image";
-import { Formik, Form, Field, ErrorMessage } from "formik";
 import LongMenu from "./headerDropdown";
 import logo from "../assets/DriveNow.svg";
 import bell from "../assets/bell.svg";
@@ -9,7 +8,7 @@ import avatar from "../assets/Avatar.svg";
 import Link from "next/link";
 
 type pageProp = {
-  name?: string;
+  name: string;
   secondName?: string;
 };
 
@@ -25,12 +24,21 @@ function Header(prop: pageProp) {
               className=" ml-[62.5px] h-[18px]"
             />
           </Link>
-          <p className="ml-[6%] mr-auto text-[#595959] font-normal">
-            Dashboard /{" "}
-            <span className="text-[#262626] text-sm leading-[18px] font-normal">
-              {prop.name}
+          <div className="flex mr-auto ml-[6%]">
+            <p className="text-[#595959] text-sm leading-[18px] font-normal">
+              Dashboard 
+            </p>
+
+            <span
+              style={{ color: prop.secondName ? "#595959" : "#262626" }}
+              className="text-sm leading-[18px] font-normal"
+            >
+             <span className="text-[#D9D9D9]">/</span> {prop.name}  
             </span>
-          </p>
+            <span className="text-[#262626] text-sm leading-[18px] font-normal">
+              / {prop.secondName}
+            </span>
+          </div>
 
           <div className="flex w-[550px] justify-end items-center">
             {/* Search bar */}
@@ -84,7 +92,6 @@ function Header(prop: pageProp) {
           </div>
         </div>
       </div>
-      
     </>
   );
 }

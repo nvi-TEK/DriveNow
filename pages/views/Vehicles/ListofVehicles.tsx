@@ -58,7 +58,7 @@ export default function ListOfVehicles() {
     <>
       <div className="flex w-full">
         <div className="w-full z-10">
-          <Header />
+          <Header name="Vehicles"/>
         </div>
       </div>
       <Layout>

@@ -52,7 +52,7 @@ export default function VehicleTracker() {
     <>
 <div className="flex w-full">
         <div className="w-full z-10">
-          <Header />
+          <Header name="Vehicles Tracker" />
         </div>
       </div>
       <Layout>

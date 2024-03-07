@@ -28,7 +28,7 @@ export default function DriverKyc() {
     <>
 <div className="flex w-full">
         <div className="w-full z-10">
-          <Header />
+          <Header name="Drivers" />
         </div>
       </div>
       <Layout>

@@ -19,7 +19,7 @@ export default function Payments() {
     <>
 <div className="flex w-full">
         <div className="w-full z-10">
-          <Header />
+          <Header name="Payments" />
         </div>
       </div>
       <Layout>

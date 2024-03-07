@@ -21,7 +21,7 @@ export default function DriveNowInvoices() {
     <>
 <div className="flex w-full">
         <div className="w-full z-10">
-          <Header />
+          <Header name="Drivenow Invoices"/>
         </div>
       </div>
       <Layout>

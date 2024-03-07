@@ -1,8 +1,8 @@
 /* eslint-disable require-jsdoc */
-
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Head from "next/head";
+import Header from "../../../components/header";
 import Layout from "../../../components/layout";
 import { AllDriversTable } from "../../../components/Drivers/AllDriversTable";
 import AllDriverTiles from "@/components/Drivers/DriverTiles";
@@ -10,16 +10,14 @@ import driver from "../../../assets/driver_icon.png";
 import vehicle from "../../../assets/vehicle_icon.png";
 import payment from "../../../assets/payments.png";
 
-import Header from "@/components/header";
-
 export default function AllDrivers() {
   return (
     <>
-<div className="flex w-full">
+      <div className="flex w-full">
         <div className="w-full z-10">
-          <Header />
+          <Header name="Drivers" />
         </div>
-      </div>      
+      </div>
       <Layout>
         <Head>
           <title>All Drivers</title>

@@ -50,7 +50,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
     <>
       <div className="flex w-full">
         <div className="w-full z-10">
-          <Header />
+        <Header name="All Drivers" secondName="Drivers KYC" />
         </div>
       </div>
       <Layout>

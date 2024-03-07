@@ -61,7 +61,7 @@ export default function AddExpense() {
     <>
       <div className="flex w-full">
         <div className="w-full z-10">
-          <Header />
+          <Header name="Add Expense" />
         </div>
       </div>
       <Layout>

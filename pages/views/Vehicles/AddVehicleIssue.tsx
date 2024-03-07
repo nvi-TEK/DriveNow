@@ -28,7 +28,7 @@ export default function AddVehicleIssue() {
     <>
 <div className="flex w-full">
         <div className="w-full z-10">
-          <Header />
+          <Header name="Vehicle Issue log"/>
         </div>
       </div>
       <Layout>

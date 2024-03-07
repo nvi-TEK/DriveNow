@@ -26,7 +26,7 @@ export default function customPush() {
     <>
       <div className="flex w-full">
         <div className="w-full z-10">
-          <Header />
+          <Header name="Custom Push/SMS"/>
         </div>
       </div>{" "}
       <Layout>

@@ -14,7 +14,7 @@ export default function Heatmap() {
     <>
       <div className="flex w-full">
         <div className="w-full z-10">
-          <Header />
+          <Header name="Heatmap" />
         </div>
       </div>
       <Layout>
