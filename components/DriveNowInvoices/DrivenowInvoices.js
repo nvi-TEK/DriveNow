@@ -21,6 +21,7 @@ import ArrowBackIosOutlinedIcon from "@mui/icons-material/ArrowBackIosOutlined";
 import { DriveNowInvoicesFilter } from "../DriveNowInvoices/DrivenowInvoicesFilter";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import { Checkbox } from "../../components/Checkbox";
+import { TableRange } from "../dateRange";
 
 export const DrivenowInvoicesTable = () => {
   const columns = useMemo(() => DRIVENOWINVOICESCOLUMNS, []);
@@ -77,7 +78,7 @@ export const DrivenowInvoicesTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border text-[#BFBFBF] rounded px-1 py-1 "
+      className="border h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
       abc
@@ -93,13 +94,13 @@ export const DrivenowInvoicesTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border text-[#BFBFBF] rounded px-1 py-1 "
+      className="border h-[30px] text-center border-[#D9D9D9] text-xs rounded px-1 py-1 "
       aria-placeholder=""
     >
       abc
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
-          {pageSize}
+        {pageSize} Items/Page
         </option>
       ))}
     </select>,
@@ -109,6 +110,14 @@ export const DrivenowInvoicesTable = () => {
 
   return (
     <>
+      <div className="flex items-center justify-between ">
+        <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pl-[10px] pt-4 ">
+          Invoice Generated History
+        </h4>
+        <div className="mr-5 h-[10px]">
+          <TableRange />
+        </div>
+      </div>
       {/* number of entries dropdown and Search bar */}
       <div className="flex items-center mt-6 justify-end mr-5">
         <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
@@ -129,7 +138,7 @@ export const DrivenowInvoicesTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-sm font-normal leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  className="text-left text-xs font-normal leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -158,30 +167,18 @@ export const DrivenowInvoicesTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className=" text-[#595959] pl-2 text-sm font-normal leading-[18px] border-y h-[48px] "
+                        className=" text-[#595959] pl-2 text-xs font-normal leading-[18px] border-y h-[48px] "
                       >
                         {cell.render("Cell")}
                       </td>
                     </>
                   );
                 })}
-                {/* <td>abc</td> */}
               </tr>
             );
           })}
         </tbody>
       </table>
-      {/* <pre>
-        <code>
-          {JSON.stringify(
-            {
-              selectedFlatRows: selectedFlatRows.map((row) => row.original),
-            },
-            null,
-            2
-          )}
-        </code>
-      </pre> */}
 
       <div className="flex mt-5 justify-end pr-5 gap-x-2">
         <button

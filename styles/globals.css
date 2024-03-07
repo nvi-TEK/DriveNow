@@ -51,13 +51,11 @@ a {
   text-decoration: none;
 }
 
-.gradient {
+/* .gradient {
   background: linear-gradient(308.18deg, #fdbc87 6.12%, #d0650d 93.32%);
-}
+} */
 
-.sidecolor {
-  background: "#FFFFFF";
-}
+
 
 #signin {
   background: url("../assets/signin.jpg");

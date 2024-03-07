@@ -50,7 +50,11 @@ export default function GuarantorDetails(prop: GuarantorProps) {
 
   return (
     <>
-      <Header name="" />
+      <div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>{" "}
       <Layout>
         <Head>
           <title>Add New Driver</title>

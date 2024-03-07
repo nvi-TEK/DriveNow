@@ -78,11 +78,11 @@ export const ExpenseTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border text-[#BFBFBF] rounded px-1 py-1 "
+      className="border border-[#D9D9D9] text-[#BFBFBF] h-[30px] text-center rounded px-1 py-1 "
       place
     >
       abc
-      {[10, 15, 20].map((pageSize) => (
+      {[3, 5, 10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
           {pageSize}
         </option>
@@ -94,13 +94,13 @@ export const ExpenseTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border text-[#BFBFBF] rounded px-1 py-1 "
+      className="border border-[#D9D9D9] h-[30px] text-center text-xs rounded px-1 py-1 "
       aria-placeholder=""
     >
       abc
-      {[10, 15, 20].map((pageSize) => (
+      {[3, 5, 10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
-          {pageSize}
+        {pageSize} Items/Page
         </option>
       ))}
     </select>,
@@ -138,7 +138,7 @@ export const ExpenseTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-sm font-normal leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  className="text-left text-xs font-normal leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -165,7 +165,7 @@ export const ExpenseTable = () => {
                 {row.cells.map((cell) => {
                   return (
                     <>
-                      <td {...cell.getCellProps()} className="text-[#595959] pl-2 text-sm font-normal leading-[18px] border-y h-[48px] ">
+                      <td {...cell.getCellProps()} className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-y h-[48px] ">
                         {cell.render("Cell")}
                       </td>
                     </>

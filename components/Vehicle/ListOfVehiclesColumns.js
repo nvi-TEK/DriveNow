@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable require-jsdoc */
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -90,13 +92,12 @@ export default function LongMenu() {
           Edit Vehicle{" "}
         </MenuItem>
         <Link href={""}>
-        <button onClick={openModal}>
-          <MenuItem className="flex" >
+          <MenuItem onClick={openModal} component={Link}
+          href={""} className="flex" >
           
             <Image src={fileicon} className="mr-2 w-5 " alt="x" />
-            Update Sim{" "}
+            Update Sim
           </MenuItem>
-          </button>
           <Modal
             isOpen={modalIsOpen}
             onRequestClose={closeModal}

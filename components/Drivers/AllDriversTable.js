@@ -76,10 +76,10 @@ export const AllDriversTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border text-[#BFBFBF] rounded px-1 py-1 "
+      className="border h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
-      abc
+  
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
           {pageSize}
@@ -92,13 +92,13 @@ export const AllDriversTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border text-[#BFBFBF] rounded px-1 py-1 "
+      className="border h-[30px] text-xs text-center border-[#D9D9D9] rounded px-1 py-1 "
       aria-placeholder=""
     >
-      abc
+    
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
-          {pageSize}
+        {pageSize} Items/Page
         </option>
       ))}
     </select>,
@@ -121,7 +121,7 @@ export const AllDriversTable = () => {
       <table {...getTableProps()} className="mt-7 ml-[10px] w-[98%]">
         <thead>
           {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
+            <tr {...headerGroup.getHeaderGroupProps()} >
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
@@ -148,7 +148,7 @@ export const AllDriversTable = () => {
           {page.map((row) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()}>
+              <tr {...row.getRowProps()} className="text-left" >
                 {row.cells.map((cell) => {
                   return (
                     <>

@@ -21,11 +21,20 @@ import { Grid } from "@mui/material";
 // import { gridSpacing } from "../components/revenueChart/constant";
 import BasicStacking from "@/components/stackedChart";
 import Header from "@/components/header";
+import {
+  CategoryDropdown,
+  MonthDropdown,
+  YearDropdown,
+} from "@/components/chartDropdown";
 
 export default function Expense() {
   return (
     <>
-      <Header name="Expense" />
+      <div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>
 
       <Layout>
         <Head>
@@ -62,10 +71,14 @@ export default function Expense() {
           <section className="flex">
             <div className="bg-white ml-5 mt-6 px-6 rounded-lg w-[61.03%] h-[41rem]">
               <div>
-                <div className="pt-6 pb-4 ">
+                <div className="flex justify-between items-center pt-6 pb-4 ">
                   <h6 className="text-[#262626] font-bold leading-[14.06px] text-sm">
                     Expense Insights
                   </h6>
+                  <div className="flex gap-x-0">
+                    <CategoryDropdown />
+                    <YearDropdown />
+                  </div>
                 </div>
               </div>
               <ExpenseStack />
@@ -91,49 +104,54 @@ export default function Expense() {
                 <h4 className="p-6 font-bold text-sm text-[#262626] leading-[21.6px]   ">
                   Expense Overview
                 </h4>
+                <div className="flex">
+                  <CategoryDropdown />
+                  <MonthDropdown />
+                  <YearDropdown />
+                </div>
               </div>
               <div className="flex justify-center mt-[70px]">
                 <DoughnutChart />
               </div>
 
               <div className="flex px-4 mt-4 gap-3 flex-wrap">
-                <div className="flex items-center rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div className="flex items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#0076EC] rounded-[50%]"></div>
                   Car Insurance
                 </div>
-                <div className="flex items-center rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div className="flex items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#492FB2] rounded-[50%]"></div>
                   Deposit Refund
                 </div>
-                <div className="flex items-center rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div className="flex items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#CD39E5] rounded-[50%]"></div>
                   Petty Cash
                 </div>
-                <div className="flex items-center rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div className="flex items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#19C098] rounded-[50%]"></div>
                   Utilities
                 </div>
-                <div className="flex items-center rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div className="flex items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#FFA723] rounded-[50%]"></div>
                   Stationaries
                 </div>
-                <div className="flex items-center rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div className="flex items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#0E7CFF] rounded-[50%]"></div>
                   Employee Transportation
                 </div>
-                <div className="flex items-center rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div className="flex items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#FF2C91] rounded-[50%]"></div>
                   System
                 </div>
-                <div className="flex items-center rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div className="flex items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#83E521] rounded-[50%]"></div>
                   Staff Costs
                 </div>
-                <div className="flex items-center rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div className="flex items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#3FBBD7] rounded-[50%]"></div>
                   Driver Support
                 </div>
-                <div className="flex items-center rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div className="flex items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#FB3232] rounded-[50%]"></div>
                   General Vehicle Maintenance
                 </div>
@@ -142,7 +160,7 @@ export default function Expense() {
           </section>
 
           {/* Table */}
-          <div className="bg-white mt-4 mb-[67px] rounded-lg mx-5 ">
+          <div className="bg-white mt-4 mb-[67px]  mx-5 ">
             <h3 className="text-[22px] font-medium leading-[30px] pl-[10px] pt-4 text-[#262626] ">
               Expense History
             </h3>

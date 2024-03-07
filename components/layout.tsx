@@ -9,12 +9,10 @@ type layoutType = {
 export default function Layout({ children }: layoutType) {
   return (
     <>
-      <section className=" w-full bg-[#FAFAFA]">
+      <section className=" w-full bg-white">
         
-
         <div
-          className="flex flex-grow bg-[#FAFAFA] 
-			"
+          className="flex flex-grow bg-[#F2F2F2]"
         >
           <SideBar />
           {children}

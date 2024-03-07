@@ -24,7 +24,7 @@ export const CUSTOMPUSHCOLUMNS = [
     accessor: "receiver_count",
   },
   {
-    Header: "Date Range",
-    accessor: "date_range",
+    Header: "Date",
+    accessor: "date",
   },
 ];

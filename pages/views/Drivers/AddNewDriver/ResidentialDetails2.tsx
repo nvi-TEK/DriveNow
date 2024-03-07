@@ -48,8 +48,11 @@ type UploadModel = {
 export default function ResidentialDetails(prop: ResidentialProps) {
   return (
     <>
-      <Header name="All Drivers / Drivers KYC" />
-
+      <div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>
       <Layout>
         <Head>
           <title>Add New Driver</title>

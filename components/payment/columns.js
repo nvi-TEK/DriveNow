@@ -4,6 +4,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import driverprofile from "../../assets/users.png";
+import refresh from "../../assets/blue_recycle.png";
 import reassign from "../../assets/pencil.png";
 import invoice from "../../assets/invoice.png";
 import restore from "../../assets/recycle.png";
@@ -125,10 +126,55 @@ export const COLUMNS = [
   {
     Header: "Engine Control",
     accessor: "engine_control",
+    Cell: (props) => {
+      return (
+        <div
+          style={{
+            color: props.value === "ON" ? "#0EA371" : "#DC4A41",
+            backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
+            borderRadius: "2px",
+            textAlign: "center",
+            width: "50px",
+            paddingTop: "2px",
+            paddingBottom: "2px",
+            fontSize: "12px",
+            lineHeight: "16px",
+            fontWeight: "500",
+          }}
+        >
+          {props.value}
+        </div>
+      );
+    }
+
   },
   {
     Header: "Engine Status",
     accessor: "engine_status",
+    Cell: (props) => {
+      return (
+        <div className="flex items-center gap-x-1">
+        <div className="">
+        <Image src={refresh} alt="refresh icon" />
+        </div>
+        <div
+          style={{
+            color: props.value === "Active" ? "#0EA371" : "#DC4A41",
+            backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
+            borderRadius: "2px",
+            textAlign: "center",
+            width: "50px",
+            paddingTop: "2px",
+            paddingBottom: "2px",
+            fontSize: "12px",
+            lineHeight: "16px",
+            fontWeight: "500",
+          }}
+        >
+          {props.value}
+        </div></div>
+      );
+    }
   },
   {
     Header: "Engine Status Updated",

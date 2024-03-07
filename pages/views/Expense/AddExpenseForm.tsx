@@ -16,6 +16,7 @@ import closebutton from "../../../assets/darkclose.png";
 import StyledDropzone from "@/components/dropzones/AddExpenseDropzone";
 import attach from "../../../assets/attachment_icon.png";
 import Header from "@/components/header";
+import AddExpensePicker from "@/components/dateRange";
 
 type AddExpenseProp = {
   expenseCategory: string;
@@ -58,8 +59,11 @@ export default function AddExpense() {
   };
   return (
     <>
-      <Header name="Add Expense" />
-
+      <div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>
       <Layout>
         <Head>
           <title>Add Expense</title>
@@ -128,7 +132,13 @@ export default function AddExpense() {
                         />
                       </div>
                       <div className="w-[50%]">
-                        
+                        <label
+                          htmlFor="costCenter"
+                          className="block mb-2 text-sm font-normal text-[#000000]"
+                        >
+                          Date
+                        </label>
+                        <AddExpensePicker />
                       </div>
                     </div>
 

@@ -19,8 +19,11 @@ import Header from "@/components/header";
 export default function DriveNowInvoices() {
   return (
     <>
-      <Header name="Drivenow Invoices" />
-
+<div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>
       <Layout>
         <Head>
           <title>DriveNow Invoices</title>
@@ -66,14 +69,7 @@ export default function DriveNowInvoices() {
             {/* Table */}
 
             <div className="bg-white rounded-lg mx-5 mb-12 mt-6 ">
-              <div className="flex justify-between ">
-                <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pl-[10px] pt-4 ">
-                  Invoice Generated History
-                </h4>
-                <div className="mr-5 h-[10px]">
-
-                </div>
-              </div>
+              
               <DrivenowInvoicesTable />
             </div>
           </section>

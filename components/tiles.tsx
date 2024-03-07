@@ -3,8 +3,10 @@
 
 import React from "react";
 import Image from "next/image";
-import driver from "../assets/driver_icon.png"
+import driver from "../assets/driver_icon.png";
+import TileDropdown from "../components/tileDropdown";
 import Link from "next/link";
+import LongMenu from "../components/tileDropdown";
 
 type tileProp1 = {
   icon: any;
@@ -28,78 +30,90 @@ type tileProp2 = {
 
 function DashboardTiles(props: tileProp1) {
   return (
-    <div className="border h-[8rem] p-4 pt-3  rounded-lg w-[20.75rem] bg-white flex grow rounded-t-lg border-[#E9ECEF]">
-      <div>
-        <Image src={props.icon} width={30} height={10} alt="" />
-
-        <p className="font-normal pt-4 text-sm leading-5 text-[#8C8C8C] ">
-          {props.entity1}
-        </p>
-        <div className="flex items-center pt-2">
-          <p className="text-[#262626] pt-  leading-7 font-medium text-xl">
-            {props.entity1value}
-          </p>
-          <p className="text-xs font-normal pl-2 text-[#0EA371] ">
-            {props.entity1differential}
-          </p>
+    <div className="border shadow-[0px_1px_2px_0px_#1B283614] h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[20.75rem] grow bg-white rounded-t-lg border-[#E9ECEF]">
+      <div className="flex items-center justify-between ">
+        <div>
+          <Image src={props.icon} width={30} height={10} alt="" />
+        </div>
+        <div>
+          <TileDropdown />
         </div>
       </div>
-
-      <div className="ml-[30%]">
-        <p className="font-normal pt-12 text-sm leading-5 text-[#8C8C8C]">
-          {props.entity2}
-        </p>
-        <div className="flex items-center pt-2">
-          <p className="text-[#262626]   leading-7 font-medium text-xl">
-            {props.entity2value}
+      <section className="flex mt-4">
+        <div>
+          <p className="font-normal pt-2 text-sm leading-5 text-[#8C8C8C] ">
+            {props.entity1}
           </p>
-          <p className="text-xs font-normal pl-2 text-[#0EA371] ">
-            {props.entity2differential}
-          </p>
+          <div className="flex items-center">
+            <p className="text-[#262626] pt-  leading-7 font-medium text-xl">
+              {props.entity1value}
+            </p>
+            <p className="text-xs font-normal pl-2 text-[#0EA371] ">
+              {props.entity1differential}
+            </p>
+          </div>
         </div>
-      </div>
+
+        <div className="ml-[30%]">
+          <p className="font-normal pt-2 text-sm leading-5 text-[#8C8C8C]">
+            {props.entity2}
+          </p>
+          <div className="flex items-center">
+            <p className="text-[#262626]   leading-7 font-medium text-xl">
+              {props.entity2value}
+            </p>
+            <p className="text-xs font-normal pl-2 text-[#0EA371] ">
+              {props.entity2differential}
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
 
 function DashboardTiles1(props: tileProp2) {
   return (
-    <div className="border h-[8rem] p-4 pt-3 rounded-lg w-[20.85rem] bg-white flex grow rounded-t-lg border-[#E9ECEF]">
-      <div>
-        <div className="">
+    <div className="border shadow-[0px_1px_2px_0px_#1B283614] h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[20.85rem] grow bg-white rounded-t-lg border-[#E9ECEF]">
+      <div className="flex justify-between items-center">
         <Image src={props.icon} width={30} height={10} alt="" />
-   
-
-        </div>
-        <p className="font-normal pt-4 text-sm leading-5 text-[#8C8C8C] ">
-          {props.entity1}
-        </p>
-        <div className="flex items-center pt-2">
-          <p className="text-[#262626] pt-  leading-7 font-medium text-xl">
-            {props.entity1value}
-          </p>
+        <div>
+          <TileDropdown />
         </div>
       </div>
 
-      <div className="ml-[14%]">
-        <p className="font-normal pt-12 text-sm leading-5 text-[#8C8C8C]">
-          {props.entity2}
-        </p>
-        <div className="flex items-center pt-2">
-          <p className="text-[#262626]   leading-7 font-medium text-xl">
-            {props.entity2value}
+      <div className="flex grow">
+        <div>
+          <p className="font-normal pt-4 text-sm leading-5 text-[#8C8C8C] ">
+            {props.entity1}
           </p>
+          <div className="flex items-center pt-2">
+            <p className="text-[#262626] pt-  leading-7 font-medium text-xl">
+              {props.entity1value}
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div className="ml-[19%]">
-        <p className="font-normal pt-12 text-sm leading-5 text-[#8C8C8C]">
-          {props.entity3}
-        </p>
-        <div className="flex items-center pt-2">
-          <p className="text-[#262626] leading-7 font-medium text-xl">
-            {props.entity3value}
+        <div className="ml-[14%]">
+          <p className="font-normal pt-4 text-sm leading-5 text-[#8C8C8C]">
+            {props.entity2}
           </p>
+          <div className="flex items-center pt-2">
+            <p className="text-[#262626]   leading-7 font-medium text-xl">
+              {props.entity2value}
+            </p>
+          </div>
+        </div>
+
+        <div className="ml-[19%]">
+          <p className="font-normal pt-4 text-sm leading-5 text-[#8C8C8C]">
+            {props.entity3}
+          </p>
+          <div className="flex items-center pt-2">
+            <p className="text-[#262626] leading-7 font-medium text-xl">
+              {props.entity3value}
+            </p>
+          </div>
         </div>
       </div>
     </div>

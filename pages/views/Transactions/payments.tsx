@@ -17,8 +17,11 @@ import Header from "@/components/header";
 export default function Payments() {
   return (
     <>
-      <Header name="Payments" />
-
+<div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>
       <Layout>
         <Head>
           <title>Payments</title>
@@ -67,7 +70,7 @@ export default function Payments() {
 
             {/* Table */}
 
-            <div className="bg-white rounded-lg mx-5 mb-12 mt-6 ">
+            <div className="bg-white rounded-lg mx-5 pb-4 mb-12 mt-6 ">
               <div className="flex justify-between ">
                 <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pl-[10px] pt-4 ">
                   Payments

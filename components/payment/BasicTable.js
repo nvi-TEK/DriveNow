@@ -72,7 +72,7 @@ export const BasicTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border text-[#BFBFBF] rounded px-1 py-1 "
+      className="border h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
       
@@ -88,13 +88,13 @@ export const BasicTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border rounded px-1 py-1 "
+      className="border h-[30px] text-xs text-center border-[#D9D9D9] rounded px-1 py-1 "
       aria-placeholder=""
     >
       abc
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
-          {pageSize}
+        {pageSize} Items/Page
         </option>
       ))}
     </select>,

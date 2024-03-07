@@ -2,9 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import React from "react";
-import Image from "next/image"
-import Bubble from "./HeatmapBubbles";
-import HeatmapBubble from "./HeatmapBubbles";
+import Image from "next/image";
 
 type DriverActivitiesProps = {
   name: string;
@@ -15,7 +13,7 @@ type DriverActivitiesProps = {
 
 function DriverActivities(props: DriverActivitiesProps) {
   return (
-    <div className="border-b h-[80px] flex justify-between items-center bg-white border-[#E6E6E6]">
+    <div className="border-b h-[80px] flex items-center justify-between grow bg-white border-[#E6E6E6]">
       <div>
         <p className="text-[#262626] text-sm font-normal leading-[18px] ">
           {props.name}
@@ -24,11 +22,26 @@ function DriverActivities(props: DriverActivitiesProps) {
           Ratings: {props.rating}
         </p>
       </div>
-      <div className="text-right">
+
+      <div className="text-right flex flex-col">
         <p className="text-[#8C8C8C] font-normal text-xs leading-4 ">
           {props.lastUpdate}
         </p>
-        <p className="">{props.status}</p>
+        <div
+          style={{
+            backgroundColor: props.status === "Online" ? "#E7F6F1" : "#FBEDEC",
+          }}
+          className="px-3 rounded-sm  text-right py-[2px] place-self-end mt-2"
+        >
+          <p
+            style={{
+              color: props.status === "Online" ? "#0EA371" : "#DC4A41",
+            }}
+            className="font-medium text-xs text-right leading-4"
+          >
+            {props.status}
+          </p>
+        </div>
       </div>
     </div>
   );

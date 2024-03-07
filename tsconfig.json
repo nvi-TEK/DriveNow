@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/revenueChart/totalRevenueChart.js", "components/revenueChart/chartdata.js", "components/revenueChart/constant.js", "components/revenueChart/totalGrowthBarChart.js", "components/customPush/table1.jsx", "components/datePickerRange.jsx", "pages/views/Drivers/AddNewDriver", "components/datepicker.js", "components/Expense/ExpenseColumns.js", "components/headerDropdown.js", "components/popover.js", "components/stackedChart.js", "components/Expense/ExpenseStackedChart.js", "components/datePickerRange.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/revenueChart/totalRevenueChart.js", "components/revenueChart/chartdata.js", "components/revenueChart/constant.js", "components/revenueChart/totalGrowthBarChart.js", "components/customPush/table1.jsx", "components/datePickerRange.jsx", "pages/views/Drivers/AddNewDriver", "components/dateRange.js", "components/Expense/ExpenseColumns.js", "components/headerDropdown.js", "components/popover.js", "components/stackedChart.js", "components/Expense/ExpenseStackedChart.js", "components/datePickerRange.js"],
   "exclude": ["node_modules"]
 }

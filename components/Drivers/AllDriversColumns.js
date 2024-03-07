@@ -41,35 +41,49 @@ export default function LongMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        disableScrollLock= {true}
+        disableScrollLock={true}
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "27ch",
             position: "sticky",
-            marginRight: "50px"
+            marginRight: "50px",
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-base   ">
+        <MenuItem
+          onClick={handleClose}
+          className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-base   "
+        >
           <Image src={pencil} className="mr-2" alt="people icon" />
           Driver Profile
         </MenuItem>
-        <MenuItem className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-base   " onClick={handleClose}>
+        <MenuItem
+          className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-base   "
+          onClick={handleClose}
+        >
           <Image src={fileicon} className="mr-2 w-5 " alt="pencil" />
           Update Agreement
         </MenuItem>
-        <MenuItem className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-base   " onClick={handleClose}>
+        <MenuItem
+          className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-base   "
+          onClick={handleClose}
+        >
           <Image src={recycle} className="mr-2 w-5 " alt="power icon" />
           Turn Off Engine Control
         </MenuItem>
-        <MenuItem className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-base   " onClick={handleClose}>
+        <MenuItem
+          className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-base   "
+          onClick={handleClose}
+        >
           <Image src={recycle} className="mr-2 w-5 " alt="recycle icon" />
           Restore Engine Control
         </MenuItem>
         <MenuItem className="flex items-center" onClick={handleClose}>
           <Image src={deleteicon} className="mr-2 w-5 " alt="bin icon" />
-          <p className="text-[#DC4A41] py-2 leading-[9.67px] font-normal text-base ">Terminate</p>
+          <p className="text-[#DC4A41] py-2 leading-[9.67px] font-normal text-base ">
+            Terminate
+          </p>
         </MenuItem>
       </Menu>
     </>
@@ -92,10 +106,51 @@ export const ALLDRIVERSCOLUMNS = [
   {
     Header: "Status",
     accessor: "status",
+    Cell: (props) => {
+      return (
+        <div
+          style={{
+            color: props.value === "Online" ? "#0EA371" : "#DC4A41",
+            backgroundColor: props.value === "Online" ? "#E7F6F1" : "#FBEDEC",
+            borderRadius: "2px",
+            textAlign: "center",
+            paddingLeft: "2px",
+            paddingRight: "2px",
+            paddingTop: "2px",
+            paddingBottom: "2px",
+            fontSize: "12px",
+            lineHeight: "16px",
+            fontWeight: "500",
+          }}
+        >
+          {props.value}
+        </div>
+      );
+    }
   },
   {
     Header: "Agreed",
     accessor: "agreed",
+    Cell: (props) => {
+      return (
+        <div
+          style={{
+            color: props.value === "Yes" ? "#0EA371" : "#DC4A41",
+            backgroundColor: props.value === "Yes" ? "#E7F6F1" : "#FBEDEC",
+            borderRadius: "2px",
+            textAlign: "center",
+            width: "50px",
+            paddingTop: "2px",
+            paddingBottom: "2px",
+            fontSize: "12px",
+            lineHeight: "16px",
+            fontWeight: "500",
+          }}
+        >
+          {props.value}
+        </div>
+      );
+    }
   },
   {
     Header: "App Version",
@@ -104,6 +159,26 @@ export const ALLDRIVERSCOLUMNS = [
   {
     Header: "Engine Control",
     accessor: "engine_control",
+    Cell: (props) => {
+      return (
+        <div
+          style={{
+            color: props.value === "ON" ? "#0EA371" : "#DC4A41",
+            backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
+            borderRadius: "2px",
+            textAlign: "center",
+            width: "50px",
+            paddingTop: "2px",
+            paddingBottom: "2px",
+            fontSize: "12px",
+            lineHeight: "16px",
+            fontWeight: "500",
+          }}
+        >
+          {props.value}
+        </div>
+      );
+    }
   },
   {
     Header: "Location Updated",

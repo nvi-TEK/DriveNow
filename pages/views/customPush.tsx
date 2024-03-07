@@ -10,6 +10,8 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { CustomPushTable } from "../../components/customPush/CustomPushTable";
 import Header from "@/components/header";
+import Datepicker from "@/components/datepicker1";
+import Picker from "@/components/dateRange";
 
 type PushProp = {
   title: string;
@@ -22,7 +24,11 @@ type PushProp = {
 export default function customPush() {
   return (
     <>
-      <Header name="Custom Push/SMS" />
+      <div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>{" "}
       <Layout>
         <Head>
           <title>Custom Push/SMS</title>
@@ -32,7 +38,6 @@ export default function customPush() {
 
         {/* Code goes into the main tag */}
         <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
-          {/* Bottom menu */}
           <section className="w- ">
             <div className="flex justify-between items-center">
               <p className="pt-[23px] pl-[21px] text-[22px] leading-[30px] font-medium text-[#262626] ">
@@ -50,7 +55,7 @@ export default function customPush() {
               </Link>
             </div>
 
-            <div className="mt-3 rounded-lg  h-[368px] mb-[33px] mx-6">
+            <div className="mt-3 rounded-lg [368px] mb-[33px] mx-6">
               <Formik<PushProp>
                 initialValues={{
                   title: "",
@@ -76,7 +81,7 @@ export default function customPush() {
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
                   <Form
                     onSubmit={handleSubmit}
-                    className="bg-white h-[368px] rounded-lg px-[1rem] pb-10"
+                    className="bg-white rounded-lg px-[1rem] pb-10"
                   >
                     <div className="flex w-full space-x-5">
                       <section className="w-[33%] ">
@@ -162,9 +167,9 @@ export default function customPush() {
                           htmlFor="title"
                           className="block mb-2 text-sm font-medium text-[#000000]"
                         >
-                          Select Date Range
+                          Select Date
                         </label>
-                        
+                        <Picker />
                       </div>
 
                       <div className="w-[50%]">
@@ -190,7 +195,7 @@ export default function customPush() {
                     <div className="mt-2">
                       <label
                         htmlFor="message"
-                        className="block mb-2 mt-3 text-sm leading-[18px] font-normal text-[#000000] "
+                        className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
                       >
                         Compose Notification Message
                       </label>

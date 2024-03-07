@@ -21,6 +21,12 @@ export default function LongMenu() {
     setAnchorEl(null);
   };
 
+  const DocsUploaded = {
+    Doc1: "green",
+    Doc2: "red",
+    Doc3: "yellow",
+  };
+
   return (
     <>
       <IconButton
@@ -100,6 +106,26 @@ export const DRIVERKYCCOLUMNS = [
   {
     Header: "Engine Control",
     accessor: "engine_control",
+    Cell: (props) => {
+      return (
+        <div
+          style={{
+            color: props.value === "ON" ? "#0EA371" : "#DC4A41",
+            backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
+            borderRadius: "2px",
+            textAlign: "center",
+            width: "50px",
+            paddingTop: "2px",
+            paddingBottom: "2px",
+            fontSize: "12px",
+            lineHeight: "16px",
+            fontWeight: "500",
+          }}
+        >
+          {props.value}
+        </div>
+      );
+    },
   },
   {
     Header: "Registration Date",
@@ -108,6 +134,41 @@ export const DRIVERKYCCOLUMNS = [
   {
     Header: "Documents Uploaded",
     accessor: "documents_uploaded",
+    Cell: (props) => {
+      return (
+        <div
+          style={{
+            color:
+              props.value === "5/5"
+                ? "#0EA371"
+                : props.value === "0/5"
+                ? "#DC4A41"
+                : props.value === "1/5"
+                ? "#DC4A41"
+                : "#E8B123",
+            backgroundColor:
+              props.value === "5/5"
+                ? "#E7F6F1"
+                : props.value === "0/5"
+                ? "#FBEDEC"
+                : props.value === "1/5"
+                ? "#FBEDEC"
+                : "#FBF6E9",
+            borderRadius: "2px",
+            textAlign: "center",
+            paddingTop: "1px",
+            paddingBottom: "1px",
+
+            maxWidth: "45px",
+            fontSize: "12px",
+            lineHeight: "16px",
+            fontWeight: "500",
+          }}
+        >
+          {props.value}
+        </div>
+      );
+    },
   },
   {
     Header: "Date Approved",

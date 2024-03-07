@@ -13,6 +13,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import StyledDropzone from "@/components/dropzone";
 import Header from "@/components/header";
+import Picker from "@/components/dateRange";
 
 type PushProp = {
   vehicleRegistration: string;
@@ -25,8 +26,11 @@ type PushProp = {
 export default function AddVehicleIssue() {
   return (
     <>
-      <Header name="Vehicle Issue log" />
-
+<div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>
       <Layout>
         <Head>
           <title>Add Vehicle Issue</title>
@@ -56,8 +60,8 @@ export default function AddVehicleIssue() {
                     "Issue Category required"
                   ),
                   amount: Yup.number().required("Amount rquired"),
-                  notification: Yup.string().required("Required field"),
-                  device: Yup.string().required("Required field"),
+                  date: Yup.string().required("Required field"),
+                  description: Yup.string().required("Required"),
                 })}
                 onSubmit={async (values) => {
                   alert(JSON.stringify(values, null, 2));
@@ -80,7 +84,7 @@ export default function AddVehicleIssue() {
                       <div className="w-[50%]">
                         <label
                           htmlFor="vehicleRegistration"
-                          className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
+                          className="block mb-2 text-sm pt-[10px] font-medium text-[#262626]"
                         >
                           Vehicle Registration
                         </label>
@@ -143,7 +147,7 @@ export default function AddVehicleIssue() {
                       <div className="w-[50%]">
                         <label
                           htmlFor="amount"
-                          className="block mb-2 text-sm font-normal  text-[#000000]"
+                          className="block mb-2 text-sm font-medium text-[#262626]"
                         >
                           Amount (GH₵)
                         </label>
@@ -155,12 +159,18 @@ export default function AddVehicleIssue() {
                           value={values.amount}
                           onChange={handleChange}
                         />
-                        <p className="font-medium text-red-700">
+                        <p className="font-medium text-xs text-red-700">
                           <ErrorMessage name="amount" />
                         </p>
                       </div>
                       <div className="w-[50%]">
-                  
+                        <label
+                          htmlFor="date"
+                          className="block mb-2 text-sm font-medium text-[#262626]"
+                        >
+                          Date
+                        </label>
+                        <Picker />
                       </div>
                     </section>
 
@@ -216,7 +226,7 @@ export default function AddVehicleIssue() {
                           value={values.description}
                           onChange={handleChange}
                         />
-                        <p className="font-medium text-xs  text-red-700">
+                        <p className="font-medium text-xs text-red-700">
                           <ErrorMessage name="description" />
                         </p>
                       </div>

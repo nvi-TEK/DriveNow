@@ -15,7 +15,11 @@ import Header from "@/components/header";
 export default function AllDrivers() {
   return (
     <>
-      <Header name="Drivers" />
+<div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>      
       <Layout>
         <Head>
           <title>All Drivers</title>
@@ -68,7 +72,7 @@ export default function AllDrivers() {
                 List of Drivers
               </h3>
 
-              <div className="relative overflow-x-auto bg-white sm:rounded-t-md">
+              <div className="relative overflow-x-auto bg-white mb-[144px] sm:rounded-t-md">
                 <AllDriversTable />
               </div>
             </div>

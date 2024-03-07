@@ -11,7 +11,7 @@ import recycle from "../assets/recycle.png";
 import deleteicon from "../assets/blockvehicle.png";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-const ITEM_HEIGHT = 60;
+const ITEM_HEIGHT = 80;
 
 export default function LongMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -53,30 +53,30 @@ export default function LongMenu() {
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="flex">
+        <MenuItem onClick={handleClose} className="flex py-2.5 ">
           <Image src={pencil} className="mr-2" alt="pencil" />
           User Profile
         </MenuItem>
-        <MenuItem className="flex" onClick={handleClose}>
+        <MenuItem className="flex py-2.5 " onClick={handleClose}>
           <Image src={fileicon} className="mr-2 w-5 " alt="x" />
           Settings
         </MenuItem>
-        <MenuItem className="flex" onClick={handleClose}>
+        <MenuItem className="flex py-2.5 " onClick={handleClose}>
           <Image src={recycle} className="mr-2 w-5 " alt="x" />
           Change Password
         </MenuItem>
-        <MenuItem className="flex" onClick={handleClose}>
+        <MenuItem className="flex py-2.5 " onClick={handleClose}>
           System
         </MenuItem>
-        <MenuItem className="flex" onClick={handleClose}>
+        <MenuItem className="flex py-2.5 " onClick={handleClose}>
           Configuration
         </MenuItem>
-        <MenuItem className="flex" onClick={handleClose}>
+        <MenuItem className="flex py-2.5 " onClick={handleClose}>
           Help Documentation
         </MenuItem>
 
         <MenuItem
-          className="flex"
+          className="flex py-2.5 "
           component={Link}
           href="/"
           onClick={handleClose}

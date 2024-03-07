@@ -4,7 +4,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-// import pencil from "../../assets/pencil.png";
+import refresh from "../../../assets/blue_recycle.png";
 import fileicon from "../../../assets/fileicon.png";
 // import recycle from "../../assets/recycle.png";
 // import deleteicon from "../../assets/blockvehicle.png";
@@ -81,6 +81,31 @@ export const VEHICLETRACKERCOLUMNS = [
   {
     Header: "Engine Status",
     accessor: "engine_status",
+    Cell: (props) => {
+      return (
+        <div className="flex items-center gap-x-1">
+        <div className="">
+        <Image src={refresh} alt="refresh icon" />
+        </div>
+        <div
+          style={{
+            color: props.value === "Active" ? "#0EA371" : "#DC4A41",
+            backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
+            borderRadius: "2px",
+            textAlign: "center",
+            paddingTop: "1px",
+            paddingLeft: "6px",
+            paddingRight: "6px",
+            paddingBottom: "1px",
+            fontSize: "12px",
+            lineHeight: "16px",
+            fontWeight: "500",
+          }}
+        >
+          {props.value}
+        </div></div>
+      );
+    }
   },
   {
     Header: "Location Updated",
@@ -89,6 +114,28 @@ export const VEHICLETRACKERCOLUMNS = [
   {
     Header: "Device Status",
     accessor: "device_status",
+    Cell: (props) => {
+      return (
+        <div
+          style={{
+            color: props.value === "Online" ? "#0EA371" : "#DC4A41",
+            backgroundColor: props.value === "Online" ? "#E7F6F1" : "#FBEDEC",
+            borderRadius: "2px",
+            textAlign: "center",
+            paddingLeft: "2px",
+            paddingRight: "2px",
+            paddingTop: "2px",
+            paddingBottom: "2px",
+            fontSize: "12px",
+            lineHeight: "16px",
+            fontWeight: "500",
+            width: "50px"
+          }}
+        >
+          {props.value}
+        </div>
+      );
+    }
   },
   {
     Header: "Action",

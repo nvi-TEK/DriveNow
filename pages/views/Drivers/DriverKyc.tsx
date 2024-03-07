@@ -26,8 +26,11 @@ import Header from "@/components/header";
 export default function DriverKyc() {
   return (
     <>
-      <Header name="Drivers" />
-
+<div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>
       <Layout>
         <Head>
           <title>Driver KYC</title>

@@ -6,16 +6,17 @@ import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../components/layout";
 import Maps from "@/components/maps";
-import Link from "next/link";
-import Image from "next/image";
-import HeatmapBubbles from "@/components/Heatmap/HeatmapBubbles";
 import DriverActivities from "@/components/Heatmap/DriverActivities";
 import Header from "@/components/header";
 
 export default function Heatmap() {
   return (
     <>
-      <Header name="Heatmap"/>
+      <div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>
       <Layout>
         <Head>
           <title>Heatmap</title>
@@ -29,8 +30,10 @@ export default function Heatmap() {
             <div className="absolute w-full">
               <Maps />
             </div>
-            <div className="w-[22%] rounded-[4px] overflow-y-scroll no-scrollbar p-4 mt-[138px] h-[770px] inset-y-0 right-0 z-10 absolute bg-white mb-0 ">
-              <h3 className="text-[#595959] text-2xl font-medium leading-7 ">Driver Activities</h3>
+            <div className="w-[22%] shadow-[opx_0px_12.8px_0px_#1B28361A] rounded-[4px] overflow-y-scroll no-scrollbar p-4 mt-[138px] h-[770px] inset-y-0 right-0 z-10 absolute bg-white mb-0 ">
+              <h3 className="text-[#595959] text-2xl font-medium leading-7 ">
+                Driver Activities
+              </h3>
               <div>
                 <DriverActivities
                   name="Frank Mensah"
@@ -48,7 +51,7 @@ export default function Heatmap() {
                   name="Frank Mensah"
                   rating="100%"
                   lastUpdate="Updated 5 mins ago"
-                  status="Online"
+                  status="Offline"
                 />
                 <DriverActivities
                   name="Frank Mensah"
@@ -66,7 +69,7 @@ export default function Heatmap() {
                   name="Frank Mensah"
                   rating="100%"
                   lastUpdate="Updated 5 mins ago"
-                  status="Online"
+                  status="Offline"
                 />
                 <DriverActivities
                   name="Frank Mensah"
@@ -84,7 +87,7 @@ export default function Heatmap() {
                   name="Frank Mensah"
                   rating="100%"
                   lastUpdate="Updated 5 mins ago"
-                  status="Online"
+                  status="Offline"
                 />
                 <DriverActivities
                   name="Frank Mensah"
@@ -98,7 +101,6 @@ export default function Heatmap() {
                   lastUpdate="Updated 5 mins ago"
                   status="Online"
                 />
-               
               </div>
             </div>
           </section>

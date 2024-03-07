@@ -13,15 +13,20 @@ import payment from "../../assets/payments.png";
 import { DashboardTiles1 } from "@/components/tiles";
 import DashboardStack from "@/components/stackedChart";
 import DashboardTiles from "@/components/tiles";
-import MouseOverPopover from "@/components/popover";
+import MouseOverPopover, { ContractPop } from "@/components/popover";
 import revenue from "../../assets/revenue_icon.png";
 import Header from "@/components/header";
+import DriverKYCPop from "../../components/popover";
+import ChartDropdown from "@/components/chartDropdown";
 
 export default function Dashboard() {
   return (
     <>
-    
-      <Header name="Dashboard" />
+    <div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>
       <Layout>
         <Head>
           <title>Dashboard</title>
@@ -98,18 +103,24 @@ export default function Dashboard() {
           <section className="flex px-5 justify-between mb-5">
             <div className="mt-6 w-[74%] ">
               <div className="bg-white h-[657px]  rounded-[8px]">
-                <div className="p-[32px]">
-                  <h6 className="text-[#777777] font-medium leading-[14.06px] text-xs">
-                    Total Revenue
-                  </h6>
-                  <p className="text-xl font-medium pt-2 leading-7 text-[#262626]   ">
-                    ₵2,412,570.00
-                  </p>
+                <div className="p-[32px] flex justify-between">
+                  <div>
+                    <h6 className="text-[#777777] font-medium leading-[14.06px] text-xs">
+                      Total Revenue
+                    </h6>
+                    <p className="text-xl font-medium pt-2 leading-7 text-[#262626]   ">
+                      ₵2,412,570.00
+                    </p>
+                  </div>
+                  <div>
+                    <ChartDropdown />
+                  </div>
                 </div>
 
                 <div className="px-[32px]">
-                <DashboardStack />
+                  <DashboardStack />
                 </div>
+
                 <div className="flex mt-[30px] px-[32px] justify-evenly ">
                   <div className="flex">
                     <div className="h-[14px] w-[14px] rounded bg-[#A6D2FF]"></div>
@@ -140,12 +151,24 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div className="bg-white l-7 rounded-[8px] mt-5">
-                <div className="flex mb-[33px]">
-                  <h4 className="text-[#262626] text-base font-medium leading-[22px] pt-[15px] pl-5">
-                    Contracts
-                  </h4>
+              <div className="bg-white shadow-[0px_1px_2px_0px_#1B283614] pt-[15px] rounded-[8px] mt-5">
+                <div className="flex items-center  justify-between mb-[33px]">
+                  <div className="flex items-center">
+                    <h4 className="text-[#262626] text-base font-medium leading-[22px] pl-5">
+                      Contracts
+                    </h4>
+                    <div className="ml-1">
+                      <ContractPop />
+                    </div>
+                  </div>
+                  <div className="ml-1 ">
+                    <div>
+                      <ChartDropdown />
+                    </div>
+                  </div>
                 </div>
+
+                {/* Contract chart */}
                 <div className="pl-5">
                   <DashChart />
                 </div>
@@ -153,11 +176,14 @@ export default function Dashboard() {
             </div>
 
             {/* Driver KYC  */}
-            <div className="mt-6 bg-[#FFFFFF] rounded-lg ml-5 pb-5 w-[25%] ">
-              <div className="flex  ">
+            <div className="mt-6 bg-[#FFFFFF] shadow-[0px_1px_2px_0px_#1B283614] rounded-lg ml-5 h-[855px] overflow-y-scroll no-scrollbar pb-5 w-[25%] ">
+              <div className="flex justify-between items-center ">
                 <p className="m-5 text-base font-medium leading-[22px] text-[#262626] ">
                   Driver KYC
                 </p>
+                <div className="mr-4">
+                  <DriverKYCPop />
+                </div>
               </div>
               <div className="mx-[6%] ">
                 <KYC
@@ -170,7 +196,43 @@ export default function Dashboard() {
                   name="Frank Mensah"
                   description="Driver’s License Uploaded"
                   date="12 Sept"
+                  status="Pending"
+                />
+                <KYC
+                  name="Frank Mensah"
+                  description="Driver’s License Uploaded"
+                  date="12 Sept"
                   status="Completed"
+                />
+                <KYC
+                  name="Frank Mensah"
+                  description="Driver’s License Uploaded"
+                  date="12 Sept"
+                  status="Pending"
+                />
+                <KYC
+                  name="Frank Mensah"
+                  description="Driver’s License Uploaded"
+                  date="12 Sept"
+                  status="Pending"
+                />
+                <KYC
+                  name="Frank Mensah"
+                  description="Driver’s License Uploaded"
+                  date="12 Sept"
+                  status="Failed"
+                />
+                <KYC
+                  name="Frank Mensah"
+                  description="Driver’s License Uploaded"
+                  date="12 Sept"
+                  status="Pending"
+                />
+                <KYC
+                  name="Frank Mensah"
+                  description="Driver’s License Uploaded"
+                  date="12 Sept"
+                  status="Failed"
                 />
                 <KYC
                   name="Frank Mensah"
@@ -188,36 +250,17 @@ export default function Dashboard() {
                   name="Frank Mensah"
                   description="Driver’s License Uploaded"
                   date="12 Sept"
-                  status="Completed"
+                  status="Failed"
                 />
                 <KYC
                   name="Frank Mensah"
                   description="Driver’s License Uploaded"
                   date="12 Sept"
-                  status="Completed"
-                />
-                <KYC
-                  name="Frank Mensah"
-                  description="Driver’s License Uploaded"
-                  date="12 Sept"
-                  status="Completed"
-                />
-                <KYC
-                  name="Frank Mensah"
-                  description="Driver’s License Uploaded"
-                  date="12 Sept"
-                  status="Completed"
-                />
-                <KYC
-                  name="Frank Mensah"
-                  description="Driver’s License Uploaded"
-                  date="12 Sept"
-                  status="Completed"
+                  status="Pending"
                 />
               </div>
             </div>
           </section>
-    
         </main>
       </Layout>
     </>

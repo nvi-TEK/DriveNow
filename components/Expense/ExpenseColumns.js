@@ -9,9 +9,7 @@ import tableaction from "../../assets/tableaction.png";
 import approve from "../../assets/approvecheck.png";
 import details from "../../assets/viewdetails.png";
 import decline from "../../assets/x.png";
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-
-
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 const ITEM_HEIGHT = 48;
 
@@ -35,7 +33,8 @@ export default function LongMenu() {
         aria-haspopup="true"
         onClick={handleClick}
       >
-<MoreHorizIcon />      </IconButton>
+        <MoreHorizIcon />{" "}
+      </IconButton>
       <Menu
         id="long-menu"
         MenuListProps={{
@@ -50,11 +49,11 @@ export default function LongMenu() {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "25ch",
             position: "sticky",
-            marginRight: "60px"
+            marginRight: "60px",
           },
         }}
       >
-      <MenuItem onClick={handleClose} className="py-2 flex">
+        <MenuItem onClick={handleClose} className="py-2 flex">
           <Image src={details} className="mr-2" alt="checkmark" />
           View Details
         </MenuItem>
@@ -111,6 +110,37 @@ export const EXPENSECOLUMNS = [
   {
     Header: "Status",
     accessor: "status",
+    Cell: (props) => {
+      return (
+        <div
+          style={{
+            color:
+              props.value === "Paid"
+                ? "#0EA371"
+                : props.value === "Declined"
+                ? "#DC4A41"
+                : "#E8B123",
+            backgroundColor:
+              props.value === "Paid"
+                ? "#E7F6F1"
+                : props.value === "Declined"
+                ? "#FBEDEC"
+                : "#FBF6E9",
+            borderRadius: "2px",
+            textAlign: "center",
+            paddingLeft: "2px",
+            paddingRight: "2px",
+            paddingTop: "1px",
+            paddingBottom: "1px",
+            fontSize: "12px",
+            lineHeight: "16px",
+            fontWeight: "500",
+          }}
+        >
+          {props.value}
+        </div>
+      );
+    },
   },
   {
     Header: "Description",

@@ -4,6 +4,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import TileDropdown from "../tileDropdown";
 
 type driverTileProp1 = {
   icon: any;
@@ -20,10 +21,18 @@ type driverTileProp1 = {
 
 export default function AllDriverTiles(props: driverTileProp1) {
   return (
-    <div className="border h-[8rem] p-4 pt-3 rounded-lg w-[30px] bg-white flex grow rounded-t-lg border-[#E9ECEF]">
-      <div>
-        <Image src={props.icon} width={30} height={10} alt="" />
+    <div className="border h-[8rem] p-4 pr-0 pt-3 rounded-lg w-[30px] bg-white grow shadow-sm rounded-t-lg border-[#E9ECEF]">
+      <div className="flex justify-between items-center">
+        <div>
+          <Image src={props.icon} width={30} height={10} alt="" />
+        </div>
+        <div>
+          <TileDropdown />
+        </div>
+      </div>
 
+<div className="flex">
+      <div>
         <p className="font-normal mt-5 text-sm leading-5 text-[#8C8C8C] ">
           {props.entity1}
         </p>
@@ -38,7 +47,7 @@ export default function AllDriverTiles(props: driverTileProp1) {
       </div>
 
       <div className="ml-[6%]">
-        <p className="font-normal pt-12 text-sm leading-5 text-[#8C8C8C]">
+        <p className="font-normal pt-4 text-sm leading-5 text-[#8C8C8C]">
           {props.entity2}
         </p>
         <div className="flex items-center pt-2">
@@ -52,7 +61,7 @@ export default function AllDriverTiles(props: driverTileProp1) {
       </div>
 
       <div className="ml-[6%]">
-        <p className="font-normal pt-12 text-sm leading-5 text-[#8C8C8C]">
+        <p className="font-normal pt-4 text-sm leading-5 text-[#8C8C8C]">
           {props.entity3}
         </p>
         <div className="flex items-center pt-2">
@@ -63,6 +72,7 @@ export default function AllDriverTiles(props: driverTileProp1) {
             {props.entity3differential}
           </p>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -76,12 +76,12 @@ export const CustomPushTable = () => {
   const dropdown = [
     <select
       value={pageSize}
+      defaultValue={3}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border text-[#BFBFBF] rounded px-1 py-1 "
+      className="border h-[30px] text-center border-[#D9D9D9] text-xs text-[#BFBFBF] rounded px-1 py-1 "
       placeholder=""
     >
-      abc
-      {[5, 10, 15, 20].map((pageSize) => (
+      {[3, 10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
           {pageSize}
         </option>
@@ -92,15 +92,16 @@ export const CustomPushTable = () => {
   const dropdown2 = [
     <select
       value={pageSize}
+      defaultValue={3}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border text-[#BFBFBF] rounded px-1 py-1 "
+      className="border h-[30px] text-center text-xs border-[#D9D9D9] rounded px-1 py-1 "
       aria-placeholder=""
     >
-      abc
-      {[10, 15, 20].map((pageSize) => (
+      {[3, 10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
-          {pageSize}
+          {pageSize} Items/Page
         </option>
+        
       ))}
     </select>,
   ];
@@ -126,7 +127,7 @@ export const CustomPushTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-sm font-normal leading-[18px] h-[48px] pl-2 bg-[#FAFAFA] "
+                  className="text-left text-xs font-normal leading-[18px] h-[48px] pl-2 bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -155,7 +156,7 @@ export const CustomPushTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-[#595959] pl-2 text-sm font-normal leading-[18px] border-y h-[48px] "
+                        className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-y h-[48px] "
                       >
                         {cell.render("Cell")}
                       </td>

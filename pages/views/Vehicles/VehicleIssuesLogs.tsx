@@ -45,8 +45,11 @@ export default function ListOfVehicles() {
 
   return (
     <>
-      <Header name="Vehicles" />
-
+<div className="flex w-full">
+        <div className="w-full z-10">
+          <Header />
+        </div>
+      </div>
       <Layout>
         <Head>
           <title>Vehicle Issue Log</title>

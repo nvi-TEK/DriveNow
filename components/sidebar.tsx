@@ -44,10 +44,10 @@ function SideBar() {
   return (
     <>
       <aside
-        className="h-[960px] border-r shadow-[0_0_60px_0_rgba(0,0,0,0.1)] mt-[1px] rounded-r-lg  w-[15rem] flex-shrink-0"
+        className="h-[960px] z-10 border-r rounded-r-lg w-[15rem] flex-shrink-0"
         aria-label="Sidebar"
       >
-        <aside className="sidecolor py-4 overflow-x-visible overflow-y-scroll h-[960px] rounded-r-lg scroll-smooth no-scrollbar">
+        <aside className="bg-white py-4 shadow-[0px_4px_16px_0px_#0000001A] overflow-x-visible overflow-y-scroll h-[960px] rounded-r-lg scroll-smooth no-scrollbar">
           <ul className="space-y-2 text-white">
             <Link href={"/views/dashboard"} as="">
               <List
