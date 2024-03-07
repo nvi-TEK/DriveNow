@@ -15,7 +15,7 @@ type pageProp = {
 function Header(prop: pageProp) {
   return (
     <>
-      <div className="bg-white z-20">
+      <div className="bg-white border-b z-20">
         <div className="flex w-full h-[4rem] shadow-[0px_4px_16px_0px_#0000001A] items-center  border-[#E6E6E6] pr-4 bg-white">
           <Link href={"/views/dashboard"}>
             <Image
