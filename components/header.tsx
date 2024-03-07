@@ -24,21 +24,19 @@ function Header(prop: pageProp) {
               className=" ml-[62.5px] h-[18px]"
             />
           </Link>
-          <div className="flex mr-auto ml-[6%]">
-            <p className="text-[#595959] text-sm leading-[18px] font-normal">
-              Dashboard 
-            </p>
 
+          <p className="text-[#595959] ml-[6%] mr-auto text-sm leading-[18px] font-normal">
+            Dashboard
             <span
               style={{ color: prop.secondName ? "#595959" : "#262626" }}
               className="text-sm leading-[18px] font-normal"
             >
-             <span className="text-[#D9D9D9]">/</span> {prop.name}  
+              <span className="text-[#D9D9D9]"> / </span> {prop.name}
             </span>
             <span className="text-[#262626] text-sm leading-[18px] font-normal">
-              / {prop.secondName}
+              {prop.secondName}
             </span>
-          </div>
+          </p>
 
           <div className="flex w-[550px] justify-end items-center">
             {/* Search bar */}

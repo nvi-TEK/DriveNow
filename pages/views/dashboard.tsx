@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable require-jsdoc */
 import React from "react";
@@ -22,9 +23,9 @@ import ChartDropdown from "@/components/chartDropdown";
 export default function Dashboard() {
   return (
     <>
-    <div className="flex w-full">
+      <div className="flex w-full">
         <div className="w-full z-10">
-          <Header name=" Dashboard"/>
+          <Header name=" Dashboard" />
         </div>
       </div>
       <Layout>

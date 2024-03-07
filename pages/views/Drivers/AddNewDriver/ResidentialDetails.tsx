@@ -49,7 +49,7 @@ export default function ResidentialDetails() {
     <>
 <div className="flex w-full">
         <div className="w-full z-10">
-        <Header name="All Drivers" secondName="Drivers KYC" />
+        <Header name="All Drivers" secondName=" / Drivers KYC" />
         </div>
       </div>
       <Layout>

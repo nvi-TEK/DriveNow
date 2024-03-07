@@ -79,9 +79,7 @@ export const ExpenseTable = () => {
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
       className="border border-[#D9D9D9] text-[#BFBFBF] h-[30px] text-center rounded px-1 py-1 "
-      place
     >
-      abc
       {[3, 5, 10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
           {pageSize}
@@ -95,12 +93,10 @@ export const ExpenseTable = () => {
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
       className="border border-[#D9D9D9] h-[30px] text-center text-xs rounded px-1 py-1 "
-      aria-placeholder=""
     >
-      abc
       {[3, 5, 10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
-        {pageSize} Items/Page
+          {pageSize} Items/Page
         </option>
       ))}
     </select>,
@@ -111,11 +107,11 @@ export const ExpenseTable = () => {
   return (
     <>
       {/* number of entries dropdown and Search bar */}
-      <div className="flex items-center justify-between  mt-6  ml-5">
+      <div className="flex items-center justify-between mt-6 ml-5">
         <div className="flex">
-          <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
+          <div className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626]">
             Show {dropdown} entries
-          </p>
+          </div>
 
           <ExpenseFilter filter={globalFilter} setFilter={setGlobalFilter} />
         </div>
@@ -138,7 +134,7 @@ export const ExpenseTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-xs font-normal leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  className="text-left text-xs font-normal leading-[18px] pl-2 h-[48px] bg-[#FAFAFA]"
                 >
                   {column.render("Header")}
                   <span>
@@ -165,7 +161,10 @@ export const ExpenseTable = () => {
                 {row.cells.map((cell) => {
                   return (
                     <>
-                      <td {...cell.getCellProps()} className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-y h-[48px] ">
+                      <td
+                        {...cell.getCellProps()}
+                        className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-y h-[48px] "
+                      >
                         {cell.render("Cell")}
                       </td>
                     </>
