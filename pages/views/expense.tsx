@@ -1,24 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable require-jsdoc */
 import React from "react";
-import { useEffect, useState } from "react";
-import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../components/layout";
 import DoughnutChart from "../../components/Expense/ExpenseDoughnut";
-import Link from "next/link";
-import Image from "next/image";
-import driver from "../../assets/driver_icon.png";
-import vehicle from "../../assets/vehicle_icon.png";
-import payment from "../../assets/payments.png";
-import declined from "../../assets/declined.png";
+import payment from "../../assets/payment.svg";
+import declined from "../../assets/decline.svg";
 import ExpenseStack from "../../components/Expense/ExpenseStackedChart";
 import ExpenseTiles from "@/components/Expense/ExpenseTiles";
 import { ExpenseTable } from "../../components/Expense/ExpenseTable";
-import revenue from "../../assets/revenue_icon.png";
-import AccountMenu from "@/components/headerDropdown";
-import { Grid } from "@mui/material";
-// import { gridSpacing } from "../components/revenueChart/constant";
+
 import BasicStacking from "@/components/stackedChart";
 import Header from "@/components/header";
 import {
@@ -32,7 +23,7 @@ export default function Expense() {
     <>
       <div className="flex w-full">
         <div className="w-full z-10">
-          <Header name="Expense"/>
+          <Header name="Expense" />
         </div>
       </div>
 
@@ -69,7 +60,7 @@ export default function Expense() {
           </section>
 
           <section className="flex">
-            <div className="bg-white ml-5 mt-6 px-6 rounded-lg w-[61.03%] h-[41rem]">
+            <div className="bg-white ml-5 mt-6 px-6 rounded-lg w-[62.03%] h-[500px]">
               <div>
                 <div className="flex justify-between items-center pt-6 pb-4 ">
                   <h6 className="text-[#262626] font-bold leading-[14.06px] text-sm">
@@ -81,9 +72,11 @@ export default function Expense() {
                   </div>
                 </div>
               </div>
-              <ExpenseStack />
+              <div>
+                <ExpenseStack />
+              </div>
 
-              <div className="flex gap-x-12 justify-center ">
+              <div className="flex gap-x-12 mt-5 justify-center ">
                 <div className="flex">
                   <div className="h-[14px] w-[18px] rounded-[3px] bg-[#0076EC]"></div>
                   <p className="font-normal text-xs pl-1 leading-[14px] text-[#585858]">
@@ -99,7 +92,7 @@ export default function Expense() {
                 </div>
               </div>
             </div>
-            <section className="bg-white mt-6 ml-4 w-[39%] rounded-[8px] mr-5">
+            <section className="bg-white mt-6 ml-4 w-[38%] rounded-[8px] mr-5">
               <div className="flex justify-between">
                 <h4 className="p-6 font-bold text-sm text-[#262626] leading-[21.6px]   ">
                   Expense Overview
@@ -160,8 +153,8 @@ export default function Expense() {
           </section>
 
           {/* Table */}
-          <div className="bg-white mt-4 mb-[67px]  mx-5 ">
-            <h3 className="text-[22px] font-medium leading-[30px] pl-[10px] pt-4 text-[#262626] ">
+          <div className="bg-white mt-4 rounded-[8px] mb-[67px] px-[10px] mx-5 ">
+            <h3 className="text-[22px] font-medium leading-[30px] pt-4 text-[#262626] ">
               Expense History
             </h3>
 

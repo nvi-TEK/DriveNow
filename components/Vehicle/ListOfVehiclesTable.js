@@ -76,7 +76,7 @@ export const ListOfVehiclesTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
+      className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
       {[10, 15, 20].map((pageSize) => (
@@ -91,7 +91,7 @@ export const ListOfVehiclesTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border h-[30px] text-center border-[#D9D9D9] text-xs rounded px-1 py-1 "
+      className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-center border-[#D9D9D9] text-xs rounded px-1 py-1 "
       aria-placeholder=""
     >
       abc
@@ -108,7 +108,7 @@ export const ListOfVehiclesTable = () => {
   return (
     <>
       {/* number of entries dropdown and Search bar */}
-      <div className="flex items-center mt-6  ml-5">
+      <div className="flex items-center mt-6">
         <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
@@ -120,14 +120,14 @@ export const ListOfVehiclesTable = () => {
       </div>
 
       {/* Table */}
-      <table {...getTableProps()} className="mt-7 ml-5 w-[96.4%]">
+      <table {...getTableProps()} className="mt-7 w-full">
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-sm font-normal leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  className="text-left text-xs font-normal leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -156,7 +156,7 @@ export const ListOfVehiclesTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-[#595959] pl-2 text-sm font-normal leading-[18px] border-y h-[48px]"
+                        className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-y h-[48px]"
                       >
                         {cell.render("Cell")}
                       </td>
@@ -168,19 +168,9 @@ export const ListOfVehiclesTable = () => {
           })}
         </tbody>
       </table>
-      {/* <pre>
-        <code>
-          {JSON.stringify(
-            {
-              selectedFlatRows: selectedFlatRows.map((row) => row.original),
-            },
-            null,
-            2
-          )}
-        </code>
-      </pre> */}
+     
 
-      <div className="flex mt-5 pb-4 justify-end pr-5 gap-x-2">
+      <div className="flex mt-5 pb-4 justify-end gap-x-2">
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
@@ -218,7 +208,7 @@ export const ListOfVehiclesTable = () => {
           <ArrowForwardIosOutlinedIcon fontSize="small" />
         </button>
 
-        <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
+        <p className="font-medium text-sm leading-[30px] text-[#262626] ">
           {dropdown2}
         </p>
       </div>

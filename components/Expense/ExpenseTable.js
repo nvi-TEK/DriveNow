@@ -3,7 +3,7 @@
 import React, { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import plus from "../../assets/plus.png";
+import plus from "../../assets/plus.svg";
 import {
   useTable,
   usePagination,
@@ -78,7 +78,7 @@ export const ExpenseTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border border-[#D9D9D9] text-[#BFBFBF] h-[30px] text-center rounded px-1 py-1 "
+      className="border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] text-[#BFBFBF] h-[30px] text-center rounded px-1 py-1 "
     >
       {[3, 5, 10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
@@ -92,7 +92,7 @@ export const ExpenseTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border border-[#D9D9D9] h-[30px] text-center text-xs rounded px-1 py-1 "
+      className="border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] h-[30px] text-center text-xs rounded px-1 py-1 "
     >
       {[3, 5, 10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
@@ -127,7 +127,7 @@ export const ExpenseTable = () => {
       </div>
 
       {/* Table */}
-      <table {...getTableProps()} className="mt-7 ml-5 w-[96.4%]">
+      <table {...getTableProps()} className="mt-7 w-full">
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -187,7 +187,7 @@ export const ExpenseTable = () => {
         </code>
       </pre> */}
 
-      <div className="flex mt-5 pb-4 justify-end pr-5 gap-x-2">
+      <div className="flex mt-5 pb-4 justify-end gap-x-2">
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
@@ -225,7 +225,7 @@ export const ExpenseTable = () => {
           <ArrowForwardIosOutlinedIcon fontSize="small" />
         </button>
 
-        <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
+        <p className="font-medium text-sm leading-[30px] text-[#262626] ">
           {dropdown2}
         </p>
       </div>

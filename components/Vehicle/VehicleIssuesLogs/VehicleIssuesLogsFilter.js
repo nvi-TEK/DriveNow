@@ -7,7 +7,7 @@ export const VehicleIssuesLogsFilter = ({ filter, setFilter }) => {
       <input
         value={filter || ""}
         onChange={(e) => setFilter(e.target.value)}
-        className="border placeholder-[#BFBFBF] w-[353px]vtext-sm pl-3 py-1 border-[#D9D9D9] rounded text-black"
+        className="border shadow-[0px_1px_2px_0px_#1B283614] text-sm placeholder-[#BFBFBF] w-[353px]vtext-sm pl-3 py-1 border-[#D9D9D9] rounded text-black"
         placeholder="Search"
       />
     </span>

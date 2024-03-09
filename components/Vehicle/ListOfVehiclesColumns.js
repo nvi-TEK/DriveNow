@@ -51,9 +51,12 @@ export default function LongMenu() {
       border: "0",
       borderRadius: "8px 8px 8px 8px",
       backgroundColor: "",
+      
     },
     overlay: {
       backgroundColor: "#0000008F",
+      zIndex: 1000,
+
     },
   };
 
@@ -105,6 +108,7 @@ export default function LongMenu() {
             shouldCloseOnOverlayClick={false}
             overlayClassName=""
             style={customStyles}
+    
           >
             <div className="w-[306px] h-[181px] rounded-lg bg-white">
               <section className="flex items-center h-[50px] rounded-t-lg">

@@ -36,7 +36,7 @@ function KYC(props: KYCProp) {
                 ? "#FBEDEC"
                 : "#FBF6E9",
           }}
-          className="px-1 text-right py-[2px] mt-2"
+          className="px-2 text-right rounded-[2px] py-[2px] mt-2"
         >
           <p
             style={{

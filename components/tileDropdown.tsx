@@ -18,7 +18,7 @@ export default function TileDropdown() {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "6px 20px 3px 6px",
+            optionPadding: "8px 0px 8px 8px",
           },
         },
       }}
@@ -29,7 +29,7 @@ export default function TileDropdown() {
           defaultValue="This Week"
           suffixIcon={<UnfoldMoreIcon />}
           variant="borderless"
-          style={{ width: 100 }}
+          style={{ width: 105 }}
           onChange={handleChange}
           options={[
             { value: "Today", label: "Today" },
@@ -56,7 +56,7 @@ function TileDropdown1() {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "6px 20px 3px 6px",
+            optionPadding: "8px 0px 8px 8px",
           },
         },
       }}

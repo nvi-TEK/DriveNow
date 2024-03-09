@@ -1,27 +1,29 @@
 /* eslint-disable require-jsdoc */
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
-import List, { Title } from "./sidebarList";
+import List from "./sidebarList";
 import logo from "../assets/logo.png";
-import dashboard from "../assets/dashboard_logo.png";
-import heatmap from "../assets/heatmap.png";
-import push from "../assets/push.png";
-import settings from "../assets/settings.png";
-import help from "../assets/help.png";
-import darkmode from "../assets/moon-star.png";
-import expense from "../assets/expense_icon.png";
-import vehicle from "../assets/vehicleSidebar.png";
-import downarrow from "../assets/arrowdown.png";
-import uparrow from "../assets/arrowup.png";
-import driverside from "../assets/driverSidebar.png";
-import transactionside from "../assets/transactionSide.png";
-// import Support from "../assets/support.png";
-// import Transaction from "../assets/transactions.png";
-// import loan from "../assets/loan.svg";
-// import dashboard from "../assets/dashboard.svg";
-// import percent from "../assets/percent.png";
+import dashboard from "../assets/dashboard.svg";
+import activedashboard from "../assets/activedashboard.svg";
+import heatmap from "../assets/heatmap.svg";
+import activeheatmap from "../assets/activeheatmap.svg";
+import push from "../assets/push.svg";
+import activepush from "../assets/activepush.svg";
+import settings from "../assets/settings.svg";
+import help from "../assets/help.svg";
+import darkmode from "../assets/moon-star.svg";
+import expense from "../assets/expense.svg";
+import activeexpense from "../assets/activeexpense.svg";
+import vehicle from "../assets/vehicleside.svg";
+import downarrow from "../assets/downarrow.svg";
+import uparrow from "../assets/uparrow.svg";
+import driverside from "../assets/driverside.svg";
+import transactionside from "../assets/transactionside.svg";
 import Link from "next/link";
 import { HelpRounded } from "@mui/icons-material";
+
+
 
 function SideBar() {
   const selectChange = (
@@ -33,6 +35,7 @@ function SideBar() {
     console.log(`${value} is ${checked}`);
   };
 
+  const router = useRouter();
   const [showDriver, setShowDriver] = useState(false);
   const [showTransaction, setShowTransaction] = useState(false);
   const [showVehicle, setShowVehicle] = useState(false);
@@ -44,26 +47,28 @@ function SideBar() {
   return (
     <>
       <aside
-        className="h-[960px] z-10 border-r rounded-r-lg w-[15rem] flex-shrink-0"
+        className=" z-10  rounded-r-lg w-[17.6%] flex-shrink-0"
         aria-label="Sidebar"
       >
-        <aside className="bg-white py-4 shadow-[0px_4px_16px_0px_#0000001A] overflow-x-visible overflow-y-scroll h-[960px] rounded-r-lg scroll-smooth no-scrollbar">
+        <aside className="bg-white border-r pt-4 pb-7 shadow-[0px_4px_16px_0px_#0000001A] overflow-x-visible rounded-r-lg scroll-smooth no-scrollbar">
           <ul className="space-y-2 text-white">
             <Link href={"/views/dashboard"} as="">
               <List
                 icon={dashboard}
+                activeIcon={activedashboard}
                 name={"Dashboard"}
                 url="/views/dashboard"
               />
             </Link>
 
             <Link href={"/views/heatmap"} as="">
-              <List icon={heatmap} name={"Heat Map"} url="/views/heatmap" />
+              <List icon={heatmap} activeIcon={activeheatmap} name={"Heat Map"} url="/views/heatmap" />
             </Link>
 
             <Link href={"/views/customPush"} as="">
               <List
                 icon={push}
+                activeIcon={activepush}
                 name={"Custom Push/SMS"}
                 url="/views/customPush"
               />
@@ -77,7 +82,7 @@ function SideBar() {
                 <Image src={driverside} className="mr-2" alt="tool icon" />
                 Drivers
               </div>
-              <Image className="mr-4 h-2 w-3" src={DriverArrow} alt="arrow" />
+              <Image className="mr-4 h-5 w-5" src={DriverArrow} alt="arrow" />
             </div>
             <div className="pl-6">
               {showDriver ? (
@@ -110,7 +115,7 @@ function SideBar() {
                 Transactions
               </div>
               <Image
-                className="mr-4 h-2 w-3"
+                className="mr-4 h-5 w-5"
                 src={TransactionArrow}
                 alt="arrow"
               />
@@ -142,7 +147,7 @@ function SideBar() {
                 <Image src={vehicle} className="mr-2" alt="tool icon" />
                 Vehicle
               </div>
-              <Image className="mr-4 h-2 w-3" src={VehicleArrow} alt="arrow" />
+              <Image className="mr-4 h-5 w-5" src={VehicleArrow} alt="arrow" />
             </div>
             <div className="pl-6">
               {showVehicle ? (
@@ -169,7 +174,7 @@ function SideBar() {
               ) : null}
             </div>
             <Link href={"/views/expense"} as="">
-              <List icon={expense} name={"Expense"} url="/views/expense" />
+              <List icon={expense} activeIcon={activeexpense} name={"Expense"} url="/views/expense" />
             </Link>
 
             <div className="flex justify-center ">
@@ -186,7 +191,7 @@ function SideBar() {
               </Link>
             </div>
 
-            <div className="flex h-[52px] pt-[394px] pl-6">
+            <div className="flex pb-7 h-[52px] pt-[394px] pl-6">
               <div>
                 <Image src={darkmode} alt="darkmode switch" />
               </div>
@@ -205,9 +210,9 @@ function SideBar() {
                     className="sr-only peer"
                   />
                   <div
-                    className="w-12 h-6 mr-4 bg-[#D9D9D9] rounded-[2.5rem] peer 
-                                        peer-checked:after:translate-x-6 peer-checked:after:border-white after:content-[''] 
-                                        after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
+                    className="w-12 h-7 mr-4 pl-1 bg-[#D9D9D9] rounded-[2.5rem] peer 
+                                        peer-checked:after:translate-x-5 peer-checked:after:border-white after:content-[''] 
+                                        after:absolute after:top-1  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
                                         peer-checked:bg-black"
                   ></div>
                 </label>

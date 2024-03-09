@@ -11,10 +11,10 @@ import {DriverKycTable} from "../../../components/Drivers/DriverKyc/DriverKycTab
 import AllDriverTiles from "@/components/Drivers/DriverTiles";
 import Link from "next/link";
 import Image from "next/image";
-import driver from "../../../assets/driver_icon.png";
+import driver from "../../../assets/driver.svg";
 import plus from "../../../assets/plus.png";
-import vehicle from "../../../assets/vehicle_icon.png";
-import payment from "../../../assets/payments.png";
+import vehicle from "../../../assets/vehicle.svg";
+import payment from "../../../assets/payment.svg";
 import { DashboardTiles1 } from "@/components/tiles";
 import DashboardTiles from "@/components/tiles";
 import AccountMenu from "@/components/headerDropdown";
@@ -78,7 +78,7 @@ export default function DriverKyc() {
             </div>
 
             {/* Table */}
-            <div className="rounded-lg bg-white mx-5 mt-[24px]">
+            <div className="rounded-lg bg-white mx-5 px-[10px] mt-[24px]">
 
               
               <div className="relative overflow-x-auto bg-white sm:rounded-t-md">

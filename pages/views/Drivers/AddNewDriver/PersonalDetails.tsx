@@ -86,7 +86,7 @@ export default function PersonalDetails(prop: PersonalProps) {
               <Image
                 src={blueline}
                 alt="blue timeline"
-                className="w-[100px] ml-1"
+                className="w-[100px] grow ml-1"
               />
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 2
@@ -97,7 +97,7 @@ export default function PersonalDetails(prop: PersonalProps) {
               <Image
                 src={greyline}
                 alt="blue timeline"
-                className="w-[100px] ml-1"
+                className="w-[100px] grow ml-1"
               />
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 3
@@ -108,7 +108,7 @@ export default function PersonalDetails(prop: PersonalProps) {
               <Image
                 src={greyline}
                 alt="blue timeline"
-                className="w-[100px] ml-1"
+                className="w-[100px] grow ml-1"
               />
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 4
@@ -169,7 +169,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <Field
                             type="text"
                             id="firstName"
-                            className="border placeholder-[#BFBFBF]  border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614]  border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="First Name"
                             value={values.firstName}
                             onChange={handleChange}
@@ -194,7 +194,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <Field
                             type="text"
                             id="lastName"
-                            className="border border-gray-300 placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-2"
+                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Last Name"
                             value={values.lastName}
                             onChange={handleChange}
@@ -221,7 +221,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <Field
                             type="text"
                             id="phone"
-                            className="border border-gray-300 placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-2.5"
+                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2.5"
                             placeholder="+233 123 456 789"
                             value={values.phone}
                             onChange={handleChange}
@@ -244,7 +244,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <Field
                             type="text"
                             id="email"
-                            className="border border-gray-300 placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-2.5"
+                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2.5"
                             placeholder="example@email.com"
                             value={values.email}
                             onChange={handleChange}
@@ -276,7 +276,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <Field
                             type="text"
                             id="ghanaCardName"
-                            className="border border-gray-300 placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-2"
+                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Full name"
                             value={values.ghanaCardName}
                             onChange={handleChange}
@@ -299,7 +299,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <Field
                             type="text"
                             id="ghanaCardNumber"
-                            className="border border-gray-300 placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-2"
+                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="GHA-12345678-42"
                             value={values.ghanaCardNumber}
                             onChange={handleChange}

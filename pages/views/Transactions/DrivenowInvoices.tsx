@@ -6,22 +6,24 @@ import { useEffect, useState } from "react";
 import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
-import DrivenowInvoicesTiles from "../../../components/DriveNowInvoices/DrivenowTiles";
+import DrivenowInvoicesTiles, {
+  DrivenowInvoicesTiles1,
+} from "../../../components/DriveNowInvoices/DrivenowTiles";
 import { DrivenowInvoicesTable } from "../../../components/DriveNowInvoices/DrivenowInvoices";
 import Link from "next/link";
 import Image from "next/image";
-import driver from "../../../assets/driver_icon.png";
-import revenue from "../../../assets/revenue_icon.png";
+import driver from "../../../assets/driver.svg";
+import revenue from "../../../assets/revenue.svg";
 import vehicle from "../../../assets/vehicle_icon.png";
-import payment from "../../../assets/payments.png";
+import payment from "../../../assets/payment.svg";
 import Header from "@/components/header";
 
 export default function DriveNowInvoices() {
   return (
     <>
-<div className="flex w-full">
+      <div className="flex w-full">
         <div className="w-full z-10">
-          <Header name="Drivenow Invoices"/>
+          <Header name="Drivenow Invoices" />
         </div>
       </div>
       <Layout>
@@ -36,7 +38,7 @@ export default function DriveNowInvoices() {
           {/* Bottom menu */}
           <section className="w-full ">
             <div className="flex space-x-4 grow m-5">
-              <DrivenowInvoicesTiles
+              <DrivenowInvoicesTiles1
                 icon={revenue}
                 entity1="Total Amount Received"
                 entity1value={2412570.0}
@@ -68,8 +70,7 @@ export default function DriveNowInvoices() {
 
             {/* Table */}
 
-            <div className="bg-white rounded-lg mx-5 mb-12 mt-6 ">
-              
+            <div className="bg-white rounded-lg mx-5 px-[10px] mb-12 mt-6 ">
               <DrivenowInvoicesTable />
             </div>
           </section>

@@ -26,9 +26,9 @@ type PushProp = {
 export default function AddVehicleIssue() {
   return (
     <>
-<div className="flex w-full">
+      <div className="flex w-full">
         <div className="w-full z-10">
-          <Header name="Vehicle Issue log"/>
+          <Header name="Vehicle Issue log" />
         </div>
       </div>
       <Layout>
@@ -91,7 +91,7 @@ export default function AddVehicleIssue() {
                         <Field
                           id="vehicleRegistration"
                           as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
+                          className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.vehicleRegistration}
                           onChange={handleChange}
                         >
@@ -119,7 +119,7 @@ export default function AddVehicleIssue() {
                         <Field
                           id="issueCategory"
                           as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
+                          className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.issueCategory}
                           onChange={handleChange}
                         >
@@ -154,7 +154,7 @@ export default function AddVehicleIssue() {
                         <Field
                           type="text"
                           id="amount"
-                          className="border border-gray-300 text-gray-900 text-sm rounded block w-full p-1.5"
+                          className="border border-gray-300 shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-1.5"
                           placeholder="Amount"
                           value={values.amount}
                           onChange={handleChange}
@@ -221,7 +221,7 @@ export default function AddVehicleIssue() {
                           id="description"
                           as="textarea"
                           rows={10}
-                          className="block p-2.5 mb-auto w-[100%] h-[100px] text-sm text-gray-900 bg-[#FFFFFF] rounded-[4px] border border-gray-300"
+                          className="block p-2.5 shadow-[0px_1px_2px_0px_#1B283614] mb-auto w-[100%] h-[100px] text-sm text-gray-900 bg-[#FFFFFF] rounded-[4px] border border-gray-300"
                           placeholder="Enter Description"
                           value={values.description}
                           onChange={handleChange}

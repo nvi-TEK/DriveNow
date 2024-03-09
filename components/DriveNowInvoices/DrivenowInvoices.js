@@ -78,7 +78,7 @@ export const DrivenowInvoicesTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
+      className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
       abc
@@ -94,7 +94,7 @@ export const DrivenowInvoicesTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border h-[30px] text-center border-[#D9D9D9] text-xs rounded px-1 py-1 "
+      className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-center border-[#D9D9D9] text-[#595959] text-xs rounded px-1 py-1 "
       aria-placeholder=""
     >
       abc
@@ -111,16 +111,16 @@ export const DrivenowInvoicesTable = () => {
   return (
     <>
       <div className="flex items-center justify-between ">
-        <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pl-[10px] pt-4 ">
+        <h4 className="text-[#262626] font-medium text-[22px] leading-[30px]  pt-4 ">
           Invoice Generated History
         </h4>
-        <div className="mr-5 h-[10px]">
+        <div className=" h-[10px]">
           <TableRange />
         </div>
       </div>
       {/* number of entries dropdown and Search bar */}
-      <div className="flex items-center mt-6 justify-end mr-5">
-        <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
+      <div className="flex items-center mt-6 justify-end mr-3">
+        <p className="font-medium text-xs leading-[30px] mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
 
@@ -131,7 +131,7 @@ export const DrivenowInvoicesTable = () => {
       </div>
 
       {/* Table */}
-      <table {...getTableProps()} className="mt-7 ml-5 w-[96.4%]">
+      <table {...getTableProps()} className="mt-7 w-full">
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -180,7 +180,7 @@ export const DrivenowInvoicesTable = () => {
         </tbody>
       </table>
 
-      <div className="flex mt-5 justify-end pr-5 gap-x-2">
+      <div className="flex mt-5 justify-end pb-4 gap-x-2">
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
@@ -218,7 +218,7 @@ export const DrivenowInvoicesTable = () => {
           <ArrowForwardIosOutlinedIcon fontSize="small" />
         </button>
 
-        <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
+        <p className="font-medium text-sm leading-[30px] text-[#262626] ">
           {dropdown2}
         </p>
       </div>

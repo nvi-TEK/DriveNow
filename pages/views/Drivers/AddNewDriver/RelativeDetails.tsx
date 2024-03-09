@@ -87,7 +87,7 @@ export default function RelativeDetails(prop: RelativeProps) {
               <Image
                 src={greenline}
                 alt="blue timeline"
-                className="w-[100px] ml-1"
+                className="w-[100px] ml-1 grow"
               />
               <div className="bg-[#0C9064] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 <CheckOutlinedIcon fontSize="small" />
@@ -98,7 +98,7 @@ export default function RelativeDetails(prop: RelativeProps) {
               <Image
                 src={greenline}
                 alt="blue timeline"
-                className="w-[100px] ml-1"
+                className="w-[100px] ml-1 grow"
               />
               <div className="bg-[#0C9064] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 <CheckOutlinedIcon fontSize="small" />
@@ -109,7 +109,7 @@ export default function RelativeDetails(prop: RelativeProps) {
               <Image
                 src={greenline}
                 alt="blue timeline"
-                className="w-[100px] ml-1"
+                className="w-[100px] ml-1 grow"
               />
               <div className="bg-[#007AF5] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 4
@@ -163,7 +163,7 @@ export default function RelativeDetails(prop: RelativeProps) {
                           <Field
                             type="text"
                             id="ghanaCardName"
-                            className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Full name"
                             value={values.ghanaCardName}
                             onChange={handleChange}
@@ -184,7 +184,7 @@ export default function RelativeDetails(prop: RelativeProps) {
                           <Field
                             type="text"
                             id="ghanaCardNumber"
-                            className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="GHA-12345678-42"
                             value={values.ghanaCardNumber}
                             onChange={handleChange}
@@ -207,7 +207,7 @@ export default function RelativeDetails(prop: RelativeProps) {
                           <Field
                             type="text"
                             id="phone"
-                            className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="+233 123 456 789"
                             value={values.phone}
                             onChange={handleChange}
@@ -228,7 +228,7 @@ export default function RelativeDetails(prop: RelativeProps) {
                           <Field
                             type="text"
                             id="houseAddress"
-                            className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Address"
                             value={values.houseAddress}
                             onChange={handleChange}
@@ -251,7 +251,7 @@ export default function RelativeDetails(prop: RelativeProps) {
                       <Field
                         type="text"
                         id="gpsAddress"
-                        className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 w-full text-sm rounded block p-2"
+                        className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 w-full text-sm rounded block p-2"
                         placeholder="GT-123-456"
                         value={values.gpsAddress}
                         onChange={handleChange}

@@ -12,7 +12,7 @@ export const Checkbox = React.forwardRef(({ indeterminate, ...rest }, ref) => {
 
   return (
     <>
-      <input className='border-[#D9D9D9]' type='checkbox' ref={resolvedRef} {...rest} />
+      <input className='border-[#D9D9D9] rounded-[2px]' type='checkbox' ref={resolvedRef} {...rest} />
     </>
   )
 })

@@ -124,7 +124,7 @@ export default function AddExpense() {
                         <Field
                           type="text"
                           id="costCenter"
-                          className="border border-gray-300 text-gray-900 text-sm rounded w-[100%]  p-1.5"
+                          className="border border-gray-300 bg-[#F0F0F0] text-gray-900 text-sm rounded w-[100%]  p-1.5"
                           placeholder=""
                           value={values.amount}
                           onChange={handleChange}
@@ -184,7 +184,7 @@ export default function AddExpense() {
                         <Field
                           type="text"
                           id="createdBy"
-                          className="border border-gray-300 text-gray-900 text-sm rounded  w-full p-1.5"
+                          className="border border-gray-300 bg-[#F0F0F0] text-gray-900 text-sm rounded  w-full p-1.5"
                           placeholder=""
                           value={values.amount}
                           onChange={handleChange}

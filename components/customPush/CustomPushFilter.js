@@ -7,7 +7,7 @@ export const CustomPushFilter = ({ filter, setFilter }) => {
       <input
         value={filter || ""}
         onChange={(e) => setFilter(e.target.value)}
-        className="border w-[164px] placeholder-[#BFBFBF] pl-3 py-1.5 text-xs border-[#D9D9D9] rounded text-black"
+        className="border w-[164px] placeholder-[#BFBFBF] pl-3 py-1.5 text-xs shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] rounded text-black"
         placeholder="Select group to send"
       />
     </span>

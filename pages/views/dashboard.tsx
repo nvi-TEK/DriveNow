@@ -8,14 +8,14 @@ import Layout from "../../components/layout";
 import Link from "next/link";
 import Image from "next/image";
 import { DashChart } from "../../components/dashboard/dashboardColumnChart";
-import driver from "../../assets/driver_icon.png";
-import vehicle from "../../assets/vehicle_icon.png";
-import payment from "../../assets/payments.png";
-import { DashboardTiles1 } from "@/components/tiles";
+import driver from "../../assets/driver.svg";
+import vehicle from "../../assets/vehicle.svg";
+import payment from "../../assets/payment.svg";
+import { DashboardTiles1, MidTiles } from "@/components/tiles";
 import DashboardStack from "@/components/stackedChart";
 import DashboardTiles from "@/components/tiles";
 import MouseOverPopover, { ContractPop } from "@/components/popover";
-import revenue from "../../assets/revenue_icon.png";
+import revenue from "../../assets/revenue.svg";
 import Header from "@/components/header";
 import DriverKYCPop from "../../components/popover";
 import ChartDropdown from "@/components/chartDropdown";
@@ -46,10 +46,10 @@ export default function Dashboard() {
                 entity1value={2412570.0}
                 entity2="Total Payments"
                 entity2value={450}
-                entity2differential="+20.00%"
+                entity2differential={-20.5}
               />
 
-              <DashboardTiles
+              <MidTiles
                 icon={driver}
                 entity1="Total Drivers"
                 entity1value={1250}
@@ -74,16 +74,16 @@ export default function Dashboard() {
               <DashboardTiles
                 icon={revenue}
                 entity1="Revenue"
-                entity1value={2412570.0}
-                entity2="Total Payments"
+                entity1value={2412570}
+                entity2="Volume"
                 entity2value={450}
-                entity2differential="+20.00%"
+                entity2differential={+20.5}
               />
 
-              <DashboardTiles
+              <MidTiles
                 icon={vehicle}
                 entity1="Total Vehicles"
-                entity1value={2412570.0}
+                entity1value={1250}
                 entity2="Active Vehicles"
                 entity2value={450}
                 entity2differential="+20.00%"
@@ -103,8 +103,8 @@ export default function Dashboard() {
 
           <section className="flex px-5 justify-between mb-5">
             <div className="mt-6 w-[74%] ">
-              <div className="bg-white h-[657px]  rounded-[8px]">
-                <div className="p-[32px] flex justify-between">
+              <div className="bg-white h-[657px] shadow-[0px_1px_2px_0px_#1B283614] rounded-[8px]">
+                <div className="p-[32px] pr-2 flex justify-between">
                   <div>
                     <h6 className="text-[#777777] font-medium leading-[14.06px] text-xs">
                       Total Revenue
@@ -118,7 +118,7 @@ export default function Dashboard() {
                   </div>
                 </div>
 
-                <div className="px-[32px]">
+                <div>
                   <DashboardStack />
                 </div>
 
@@ -170,7 +170,7 @@ export default function Dashboard() {
                 </div>
 
                 {/* Contract chart */}
-                <div className="pl-5">
+                <div>
                   <DashChart />
                 </div>
               </div>
@@ -178,7 +178,7 @@ export default function Dashboard() {
 
             {/* Driver KYC  */}
             <div className="mt-6 bg-[#FFFFFF] shadow-[0px_1px_2px_0px_#1B283614] rounded-lg ml-5 h-[855px] overflow-y-scroll no-scrollbar pb-5 w-[25%] ">
-              <div className="flex justify-between items-center ">
+              <div className="flex bg bg-white justify-between items-center ">
                 <p className="m-5 text-base font-medium leading-[22px] text-[#262626] ">
                   Driver KYC
                 </p>
@@ -186,7 +186,7 @@ export default function Dashboard() {
                   <DriverKYCPop />
                 </div>
               </div>
-              <div className="mx-[6%] ">
+              <div className="mx-[6%]">
                 <KYC
                   name="Frank Mensah"
                   description="Driver’s License Uploaded"

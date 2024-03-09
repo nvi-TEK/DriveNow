@@ -13,23 +13,11 @@ import greyline from "../../../../assets/greyline.png";
 import StyledDropzone from "../../../../components/dropzone";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import ResidentialDetailsMap from "../../../../components/Drivers/DriverKyc/ResidentialDetailsMap";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import AllDriverTiles from "@/components/Drivers/DriverTiles";
 import Link from "next/link";
 import Image from "next/image";
 import info from "../../../../assets/info_icon.png";
 import greenline from "../../../../assets/greenline.png";
 
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import driver from "../../../assets/driver_icon.png";
-import plus from "../../../../assets/plus.png";
-import vehicle from "../../../assets/vehicle_icon.png";
-import payment from "../../../assets/payments.png";
-import { DashboardTiles1 } from "@/components/tiles";
-import DashboardTiles from "@/components/tiles";
-import AccountMenu from "@/components/headerDropdown";
-import { Grid } from "@mui/material";
-// import { gridSpacing } from "../components/revenueChart/constant";
 import BasicStacking from "@/components/stackedChart";
 import Header from "@/components/header";
 
@@ -47,9 +35,9 @@ type UploadModel = {
 export default function ResidentialDetails() {
   return (
     <>
-<div className="flex w-full">
+      <div className="flex w-full">
         <div className="w-full z-10">
-        <Header name="All Drivers" secondName=" / Drivers KYC" />
+          <Header name="All Drivers" secondName=" / Drivers KYC" />
         </div>
       </div>
       <Layout>
@@ -84,7 +72,7 @@ export default function ResidentialDetails() {
               <Image
                 src={greenline}
                 alt="blue timeline"
-                className="w-[100px] ml-1"
+                className="w-[100px] grow ml-1"
               />
               <div className="bg-[#007AF5] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 2
@@ -95,7 +83,7 @@ export default function ResidentialDetails() {
               <Image
                 src={greyline}
                 alt="blue timeline"
-                className="w-[100px] ml-1"
+                className="w-[100px] grow ml-1"
               />
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 3
@@ -106,7 +94,7 @@ export default function ResidentialDetails() {
               <Image
                 src={greyline}
                 alt="blue timeline"
-                className="w-[100px] ml-1"
+                className="w-[100px] grow ml-1"
               />
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 4
@@ -156,7 +144,7 @@ export default function ResidentialDetails() {
                           <Field
                             type="text"
                             id="houseAddress"
-                            className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Address"
                             value={values.houseAddress}
                             onChange={handleChange}
@@ -180,7 +168,7 @@ export default function ResidentialDetails() {
                           <Field
                             type="text"
                             id="streetName"
-                            className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Street Name"
                             value={values.streetName}
                             onChange={handleChange}
@@ -206,7 +194,7 @@ export default function ResidentialDetails() {
                           <Field
                             type="text"
                             id="city"
-                            className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="City"
                             value={values.city}
                             onChange={handleChange}
@@ -230,7 +218,7 @@ export default function ResidentialDetails() {
                           <Field
                             type="text"
                             id="region"
-                            className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Region"
                             value={values.region}
                             onChange={handleChange}

@@ -2,13 +2,12 @@ import React from "react";
 import { Chart as ChartJS, defaults, Tooltip } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import dashboardData from "./dashboardData.json";
-import { options } from "../mainChart";
 
 ChartJS.register(Tooltip);
 
 export const DashChart = () => {
   return (
-    <div className="h-[270px] w-[700px] ">
+    <div className="h-[260px] w-full px-4 pb-4">
       <Bar
         data={{
           labels: dashboardData.map((data) => data.label),
@@ -24,6 +23,8 @@ export const DashChart = () => {
           ],
         }}
         options={{
+         
+          maintainAspectRatio: false,
           plugins: {
             legend: {
               display: false,
@@ -32,6 +33,7 @@ export const DashChart = () => {
           interaction: {
             mode: "index",
           },
+          
           scales: {
            x:{ 
               grid: {
@@ -49,16 +51,19 @@ export const DashChart = () => {
                 drawTicks: false
               }, 
               ticks:{
-                display: true
+                display: true,
+                color: '#BFBFBF'
               },
             },
             y: {
               ticks: {
                 stepSize: 20,
+                color: '#BFBFBF',
                 display: true
               },
               grid: {
                 display: false,
+            
                 offset: true,
                 drawOnChartArea: false,
                 drawBorder: false,

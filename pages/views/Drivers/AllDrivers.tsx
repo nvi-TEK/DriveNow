@@ -6,9 +6,9 @@ import Header from "../../../components/header";
 import Layout from "../../../components/layout";
 import { AllDriversTable } from "../../../components/Drivers/AllDriversTable";
 import AllDriverTiles from "@/components/Drivers/DriverTiles";
-import driver from "../../../assets/driver_icon.png";
-import vehicle from "../../../assets/vehicle_icon.png";
-import payment from "../../../assets/payments.png";
+import driver from "../../../assets/driver.svg";
+import vehicle from "../../../assets/vehicle.svg";
+import payment from "../../../assets/payment.svg";
 
 export default function AllDrivers() {
   return (
@@ -65,7 +65,7 @@ export default function AllDrivers() {
             </div>
 
             {/* Table */}
-            <div className=" bg-white rounded-lg mx-5 mt-[24px]">
+            <div className=" bg-white rounded-lg px-[10px] mx-5 mt-[24px]">
               <h3 className="font-medium pl-2 pt-5 text-[#262626] text-[22px] leading-[30px] ">
                 List of Drivers
               </h3>

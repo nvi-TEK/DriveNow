@@ -1,21 +1,14 @@
 /* eslint-disable require-jsdoc */
-
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import { useEffect, useState } from "react";
-import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { DriverKycTable } from "../../../components/Drivers/DriverKyc/DriverKycTable";
-import AllDriverTiles from "@/components/Drivers/DriverTiles";
-import Link from "next/link";
 import Image from "next/image";
-import driver from "../../../assets/driver_icon.png";
-import onlinedriver from "../../../assets/onlinedriver.png";
+import driver from "../../../assets/driver.svg";
+import onlinedriver from "../../../assets/onlinedriver.svg";
 import vehilce from "../../../assets/vehicle_icon.png";
-import offlinedriver from "../../../assets/offlinedriver.png";
-import vehicle from "../../../assets/vehicle_icon.png";
+import offlinedriver from "../../../assets/offlinedriver.svg";
+import vehicle from "../../../assets/vehicle.svg";
 import Header from "@/components/header";
 import ListOfVehiclesTiles from "@/components/Vehicle/ListOfVehiclesTiles";
 import DriverMap from "@/components/Drivers/DriverMap";

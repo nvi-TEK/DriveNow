@@ -8,16 +8,16 @@ import AllDriverTiles from "@/components/Drivers/DriverTiles";
 import { BasicTable } from "../../../components/payment/BasicTable";
 import Link from "next/link";
 import Image from "next/image";
-import driver from "../../../assets/driver_icon.png";
-import vehicle from "../../../assets/vehicle_icon.png";
-import payment from "../../../assets/payments.png";
-import bell from "../../../assets/bell_icon.png";
+import driver from "../../../assets/driver.svg";
+import vehicle from "../../../assets/vehicle.svg";
+import payment from "../../../assets/payment.svg";
+import bell from "../../../assets/paymentbell.svg";
 import Header from "@/components/header";
 
 export default function Payments() {
   return (
     <>
-<div className="flex w-full">
+      <div className="flex w-full">
         <div className="w-full z-10">
           <Header name="Payments" />
         </div>
@@ -70,15 +70,15 @@ export default function Payments() {
 
             {/* Table */}
 
-            <div className="bg-white rounded-lg mx-5 pb-4 mb-12 mt-6 ">
+            <div className="bg-white rounded-lg mx-5 px-[10px] pb-4 mb-12 mt-6 ">
               <div className="flex justify-between ">
-                <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pl-[10px] pt-4 ">
+                <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pl-[] pt-4 ">
                   Payments
                 </h4>
                 <Link href={"/views/"}>
                   <button
                     type="button"
-                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] rounded-[4px] w-[] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
+                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] rounded-[4px] w-[] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center mb-2 "
                   >
                     <Image src={bell} alt="bell icon" className="ml-0 mr-1" />
                     Send Payment Reminder

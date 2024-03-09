@@ -13,7 +13,7 @@ function Picker() {
     <DatePicker
       format={dateFormat}
       placeholder="dd/mm/yyyy"
-      className="border-[#D9D9D9] text-xs py-[5px] rounded-[4px]  w-full"
+      className="border-[#D9D9D9] shadow-[0px_1px_2px_0px_#1B283614] text-xs py-[5px] rounded-[4px]  w-full"
     />
   );
 }
@@ -25,7 +25,7 @@ function AddExpensePicker() {
       disabled={true}
       defaultValue={moment()}
       placeholder="dd/mm/yyyy"
-      className="border-[#D9D9D9] text-xs py-[5px] rounded-[4px]  w-full"
+      className="border-[#D9D9D9] bg-[#F0F0F0] shadow-[0px_1px_2px_0px_#1B283614] text-xs py-[5px] rounded-[4px]  w-full"
     />
   );
 }
@@ -36,7 +36,7 @@ function TableRange() {
       <RangePicker
         size="small"
         placeholder={["Start", "End"]}
-        className="w-[216px] shadow-md rounded-[3px]"
+        className="w-[216px] shadow-[0px_1px_2px_0px_#1B283614] rounded-[3px]"
       />
     </Space>
   );

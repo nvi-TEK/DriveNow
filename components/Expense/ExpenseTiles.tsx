@@ -18,7 +18,7 @@ type ExpenseProp1 = {
 
 export default function ExpenseTiles(props: ExpenseProp1) {
   return (
-    <div className="h-[8rem] p-4 pt-3 pr-0 shadow rounded-lg w-[517px] bg-white grow rounded-t-lg border-[#E9ECEF]">
+    <div className="h-[8rem] p-4 pt-3 pr-0 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg bg-white grow rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />
@@ -35,7 +35,7 @@ export default function ExpenseTiles(props: ExpenseProp1) {
           </p>
           <div className="flex items-center pt-2">
             <p className="text-[#262626] pt-  leading-7 font-medium text-xl">
-              {props.entity1value}
+              {props.entity1value.toLocaleString()}
             </p>
             <p className="text-xs font-normal pl-2 text-[#0EA371]">
               {props.entity1differential}
@@ -49,7 +49,7 @@ export default function ExpenseTiles(props: ExpenseProp1) {
           </p>
           <div className="flex items-center pt-2">
             <p className="text-[#262626]   leading-7 font-medium text-xl">
-              {props.entity2value}
+              {props.entity2value.toLocaleString()}
             </p>
             <p className="text-xs font-normal pl-2 text-[#0EA371] ">
               {props.entity2differential}

@@ -19,16 +19,6 @@ import Link from "next/link";
 import Image from "next/image";
 import info from "../../../../assets/info_icon.png";
 import greenline from "../../../../assets/greenline.png";
-
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import driver from "../../../assets/driver_icon.png";
-import plus from "../../../../assets/plus.png";
-import vehicle from "../../../assets/vehicle_icon.png";
-import payment from "../../../assets/payments.png";
-import { DashboardTiles1 } from "@/components/tiles";
-import DashboardTiles from "@/components/tiles";
-import AccountMenu from "@/components/headerDropdown";
-import { Grid } from "@mui/material";
 // import { gridSpacing } from "../components/revenueChart/constant";
 import BasicStacking from "@/components/stackedChart";
 import Header from "@/components/header";
@@ -83,7 +73,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
                 <Image
                   src={blueline}
                   alt="blue timeline"
-                  className="w-[100px] ml-1"
+                  className="w-[100px] ml-1 grow"
                 />
                 <div className="bg-[#007AF5] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                   2
@@ -94,7 +84,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
                 <Image
                   src={greyline}
                   alt="blue timeline"
-                  className="w-[100px] ml-1"
+                  className="w-[100px] ml-1 grow"
                 />
                 <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                   3
@@ -105,7 +95,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
                 <Image
                   src={greyline}
                   alt="blue timeline"
-                  className="w-[100px] ml-1"
+                  className="w-[100px] ml-1 grow"
                 />
                 <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                   4
@@ -157,7 +147,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
                             <Field
                               type="text"
                               id="houseAddress"
-                              className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
+                              className="border border-gray-300 shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded2 block w-[500px] p-2"
                               placeholder="Address"
                               value={values.houseAddress}
                               onChange={handleChange}
@@ -178,7 +168,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
                             <Field
                               type="text"
                               id="streetName"
-                              className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
+                              className="border border-gray-300 shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded2 block w-[500px] p-2"
                               placeholder="Street Name"
                               value={values.streetName}
                               onChange={handleChange}
@@ -201,7 +191,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
                             <Field
                               type="text"
                               id="city"
-                              className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
+                              className="border border-gray-300 shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded2 block w-[500px] p-2"
                               placeholder="City"
                               value={values.city}
                               onChange={handleChange}
@@ -222,7 +212,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
                             <Field
                               type="text"
                               id="region"
-                              className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
+                              className="border border-gray-300 shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded2 block w-[500px] p-2"
                               placeholder="Region"
                               value={values.region}
                               onChange={handleChange}
@@ -245,7 +235,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
                         <Field
                           type="text"
                           id="gpsAddress"
-                          className="border border-gray-300 text-gray-900 text-sm rounded2 block w-[500px] p-2"
+                          className="border border-gray-300 shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded2 block w-[500px] p-2"
                           placeholder="GT-123-456"
                           value={values.gpsAddress}
                           onChange={handleChange}

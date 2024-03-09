@@ -19,28 +19,34 @@ const ExpenseStack = () => {
         label: "",
         data: expenseStackData.map((data) => data.value1),
         backgroundColor: "#0076EC",
+        barThickness: 32,
       },
       {
         label: "",
         data: expenseStackData.map((data) => data.value2),
         backgroundColor: "#BDE6FF",
+        barThickness: 32,
       },
     ],
   };
 
   const options = {
+    maintainAspectRatio: false,
     plugins: {
-        legend: {
-          display: false
-        }
-       },
+      legend: {
+        display: false,
+      },
+    },
     interaction: {
-        mode: 'index'
+      mode: "index",
     },
     scales: {
       x: {
         grid: {
           drawOnChartArea: false,
+        },
+        ticks: {
+          color: "#585858",
         },
         stacked: true,
       },
@@ -48,6 +54,7 @@ const ExpenseStack = () => {
         grid: {},
         ticks: {
           stepSize: 90,
+          color: "#585858",
         },
 
         stacked: true,
@@ -56,7 +63,7 @@ const ExpenseStack = () => {
   };
 
   return (
-    <div className="h-[340px] w-[630px]">
+    <div className="h-[360px] w-full">
       <Bar data={data} options={options} />
     </div>
   );

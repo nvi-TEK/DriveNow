@@ -2,21 +2,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { useEffect, useState } from "react";
-import Modal from "react-modal";
-import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import ListOfVehiclesTiles from "../../../components/Vehicle/ListOfVehiclesTiles";
 import { ListOfVehiclesTable } from "../../../components/Vehicle/ListOfVehiclesTable";
 import Link from "next/link";
 import Image from "next/image";
-import driver from "../../../assets/driver_icon.png";
-import revenue from "../../../assets/revenue_icon.png";
-import vehicle from "../../../assets/vehicle_icon.png";
-import repair from "../../../assets/repair.png";
+import vehicle from "../../../assets/vehicle.svg";
+import repair from "../../../assets/repair.svg";
 import payment from "../../../assets/payments.png";
 import bell from "../../../assets/bell_icon.png";
 import plus from "../../../assets/plus.png";
@@ -58,7 +51,7 @@ export default function ListOfVehicles() {
     <>
       <div className="flex w-full">
         <div className="w-full z-10">
-          <Header name="Vehicles"/>
+          <Header name="Vehicles" />
         </div>
       </div>
       <Layout>
@@ -96,15 +89,15 @@ export default function ListOfVehicles() {
 
             {/* Table */}
 
-            <div className="bg-white rounded-lg mx-5 mb-12 mt-6 ">
+            <div className="bg-white rounded-lg px-[10px] mx-5 mb-12 mt-6 ">
               <div className="flex justify-between ">
-                <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pl-[10px] pt-4 ">
+                <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pt-4 ">
                   List of Vehicles{" "}
                 </h4>
-                <Link href={""}>
+                <Link href={"/views/Vehicles/AddVehicle/VehicleDetails"}>
                   <button
                     type="button"
-                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] rounded-[4px] w-[] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
+                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] rounded-[4px] w-[] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center mb-2 "
                   >
                     <Image src={plus} alt="plus sign" className="ml-0 mr-1" />
                     Add New Vehicle

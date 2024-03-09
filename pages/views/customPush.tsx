@@ -10,7 +10,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { CustomPushTable } from "../../components/customPush/CustomPushTable";
 import Header from "@/components/header";
-import Datepicker from "@/components/datepicker1";
 import Picker from "@/components/dateRange";
 
 type PushProp = {
@@ -26,7 +25,7 @@ export default function customPush() {
     <>
       <div className="flex w-full">
         <div className="w-full z-10">
-          <Header name="Custom Push/SMS"/>
+          <Header name="Custom Push/SMS" />
         </div>
       </div>{" "}
       <Layout>
@@ -55,7 +54,7 @@ export default function customPush() {
               </Link>
             </div>
 
-            <div className="mt-3 rounded-lg [368px] mb-[33px] mx-6">
+            <div className="mt-3 rounded-lg shadow-[0px_1px_2px_0px_#1B283614] [368px] mb-[33px] mx-6">
               <Formik<PushProp>
                 initialValues={{
                   title: "",
@@ -65,14 +64,12 @@ export default function customPush() {
                   device: "",
                 }}
                 validationSchema={Yup.object({
-                  message: Yup.string()
-                    .max(20, "Must be 40 characters or less")
-                    .required("Message required"),
+                  message: Yup.string().required("Required"),
 
-                  title: Yup.string().required("Message required"),
-                  group: Yup.string().required("Required field"),
-                  notification: Yup.string().required("Required field"),
-                  device: Yup.string().required("Required field"),
+                  title: Yup.string().required("Required"),
+                  group: Yup.string().required("Required"),
+                  notification: Yup.string().required("Required"),
+                  device: Yup.string().required("Required"),
                 })}
                 onSubmit={async (values) => {
                   alert(JSON.stringify(values, null, 2));
@@ -94,17 +91,17 @@ export default function customPush() {
                         <Field
                           id="group"
                           as="select"
-                          className="bg-[#FFFFFF] border grow border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
+                          className="bg-[#FFFFFF] border grow shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
                           value={values.group}
                           onChange={handleChange}
                         >
-                          <option disabled={true} value={""}>
+                          <option className="py-3" disabled={true} value={""}>
                             Select group
                           </option>
-                          <option>All Drivers</option>
-                          <option>Online Drivers</option>
-                          <option>Offline Drivers</option>
-                          <option>DriveNow Drivers</option>
+                          <option className="py-3">All Drivers</option>
+                          <option className="py-3">Online Drivers</option>
+                          <option className="py-3">Offline Drivers</option>
+                          <option className="py-3">DriveNow Drivers</option>
                         </Field>
                         <p className="font-medium text-xs text-red-700">
                           <ErrorMessage name="group" />
@@ -120,7 +117,7 @@ export default function customPush() {
                         <Field
                           id="notification"
                           as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
+                          className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.notification}
                           onChange={handleChange}
                         >
@@ -145,7 +142,7 @@ export default function customPush() {
                         <Field
                           id="device"
                           as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
+                          className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.device}
                           onChange={handleChange}
                         >
@@ -182,7 +179,7 @@ export default function customPush() {
                         <Field
                           type="text"
                           id="title"
-                          className="border border-gray-300 placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
+                          className="border border-gray-300 shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
                           placeholder="Title"
                           value={values.title}
                           onChange={handleChange}
@@ -203,7 +200,7 @@ export default function customPush() {
                         id="message"
                         as="textarea"
                         rows={10}
-                        className="block p-2.5 mb-auto w-[100%] h-[100px] text-sm text-gray-900 bg-[#FFFFFF] rounded-[4px] border border-gray-300"
+                        className="block shadow-[0px_1px_2px_0px_#1B283614] p-2.5 mb-auto w-[100%] h-[100px] text-sm text-gray-900 bg-[#FFFFFF] rounded-[4px] border border-gray-300"
                         placeholder="Type your message here..."
                         value={values.message}
                         onChange={handleChange}
@@ -227,7 +224,7 @@ export default function customPush() {
               </Formik>
             </div>
 
-            <div className="mb-[50px] mx-5 rounded-lg pb-4 pt-3 bg-white ">
+            <div className="mb-[50px] mx-5 px-[10px] shadow-[0px_1px_2px_0px_#1B283614] rounded-lg pb-4 pt-3 bg-white ">
               <h3 className="text-[#262626] font-medium text-[22px] pt-4 pl-[10px] leading-[30px]">
                 Custom Push History
               </h3>

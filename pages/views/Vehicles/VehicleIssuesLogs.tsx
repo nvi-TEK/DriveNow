@@ -8,9 +8,9 @@ import ListOfVehiclesTiles from "../../../components/Vehicle/ListOfVehiclesTiles
 import { VehicleIssuesLogsTable } from "../../../components/Vehicle/VehicleIssuesLogs/VehicleIssuesLogsTable";
 import Link from "next/link";
 import Image from "next/image";
-import vehicle from "../../../assets/vehicle_icon.png";
-import repair from "../../../assets/repair.png";
-import plus from "../../../assets/plus.png";
+import vehicle from "../../../assets/vehicle.svg";
+import repair from "../../../assets/repair.svg";
+import plus from "../../../assets/plus.svg";
 import Header from "@/components/header";
 
 export default function ListOfVehicles() {
@@ -45,9 +45,9 @@ export default function ListOfVehicles() {
 
   return (
     <>
-<div className="flex w-full">
+      <div className="flex w-full">
         <div className="w-full z-10">
-          <Header name="Vehicles"/>
+          <Header name="Vehicles" />
         </div>
       </div>
       <Layout>
@@ -84,15 +84,15 @@ export default function ListOfVehicles() {
               />
             </div>
 
-            <div className="bg-white rounded-lg mx-5 mb-12 mt-6 ">
+            <div className="bg-white rounded-lg mx-5 mb-12 px-[10px] mt-6 ">
               <div className="flex justify-between ">
-                <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pl-[10px] pt-4 ">
+                <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pt-4 ">
                   Vehicle Issue Log
                 </h4>
                 <Link href={"AddVehicleIssue"}>
                   <button
                     type="button"
-                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] rounded-[4px] w-[] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
+                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] rounded-[4px] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center  mb-2 "
                   >
                     <Image src={plus} alt="plus sign" className="ml-0 mr-1" />
                     Add Vehicle Issue Log

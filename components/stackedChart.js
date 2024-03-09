@@ -39,11 +39,12 @@ const DashboardStack = () => {
   };
 
   const options = {
+    maintainAspectRatio: false,
     plugins: {
       legend: {
-        display: false
-      }
-     },
+        display: false,
+      },
+    },
     interaction: {
       mode: "index",
     },
@@ -52,12 +53,17 @@ const DashboardStack = () => {
         grid: {
           drawOnChartArea: false,
         },
+        ticks: {
+          color: "#BFBFBF",
+        },
+
         stacked: true,
       },
       y: {
         grid: {},
         ticks: {
           stepSize: 90,
+          color: "#BFBFBF",
         },
 
         stacked: true,
@@ -66,7 +72,7 @@ const DashboardStack = () => {
   };
 
   return (
-    <div className="h-[340px] w-[680px] ">
+    <div className="h-[400px] w-full px-[30px] ">
       <Bar data={data} options={options} />
     </div>
   );

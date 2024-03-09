@@ -78,7 +78,7 @@ export const CustomPushTable = () => {
       value={pageSize}
       defaultValue={3}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border h-[30px] text-center border-[#D9D9D9] text-xs text-[#BFBFBF] rounded px-1 py-1 "
+      className="border h-[30px] shadow-[0px_1px_2px_0px_#1B283614] text-center border-[#D9D9D9] text-xs text-[#BFBFBF] rounded px-1 py-1 "
       placeholder=""
     >
       {[3, 10, 15, 20].map((pageSize) => (
@@ -94,7 +94,7 @@ export const CustomPushTable = () => {
       value={pageSize}
       defaultValue={3}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border h-[30px] text-center text-xs border-[#D9D9D9] rounded px-1 py-1 "
+      className="border h-[30px] shadow-[0px_1px_2px_0px_#1B283614] text-center text-xs border-[#D9D9D9] rounded px-1 py-1 "
       aria-placeholder=""
     >
       {[3, 10, 15, 20].map((pageSize) => (
@@ -120,7 +120,7 @@ export const CustomPushTable = () => {
       </div>
 
       {/* Table */}
-      <table {...getTableProps()} className="mt-7 ml-[10px] w-[98%]">
+      <table {...getTableProps()} className="mt-7 w-full">
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -156,7 +156,7 @@ export const CustomPushTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-y h-[48px] "
+                        className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-[#E6E6E6] border-y h-[48px] "
                       >
                         {cell.render("Cell")}
                       </td>
@@ -169,7 +169,7 @@ export const CustomPushTable = () => {
         </tbody>
       </table>
 
-      <div className="flex mt-5 justify-end pr-5 gap-x-2">
+      <div className="flex mt-5 justify-end gap-x-2">
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
@@ -207,7 +207,7 @@ export const CustomPushTable = () => {
           <ArrowForwardIosOutlinedIcon fontSize="small" />
         </button>
 
-        <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
+        <p className="font-medium text-sm leading-[30px] text-[#262626] ">
           {dropdown2}
         </p>
       </div>

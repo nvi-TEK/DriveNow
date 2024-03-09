@@ -7,11 +7,8 @@ import Head from "next/head";
 import Layout from "../../../components/layout";
 import ListOfVehiclesTiles from "../../../components/Vehicle/ListOfVehiclesTiles";
 import { VehicleTrackerTable } from "../../../components/Vehicle/VehicleTracker/VehicleTrackerTable";
-import Link from "next/link";
-import Image from "next/image";
-
-import vehicle from "../../../assets/vehicle_icon.png";
-import repair from "../../../assets/repair.png";
+import vehicle from "../../../assets/vehicle.svg";
+import repair from "../../../assets/repair.svg";
 import payment from "../../../assets/payments.png";
 import bell from "../../../assets/bell_icon.png";
 import plus from "../../../assets/plus.png";
@@ -89,9 +86,9 @@ export default function VehicleTracker() {
               />
             </div>
 
-            <div className="bg-white rounded-lg mx-5 mb-12 mt-6 ">
+            <div className="bg-white rounded-lg mx-5 px-[10px] mb-12 mt-6 ">
               <div className="flex justify-between ">
-                <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pl-[10px] pt-4 ">
+                <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pt-4 ">
                   Vehicle Tracker
                 </h4>
                 

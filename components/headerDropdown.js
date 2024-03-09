@@ -5,7 +5,9 @@ import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import pencil from "../assets/pencil.png";
+import user from "../assets/user.svg";
+import settings from "../assets/settings.svg";
+import lock from "../assets/lock.svg";
 import fileicon from "../assets/fileicon.png";
 import recycle from "../assets/recycle.png";
 import deleteicon from "../assets/blockvehicle.png";
@@ -36,7 +38,7 @@ export default function LongMenu() {
         <KeyboardArrowDownIcon />
       </IconButton>
       <Menu
-      className="rounded-lg mr-2 mt-9"
+        className="rounded-lg mr-2 mt-9"
         id="long-menu"
         MenuListProps={{
           "aria-labelledby": "long-button",
@@ -53,35 +55,53 @@ export default function LongMenu() {
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="flex py-2.5 ">
-          <Image src={pencil} className="mr-2" alt="pencil" />
+        <MenuItem
+          onClick={handleClose}
+          className="flex text-sm font-normal leading-[18px] text-[#262626] px-5 py-2.5 "
+        >
+          <Image src={user} className="mr-2 w-6" alt="pencil" />
           User Profile
         </MenuItem>
-        <MenuItem className="flex py-2.5 " onClick={handleClose}>
-          <Image src={fileicon} className="mr-2 w-5 " alt="x" />
+        <MenuItem
+          className="flex text-sm font-normal leading-[18px] text-[#262626] px-5 py-2.5 "
+          onClick={handleClose}
+        >
+          <Image src={settings} className="mr-2 w-6 " alt="x" />
           Settings
         </MenuItem>
-        <MenuItem className="flex py-2.5 " onClick={handleClose}>
-          <Image src={recycle} className="mr-2 w-5 " alt="x" />
+        <MenuItem
+          className="flex text-sm font-normal leading-[18px] text-[#262626] px-5 py-2.5 "
+          onClick={handleClose}
+        >
+          <Image src={lock} className="mr-2 w-6 " alt="x" />
           Change Password
         </MenuItem>
-        <MenuItem className="flex py-2.5 " onClick={handleClose}>
+        <MenuItem
+          className="flex text-sm font-normal leading-[18px] text-[#262626] px-5 py-2.5 "
+          onClick={handleClose}
+        >
           System
         </MenuItem>
-        <MenuItem className="flex py-2.5 " onClick={handleClose}>
+        <MenuItem
+          className="flex text-sm font-normal leading-[18px] text-[#262626] px-5 py-2.5 "
+          onClick={handleClose}
+        >
           Configuration
         </MenuItem>
-        <MenuItem className="flex py-2.5 " onClick={handleClose}>
+        <MenuItem
+          className="flex text-sm font-normal leading-[18px] text-[#262626] px-5 py-2.5  "
+          onClick={handleClose}
+        >
           Help Documentation
         </MenuItem>
 
         <MenuItem
-          className="flex py-2.5 "
+          className="flex text-sm font-normal text-[#DC4A41] leading-[18px] px-5 py-2.5 "
           component={Link}
           href="/"
           onClick={handleClose}
         >
-          <p className="text-[#DC4A41]">Log Out</p>
+          Log Out
         </MenuItem>
       </Menu>
     </>

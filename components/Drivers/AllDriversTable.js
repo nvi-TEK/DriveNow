@@ -76,10 +76,9 @@ export const AllDriversTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
+      className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
-  
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
           {pageSize}
@@ -92,13 +91,12 @@ export const AllDriversTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border h-[30px] text-xs text-center border-[#D9D9D9] rounded px-1 py-1 "
+      className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-xs text-center border-[#D9D9D9] rounded px-1 py-1 "
       aria-placeholder=""
     >
-    
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
-        {pageSize} Items/Page
+          {pageSize} Items/Page
         </option>
       ))}
     </select>,
@@ -118,14 +116,14 @@ export const AllDriversTable = () => {
       </div>
 
       {/* Table */}
-      <table {...getTableProps()} className="mt-7 ml-[10px] w-[98%]">
+      <table {...getTableProps()} className="mt-7 w-full">
         <thead>
           {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()} >
+            <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-sm font-normal text-[#262626] leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  className="text-left text-xs font-normal text-[#262626] leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -148,13 +146,13 @@ export const AllDriversTable = () => {
           {page.map((row) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()} className="text-left" >
+              <tr {...row.getRowProps()} className="text-left">
                 {row.cells.map((cell) => {
                   return (
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-sm font-normal leading-[18px] text-[#595959] border-y p-2 "
+                        className="text-xs font-normal leading-[18px] text-[#595959] border-y p-2 "
                       >
                         {cell.render("Cell")}
                       </td>
@@ -167,7 +165,7 @@ export const AllDriversTable = () => {
         </tbody>
       </table>
 
-      <div className="flex mt-5 pb-4 justify-end pr-5 gap-x-2">
+      <div className="flex mt-5 pb-4 justify-end gap-x-2">
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
@@ -205,7 +203,7 @@ export const AllDriversTable = () => {
           <ArrowForwardIosOutlinedIcon fontSize="small" />
         </button>
 
-        <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
+        <p className="font-medium text-sm leading-[30px] text-[#262626] ">
           {dropdown2}
         </p>
       </div>

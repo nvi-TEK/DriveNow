@@ -18,7 +18,7 @@ export default function ChartDropdown() {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "6px 20px 3px 6px",
+            optionPadding: "8px 0px 8px 8px",
           },
         },
       }}
@@ -55,7 +55,7 @@ function YearDropdown() {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "6px 20px 3px 6px",
+            optionPadding: "8px 0px 8px 8px",
           },
         },
       }}
@@ -92,6 +92,7 @@ function CategoryDropdown() {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
+            optionPadding: "8px 0px 8px 8px",
           },
         },
       }}
@@ -124,7 +125,7 @@ function MonthDropdown() {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "6px 20px 3px 6px",
+            optionPadding: "8px 0px 8px 8px",
           },
         },
       }}

@@ -1,0 +1,13 @@
+<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Tabler Icons" clip-path="url(#clip0_371_12290)">
+<path id="Vector" d="M9 12.5898C9 13.3855 9.31607 14.1486 9.87868 14.7112C10.4413 15.2738 11.2044 15.5898 12 15.5898C12.7956 15.5898 13.5587 15.2738 14.1213 14.7112C14.6839 14.1486 15 13.3855 15 12.5898C15 11.7942 14.6839 11.0311 14.1213 10.4685C13.5587 9.90591 12.7956 9.58984 12 9.58984C11.2044 9.58984 10.4413 9.90591 9.87868 10.4685C9.31607 11.0311 9 11.7942 9 12.5898Z" stroke="#007AF5" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M3 8.58984C3 8.05941 3.21071 7.5507 3.58579 7.17563C3.96086 6.80056 4.46957 6.58984 5 6.58984H19C19.5304 6.58984 20.0391 6.80056 20.4142 7.17563C20.7893 7.5507 21 8.05941 21 8.58984V16.5898C21 17.1203 20.7893 17.629 20.4142 18.0041C20.0391 18.3791 19.5304 18.5898 19 18.5898H5C4.46957 18.5898 3.96086 18.3791 3.58579 18.0041C3.21071 17.629 3 17.1203 3 16.5898V8.58984Z" stroke="#007AF5" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M18 12.5898H18.01" stroke="#007AF5" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M6 12.5898H6.01" stroke="#007AF5" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_371_12290">
+<rect width="24" height="24" fill="white" transform="translate(0 0.589844)"/>
+</clipPath>
+</defs>
+</svg>
