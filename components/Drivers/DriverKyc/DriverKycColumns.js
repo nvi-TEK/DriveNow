@@ -4,10 +4,11 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import pencil from "../../../assets/pencil.png";
-import fileicon from "../../../assets/fileicon.png";
-import recycle from "../../../assets/recycle.png";
-import deleteicon from "../../../assets/blockvehicle.png";
+import pencil from "../../../assets/pencil.svg";
+import user from "../../../assets/user.svg";
+import recycle from "../../../assets/recycle.svg";
+import bin from "../../../assets/bin.svg";
+import power from "../../../assets/power.svg";
 
 const ITEM_HEIGHT = 56;
 
@@ -54,19 +55,20 @@ export default function LongMenu() {
             width: "27ch",
             position: "sticky",
             marginRight: "50px",
+            paddingTop: "",
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="flex py-2 ">
-          <Image src={pencil} className="mr-2" alt="people icon" />
+        <MenuItem onClick={handleClose} className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-sm ">
+          <Image src={user} className="mr-2 w-5" alt="people icon" />
           Driver Profile
         </MenuItem>
         <MenuItem className="flex py-2 " onClick={handleClose}>
-          <Image src={fileicon} className="mr-2 w-5 " alt="pencil" />
+          <Image src={pencil} className="mr-2 w-5 " alt="pencil" />
           Update Agreement
         </MenuItem>
         <MenuItem className="flex py-2 " onClick={handleClose}>
-          <Image src={recycle} className="mr-2 w-5 " alt="power icon" />
+          <Image src={power} className="mr-2 w-5 " alt="power icon" />
           Turn Off Engine Control
         </MenuItem>
         <MenuItem className="flex py-2 " onClick={handleClose}>
@@ -74,7 +76,7 @@ export default function LongMenu() {
           Restore Engine Control
         </MenuItem>
         <MenuItem className="flex py-2 " onClick={handleClose}>
-          <Image src={deleteicon} className="mr-2 w-5 " alt="bin icon" />
+          <Image src={bin} className="mr-2 w-5 " alt="bin icon" />
           <p className="text-[#DC4A41]">Terminate</p>
         </MenuItem>
       </Menu>

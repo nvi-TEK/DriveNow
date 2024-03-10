@@ -22,8 +22,6 @@ import { VehicleTrackerFilter } from "../VehicleTracker/VehicleTrackerFilter";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import { Checkbox } from "../../Checkbox";
 
-
-
 export const VehicleTrackerTable = () => {
   const columns = useMemo(() => VEHICLETRACKERCOLUMNS, []);
   const data = useMemo(() => VEHICLE_TRACKER_DATA, []);
@@ -79,7 +77,6 @@ export const VehicleTrackerTable = () => {
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
       className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
-      place
     >
       abc
       {[10, 15, 20].map((pageSize) => (
@@ -100,7 +97,7 @@ export const VehicleTrackerTable = () => {
       abc
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
-        {pageSize} Items/Page
+          {pageSize} Items/Page
         </option>
       ))}
     </select>,
@@ -157,7 +154,10 @@ export const VehicleTrackerTable = () => {
                 {row.cells.map((cell) => {
                   return (
                     <>
-                      <td {...cell.getCellProps()} className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-y h-[48px]">
+                      <td
+                        {...cell.getCellProps()}
+                        className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-y h-[48px]"
+                      >
                         {cell.render("Cell")}
                       </td>
                     </>
@@ -168,7 +168,6 @@ export const VehicleTrackerTable = () => {
           })}
         </tbody>
       </table>
-      
 
       <div className="flex mt-5 pb-4 justify-end gap-x-2">
         <button

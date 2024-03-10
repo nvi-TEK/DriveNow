@@ -11,7 +11,7 @@ import { DashChart } from "../../components/dashboard/dashboardColumnChart";
 import driver from "../../assets/driver.svg";
 import vehicle from "../../assets/vehicle.svg";
 import payment from "../../assets/payment.svg";
-import { DashboardTiles1, MidTiles } from "@/components/tiles";
+import { DashboardTiles1, LastTile, MidTiles } from "@/components/tiles";
 import DashboardStack from "@/components/stackedChart";
 import DashboardTiles from "@/components/tiles";
 import MouseOverPopover, { ContractPop } from "@/components/popover";
@@ -55,8 +55,8 @@ export default function Dashboard() {
                 entity1value={1250}
                 entity2="Active Drivers"
                 entity2value={1180}
-                entity2differential="-4.90%"
-                entity1differential="+15.80%"
+                entity2differential={-4.90}
+                entity1differential={+15.80}
               />
 
               <DashboardTiles1
@@ -77,7 +77,7 @@ export default function Dashboard() {
                 entity1value={2412570}
                 entity2="Volume"
                 entity2value={450}
-                entity2differential={+20.5}
+                entity2differential={+18.5}
               />
 
               <MidTiles
@@ -86,17 +86,17 @@ export default function Dashboard() {
                 entity1value={1250}
                 entity2="Active Vehicles"
                 entity2value={450}
-                entity2differential="+20.00%"
+                entity1differential={-15}
+                entity2differential={+20.00}
               />
 
-              <DashboardTiles1
+              <LastTile
                 icon={payment}
-                entity1="Total Payments"
+                entity1="Active Repairs"
                 entity1value={450}
-                entity2="Failed"
+                entity2="Completed"
                 entity2value={5}
-                entity3="Completed"
-                entity3value={445}
+              
               />
             </div>
           </section>

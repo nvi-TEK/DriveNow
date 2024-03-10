@@ -8,13 +8,13 @@ import Modal from "react-modal";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import pencil from "../../assets/pencil.png";
-import fileicon from "../../assets/fileicon.png";
-import recycle from "../../assets/recycle.png";
+import pencil from "../../assets/pencil.svg";
+import file from "../../assets/file.svg";
+import recycle from "../../assets/recycle.svg";
 import modalclose from "../../assets/modalclose.png";
-import deleteicon from "../../assets/blockvehicle.png";
+import vehicle from "../../assets/menuvehicle.svg";
 
-const ITEM_HEIGHT = 56;
+const ITEM_HEIGHT = 86;
 
 
 export default function LongMenu() {
@@ -83,22 +83,22 @@ export default function LongMenu() {
         disableScrollLock= {true}
         PaperProps={{
           style: {
-            maxHeight: ITEM_HEIGHT * 4.5,
+            maxHeight: ITEM_HEIGHT * 4,
             width: "25ch",
             position: "sticky",
             marginRight: "100px"
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="flex">
-          <Image src={pencil} className="mr-2" alt="checkmark" />
+        <MenuItem onClick={handleClose} className="flex py-2.5">
+          <Image src={pencil} className="mr-2 w-6" alt="checkmark" />
           Edit Vehicle{" "}
         </MenuItem>
         <Link href={""}>
           <MenuItem onClick={openModal} component={Link}
-          href={""} className="flex" >
+          href={""} className="flex py-2.5" >
           
-            <Image src={fileicon} className="mr-2 w-5 " alt="x" />
+            <Image src={file} className="mr-2 w-6 " alt="x" />
             Update Sim
           </MenuItem>
           <Modal
@@ -163,12 +163,12 @@ export default function LongMenu() {
           </Modal>
         </Link>
 
-        <MenuItem className="flex" onClick={handleClose}>
-          <Image src={recycle} className="mr-2 w-5 " alt="x" />
+        <MenuItem className="flex py-2.5" onClick={handleClose}>
+          <Image src={recycle} className="mr-2 w-6 " alt="x" />
           Update Status{" "}
         </MenuItem>
-        <MenuItem className="flex" onClick={handleClose}>
-          <Image src={deleteicon} className="mr-2 w-5 " alt="off icon" />
+        <MenuItem className="flex py-2.5" onClick={handleClose}>
+          <Image src={vehicle} className="mr-2 w-6 " alt="off icon" />
           <p className="text-[#DC4A41]">Delete</p>{" "}
         </MenuItem>
       </Menu>

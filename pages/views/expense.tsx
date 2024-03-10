@@ -43,7 +43,7 @@ export default function Expense() {
                 icon={payment}
                 entity1="Total Expenses (Paid)"
                 entity1value={1250}
-                entity1differential="+15.80%"
+                entity1differential={+15.8}
                 entity2="Approved Expenses"
                 entity2value={1180}
               />
@@ -52,7 +52,7 @@ export default function Expense() {
                 icon={declined}
                 entity1="Total Expenses (Declined)"
                 entity1value={20}
-                entity1differential="+5.80%"
+                entity1differential={+5.8}
                 entity2="Pending Expenses"
                 entity2value={450}
               />
@@ -92,7 +92,7 @@ export default function Expense() {
                 </div>
               </div>
             </div>
-            <section className="bg-white mt-6 ml-4 w-[38%] rounded-[8px] mr-5">
+            <section className="bg-white mt-6 ml-4 w-[38%] h-[500px] rounded-[8px] mr-5">
               <div className="flex justify-between">
                 <h4 className="p-6 font-bold text-sm text-[#262626] leading-[21.6px]   ">
                   Expense Overview
@@ -103,16 +103,16 @@ export default function Expense() {
                   <YearDropdown />
                 </div>
               </div>
-              <div className="flex justify-center mt-[70px]">
+              <div className="flex justify-center mt-[24px]">
                 <DoughnutChart />
               </div>
 
-              <div className="flex px-4 mt-4 gap-3 flex-wrap">
-                <div className="flex items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+              <div className="flex px-4 mt-6 gap-3 flex-wrap">
+                <div className="flex items-center leading-4 text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#0076EC] rounded-[50%]"></div>
                   Car Insurance
                 </div>
-                <div className="flex items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div className="flex items-center leading-4 text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#492FB2] rounded-[50%]"></div>
                   Deposit Refund
                 </div>

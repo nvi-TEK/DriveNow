@@ -12,7 +12,7 @@ import repair from "../../../assets/repair.svg";
 import payment from "../../../assets/payments.png";
 import bell from "../../../assets/bell_icon.png";
 import plus from "../../../assets/plus.png";
-
+import VehicleTrackerTiles from "@/components/Vehicle/VehicleTracker/VehicleTrackerTiles";
 import Header from "@/components/header";
 
 export default function VehicleTracker() {
@@ -47,7 +47,7 @@ export default function VehicleTracker() {
 
   return (
     <>
-<div className="flex w-full">
+      <div className="flex w-full">
         <div className="w-full z-10">
           <Header name="Vehicles Tracker" />
         </div>
@@ -64,21 +64,21 @@ export default function VehicleTracker() {
           {/* Bottom menu */}
           <section className="w-full ">
             <div className="flex space-x-4 grow m-5">
-              <ListOfVehiclesTiles
+              <VehicleTrackerTiles
                 icon={vehicle}
                 entity1="Total Vehicles"
                 entity1value={1250}
-                entity1differential="+15.80%"
+                entity1differential={+15.8}
                 entity2="Allocated Vehicles"
                 entity2value={1180}
                 entity3="Unallocated Vehicles"
                 entity3value={70}
               />
-              <ListOfVehiclesTiles
+              <VehicleTrackerTiles
                 icon={repair}
                 entity1="Completed Issues"
                 entity1value={20}
-                entity1differential="+5.80%"
+                entity1differential={-5.8}
                 entity2="Active Issues"
                 entity2value={450}
                 entity3="Out of service"
@@ -91,7 +91,6 @@ export default function VehicleTracker() {
                 <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pt-4 ">
                   Vehicle Tracker
                 </h4>
-                
               </div>
               <VehicleTrackerTable />
             </div>

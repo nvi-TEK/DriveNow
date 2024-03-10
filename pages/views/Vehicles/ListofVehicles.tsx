@@ -4,7 +4,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Layout from "../../../components/layout";
-import ListOfVehiclesTiles from "../../../components/Vehicle/ListOfVehiclesTiles";
+import { ListofVehiclesTiles } from "@/components/Vehicle/ListOfVehiclesTiles";
 import { ListOfVehiclesTable } from "../../../components/Vehicle/ListOfVehiclesTable";
 import Link from "next/link";
 import Image from "next/image";
@@ -66,24 +66,25 @@ export default function ListOfVehicles() {
           {/* Bottom menu */}
           <section className="w-full ">
             <div className="flex space-x-4 grow m-5">
-              <ListOfVehiclesTiles
+              <ListofVehiclesTiles
                 icon={vehicle}
                 entity1="Total Vehicles"
                 entity1value={1250}
-                entity1differential="+15.80%"
+                entity1differential={+15.8}
                 entity2="Allocated Vehicles"
                 entity2value={450}
                 entity3="Unallocated Vehicles"
                 entity3value={70}
               />
-              <ListOfVehiclesTiles
+              <ListofVehiclesTiles
                 icon={repair}
                 entity1="Completed repairs"
                 entity1value={20}
-                entity2="Active  Repairs"
+                entity2="Active Repairs"
                 entity2value={450}
                 entity3="Out of service"
                 entity3value={15}
+                entity1differential={-5.8}
               />
             </div>
 

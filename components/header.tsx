@@ -29,6 +29,7 @@ function Header(prop: pageProp) {
             <Link className="text-[#007AF5]" href={"/views/dashboard"}>
               Dashboard
             </Link>
+
             <span
               style={{ color: prop.secondName ? "#595959" : "#8C8C8C" }}
               className="text-sm leading-[18px] font-normal"

@@ -5,9 +5,8 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 // import pencil from "../../assets/pencil.png";
-import fileicon from "../../../assets/fileicon.png";
-// import recycle from "../../assets/recycle.png";
-// import deleteicon from "../../assets/blockvehicle.png";
+import fileicon from "../../../assets/file.svg";
+
 
 const ITEM_HEIGHT = 56;
 
@@ -52,7 +51,7 @@ export default function LongMenu() {
         }}
       >
         <MenuItem onClick={handleClose} className="flex">
-          <Image src={fileicon} className="mr-2" alt="checkmark" />
+          <Image src={fileicon} className="mr-2 w-6" alt="checkmark" />
           Raise an Expense
         </MenuItem>
       </Menu>

@@ -5,7 +5,7 @@ import Head from "next/head";
 import Header from "../../../components/header";
 import Layout from "../../../components/layout";
 import { AllDriversTable } from "../../../components/Drivers/AllDriversTable";
-import AllDriverTiles from "@/components/Drivers/DriverTiles";
+import AllDriverTiles, { AllDriverTiles1 } from "@/components/Drivers/DriverTiles";
 import driver from "../../../assets/driver.svg";
 import vehicle from "../../../assets/vehicle.svg";
 import payment from "../../../assets/payment.svg";
@@ -34,26 +34,27 @@ export default function AllDrivers() {
                 icon={vehicle}
                 entity1="Total Vehicles"
                 entity1value={1250}
-                entity1differential="+15.80%"
+                entity1differential={+15.80}
                 entity2="Active Vehicles"
                 entity2value={1180}
-                entity2differential="+4.90%"
+                entity2differential={+4.90}
                 entity3="Damaged"
                 entity3value={70}
-                entity3differential="-4.90%"
+                entity3differential={-4.90}
               />
               <AllDriverTiles
                 icon={driver}
                 entity1="Total Drivers"
                 entity1value={1250}
-                entity1differential="+15.80%"
+                entity1differential={+15.80}
                 entity2="Online Drivers"
                 entity2value={1180}
                 entity3="Offline Drivers"
                 entity3value={70}
-                entity3differential="-4.90%"
+                entity3differential={-4.90}
+                entity2differential={-4.90}
               />
-              <AllDriverTiles
+              <AllDriverTiles1
                 icon={payment}
                 entity1="Total Payments"
                 entity1value={450}

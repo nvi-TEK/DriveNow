@@ -7,7 +7,7 @@ import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
 import DrivenowInvoicesTiles, {
-  DrivenowInvoicesTiles1,
+  DrivenowInvoicesTiles1, LastTile,
 } from "../../../components/DriveNowInvoices/DrivenowTiles";
 import { DrivenowInvoicesTable } from "../../../components/DriveNowInvoices/DrivenowInvoices";
 import Link from "next/link";
@@ -44,22 +44,23 @@ export default function DriveNowInvoices() {
                 entity1value={2412570.0}
                 entity2="Total Daily"
                 entity2value={450}
-                entity2differential="+20.00%"
+                entity2differential={20.0}
               />
               <DrivenowInvoicesTiles
                 icon={driver}
                 entity1="Total Drivers"
                 entity1value={1250}
-                entity1differential="+15.80%"
-                entity2="Online Drivers"
+                entity1differential={+15.8}
+                entity2differential={+15.8}
+                entity2="Defaulted Drivers"
                 entity2value={1180}
-                entity3="Offline Drivers"
+                entity3="Blocked Drivers"
                 entity3value={70}
-                entity3differential="-4.90%"
+                entity3differential={-4.9}
               />
-              <DrivenowInvoicesTiles
+              <LastTile
                 icon={payment}
-                entity1="Total Payments"
+                entity1="Total Transactions"
                 entity1value={450}
                 entity2="Completed"
                 entity2value={445}

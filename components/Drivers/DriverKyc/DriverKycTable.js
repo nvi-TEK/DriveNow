@@ -100,7 +100,7 @@ export const DriverKycTable = () => {
       abc
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
-        {pageSize} Items/Page
+          {pageSize} Items/Page
         </option>
       ))}
     </select>,
@@ -111,7 +111,7 @@ export const DriverKycTable = () => {
   return (
     <>
       {/* number of entries dropdown and Search bar */}
-      <section className="flex items-center justify-between mt-6  ml-5">
+      <section className="flex items-center justify-between mt-6 ml-5">
         <div className="flex">
           <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
             Show {dropdown} entries
@@ -123,7 +123,7 @@ export const DriverKycTable = () => {
         <Link href={"/views/Drivers/AddNewDriver/PersonalDetails"}>
           <button
             type="button"
-            className="text-[#FFFFFF] border  bg-[#007AF5] ml-auto rounded-[4px] w-[154px] border-[#DADADA] focus:outline-none text-sm  py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
+            className="text-[#FFFFFF] border bg-[#007AF5] ml-auto rounded-[4px] px-2.5 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center mb-2 "
           >
             <Image src={plus} alt="Plus sign" className="mr-1" /> Add New Driver
           </button>

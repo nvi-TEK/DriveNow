@@ -8,7 +8,7 @@ import refresh from "../../../assets/blue_recycle.png";
 import fileicon from "../../../assets/fileicon.png";
 // import recycle from "../../assets/recycle.png";
 // import deleteicon from "../../assets/blockvehicle.png";
-import viewmap from "../../../assets/viewmap.png";
+import viewmap from "../../../assets/viewmap.svg";
 
 const ITEM_HEIGHT = 56;
 
@@ -42,18 +42,18 @@ export default function LongMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        disableScrollLock= {true}
+        disableScrollLock={true}
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "25ch",
             position: "sticky",
-            marginRight: "30px"
+            marginRight: "30px",
           },
         }}
       >
         <MenuItem onClick={handleClose} className="flex ">
-          <Image src={viewmap} className="mr-2" alt="map" />
+          <Image src={viewmap} className="mr-2 w-6" alt="map" />
           View on map
         </MenuItem>
       </Menu>
@@ -84,28 +84,29 @@ export const VEHICLETRACKERCOLUMNS = [
     Cell: (props) => {
       return (
         <div className="flex items-center gap-x-1">
-        <div className="">
-        <Image src={refresh} alt="refresh icon" />
+          <div className="">
+            <Image src={refresh} alt="refresh icon" />
+          </div>
+          <div
+            style={{
+              color: props.value === "Active" ? "#0EA371" : "#DC4A41",
+              backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
+              borderRadius: "2px",
+              textAlign: "center",
+              paddingTop: "1px",
+              paddingLeft: "6px",
+              paddingRight: "6px",
+              paddingBottom: "1px",
+              fontSize: "12px",
+              lineHeight: "16px",
+              fontWeight: "500",
+            }}
+          >
+            {props.value}
+          </div>
         </div>
-        <div
-          style={{
-            color: props.value === "Active" ? "#0EA371" : "#DC4A41",
-            backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
-            borderRadius: "2px",
-            textAlign: "center",
-            paddingTop: "1px",
-            paddingLeft: "6px",
-            paddingRight: "6px",
-            paddingBottom: "1px",
-            fontSize: "12px",
-            lineHeight: "16px",
-            fontWeight: "500",
-          }}
-        >
-          {props.value}
-        </div></div>
       );
-    }
+    },
   },
   {
     Header: "Location Updated",
@@ -129,13 +130,13 @@ export const VEHICLETRACKERCOLUMNS = [
             fontSize: "12px",
             lineHeight: "16px",
             fontWeight: "500",
-            width: "50px"
+            width: "50px",
           }}
         >
           {props.value}
         </div>
       );
-    }
+    },
   },
   {
     Header: "Action",

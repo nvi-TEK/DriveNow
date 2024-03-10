@@ -4,11 +4,12 @@ import React from "react";
 import Head from "next/head";
 import Layout from "../../../components/layout";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import AllDriverTiles from "@/components/Drivers/DriverTiles";
+import PaymentTiles, { LastTile, MidTiles } from "../../../components/payment/paymentTiles";
 import { BasicTable } from "../../../components/payment/BasicTable";
 import Link from "next/link";
 import Image from "next/image";
 import driver from "../../../assets/driver.svg";
+import revenue from "../../../assets/revenue.svg";
 import vehicle from "../../../assets/vehicle.svg";
 import payment from "../../../assets/payment.svg";
 import bell from "../../../assets/paymentbell.svg";
@@ -34,32 +35,31 @@ export default function Payments() {
           {/* Bottom menu */}
           <section className="w-full ">
             <div className="flex space-x-4 grow m-5">
-              <AllDriverTiles
-                icon={vehicle}
-                entity1="Total Vehicles"
-                entity1value={1250}
-                entity1differential="+15.80%"
-                entity2="Active Vehicles"
-                entity2value={1180}
-                entity2differential="+4.90%"
-                entity3="Damaged"
-                entity3value={70}
-                entity3differential="-4.90%"
+              <PaymentTiles
+                icon={revenue}
+                entity1="Total Amount Received"
+                entity1value={2412570.00}
+                entity1differential={+15.80}
+                entity2="Total Daily"
+                entity2value={450}
+                entity2differential={+4.90}
+                
               />
-              <AllDriverTiles
+              <MidTiles
                 icon={driver}
                 entity1="Total Drivers"
-                entity1value={1250}
-                entity1differential="+15.80%"
-                entity2="Online Drivers"
+                entity1value={1250}             
+                entity2="Defaulted Drivers"
                 entity2value={1180}
-                entity3="Offline Drivers"
+                entity3="Blocked Drivers"
                 entity3value={70}
-                entity3differential="-4.90%"
+                entity1differential={+15.80}
+                entity2differential={-4.90}
+                entity3differential={+4.90}
               />
-              <AllDriverTiles
+              <LastTile
                 icon={payment}
-                entity1="Total Payments"
+                entity1="Total Transactions"
                 entity1value={450}
                 entity2="Completed"
                 entity2value={445}

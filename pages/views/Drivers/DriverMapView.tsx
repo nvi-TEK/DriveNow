@@ -15,9 +15,9 @@ import DriverMap from "@/components/Drivers/DriverMap";
 export default function DriverKyc() {
   return (
     <>
-<div className="flex w-full">
+      <div className="flex w-full">
         <div className="w-full z-10">
-          <Header name="Driver Map View"/>
+          <Header name="Driver Map View" />
         </div>
       </div>
       <Layout>
@@ -35,24 +35,25 @@ export default function DriverKyc() {
                 icon={vehicle}
                 entity1="Total Vehicles"
                 entity1value={1250}
-                entity1differential="+15.80%"
+                entity1differential={+15.8}
                 entity2="Active Vehicles"
                 entity2value={1180}
-                entity2differential="+4.90%"
+                entity2differential={+4.9}
                 entity3="Damaged"
                 entity3value={70}
-                entity3differential="-4.90%"
+                entity3differential={-4.9}
               />
               <ListOfVehiclesTiles
                 icon={driver}
                 entity1="Total Drivers"
                 entity1value={1250}
-                entity1differential="+15.80%"
+                entity1differential={+15.8}
                 entity2="Online Drivers"
                 entity2value={1180}
                 entity3="Offline Drivers"
                 entity3value={70}
-                entity3differential="-4.90%"
+                entity3differential={-4.9}
+                entity2differential={-4.9}
               />
             </div>
 
