@@ -13,12 +13,13 @@ export default function TileDropdown() {
           colorText: "#8C8C8C",
           fontSize: 12,
           lineHeight: 1,
+          fontFamily: "Avenir Next LT Pro",
         },
         components: {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "8px 0px 8px 8px",
+            optionPadding: "8px 50px 8px 8px",
           },
         },
       }}
@@ -28,8 +29,9 @@ export default function TileDropdown() {
           className="text-[#8C8C8C]"
           defaultValue="This Week"
           suffixIcon={<UnfoldMoreIcon />}
+          popupMatchSelectWidth={false}
           variant="borderless"
-          style={{ width: 105 }}
+          style={{ width: 100 }}
           onChange={handleChange}
           options={[
             { value: "Today", label: "Today" },

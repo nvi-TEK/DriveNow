@@ -81,7 +81,7 @@ export default function VehicleImages(prop: RegistrationProps) {
               <Image
                 src={greenline}
                 alt="blue timeline"
-                className="w-[25%] grow ml-1"
+                className="w-[23%] grow ml-1"
               />
               <div className="bg-[#0C9064] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 <CheckOutlinedIcon fontSize="small" />
@@ -92,7 +92,7 @@ export default function VehicleImages(prop: RegistrationProps) {
               <Image
                 src={greenline}
                 alt="blue timeline"
-                className="w-[25%] grow ml-1"
+                className="w-[23%] grow ml-1"
               />
               <div className="bg-[#007AF5] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 3

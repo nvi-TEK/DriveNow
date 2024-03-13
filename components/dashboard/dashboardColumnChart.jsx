@@ -7,7 +7,7 @@ ChartJS.register(Tooltip);
 
 export const DashChart = () => {
   return (
-    <div className="h-[260px] w-full px-4 pb-4">
+    <div className="h-[260px] max-2xl:h-[235px] w-full px-4 pb-3">
       <Bar
         data={{
           labels: dashboardData.map((data) => data.label),

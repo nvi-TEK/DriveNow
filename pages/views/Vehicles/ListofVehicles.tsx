@@ -91,14 +91,14 @@ export default function ListOfVehicles() {
             {/* Table */}
 
             <div className="bg-white rounded-lg px-[10px] mx-5 mb-12 mt-6 ">
-              <div className="flex justify-between ">
-                <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pt-4 ">
+              <div className="flex justify-between pt-4 items-center">
+                <h4 className="text-[#262626] font-medium text-[22px] max-2xl:text-xl leading-[30px]">
                   List of Vehicles{" "}
                 </h4>
                 <Link href={"/views/Vehicles/AddVehicle/VehicleDetails"}>
                   <button
                     type="button"
-                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] rounded-[4px] w-[] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center mb-2 "
+                    className="text-[#FFFFFF] border bg-[#007AF5] rounded-[4px] focus:outline-none max-2xl:text-xs text-sm px-4 py-1.5 max-2xl:py-1 text-[14px] text-center inline-flex justify-center font-normal items-center"
                   >
                     <Image src={plus} alt="plus sign" className="ml-0 mr-1" />
                     Add New Vehicle

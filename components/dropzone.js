@@ -5,9 +5,44 @@ import plus from "../assets/dropzoneplus.svg";
 import Image from "next/image";
 
 const baseStyle = {
-  
   display: "flex",
   width: "188px",
+  height: "200px",
+  alignItems: "center",
+  padding: "50px",
+  justifyItems: "center",
+  paddingLeft: "73px",
+  borderWidth: 1,
+  borderRadius: 8,
+  borderColor: "#BFBFBF",
+  borderStyle: "dashed",
+  backgroundColor: "#fafafa",
+  color: "#bdbdbd",
+  outline: "none",
+  transition: "border .24s ease-in-out",
+};
+
+
+const VehicleStyle = {
+  display: "flex",
+  width: "100%",
+  height: "200px",
+  alignItems: "center",
+  padding: "50px",
+  justifyItems: "center",
+  paddingLeft: "73px",
+  borderWidth: 1,
+  borderRadius: 8,
+  borderColor: "#BFBFBF",
+  borderStyle: "dashed",
+  backgroundColor: "#fafafa",
+  color: "#bdbdbd",
+  outline: "none",
+  transition: "border .24s ease-in-out",
+};
+const LastDropzoneStyle = {
+  display: "flex",
+  width: "17.9%",
   height: "200px",
   alignItems: "center",
   padding: "50px",
@@ -62,3 +97,65 @@ export default function StyledDropzone() {
     </div>
   );
 }
+
+
+
+
+function VehicleImagesDropzone() {
+  const { getRootProps, getInputProps, isFocused, isDragAccept, isDragReject } =
+    useDropzone({ accept: { "image/*": [] } });
+
+  const style = useMemo(
+    () => ({
+      ...VehicleStyle,
+      ...(isFocused ? focusedStyle : {}),
+      ...(isDragAccept ? acceptStyle : {}),
+      ...(isDragReject ? rejectStyle : {}),
+    }),
+    [isFocused, isDragAccept, isDragReject]
+  );
+
+  return (
+    <div className="container">
+      <div className="cursor-pointer grow" {...getRootProps({ style })}>
+        <input {...getInputProps()} />
+        <Image
+          className="w-[2.625rem] h-[2.625rem]"
+          src={plus}
+          alt={"plus icon"}
+        />
+      </div>
+    </div>
+  );
+}
+
+
+function VehicleImagesDropzone1() {
+  const { getRootProps, getInputProps, isFocused, isDragAccept, isDragReject } =
+    useDropzone({ accept: { "image/*": [] } });
+
+  const style = useMemo(
+    () => ({
+      ...LastDropzoneStyle,
+      ...(isFocused ? focusedStyle : {}),
+      ...(isDragAccept ? acceptStyle : {}),
+      ...(isDragReject ? rejectStyle : {}),
+    }),
+    [isFocused, isDragAccept, isDragReject]
+  );
+
+  return (
+    <div className="container">
+      <div className="cursor-pointer grow" {...getRootProps({ style })}>
+        <input {...getInputProps()} />
+        <Image
+          className="w-[2.625rem] h-[2.625rem]"
+          src={plus}
+          alt={"plus icon"}
+        />
+      </div>
+    </div>
+  );
+}
+
+export {VehicleImagesDropzone, VehicleImagesDropzone1}

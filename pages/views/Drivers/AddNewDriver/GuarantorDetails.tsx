@@ -81,40 +81,40 @@ export default function GuarantorDetails(prop: GuarantorProps) {
               <div className="bg-[#0C9064] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
                 <CheckOutlinedIcon fontSize="small" />
               </div>
-              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#0C9064]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#0C9064]">
                 Personal Details
               </p>
               <Image
                 src={greenline}
                 alt="blue timeline"
-                className="w-[100px] ml-1 grow"
+                className="w-[8%] ml-1 grow"
               />
               <div className="bg-[#0C9064] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 <CheckOutlinedIcon fontSize="small" />
               </div>
-              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#0C9064]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#0C9064]">
                 Residence Details{" "}
               </p>
               <Image
                 src={greenline}
                 alt="blue timeline"
-                className="w-[100px] ml-1 grow"
+                className="w-[8%] ml-1 grow"
               />
               <div className="bg-[#007AF5] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 3
               </div>
-              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#007AF5]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#007AF5]">
                 Guarantor Details{" "}
               </p>
               <Image
                 src={greyline}
                 alt="blue timeline"
-                className="w-[100px] ml-1 grow"
+                className="w-[8%] ml-1 grow"
               />
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 4
               </div>
-              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#8C8C8C]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#8C8C8C]">
                 Relative Details{" "}
               </p>
             </div>

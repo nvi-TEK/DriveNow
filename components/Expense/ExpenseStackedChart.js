@@ -63,7 +63,7 @@ const ExpenseStack = () => {
   };
 
   return (
-    <div className="h-[360px] w-full">
+    <div className="h-[360px] max-2xl:h-[340px] w-full">
       <Bar data={data} options={options} />
     </div>
   );

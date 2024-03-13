@@ -4,7 +4,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 export const ExpenseFilter = ({ filter, setFilter }) => {
   return (
     <span className="flex items-center">
-    <p className="text-[#262626] text-sm leading-[30px] font-medium">Search:</p>
+    <p className="text-[#262626] max-2xl:text-xs text-sm leading-[30px] font-medium">Search:</p>
       <input
         value={filter || ""}
         onChange={(e) => setFilter(e.target.value)}

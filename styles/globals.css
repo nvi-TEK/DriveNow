@@ -63,3 +63,19 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.MuiMenuItem-root {
+  font-family: "Avenir Next LT Pro";
+}
+
+.ant-select-selection {
+  background-color: green;
+}
+
+#kyc-child{
+
+}
+
+#tdrops>div {
+  margin-top: "410px";
+}

@@ -73,33 +73,33 @@ export default function VehicleDetails(prop: DetailsProps) {
               </p>
             </div>
             {/* Timeline */}
-            <div className="flex py-6 px-[44px] border-y items-center">
-              <div className="bg-[#007AF5] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
+            <div className="flex py-6 px-[44px] border-y box-border items-center">
+              <div className="bg-[#007AF5] flex items-center justify-center w-8 h-8 text-white rounded-[100%] ">
                 1
               </div>
-              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#007AF5]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#007AF5]">
                 Vehicle Details
               </p>
               <Image
                 src={blueline}
                 alt="blue timeline"
-                className="w-[25%] grow ml-1"
+                className="grow w-[23%]"
               />
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 2
               </div>
-              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#8C8C8C]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#8C8C8C]">
                 Vehicle Images
               </p>
               <Image
                 src={greyline}
                 alt="blue timeline"
-                className="w-[25%] grow ml-1"
+                className="w-[23%] grow"
               />
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 3
               </div>
-              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#8C8C8C]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#8C8C8C]">
                 Registration Details
               </p>
             </div>

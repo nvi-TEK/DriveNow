@@ -16,7 +16,7 @@ function Header(prop: pageProp) {
   return (
     <>
       <div className="bg-white border-b z-20">
-        <div className="flex w-full h-[4rem] shadow-[0px_4px_16px_0px_#0000001A] items-center  border-[#E6E6E6] pr-4 bg-white">
+        <div className="flex w-full h-[4rem] max-2xl:h-[55px] shadow-[0px_4px_16px_0px_#0000001A] items-center  border-[#E6E6E6] pr-4 bg-white">
           <Link href={"/views/dashboard"}>
             <Image
               src={logo}
@@ -65,7 +65,7 @@ function Header(prop: pageProp) {
                 <input
                   type="search"
                   id="default-search"
-                  className="block w-[256px] border-0 p-2 ps-10 text-sm text-gray-900 rounded-lg bg-[#F2F2F2] dark:placeholder-gray-400"
+                  className="block w-[256px] border-0 p-1.5 ps-10 text-sm text-gray-900 rounded-lg bg-[#F2F2F2] dark:placeholder-gray-400"
                   placeholder="What are you looking for？"
                 />
               </div>
@@ -73,7 +73,7 @@ function Header(prop: pageProp) {
 
             {/* Notification bell */}
             <div className="ml-[3%]">
-              <Image src={bell} alt="Notification bell" />
+              <Image src={bell} className="max-2xl:w-5" alt="Notification bell" />
             </div>
 
             {/* profile picture */}
@@ -81,7 +81,7 @@ function Header(prop: pageProp) {
               <Image
                 src={avatar}
                 alt={"profile pic"}
-                className="rounded-full w-[40px] h-[40px]"
+                className="rounded-full max-2xl:w-[34px] max-2xl:h-[34px] w-[40px] h-[40px]"
               />
             </div>
             <p className="ml-[] leading-4 text-xs font-normal">Kweku Asamoah</p>

@@ -72,7 +72,7 @@ const DashboardStack = () => {
   };
 
   return (
-    <div className="h-[400px] w-full px-[30px] ">
+    <div className="max-2xl:h-[360px] h-[450px] w-full px-[30px] ">
       <Bar data={data} options={options} />
     </div>
   );

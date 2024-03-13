@@ -9,7 +9,10 @@ import Head from "next/head";
 import Layout from "../../../../components/layout";
 import blueline from "../../../../assets/blueline.svg";
 import greyline from "../../../../assets/greyline.svg";
-import StyledDropzone from "../../../../components/dropzone";
+import StyledDropzone, {
+  VehicleImagesDropzone,
+  VehicleImagesDropzone1,
+} from "../../../../components/dropzone";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import AllDriverTiles from "@/components/Drivers/DriverTiles";
 import Link from "next/link";
@@ -27,8 +30,6 @@ import DashboardTiles from "@/components/tiles";
 import AccountMenu from "@/components/headerDropdown";
 import BasicStacking from "@/components/stackedChart";
 import Header from "@/components/header";
-
-
 
 type UploadModel = {
   documents?: any;
@@ -68,41 +69,37 @@ export default function VehicleImages(prop: UploadModel) {
               <div className="bg-[#0C9064] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
                 <CheckOutlinedIcon fontSize="small" />
               </div>
-              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#0C9064]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#0C9064]">
                 Vehicle Details
               </p>
               <Image
                 src={greenline}
                 alt="blue timeline"
-                className="w-[25%] grow ml-1"
+                className="w-[23%] grow ml-1"
               />
               <div className="bg-[#007AF5] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 2
               </div>
-              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#007AF5]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#007AF5]">
                 Vehicle Images
               </p>
               <Image
                 src={greyline}
                 alt="blue timeline"
-                className="w-[25%] grow ml-1"
+                className="w-[23%] grow ml-1"
               />
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 3
               </div>
-              <p className="pl-[10px] font-bold text-sm leading-[30px] text-[#8C8C8C]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#8C8C8C]">
                 Registration Details
               </p>
             </div>
 
             <div className="mt-2 mb- border-0">
               <Formik<UploadModel>
-                initialValues={{
-                  
-                }}
-                validationSchema={Yup.object({
-                
-                })}
+                initialValues={{}}
+                validationSchema={Yup.object({})}
                 onSubmit={async (values) => {
                   alert(JSON.stringify(values, null, 2));
                 }}
@@ -124,45 +121,46 @@ export default function VehicleImages(prop: UploadModel) {
                       </p>
                     </div>
                     {/* dropzones */}
-                    <div className="flex gap-x-6 mt-3 flex-wrap">
-                      <div className="flex flex-col grow items-center">
-                        <StyledDropzone />
-                        <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
-                          3/4 View
-                        </p>
+                    <div>
+                      <div className="flex w-full gap-x-5 justify-between mt-3">
+                        <div className="flex flex-col grow  items-center">
+                          <VehicleImagesDropzone />
+                          <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                            3/4 View
+                          </p>
+                        </div>
+                        <div className="flex flex-col grow  items-center">
+                          <VehicleImagesDropzone />
+                          <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                            Front View
+                          </p>
+                        </div>
+                        <div className="flex flex-col grow  items-center">
+                          <VehicleImagesDropzone />
+                          <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                            Right View
+                          </p>
+                        </div>
+                        <div className="flex flex-col grow  items-center">
+                          <VehicleImagesDropzone />
+                          <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                            Left View
+                          </p>
+                        </div>
+                        <div className="flex flex-col grow  items-center">
+                          <VehicleImagesDropzone />
+                          <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                            Rear View
+                          </p>
+                        </div>
                       </div>
-                      <div className="flex flex-col grow items-center">
-                        <StyledDropzone />
-                        <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
-                          Front View
-                        </p>
-                      </div>
-                      <div className="flex flex-col grow items-center">
-                        <StyledDropzone />
-                        <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
-                          Right View
-                        </p>
-                      </div>
-                      <div className="flex flex-col grow items-center">
-                        <StyledDropzone />
-                        <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
-                          Left View
-                        </p>
-                      </div>
-                      <div className="flex flex-col grow items-center">
-                        <StyledDropzone />
-                        <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
-                          Rear View
-                        </p>
-                      </div>
-                      <div className="flex mt-9 flex-col items-center">
-                        <StyledDropzone />
-                        <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                      <div className="flex mt-9 flex-col justify-start items-center">
+                        <VehicleImagesDropzone1 />
+                        <p className="text-[#737373] font-medium text-xs leading-[30px] pt-2 ">
                           Dashboard View
                         </p>
                       </div>
                     </div>
-
                     <div className="flex justify-between mt-7">
                       <Link href={"/views/Vehicles/AddVehicle/VehicleDetails"}>
                         <button

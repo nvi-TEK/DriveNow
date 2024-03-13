@@ -23,8 +23,6 @@ import transactionside from "../assets/transactionside.svg";
 import Link from "next/link";
 import { HelpRounded } from "@mui/icons-material";
 
-
-
 function SideBar() {
   const selectChange = (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -47,11 +45,11 @@ function SideBar() {
   return (
     <>
       <aside
-        className=" z-10  rounded-r-lg w-[17.6%] flex-shrink-0"
+        className="z-10 rounded-r-lg w-[17.6%] flex-shrink-0"
         aria-label="Sidebar"
       >
         <aside className="bg-white border-r pt-4 pb-7 shadow-[0px_4px_16px_0px_#0000001A] overflow-x-visible rounded-r-lg scroll-smooth no-scrollbar">
-          <ul className="space-y-2 text-white">
+          <ul className="space-y-2 max-2xl:space-y-2 text-white">
             <Link href={"/views/dashboard"} as="">
               <List
                 icon={dashboard}
@@ -62,7 +60,12 @@ function SideBar() {
             </Link>
 
             <Link href={"/views/heatmap"} as="">
-              <List icon={heatmap} activeIcon={activeheatmap} name={"Heat Map"} url="/views/heatmap" />
+              <List
+                icon={heatmap}
+                activeIcon={activeheatmap}
+                name={"Heat Map"}
+                url="/views/heatmap"
+              />
             </Link>
 
             <Link href={"/views/customPush"} as="">
@@ -75,16 +78,26 @@ function SideBar() {
             </Link>
 
             <div
-              className="flex ml-6 cursor-pointer justify-between items-center text-black"
+              className="flex ml-6 cursor-pointer max-2xl:pb-2 pb-2 justify-between items-center text-black"
               onClick={() => setShowDriver(!showDriver)}
             >
-              <div className="flex py-2">
-                <Image src={driverside} className="mr-2" alt="tool icon" />
+              <div className="flex max-2xl:text-[15px] max-2xl:py-0 py-2">
+                <Image
+                  src={driverside}
+                  className="mr-2 max-2xl:w-5"
+                  alt="tool icon"
+                />
                 Drivers
               </div>
-              <Image className="mr-4 h-5 w-5" src={DriverArrow} alt="arrow" />
+              <div>
+                <Image
+                  className="mr-4 h-5 max-2xl:w-4 w-5"
+                  src={DriverArrow}
+                  alt="arrow"
+                />
+              </div>
             </div>
-            <div className="pl-6">
+            <div className="pl-6 max-2xl:pl-2">
               {showDriver ? (
                 <>
                   <Link href={"/views/Drivers/AllDrivers"} as="">
@@ -107,20 +120,24 @@ function SideBar() {
             </div>
 
             <div
-              className="flex ml-6 cursor-pointer justify-between items-center text-black"
+              className="flex ml-6 cursor-pointer max-2xl:pb-2 pb-2 justify-between items-center text-black"
               onClick={() => setShowTransaction(!showTransaction)}
             >
-              <div className="flex py-2">
-                <Image src={transactionside} className="mr-2" alt="tool icon" />
+              <div className="flex max-2xl:text-[15px]">
+                <Image
+                  src={transactionside}
+                  className="mr-2 max-2xl:w-5"
+                  alt="tool icon"
+                />
                 Transactions
               </div>
               <Image
-                className="mr-4 h-5 w-5"
+                className="mr-4 max-2xl:w-4 h-5 w-5"
                 src={TransactionArrow}
                 alt="arrow"
               />
             </div>
-            <div className="pl-6">
+            <div className="pl-6 max-2xl:pl-2">
               {showTransaction ? (
                 <>
                   <Link href={"/views/Transactions/payments"} as="">
@@ -143,13 +160,21 @@ function SideBar() {
               className="flex ml-6 cursor-pointer justify-between items-center text-black"
               onClick={() => setShowVehicle(!showVehicle)}
             >
-              <div className="flex py-2">
-                <Image src={vehicle} className="mr-2" alt="tool icon" />
+              <div className="flex max-2xl:text-[15px] max-2xl:py-0 py-2">
+                <Image
+                  src={vehicle}
+                  className="mr-2 max-2xl:w-5"
+                  alt="tool icon"
+                />
                 Vehicle
               </div>
-              <Image className="mr-4 h-5 w-5" src={VehicleArrow} alt="arrow" />
+              <Image
+                className="mr-4 h-5 max-2xl:w-4 w-5"
+                src={VehicleArrow}
+                alt="arrow"
+              />
             </div>
-            <div className="pl-6">
+            <div className="pl-6 max-2xl:pl-2">
               {showVehicle ? (
                 <>
                   <Link href={"/views/Vehicles/ListofVehicles"} as="">
@@ -174,11 +199,16 @@ function SideBar() {
               ) : null}
             </div>
             <Link href={"/views/expense"} as="">
-              <List icon={expense} activeIcon={activeexpense} name={"Expense"} url="/views/expense" />
+              <List
+                icon={expense}
+                activeIcon={activeexpense}
+                name={"Expense"}
+                url="/views/expense"
+              />
             </Link>
 
             <div className="flex justify-center ">
-              <hr className="h-px my-6 w-[80%] bg-[#E6E6E6] border-0" />
+              <hr className="h-px my-6 w-[85%] bg-[#E6E6E6] border-0" />
             </div>
 
             <div>
@@ -191,14 +221,20 @@ function SideBar() {
               </Link>
             </div>
 
-            <div className="flex pb-7 h-[52px] pt-[394px] pl-6">
+            <div className="flex pb-7 h-[52px] pt-[394px] max-2xl:pt-[290px] pl-6">
               <div>
-                <Image src={darkmode} alt="darkmode switch" />
+                <Image
+                  src={darkmode}
+                  className="max-2xl:w-5"
+                  alt="darkmode switch"
+                />
               </div>
 
-              <p className="text-[#262626] ml-2 ">Dark mode</p>
+              <p className="text-[#262626] max-2xl:text-[15px] ml-2 ">
+                Dark mode
+              </p>
 
-              <div className="ml-auto mt">
+              <div className="ml-auto">
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input
                     type="checkbox"

@@ -22,13 +22,13 @@ function List(props: sideBarProp) {
           : ""
       }
     >
-      <div className="flex items-center py-3 mx-2 pl-4 rounded-lg text-base font-medium hover:bg-[#F1F8FF]">
-        <Image src={router.pathname == props.url ? props.activeIcon : props.icon} alt="" />
+      <div className="flex items-center py-3 max-2xl:py-2 mx-2 pl-4 rounded-lg text-base font-medium hover:bg-[#F1F8FF]">
+        <Image src={router.pathname == props.url ? props.activeIcon : props.icon} className="max-2xl:w-5" alt="" />
         <span
           className={
             router.pathname == props.url
-              ? "flex-1 ml-2 leading-5 whitespace-nowrap text-base font-normal text-[#007AF5]"
-              : "flex-1 ml-2 leading-5 whitespace-nowrap text-base font-normal text-[#262626]"
+              ? "flex-1 ml-2 leading-5 whitespace-nowrap text-base max-2xl:text-[15px]  font-normal text-[#007AF5]"
+              : "flex-1 ml-2 leading-5 whitespace-nowrap text-base max-2xl:text-[15px]  font-normal text-[#262626]"
           }
         >
           {props.name}

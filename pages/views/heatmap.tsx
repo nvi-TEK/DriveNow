@@ -26,15 +26,17 @@ export default function Heatmap() {
 
         {/* Code goes into the main tag */}
         <main className="bg-[#F2F2F2] w-full  xg:min-h-screen">
-          <section className="w-full h-[860px] mb-0">
+          <section className="w-full mb-0">
             <div className="absolute w-full">
               <Maps />
             </div>
-            <div className="w-[22%] shadow-[opx_0px_12.8px_0px_#1B28361A] rounded-[4px] overflow-y-scroll no-scrollbar p-4 mt-[138px] h-[770px] inset-y-0 right-0 z-10 absolute bg-white mb-0 ">
+            <div className="w-[22%] shadow-[opx_0px_12.8px_0px_#1B28361A] rounded-[4px] overflow-y-scroll no-scrollbar pt-0 pb-4 mt-[138px] h-[770px] max-2xl:h-[610px] inset-y-0 right-0 z-10 absolute bg-white mb-0 ">
+              <div className="bg-white z-20 pt-4 rounded-t-[4px] w-full absolute pl-4">
               <h3 className="text-[#595959] text-2xl font-medium leading-7 ">
                 Driver Activities
               </h3>
-              <div>
+              </div>
+              <div className="px-4 mt-10">
                 <DriverActivities
                   name="Frank Mensah"
                   rating="100%"

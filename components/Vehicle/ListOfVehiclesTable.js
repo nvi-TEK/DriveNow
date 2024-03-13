@@ -109,7 +109,7 @@ export const ListOfVehiclesTable = () => {
     <>
       {/* number of entries dropdown and Search bar */}
       <div className="flex items-center mt-6">
-        <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
+        <p className="font-medium text-sm max-2xl:text-xs leading-[30px] mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
 
@@ -127,7 +127,7 @@ export const ListOfVehiclesTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-xs font-normal leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  className="text-left max-2xl:text-xs text-sm font-normal leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -156,7 +156,7 @@ export const ListOfVehiclesTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-y h-[48px]"
+                        className="text-[#595959] pl-2 max-2xl:text-xs text-sm font-normal leading-[18px] border-y h-[48px]"
                       >
                         {cell.render("Cell")}
                       </td>
@@ -179,23 +179,23 @@ export const ListOfVehiclesTable = () => {
           <ArrowBackIosOutlinedIcon fontSize="small" />
         </button>
 
-        <button className="border px-3 rounded" onClick={() => gotoPage(0)}>
+        <button className="border text-[#595959] px-3 rounded" onClick={() => gotoPage(0)}>
           {" "}
           1{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(1)}>
+        <button className="border text-[#595959] px-3 rounded" onClick={() => gotoPage(1)}>
           {" "}
           2{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(2)}>
+        <button className="border text-[#595959] px-3 rounded" onClick={() => gotoPage(2)}>
           {" "}
           3{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(3)}>
+        <button className="border text-[#595959] px-3 rounded" onClick={() => gotoPage(3)}>
           {" "}
           4{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(4)}>
+        <button className="border text-[#595959] px-3 rounded" onClick={() => gotoPage(4)}>
           {" "}
           5{" "}
         </button>

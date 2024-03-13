@@ -50,53 +50,54 @@ export default function LongMenu() {
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
-            width: "25ch",
+            width: "201px",
             position: "sticky",
+            fontFamily: "Avenir LT Pro",
           },
         }}
       >
         <MenuItem
           onClick={handleClose}
-          className="flex text-sm font-normal leading-[18px] text-[#262626] px-5 py-2.5 "
+          className="flex text-sm font-normal leading-[18px] text-[#262626] py-2.5 "
         >
           <Image src={user} className="mr-2 w-6" alt="pencil" />
           User Profile
         </MenuItem>
         <MenuItem
-          className="flex text-sm font-normal leading-[18px] text-[#262626] px-5 py-2.5 "
+          className="flex text-sm font-normal leading-[18px] text-[#262626] py-2.5 "
           onClick={handleClose}
         >
           <Image src={settings} className="mr-2 w-6 " alt="x" />
           Settings
         </MenuItem>
         <MenuItem
-          className="flex text-sm font-normal leading-[18px] text-[#262626] px-5 py-2.5 "
+          className="flex text-sm font-normal leading-[18px] text-[#262626] py-2.5 "
           onClick={handleClose}
         >
           <Image src={lock} className="mr-2 w-6 " alt="x" />
           Change Password
         </MenuItem>
         <MenuItem
-          className="flex text-sm font-normal leading-[18px] text-[#262626] px-5 py-2.5 "
+          className="flex text-sm font-normal leading-[18px] text-[#262626] py-2.5 "
           onClick={handleClose}
         >
           System
         </MenuItem>
         <MenuItem
-          className="flex text-sm font-normal leading-[18px] text-[#262626] px-5 py-2.5 "
+          className="flex text-sm font-normal leading-[18px] text-[#262626] py-2.5 "
           onClick={handleClose}
         >
           Configuration
         </MenuItem>
         <MenuItem
-          className="flex text-sm font-normal leading-[18px] text-[#262626] px-5 py-2.5  "
+          className="flex text-sm font-normal leading-[18px] text-[#262626] py-2.5  "
           onClick={handleClose}
         >
           Help Documentation
         </MenuItem>
 
         <MenuItem
-          className="flex text-sm font-normal text-[#DC4A41] leading-[18px] px-5 py-2.5 "
+          className="flex text-sm font-normal text-[#DC4A41] leading-[18px] py-2.5 "
           component={Link}
           href="/"
           onClick={handleClose}
