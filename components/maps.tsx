@@ -6,7 +6,7 @@ export default function Maps() {
     <div className="m-0">
       <APIProvider apiKey={""}>
         <Map
-          style={{ width: "100%", height: "745px" }}
+          style={{ width: "100%", height: "768px" }}
           defaultCenter={{ lat: 5.5593, lng: 0.1974 }}
           defaultZoom={12}
           gestureHandling={"greedy"}

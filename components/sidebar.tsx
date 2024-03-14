@@ -216,7 +216,7 @@ function SideBar() {
                 <List icon={settings} name={"Settings"} url="" />
               </Link>
 
-              <Link href={"/views/dashboard"} as="">
+              <Link href={""} as="">
                 <List icon={help} name={"Help"} url="" />
               </Link>
             </div>

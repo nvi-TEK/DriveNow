@@ -27,7 +27,7 @@ export default function Heatmap() {
         {/* Code goes into the main tag */}
         <main className="bg-[#F2F2F2] w-full  xg:min-h-screen">
           <section className="w-full mb-0">
-            <div className="absolute w-full">
+            <div className="absolute w-full mb-0">
               <Maps />
             </div>
             <div className="w-[22%] shadow-[opx_0px_12.8px_0px_#1B28361A] rounded-[4px] overflow-y-scroll no-scrollbar pt-0 pb-4 mt-[138px] h-[770px] max-2xl:h-[610px] inset-y-0 right-0 z-10 absolute bg-white mb-0 ">
