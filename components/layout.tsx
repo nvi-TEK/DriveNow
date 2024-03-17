@@ -2,7 +2,7 @@
 import React from "react";
 import SideBar from "./sidebar";
 import Header from "./header";
-import { Providers } from "@/pages/providers";
+import Providers from "@/pages/providers";
 
 type layoutType = {
   children?: any;
