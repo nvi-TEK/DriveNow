@@ -76,7 +76,7 @@ export const VehicleIssuesLogsTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
+      className="border shadow-[0px_1px_2px_0px_#1B283614] dark:border-0 dark:bg-gray-600 dark:text-white h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
       abc
@@ -92,7 +92,7 @@ export const VehicleIssuesLogsTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-center border-[#D9D9D9] text-xs rounded px-1 py-1 "
+      className="border shadow-[0px_1px_2px_0px_#1B283614] dark:border-0 dark:bg-gray-600 dark:text-white h-[30px] text-center border-[#D9D9D9] text-xs rounded px-1 py-1 "
       aria-placeholder=""
     >
       abc
@@ -110,7 +110,7 @@ export const VehicleIssuesLogsTable = () => {
     <>
       {/* number of entries dropdown and Search bar */}
       <div className="flex items-center mt-6  ml-3">
-        <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
+        <p className="font-medium dark:text-white text-sm leading-[30px] mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
 
@@ -128,7 +128,7 @@ export const VehicleIssuesLogsTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-xs font-normal leading-[18px] h-[48px] pl-2 bg-[#FAFAFA] "
+                  className="text-left text-xs font-normal leading-[18px] h-[48px] text-[#262626] dark:text-white dark:bg-gray-600 pl-2 bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -157,47 +157,60 @@ export const VehicleIssuesLogsTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-y h-[48px]"
+                        className="text-[#595959] pl-2 text-xs font-normal dark:text-white dark:border-gray-500 leading-[18px] border-y h-[48px]"
                       >
                         {cell.render("Cell")}
                       </td>
                     </>
                   );
                 })}
-                {/* <td>abc</td> */}
               </tr>
             );
           })}
         </tbody>
       </table>
-      
 
       <div className="flex mt-5 pb-4 justify-end gap-x-2">
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
-          className="px-2 border rounded-sm "
+          className="px-2 border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white rounded-sm "
         >
           <ArrowBackIosOutlinedIcon fontSize="small" />
         </button>
 
-        <button className="border px-3 rounded" onClick={() => gotoPage(0)}>
+        <button
+          className="border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(0)}
+        >
           {" "}
           1{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(1)}>
+        <button
+          className="border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(1)}
+        >
           {" "}
           2{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(2)}>
+        <button
+          className="border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(2)}
+        >
           {" "}
           3{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(3)}>
+        <button
+          className="border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(3)}
+        >
           {" "}
           4{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(4)}>
+        <button
+          className="border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(4)}
+        >
           {" "}
           5{" "}
         </button>
@@ -205,7 +218,7 @@ export const VehicleIssuesLogsTable = () => {
         <button
           onClick={() => nextPage()}
           disabled={!canNextPage}
-          className="px-2 border rounded-sm "
+          className="px-2 border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white rounded-sm "
         >
           <ArrowForwardIosOutlinedIcon fontSize="small" />
         </button>

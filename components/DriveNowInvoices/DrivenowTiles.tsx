@@ -40,7 +40,7 @@ type DrivenowInvoicesProp2 = {
 
 export default function DrivenowInvoicesTiles(props: DrivenowInvoicesProp1) {
   return (
-    <div className="border h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white shadow-[0px_1px_2px_0px_#1B283614] grow rounded-t-lg border-[#E9ECEF]">
+    <div className="border h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] dark:bg-gray-700 dark:border-0 bg-white shadow-[0px_1px_2px_0px_#1B283614] grow rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />
@@ -52,11 +52,11 @@ export default function DrivenowInvoicesTiles(props: DrivenowInvoicesProp1) {
 
       <div className="flex">
         <div className="grow">
-          <p className="font-normal mt-4 text-xs leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white mt-4 text-xs leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] pt-  leading-7 font-medium text-lg">
+            <p className="text-[#262626] pt- dark:text-white leading-7 font-medium text-lg">
               {props.entity1value.toLocaleString()}
             </p>
             <p
@@ -70,11 +70,11 @@ export default function DrivenowInvoicesTiles(props: DrivenowInvoicesProp1) {
           </div>
         </div>
         <div className="ml-[] grow">
-          <p className="font-normal pt-4 text-xs leading-5 text-[#8C8C8C]">
+          <p className="font-normal pt-4 text-xs dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626]   leading-7 font-medium text-lg">
+            <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
               {props.entity2value.toLocaleString()}
             </p>
             <p
@@ -89,11 +89,11 @@ export default function DrivenowInvoicesTiles(props: DrivenowInvoicesProp1) {
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal pt-4 text-xs leading-5 text-[#8C8C8C]">
+          <p className="font-normal pt-4 text-xs dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity3}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626]   leading-7 font-medium text-lg">
+            <p className="text-[#262626]  dark:text-white leading-7 font-medium text-lg">
               {props.entity3value}
             </p>
             <p
@@ -112,7 +112,7 @@ export default function DrivenowInvoicesTiles(props: DrivenowInvoicesProp1) {
 }
 function LastTile(props: LastTileProp) {
   return (
-    <div className="border h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white shadow-[0px_1px_2px_0px_#1B283614] grow rounded-t-lg border-[#E9ECEF]">
+    <div className="border h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white dark:bg-gray-700 dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] grow rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />
@@ -124,28 +124,28 @@ function LastTile(props: LastTileProp) {
 
       <div className="flex">
         <div className="grow">
-          <p className="font-normal mt-4 text-xs leading-5 text-[#8C8C8C] ">
+          <p className="font-normal mt-4 text-xs dark:text-white leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
-          <p className="text-[#262626] pt-  leading-7 font-medium text-lg">
+          <p className="text-[#262626] pt- dark:text-white leading-7 font-medium text-lg">
             {props.entity1value.toLocaleString()}
           </p>
         </div>
         <div className="ml-[] grow">
-          <p className="font-normal pt-4 text-xs leading-5 text-[#8C8C8C]">
+          <p className="font-normal pt-4 text-xs dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
-          <p className="text-[#262626]   leading-7 font-medium text-lg">
+          <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
             {props.entity2value.toLocaleString()}
           </p>
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal pt-4 text-xs leading-5 text-[#8C8C8C]">
+          <p className="font-normal pt-4 text-xs dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity3}
           </p>
 
-          <p className="text-[#262626]   leading-7 font-medium text-lg">
+          <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
             {props.entity3value}
           </p>
         </div>
@@ -156,7 +156,7 @@ function LastTile(props: LastTileProp) {
 
 function DrivenowInvoicesTiles1(props: DrivenowInvoicesProp2) {
   return (
-    <div className="border h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white shadow-[0px_1px_2px_0px_#1B283614] grow rounded-t-lg border-[#E9ECEF]">
+    <div className="border h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white dark:bg-gray-700 dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] grow rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />
@@ -168,21 +168,21 @@ function DrivenowInvoicesTiles1(props: DrivenowInvoicesProp2) {
 
       <div className="flex">
         <div className="grow">
-          <p className="font-normal mt-4 text-xs leading-5 text-[#8C8C8C] ">
+          <p className="font-normal mt-4 text-xs dark:text-white leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] leading-7 font-medium text-lg">
+            <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
               ₵{props.entity1value.toLocaleString()}
             </p>
           </div>
         </div>
         <div className="ml-[] grow">
-          <p className="font-normal pt-4 text-xs leading-5 text-[#8C8C8C]">
+          <p className="font-normal pt-4 text-xs dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] leading-7 font-medium text-lg">
+            <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
               ₵{props.entity2value.toLocaleString()}
             </p>
             <p

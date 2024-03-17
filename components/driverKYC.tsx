@@ -14,17 +14,17 @@ type KYCProp = {
 
 function KYC(props: KYCProp) {
   return (
-    <div className="border-b max-2xl:h-[70px] h-[80px] flex items-center justify-between grow bg-white border-[#E6E6E6]">
+    <div className="border-b max-2xl:h-[70px] h-[80px] flex items-center justify-between grow dark:bg-gray-700 bg-white dark:border-gray-500 border-[#E6E6E6]">
       <div>
-        <p className="text-[#595959] max-2xl:text-sm   font-normal leading-[18px] ">
+        <p className="text-[#595959] max-2xl:text-sm dark:text-white font-normal leading-[18px] ">
           {props.name}
         </p>
-        <p className="font-medium max-2xl:text-[11px] text-xs pt-2 leading-[14.52px] ">
+        <p className="font-medium max-2xl:text-[11px] dark:text-white text-xs pt-2 leading-[14.52px] ">
           {props.description}
         </p>
       </div>
       <div className="ml-[] text-right">
-        <p className="text-[#8C8C8C] font-normal text-xs max-2xl:text-[11px] leading-4 ">
+        <p className="text-[#8C8C8C] font-normal dark:text-white text-xs max-2xl:text-[11px] leading-4 ">
           {props.date}
         </p>
         <div

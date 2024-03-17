@@ -36,17 +36,17 @@ export default function customPush() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
           <section className="w- ">
             <div className="flex justify-between items-center">
-              <p className="pt-[23px] pl-[21px] text-[22px] leading-[30px] font-medium text-[#262626] ">
+              <p className="pt-[23px] pl-[21px] text-[22px] dark:text-white leading-[30px] font-medium text-[#262626] ">
                 Custom Push/SMS
               </p>
 
               <Link href={""}>
                 <button
                   type="button"
-                  className="text-[#FFFFFF] border bg-[#007AF5] mt-[23px] rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-xs py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2"
+                  className="text-[#FFFFFF] border bg-[#007AF5] dark:border-0 mt-[23px] rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-xs py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2"
                 >
                   Send
                   <Image className="ml-[4px]" src={sendlogo} alt={""} />
@@ -78,20 +78,20 @@ export default function customPush() {
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
                   <Form
                     onSubmit={handleSubmit}
-                    className="bg-white rounded-lg px-[1rem] pb-10"
+                    className="bg-white dark:bg-gray-700 rounded-lg px-[1rem] pb-10"
                   >
                     <div className="flex w-full space-x-5">
                       <section className="w-[33%] ">
                         <label
                           htmlFor="group"
-                          className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
+                          className="block mb-2 dark:text-white text-sm pt-[10px] font-medium text-gray-900"
                         >
                           Select Group to Send
                         </label>
                         <Field
                           id="group"
                           as="select"
-                          className="bg-[#FFFFFF] border grow shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
+                          className="bg-[#FFFFFF] dark:bg-gray-600 dark:text-white dark:border-0 border grow shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
                           value={values.group}
                           onChange={handleChange}
                         >
@@ -110,14 +110,14 @@ export default function customPush() {
                       <section className="w-[33%]">
                         <label
                           htmlFor="notification"
-                          className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
+                          className="block mb-2 dark:text-white text-sm pt-[10px] font-medium text-gray-900"
                         >
                           Select Notification Type
                         </label>
                         <Field
                           id="notification"
                           as="select"
-                          className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
+                          className="bg-[#FFFFFF] border dark:bg-gray-600 dark:text-white dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.notification}
                           onChange={handleChange}
                         >
@@ -135,14 +135,14 @@ export default function customPush() {
                       <section className="w-[33%]">
                         <label
                           htmlFor="device"
-                          className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
+                          className="block mb-2 dark:text-white text-sm pt-[10px] font-medium text-gray-900"
                         >
                           Select Device Type
                         </label>
                         <Field
                           id="device"
                           as="select"
-                          className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
+                          className="bg-[#FFFFFF] border dark:bg-gray-600 dark:text-white dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.device}
                           onChange={handleChange}
                         >
@@ -162,7 +162,7 @@ export default function customPush() {
                       <div className="w-[50%]">
                         <label
                           htmlFor="title"
-                          className="block mb-2 text-sm font-medium text-[#000000]"
+                          className="block mb-2 dark:text-white text-sm font-medium text-[#000000]"
                         >
                           Select Date
                         </label>
@@ -172,14 +172,14 @@ export default function customPush() {
                       <div className="w-[50%]">
                         <label
                           htmlFor="title"
-                          className="block mb-2 text-sm font-medium text-[#000000]"
+                          className="block mb-2 dark:text-white text-sm font-medium text-[#000000]"
                         >
                           Message Title
                         </label>
                         <Field
                           type="text"
                           id="title"
-                          className="border border-gray-300 shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
+                          className="border border-gray-300 dark:bg-gray-600 dark:text-white dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
                           placeholder="Title"
                           value={values.title}
                           onChange={handleChange}
@@ -192,7 +192,7 @@ export default function customPush() {
                     <div className="mt-2">
                       <label
                         htmlFor="message"
-                        className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
+                        className="block mb-2 dark:text-white text-sm pt-[10px] font-medium text-gray-900"
                       >
                         Compose Notification Message
                       </label>
@@ -200,7 +200,7 @@ export default function customPush() {
                         id="message"
                         as="textarea"
                         rows={10}
-                        className="block shadow-[0px_1px_2px_0px_#1B283614] p-2.5 mb-auto w-[100%] h-[100px] text-sm text-gray-900 bg-[#FFFFFF] rounded-[4px] border border-gray-300"
+                        className="block shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:border-0 p-2.5 mb-auto w-[100%] h-[100px] text-sm text-gray-900 bg-[#FFFFFF] rounded-[4px] border border-gray-300"
                         placeholder="Type your message here..."
                         value={values.message}
                         onChange={handleChange}
@@ -213,7 +213,7 @@ export default function customPush() {
                     <Link href={""}>
                       <button
                         type="button"
-                        className="text-[#FFFFFF] border bg-[#007AF5]  mt-[2%] rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-xs py-1.5 text-center inline-flex justify-center font-normal items-center ml-[] mr-2 mb-2"
+                        className="text-[#FFFFFF] border bg-[#007AF5] dark:border-0  mt-[2%] rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-xs py-1.5 text-center inline-flex justify-center font-normal items-center ml-[] mr-2 mb-2"
                       >
                         Send
                         <Image className="ml-[4px]" src={sendlogo} alt={""} />
@@ -224,8 +224,8 @@ export default function customPush() {
               </Formik>
             </div>
 
-            <div className="mb-[50px] mx-5 px-[10px] shadow-[0px_1px_2px_0px_#1B283614] rounded-lg pb-4 pt-3 bg-white ">
-              <h3 className="text-[#262626] font-medium text-[22px] pt-4 pl-[10px] leading-[30px]">
+            <div className="mb-[50px] mx-5 px-[10px] shadow-[0px_1px_2px_0px_#1B283614] rounded-lg pb-4 pt-3 dark:bg-gray-700 bg-white ">
+              <h3 className="text-[#262626] dark:text-white font-medium text-[22px] pt-4 pl-[10px] leading-[30px]">
                 Custom Push History
               </h3>
               <CustomPushTable />

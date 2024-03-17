@@ -22,6 +22,7 @@ import driverside from "../assets/driverside.svg";
 import transactionside from "../assets/transactionside.svg";
 import Link from "next/link";
 import { HelpRounded } from "@mui/icons-material";
+import ThemeToggle from "./themeToggle";
 
 function SideBar() {
   const selectChange = (
@@ -48,7 +49,7 @@ function SideBar() {
         className="z-10 rounded-r-lg w-[17.6%] flex-shrink-0"
         aria-label="Sidebar"
       >
-        <aside className="bg-white border-r pt-4 pb-7 shadow-[0px_4px_16px_0px_#0000001A] overflow-x-visible rounded-r-lg scroll-smooth no-scrollbar">
+        <aside className="bg-white dark:bg-gray-700 border-r dark:border-0 dark: pt-4 pb-7 shadow-[0px_4px_16px_0px_#0000001A] overflow-x-visible rounded-r-lg scroll-smooth no-scrollbar">
           <ul className="space-y-2 max-2xl:space-y-2 text-white">
             <Link href={"/views/dashboard"} as="">
               <List
@@ -81,7 +82,7 @@ function SideBar() {
               className="flex ml-6 cursor-pointer max-2xl:pb-2 pb-2 justify-between items-center text-black"
               onClick={() => setShowDriver(!showDriver)}
             >
-              <div className="flex max-2xl:text-[15px] max-2xl:py-0 py-2">
+              <div className="flex dark:text-white max-2xl:text-[15px] max-2xl:py-0 py-2">
                 <Image
                   src={driverside}
                   className="mr-2 max-2xl:w-5"
@@ -123,7 +124,7 @@ function SideBar() {
               className="flex ml-6 cursor-pointer max-2xl:pb-2 pb-2 justify-between items-center text-black"
               onClick={() => setShowTransaction(!showTransaction)}
             >
-              <div className="flex max-2xl:text-[15px]">
+              <div className="flex dark:text-white max-2xl:text-[15px]">
                 <Image
                   src={transactionside}
                   className="mr-2 max-2xl:w-5"
@@ -160,7 +161,7 @@ function SideBar() {
               className="flex ml-6 cursor-pointer justify-between items-center text-black"
               onClick={() => setShowVehicle(!showVehicle)}
             >
-              <div className="flex max-2xl:text-[15px] max-2xl:py-0 py-2">
+              <div className="flex max-2xl:text-[15px] dark:text-white max-2xl:py-0 py-2">
                 <Image
                   src={vehicle}
                   className="mr-2 max-2xl:w-5"
@@ -208,7 +209,7 @@ function SideBar() {
             </Link>
 
             <div className="flex justify-center ">
-              <hr className="h-px my-6 w-[85%] bg-[#E6E6E6] border-0" />
+              <hr className="h-px my-6 max-2xl:my-1 w-[85%] dark:bg-gray-500 bg-[#E6E6E6] border-0" />
             </div>
 
             <div>
@@ -221,7 +222,14 @@ function SideBar() {
               </Link>
             </div>
 
-            <div className="flex pb-7 h-[52px] pt-[394px] max-2xl:pt-[290px] pl-6">
+            <div className="pt-[394px] flex justify-end items-center pr-5 ml-auto ">
+              <p className="text-[#262626] max-2xl:text-xs dark:text-white pr-1">
+                Theme:
+              </p>
+              <ThemeToggle />
+            </div>
+
+            {/* <div className="flex pb-7 h-[52px] pt-[394px] max-2xl:pt-[290px] pl-6">
               <div>
                 <Image
                   src={darkmode}
@@ -230,7 +238,7 @@ function SideBar() {
                 />
               </div>
 
-              <p className="text-[#262626] max-2xl:text-[15px] ml-2 ">
+              <p className="text-[#262626] dark:text-white max-2xl:text-[15px] ml-2 ">
                 Dark mode
               </p>
 
@@ -246,14 +254,14 @@ function SideBar() {
                     className="sr-only peer"
                   />
                   <div
-                    className="w-12 h-7 mr-4 pl-1 bg-[#D9D9D9] rounded-[2.5rem] peer 
+                    className="w-12 h-7 mr-4 pl-1 bg-[#D9D9D9] dark:bg-gray-500 rounded-[2.5rem] peer 
                                         peer-checked:after:translate-x-5 peer-checked:after:border-white after:content-[''] 
                                         after:absolute after:top-1  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
                                         peer-checked:bg-black"
                   ></div>
                 </label>
               </div>
-            </div>
+            </div> */}
           </ul>
         </aside>
       </aside>

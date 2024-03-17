@@ -34,7 +34,7 @@ export default function DriveNowInvoices() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
           <section className="w-full ">
             <div className="flex space-x-4 grow m-5">
@@ -71,7 +71,7 @@ export default function DriveNowInvoices() {
 
             {/* Table */}
 
-            <div className="bg-white rounded-lg mx-5 px-[10px] mb-12 mt-6 ">
+            <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 px-[10px] mb-12 mt-6 ">
               <DrivenowInvoicesTable />
             </div>
           </section>

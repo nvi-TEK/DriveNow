@@ -22,7 +22,7 @@ export default function DoughnutChart() {
     datasets: [
       {
         label: "",
-        data: [10, 16, 25, 20, 5, 40, 33, 18, 22, 50],
+        data: [18, 16, 25, 20, 25, 40, 33, 18, 22, 50],
         backgroundColor: [
           "#0076EC",
           "#6943FF",
@@ -36,6 +36,7 @@ export default function DoughnutChart() {
           "#FB3232",
         ],
         borderRadius: 80,
+        borderWidth: 0,
         cutout: '80%',
       },
     ],

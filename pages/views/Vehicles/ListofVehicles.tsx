@@ -62,7 +62,7 @@ export default function ListOfVehicles() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
           <section className="w-full ">
             <div className="flex space-x-4 grow m-5">
@@ -90,15 +90,15 @@ export default function ListOfVehicles() {
 
             {/* Table */}
 
-            <div className="bg-white rounded-lg px-[10px] mx-5 mb-12 mt-6 ">
+            <div className="bg-white dark:bg-gray-700 rounded-lg px-[10px] mx-5 mb-12 mt-6 ">
               <div className="flex justify-between pt-4 items-center">
-                <h4 className="text-[#262626] font-medium text-[22px] max-2xl:text-xl leading-[30px]">
+                <h4 className="text-[#262626] dark:text-white font-medium text-[22px] max-2xl:text-xl leading-[30px]">
                   List of Vehicles{" "}
                 </h4>
                 <Link href={"/views/Vehicles/AddVehicle/VehicleDetails"}>
                   <button
                     type="button"
-                    className="text-[#FFFFFF] border bg-[#007AF5] rounded-[4px] focus:outline-none max-2xl:text-xs text-sm px-4 py-1.5 max-2xl:py-1 text-[14px] text-center inline-flex justify-center font-normal items-center"
+                    className="text-[#FFFFFF] border bg-[#007AF5] dark:border-0 rounded-[4px] focus:outline-none max-2xl:text-xs text-sm px-4 py-1.5 max-2xl:py-1 text-[14px] text-center inline-flex justify-center font-normal items-center"
                   >
                     <Image src={plus} alt="plus sign" className="ml-0 mr-1" />
                     Add New Vehicle

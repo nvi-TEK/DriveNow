@@ -36,10 +36,10 @@ export default function Dashboard() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
           <section className="w-full  ">
-            <div className="flex gap-4 mt-4 px-5  grow">
+            <div className="flex gap-4 mt-4 px-5 grow">
               <DashboardTiles
                 icon={revenue}
                 entity1="Revenue"
@@ -102,13 +102,13 @@ export default function Dashboard() {
 
           <section className="flex px-5 justify-between mb-5">
             <div className="mt-6 max-2xl:mt-4 w-[74%] ">
-              <div className="bg-white h-[657px] max-2xl:h-[512px] shadow-[0px_1px_2px_0px_#1B283614] rounded-[8px]">
+              <div className="bg-white dark:bg-gray-700 h-[657px] max-2xl:h-[512px] shadow-[0px_1px_2px_0px_#1B283614] rounded-[8px]">
                 <div className="p-5 pb-3 pr-2 flex  justify-between">
                   <div>
-                    <h6 className="text-[#777777] font-medium leading-[14.06px] text-xs">
+                    <h6 className="text-[#777777] dark:text-white font-medium leading-[14.06px] text-xs">
                       Total Revenue
                     </h6>
-                    <p className="text-xl max-2xl:text-lg font-medium pt-2 max-2xl:pt-1 leading-7 text-[#262626]   ">
+                    <p className="text-xl max-2xl:text-lg dark:text-white font-medium pt-2 max-2xl:pt-1 leading-7 text-[#262626]   ">
                       ₵2,412,570.00
                     </p>
                   </div>
@@ -124,37 +124,37 @@ export default function Dashboard() {
                 <div className="flex mt-[30px] px-[32px] justify-evenly ">
                   <div className="flex">
                     <div className="h-[14px] w-[14px] rounded bg-[#A6D2FF]"></div>
-                    <p className="font-normal text-xs pl-1 leading-[14px] text-[#585858]">
+                    <p className="font-normal text-xs dark:text-white pl-1 leading-[14px] text-[#585858]">
                       Online Payment
                     </p>
                   </div>
 
                   <div className="flex">
                     <div className="h-[14px] w-[14px] rounded bg-[#1F8FFF]"></div>
-                    <p className="font-normal text-xs pl-1 leading-[14px] text-[#585858]">
+                    <p className="font-normal text-xs dark:text-white pl-1 leading-[14px] text-[#585858]">
                       Manual Payment
                     </p>
                   </div>
 
                   <div className="flex">
                     <div className="h-[14px] w-[14px] rounded bg-[#D52D4D]"></div>
-                    <p className="font-normal text-xs pl-1 leading-[14px] text-[#585858]">
+                    <p className="font-normal text-xs dark:text-white pl-1 leading-[14px] text-[#585858]">
                       Loss
                     </p>
                   </div>
 
                   <div className="flex">
                     <div className="h-[14px] w-[14px] rounded bg-[#FFDBE2]"></div>
-                    <p className="font-normal text-xs pl-1 leading-[14px] text-[#585858]">
+                    <p className="font-normal text-xs dark:text-white pl-1 leading-[14px] text-[#585858]">
                       Maintenance
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white shadow-[0px_1px_2px_0px_#1B283614] pt-[15px] rounded-[8px] mt-5">
+              <div className="bg-white dark:bg-gray-700 shadow-[0px_1px_2px_0px_#1B283614] pt-[15px] rounded-[8px] mt-5">
                 <div className="flex items-center justify-between mb-[33px]">
                   <div className="flex items-center">
-                    <h4 className="text-[#262626] text-base font-medium leading-[22px] pl-5">
+                    <h4 className="text-[#262626] dark:text-white text-base font-medium leading-[22px] pl-5">
                       Contracts
                     </h4>
                     <div className="ml-1">
@@ -176,12 +176,12 @@ export default function Dashboard() {
             </div>
 
             {/* Driver KYC  */}
-            <div className="mt-6 max-2xl:mt-4 bg-[#FFFFFF] shadow-[0px_1px_2px_0px_#1B283614] rounded-lg ml-5 h-[685px] overflow-y-scroll no-scrollbar pb-5 w-[25%] ">
+            <div className="mt-6 max-2xl:mt-4 bg-[#FFFFFF] dark:bg-gray-700 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg ml-5 h-[685px] overflow-y-scroll no-scrollbar pb-5 w-[25%] ">
               <div
                 id="kyc-child"
-                className="flex z- absolute w-[19.6%] pt-0 mt-0 bg-white justify-between rounded-t-lg items-center"
+                className="flex z- absolute w-[19.6%] pt-0 mt-0 bg-white dark:bg-gray-700  justify-between rounded-t-lg items-center"
               >
-                <p className="m-5 text-base font-medium leading-[22px] text-[#262626]">
+                <p className="m-5 text-base dark:text-white font-medium leading-[22px] text-[#262626]">
                   Driver KYC
                 </p>
 

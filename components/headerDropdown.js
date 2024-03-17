@@ -35,7 +35,7 @@ export default function LongMenu() {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <KeyboardArrowDownIcon />
+        <KeyboardArrowDownIcon className="dark:text-white" />
       </IconButton>
       <Menu
         className="rounded-lg mr-2 mt-9"

@@ -27,7 +27,7 @@ export default function ChartDropdown() {
         <Select
           className="text-[#8C8C8C]"
           defaultValue="This Year"
-          suffixIcon={<UnfoldMoreIcon />}
+          suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           variant="borderless"
           style={{ width: 100 }}
           onChange={handleChange}
@@ -64,7 +64,7 @@ function YearDropdown() {
         <Select
           className="text-[#8C8C8C]"
           defaultValue="2024"
-          suffixIcon={<UnfoldMoreIcon />}
+          suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           variant="borderless"
           style={{ width: 71 }}
           onChange={handleChange}
@@ -101,7 +101,7 @@ function CategoryDropdown() {
         <Select
           className="text-[#8C8C8C]"
           defaultValue="FLEET"
-          suffixIcon={<UnfoldMoreIcon />}
+          suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           variant="borderless"
           style={{ width: 76 }}
           onChange={handleChange}
@@ -134,7 +134,7 @@ function MonthDropdown() {
         <Select
           className="text-[#8C8C8C]"
           defaultValue="JAN"
-          suffixIcon={<UnfoldMoreIcon />}
+          suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           variant="borderless"
           style={{ width: 66 }}
           onChange={handleChange}

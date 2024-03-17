@@ -18,7 +18,7 @@ type ExpenseProp1 = {
 
 export default function ExpenseTiles(props: ExpenseProp1) {
   return (
-    <div className="h-[8rem] max-2xl:h-[110px] p-4 pt-3 max-2xl:pt-2 pr-0 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg bg-white grow  border-[#E9ECEF]">
+    <div className="h-[8rem] max-2xl:h-[110px] dark:bg-gray-700 dark:border-0 p-4 pt-3 max-2xl:pt-2 pr-0 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg bg-white grow  border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={props.icon} className="w-[30px] max-2xl:w-7" alt="" />
@@ -30,11 +30,11 @@ export default function ExpenseTiles(props: ExpenseProp1) {
 
       <div className="flex mt-4 max-2xl:mt-3">
         <div className="grow">
-          <p className="font-normal  text-sm max-2xl:text-[11px] leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white text-sm max-2xl:text-[11px] leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center max-2xl:pt-1 pt-2">
-            <p className="text-[#262626] leading-7 font-medium max-2xl:text-lg text-xl">
+            <p className="text-[#262626] dark:text-white leading-7 font-medium max-2xl:text-lg text-xl">
               {props.entity1value.toLocaleString()}
             </p>
             <p
@@ -50,11 +50,11 @@ export default function ExpenseTiles(props: ExpenseProp1) {
         </div>
 
         <div className="grow">
-          <p className="font-normal text-sm leading-5 max-2xl:text-[11px] text-[#8C8C8C]">
+          <p className="font-normal text-sm leading-5 dark:text-white max-2xl:text-[11px] text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex items-center max-2xl:pt-1 pt-2">
-            <p className="text-[#262626] leading-7 font-medium max-2xl:text-lg text-xl">
+            <p className="text-[#262626] leading-7 dark:text-white font-medium max-2xl:text-lg text-xl">
               {props.entity2value.toLocaleString()}
             </p>
             <p className="text-xs font-normal max-2xl:text-[11px] pl-2">

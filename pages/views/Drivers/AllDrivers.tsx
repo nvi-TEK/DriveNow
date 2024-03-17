@@ -26,7 +26,7 @@ export default function AllDrivers() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
           <section className="w-full ">
             <div className="flex space-x-4 grow m-5">
@@ -66,12 +66,12 @@ export default function AllDrivers() {
             </div>
 
             {/* Table */}
-            <div className=" bg-white rounded-lg px-[10px] mx-5 mt-[24px]">
-              <h3 className="font-medium pl-2 pt-5 text-[#262626] text-[22px] leading-[30px] ">
+            <div className=" bg-white dark:bg-gray-700 rounded-lg px-[10px] mx-5 mt-[24px]">
+              <h3 className="font-medium pl-2 pt-5 dark:text-white text-[#262626] text-[22px] leading-[30px] ">
                 List of Drivers
               </h3>
 
-              <div className="relative overflow-x-auto bg-white mb-[144px] sm:rounded-t-md">
+              <div className="relative overflow-x-auto dark:bg-gray-700 bg-white mb-[144px] sm:rounded-t-md">
                 <AllDriversTable />
               </div>
             </div>

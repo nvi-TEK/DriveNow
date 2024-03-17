@@ -19,5 +19,6 @@ const config: Config = {
   plugins: [require("flowbite/plugin")({
     charts: true,
   })],
+  darkMode: 'class',
 };
 export default config;

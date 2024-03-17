@@ -76,7 +76,7 @@ export const AllDriversTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
+      className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-600 dark:border-0 dark:text-white h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
       {[10, 15, 20].map((pageSize) => (
@@ -91,7 +91,7 @@ export const AllDriversTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-xs text-center border-[#D9D9D9] rounded px-1 py-1 "
+      className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-600 dark:border-0 dark:text-white h-[30px] text-xs text-center border-[#D9D9D9] rounded px-1 py-1 "
       aria-placeholder=""
     >
       {[10, 15, 20].map((pageSize) => (
@@ -108,7 +108,7 @@ export const AllDriversTable = () => {
     <>
       {/* number of entries dropdown and Search bar */}
       <div className="flex items-center mt-6  ml-5">
-        <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
+        <p className="font-medium dark:text-white text-sm leading-[30px] mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
 
@@ -123,7 +123,7 @@ export const AllDriversTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-xs font-normal text-[#262626] leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  className="text-left text-xs font-normal text-[#262626] dark:text-white dark:bg-gray-600 leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -152,7 +152,7 @@ export const AllDriversTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-xs font-normal leading-[18px] text-[#595959] border-y p-2 "
+                        className="text-xs font-normal leading-[18px] dark:text-white dark:border-gray-500 text-[#595959] border-y p-2 "
                       >
                         {cell.render("Cell")}
                       </td>
@@ -169,28 +169,28 @@ export const AllDriversTable = () => {
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
-          className="px-2 border rounded-sm "
+          className="px-2 border dark:border-0 dark:bg-gray-600 rounded-sm "
         >
           <ArrowBackIosOutlinedIcon fontSize="small" />
         </button>
 
-        <button className="border px-3 rounded" onClick={() => gotoPage(0)}>
+        <button className="border dark:border-0 dark:bg-gray-600 px-3 rounded" onClick={() => gotoPage(0)}>
           {" "}
           1{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(1)}>
+        <button className="border dark:border-0 dark:bg-gray-600 px-3 rounded" onClick={() => gotoPage(1)}>
           {" "}
           2{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(2)}>
+        <button className="border dark:border-0 dark:bg-gray-600 px-3 rounded" onClick={() => gotoPage(2)}>
           {" "}
           3{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(3)}>
+        <button className="border dark:border-0 dark:bg-gray-600 px-3 rounded" onClick={() => gotoPage(3)}>
           {" "}
           4{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(4)}>
+        <button className="border dark:border-0 dark:bg-gray-600 px-3 rounded" onClick={() => gotoPage(4)}>
           {" "}
           5{" "}
         </button>
@@ -198,7 +198,7 @@ export const AllDriversTable = () => {
         <button
           onClick={() => nextPage()}
           disabled={!canNextPage}
-          className="px-2 border rounded-sm "
+          className="px-2 border dark:border-0 dark:bg-gray-600 rounded-sm "
         >
           <ArrowForwardIosOutlinedIcon fontSize="small" />
         </button>

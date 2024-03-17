@@ -19,7 +19,7 @@ type VehicleIssuesLogsProp1 = {
 
 export default function VehicleIssuesLogsTiles(props: VehicleIssuesLogsProp1) {
   return (
-    <div className="border h-[8rem] p-4 pt-3 pr-0 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg bg-white grow border-[#E9ECEF]">
+    <div className="border h-[8rem] p-4 pt-3 pr-0 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg dark:border-0 dark:bg-gray-700 bg-white grow border-[#E9ECEF]">
       <div className="flex items-center justify-between">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />
@@ -32,11 +32,11 @@ export default function VehicleIssuesLogsTiles(props: VehicleIssuesLogsProp1) {
 
       <div className="flex mt-4">
         <div className="grow">
-          <p className="font-normal text-sm leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white text-sm leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center grow pt-2">
-            <p className="text-[#262626] pt-  leading-7 font-medium text-lg">
+            <p className="text-[#262626] pt- dark:text-white leading-7 font-medium text-lg">
               {props.entity1value.toLocaleString()}
             </p>
             <p
@@ -52,22 +52,22 @@ export default function VehicleIssuesLogsTiles(props: VehicleIssuesLogsProp1) {
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal text-sm leading-5 text-[#8C8C8C]">
+          <p className="font-normal text-sm dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] leading-7 font-medium text-lg">
+            <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
               {props.entity2value.toLocaleString()}
             </p>
           </div>
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal text-sm leading-5 text-[#8C8C8C]">
+          <p className="font-normal text-sm dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity3}
           </p>
           <div className="items-center pt-2">
-            <p className="text-[#262626]   leading-7 font-medium text-lg">
+            <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
               {props.entity3value}
             </p>
           </div>

@@ -46,7 +46,7 @@ const ExpenseStack = () => {
           drawOnChartArea: false,
         },
         ticks: {
-          color: "#585858",
+          color: "#BFBFBF",
         },
         stacked: true,
       },
@@ -54,7 +54,7 @@ const ExpenseStack = () => {
         grid: {},
         ticks: {
           stepSize: 90,
-          color: "#585858",
+          color: "#BFBFBF",
         },
 
         stacked: true,

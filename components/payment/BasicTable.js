@@ -72,10 +72,8 @@ export const BasicTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
-      place
+      className="border dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
     >
-      
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
           {pageSize}
@@ -88,13 +86,13 @@ export const BasicTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-xs text-center border-[#D9D9D9] rounded px-1 py-1 "
+      className="border dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] h-[30px] text-xs text-center border-[#D9D9D9] rounded px-1 py-1 "
       aria-placeholder=""
     >
       abc
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
-        {pageSize} Items/Page
+          {pageSize} Items/Page
         </option>
       ))}
     </select>,
@@ -105,8 +103,17 @@ export const BasicTable = () => {
   return (
     <>
       {/* number of entries dropdown and Search bar */}
+
+      <div>
+        <label
+          htmlFor="select"
+          className="block mb-2 text-sm max-2xl:text-xs font-medium dark:text-white leading-[30px] text-[#262626]"
+        >
+          Select:
+        </label>
+      </div>
       <div className="flex items-center mt-6 justify-end mr-2">
-        <p className="font-medium text-xs leading-[30px] mr-[33px] text-[#262626] ">
+        <p className="font-medium dark:text-white text-xs leading-[30px] mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
 
@@ -120,8 +127,10 @@ export const BasicTable = () => {
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-xs font-normal leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  {...column.getHeaderProps}
+                  {...column.getSortByToggleProps()}
+                  className="text-left text-sm max-2xl:text-xs font-normal dark:bg-gray-600 dark:text-white text-[#262626] leading-[18px] pl-2 h-[48px] bg-[#FAFAFA]"
+                  style={{ minWidth: column.minWidth, width: column.width }}
                 >
                   {column.render("Header")}
                   <span>
@@ -148,7 +157,10 @@ export const BasicTable = () => {
                 {row.cells.map((cell) => {
                   return (
                     <>
-                      <td {...cell.getCellProps()} className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-y h-[48px]">
+                      <td
+                        {...cell.getCellProps()}
+                        className="text-[#595959] pl-2 max-2xl:text-xs text-sm dark:text-white dark:border-gray-500 font-normal leading-[18px] border-y h-[48px]"
+                      >
                         {cell.render("Cell")}
                       </td>
                     </>
@@ -164,28 +176,28 @@ export const BasicTable = () => {
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
-          className="px-2 border rounded-sm "
+          className="px-2 border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white rounded-sm "
         >
           <ArrowBackIosOutlinedIcon fontSize="small" />
         </button>
 
-        <button className="border px-3 rounded" onClick={() => gotoPage(0)}>
+        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(0)}>
           {" "}
           1{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(1)}>
+        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(1)}>
           {" "}
           2{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(2)}>
+        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(2)}>
           {" "}
           3{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(3)}>
+        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(3)}>
           {" "}
           4{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(4)}>
+        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(4)}>
           {" "}
           5{" "}
         </button>
@@ -193,7 +205,7 @@ export const BasicTable = () => {
         <button
           onClick={() => nextPage()}
           disabled={!canNextPage}
-          className="px-2 border rounded-sm "
+          className="px-2 border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white rounded-sm "
         >
           <ArrowForwardIosOutlinedIcon fontSize="small" />
         </button>

@@ -60,18 +60,18 @@ export default function VehicleImages(prop: RegistrationProps) {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
-          <section className="bg-[#FFFFFF] rounded-lg m-[19px] p-4">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
+          <section className="bg-[#FFFFFF] dark:bg-gray-700 rounded-lg m-[19px] p-4">
             <div className="pb-4">
-              <h3 className="font-medium text-[22px] leading-[30px] text-[#262626]">
+              <h3 className="font-medium dark:text-white text-[22px] leading-[30px] text-[#262626]">
                 Add Vehicle
               </h3>
-              <p className="text-[#737373] font-medium leading-[30px] text-base ">
+              <p className="text-[#737373] dark:text-gray-300 font-medium leading-[30px] text-base ">
                 Complete this form to add a vehicle.
               </p>
             </div>
             {/* Timeline */}
-            <div className="flex py-6 px-[44px] border-y items-center">
+            <div className="flex py-6 px-[44px] border-y dark:border-gray-500 items-center">
               <div className="bg-[#0C9064] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
                 <CheckOutlinedIcon fontSize="small" />
               </div>
@@ -121,12 +121,12 @@ export default function VehicleImages(prop: RegistrationProps) {
                 }}
               >
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
-                  <Form onSubmit={handleSubmit} className="bg-white border-0">
+                  <Form onSubmit={handleSubmit} className="bg-white dark:bg-gray-700 border-0">
                     <div className="mt-4">
-                      <h5 className="text-[#262626] leading-[30px] font-medium text-base ">
+                      <h5 className="text-[#262626] dark:text-white leading-[30px] font-medium text-base ">
                         Vehicle Registration Details
                       </h5>
-                      <p className="text-[#737373] text-sm font-medium leading-[30px] pt-1">
+                      <p className="text-[#737373] dark:text-gray-300 text-sm font-medium leading-[30px] pt-1">
                         Upload images of the Vehicle Documents. These documents
                         are required as part of regulations.
                       </p>
@@ -135,13 +135,13 @@ export default function VehicleImages(prop: RegistrationProps) {
                     <div className="flex gap-x-10 mt-3 pb-3 flex-wrap">
                       <div className="flex flex-col items-center">
                         <StyledDropzone />
-                        <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                        <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
                           Road Worthy Certificate
                         </p>
                       </div>
                       <div className="flex flex-col  items-center">
                         <StyledDropzone />
-                        <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                        <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
                           Insurance Certificate
                         </p>
                       </div>
@@ -152,7 +152,7 @@ export default function VehicleImages(prop: RegistrationProps) {
                         <div className="w-[50%]">
                           <label
                             htmlFor="insuranceExpiryDate"
-                            className="block mb-2 text-sm font-medium leading-[30px] text-[#262626]"
+                            className="block mb-2 dark:text-white text-sm font-medium leading-[30px] text-[#262626]"
                           >
                             Insurance Expiry Date
                           </label>
@@ -163,7 +163,7 @@ export default function VehicleImages(prop: RegistrationProps) {
                         <div className="w-[50%]">
                           <label
                             htmlFor="roadWorthyExpiry"
-                            className="block mb-2 text-sm font-medium leading-[30px] text-[#262626]"
+                            className="block mb-2 dark:text-white text-sm font-medium leading-[30px] text-[#262626]"
                           >
                             Road Worthy Certificate Expiry Date
                           </label>
@@ -177,14 +177,14 @@ export default function VehicleImages(prop: RegistrationProps) {
                         <div className="w-[50%]">
                           <label
                             htmlFor="insuranceType"
-                            className="block mb-2 text-sm font-medium leading-[30px] text-[#262626]"
+                            className="block mb-2 dark:text-white text-sm font-medium leading-[30px] text-[#262626]"
                           >
                             Insurance Type
                           </label>
                           <Field
                             id="insuranceType"
                             as="select"
-                            className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
+                            className="bg-[#FFFFFF] border dark:text-white dark:bg-gray-600 dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
                             value={values.insuranceType}
                             onChange={handleChange}
                           >
@@ -207,7 +207,7 @@ export default function VehicleImages(prop: RegistrationProps) {
                         <div className="w-[50%]">
                           <label
                             htmlFor="maintenanceDate"
-                            className="block mb-2 text-sm font-medium leading-[30px] text-[#262626]"
+                            className="block mb-2 dark:text-white text-sm font-medium leading-[30px] text-[#262626]"
                           >
                             Maintenance Date
                           </label>
@@ -215,7 +215,7 @@ export default function VehicleImages(prop: RegistrationProps) {
                             <Picker />
                           </div>
 
-                          <p className="text-[#8C8C8C] text-sm font-normal leading-4 pt-1">
+                          <p className="text-[#8C8C8C] dark:text-gray-300 text-sm font-normal leading-4 pt-1">
                             Enter most recent maintenance date.
                           </p>
                         </div>
@@ -226,7 +226,7 @@ export default function VehicleImages(prop: RegistrationProps) {
                       <Link href={"/views/Vehicles/AddVehicle/VehicleImages"}>
                         <button
                           type="button"
-                          className="text-[#FFFFFF] border bg-[#8C8C8C] rounded-[4px] px-4 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center"
+                          className="text-[#FFFFFF] border dark:border-0 bg-[#8C8C8C] rounded-[4px] px-4 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center"
                         >
                           Back
                         </button>
@@ -234,7 +234,7 @@ export default function VehicleImages(prop: RegistrationProps) {
                       <Link href={""}>
                         <button
                           type="button"
-                          className="text-[#FFFFFF] border bg-[#007AF5] rounded-[4px] px-4 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center"
+                          className="text-[#FFFFFF] border dark:border-0 bg-[#007AF5] rounded-[4px] px-4 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center"
                         >
                           Submit
                         </button>

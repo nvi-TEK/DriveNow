@@ -22,7 +22,6 @@ const baseStyle = {
   transition: "border .24s ease-in-out",
 };
 
-
 const VehicleStyle = {
   display: "flex",
   width: "100%",
@@ -98,9 +97,6 @@ export default function StyledDropzone() {
   );
 }
 
-
-
-
 function VehicleImagesDropzone() {
   const { getRootProps, getInputProps, isFocused, isDragAccept, isDragReject } =
     useDropzone({ accept: { "image/*": [] } });
@@ -128,7 +124,6 @@ function VehicleImagesDropzone() {
     </div>
   );
 }
-
 
 function VehicleImagesDropzone1() {
   const { getRootProps, getInputProps, isFocused, isDragAccept, isDragReject } =
@@ -158,4 +153,4 @@ function VehicleImagesDropzone1() {
   );
 }
 
-export {VehicleImagesDropzone, VehicleImagesDropzone1}
+export { VehicleImagesDropzone, VehicleImagesDropzone1 };

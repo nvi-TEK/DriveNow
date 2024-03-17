@@ -39,9 +39,8 @@ export default function AddVehicleIssue() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
-          {/* Bottom menu */}
-          <section className="w- ">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
+          <section className=" ">
             <div className="mt-5 rounded-lg mb-12 shadow mx-6">
               <Formik<PushProp>
                 initialValues={{
@@ -70,28 +69,28 @@ export default function AddVehicleIssue() {
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
                   <Form
                     onSubmit={handleSubmit}
-                    className="bg-white shadow-lg rounded-lg px-4 pb-4"
+                    className="bg-white dark:bg-gray-700 shadow-lg rounded-lg px-4 pb-4"
                   >
-                    <h3 className="font-medium pt-4 text-[22px] leading-[30px] text-[#262626]">
+                    <h3 className="font-medium pt-4 text-[22px] leading-[30px] dark:text-white text-[#262626]">
                       Add Vehicle Issues
                     </h3>
-                    <p className="text-base font-medium pt-2 leading-[30px] text-[#737373]  ">
+                    <p className="text-base font-medium pt-2 leading-[30px] text-[#737373] dark:text-gray-300  ">
                       Complete this form to add a vehicle issue, ensuring
                       vehicle issue logs are recorded effectively.
                     </p>
 
-                    <section className="border-t gap-x-4 pt-4 mt-4 flex">
+                    <section className="border-t dark:border-gray-500 gap-x-4 pt-4 mt-4 flex">
                       <div className="w-[50%]">
                         <label
                           htmlFor="vehicleRegistration"
-                          className="block mb-2 text-sm pt-[10px] font-medium text-[#262626]"
+                          className="block mb-2 dark:text-white text-sm pt-[10px] font-medium text-[#262626]"
                         >
                           Vehicle Registration
                         </label>
                         <Field
                           id="vehicleRegistration"
                           as="select"
-                          className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
+                          className="bg-[#FFFFFF] dark:border-0 dark:bg-gray-600 dark:text-white border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.vehicleRegistration}
                           onChange={handleChange}
                         >
@@ -104,7 +103,7 @@ export default function AddVehicleIssue() {
                           <option>GS 4004-23</option>
                           <option>GS 4504-23</option>
                         </Field>
-                        <p className="font-medium text-xs text-red-700">
+                        <p className="font-medium text-xs text-red-700 dark:text-red-300">
                           <ErrorMessage name="vehicleRegistration" />
                         </p>
                       </div>
@@ -112,14 +111,14 @@ export default function AddVehicleIssue() {
                       <div className="w-[50%]">
                         <label
                           htmlFor="issueCategory"
-                          className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
+                          className="block mb-2 dark:text-white text-sm pt-[10px] font-medium text-gray-900"
                         >
                           Issue Category
                         </label>
                         <Field
                           id="issueCategory"
                           as="select"
-                          className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
+                          className="bg-[#FFFFFF] dark:border-0 dark:bg-gray-600 dark:text-white border shadow-[0px_1px_2px_0px_#1B283614] border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.issueCategory}
                           onChange={handleChange}
                         >
@@ -137,36 +136,36 @@ export default function AddVehicleIssue() {
                           <option>Part Replacement</option>
                           <option>Other</option>
                         </Field>
-                        <p className="font-medium text-xs text-red-700">
+                        <p className="font-medium text-xs text-red-700 dark:text-red-300">
                           <ErrorMessage name="issueCategory" />
                         </p>
                       </div>
                     </section>
 
-                    <section className="flex border-b pb-4 mt-[24px] gap-x-4">
+                    <section className="flex border-b dark:border-gray-500 pb-4 mt-[24px] gap-x-4">
                       <div className="w-[50%]">
                         <label
                           htmlFor="amount"
-                          className="block mb-2 text-sm font-medium text-[#262626]"
+                          className="block mb-2 dark:text-white text-sm font-medium text-[#262626]"
                         >
                           Amount (GH₵)
                         </label>
                         <Field
                           type="text"
                           id="amount"
-                          className="border border-gray-300 shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-1.5"
+                          className="border border-gray-300 dark:border-0 dark:placeholder-gray-300 dark:bg-gray-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-1.5"
                           placeholder="Amount"
                           value={values.amount}
                           onChange={handleChange}
                         />
-                        <p className="font-medium text-xs text-red-700">
+                        <p className="font-medium text-xs text-red-700 dark:text-red-300">
                           <ErrorMessage name="amount" />
                         </p>
                       </div>
                       <div className="w-[50%]">
                         <label
                           htmlFor="date"
-                          className="block mb-2 text-sm font-medium text-[#262626]"
+                          className="block mb-2 dark:text-white text-sm font-medium text-[#262626]"
                         >
                           Date
                         </label>
@@ -175,25 +174,25 @@ export default function AddVehicleIssue() {
                     </section>
 
                     <section className="mt-4 ">
-                      <h4 className="text-base font-medium leading-[30px] text-[#262626]">
+                      <h4 className="text-base dark:text-white font-medium leading-[30px] text-[#262626]">
                         Upload Images of Damage
                       </h4>
                       <div className="flex mt-4 justify-between">
                         <div>
                           <StyledDropzone />
-                          <p className="text-base font-medium leading-[30px] text-[#262626]   ">
+                          <p className="text-base font-medium leading-[30px] text-[#262626] dark:text-white  ">
                             Upload Repair Image 1
                           </p>
                         </div>
                         <div>
                           <StyledDropzone />
-                          <p className="text-base font-medium leading-[30px] text-[#262626]  ">
+                          <p className="text-base font-medium leading-[30px] text-[#262626] dark:text-white ">
                             Upload Repair Image 2
                           </p>
                         </div>
                         <div>
                           <StyledDropzone />
-                          <p className="text-base font-medium leading-[30px] text-[#262626]  ">
+                          <p className="text-base font-medium leading-[30px] text-[#262626] dark:text-white ">
                             Upload Repair Image 3
                           </p>
                         </div>
@@ -213,7 +212,7 @@ export default function AddVehicleIssue() {
                       <div className="mt-2">
                         <label
                           htmlFor="description"
-                          className="block mb-2 mt-3 text-base font-medium leading-[30px] text-[#262626] "
+                          className="block mb-2 mt-3 text-base font-medium leading-[30px] text-[#262626] dark:text-white"
                         >
                           Description
                         </label>
@@ -221,12 +220,12 @@ export default function AddVehicleIssue() {
                           id="description"
                           as="textarea"
                           rows={10}
-                          className="block p-2.5 shadow-[0px_1px_2px_0px_#1B283614] mb-auto w-[100%] h-[100px] text-sm text-gray-900 bg-[#FFFFFF] rounded-[4px] border border-gray-300"
+                          className="block p-2.5 shadow-[0px_1px_2px_0px_#1B283614] mb-auto w-[100%] h-[100px] text-sm dark:placeholder-gray-300 text-gray-900 bg-[#FFFFFF] dark:border-0 dark:bg-gray-600 dark:text-white rounded-[4px] border border-gray-300"
                           placeholder="Enter Description"
                           value={values.description}
                           onChange={handleChange}
                         />
-                        <p className="font-medium text-xs text-red-700">
+                        <p className="font-medium text-xs text-red-700 dark:text-red-300">
                           <ErrorMessage name="description" />
                         </p>
                       </div>
@@ -235,7 +234,7 @@ export default function AddVehicleIssue() {
                     <Link href={""}>
                       <button
                         type="button"
-                        className="text-[#FFFFFF] border bg-[#007AF5] mt-4 rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-xs py-1.5 text-center inline-flex justify-center font-normal items-center ml-[92%] mr-2 "
+                        className="text-[#FFFFFF] border dark:border-0 bg-[#007AF5] mt-4 rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-xs py-1.5 text-center inline-flex justify-center font-normal items-center ml-[92%] mr-2 "
                       >
                         Submit
                       </button>

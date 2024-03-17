@@ -39,7 +39,7 @@ export default function DriverKyc() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
       
           <section className="w-full pb-[130px] ">
             <div className="flex space-x-4 grow m-5">
@@ -79,10 +79,10 @@ export default function DriverKyc() {
             </div>
 
             {/* Table */}
-            <div className="rounded-lg bg-white mx-5 px-[10px] mt-[24px]">
+            <div className="rounded-lg bg-white dark:bg-gray-700 mx-5 px-[10px] mt-[24px]">
 
               
-              <div className="relative overflow-x-auto bg-white sm:rounded-t-md">
+              <div className="relative overflow-x-auto bg-white dark:bg-gray-700 sm:rounded-t-md">
               <DriverKycTable />
               </div>
             </div>

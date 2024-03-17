@@ -58,7 +58,7 @@ export default function VehicleIssueLogs() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
           <section className="w-full ">
             <div className="flex space-x-4 grow m-5">
@@ -84,15 +84,15 @@ export default function VehicleIssueLogs() {
               />
             </div>
 
-            <div className="bg-white rounded-lg mx-5 mb-12 px-[10px] mt-6 ">
+            <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 mb-12 px-[10px] mt-6 ">
               <div className="flex justify-between ">
-                <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pt-4 ">
+                <h4 className="text-[#262626] dark:text-white font-medium text-[22px] leading-[30px] pt-4 ">
                   Vehicle Issue Log
                 </h4>
                 <Link href={"AddVehicleIssue"}>
                   <button
                     type="button"
-                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] rounded-[4px] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center  mb-2 "
+                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] dark:border-0 rounded-[4px] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center  mb-2 "
                   >
                     <Image src={plus} alt="plus sign" className="ml-0 mr-1" />
                     Add Vehicle Issue Log

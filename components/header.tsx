@@ -1,6 +1,7 @@
 /* eslint-disable require-jsdoc */
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 import LongMenu from "./headerDropdown";
 import logo from "../assets/DriveNow.svg";
 import bell from "../assets/bell.svg";
@@ -13,10 +14,29 @@ type pageProp = {
 };
 
 function Header(prop: pageProp) {
+  const [mounted, setMounted] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted)
+    return (
+      <Image
+        src={logo}
+        width={36}
+        height={36}
+        sizes="36x36"
+        alt="Loading Light/Dark Toggle"
+        priority={false}
+        title="Loading Light/Dark Toggle"
+        className="cursor-pointer "
+      />
+    );
+
   return (
     <>
-      <div className="bg-white border-b z-20">
-        <div className="flex w-full h-[4rem] max-2xl:h-[55px] shadow-[0px_4px_16px_0px_#0000001A] items-center  border-[#E6E6E6] pr-4 bg-white">
+      <div className="bg-white dark:border-gray-700 border-b z-20">
+        <div className="flex w-full h-[4rem] max-2xl:h-[55px] shadow-[0px_4px_16px_0px_#0000001A] items-center dark:bg-gray-700 dark:border-gray-500 border-[#E6E6E6] pr-4 bg-white">
           <Link href={"/views/dashboard"}>
             <Image
               src={logo}
@@ -47,7 +67,7 @@ function Header(prop: pageProp) {
               <div className="relative">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                   <svg
-                    className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                    className="w-4 h-4 text-gray-500 dark:text-gray-300"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -65,7 +85,7 @@ function Header(prop: pageProp) {
                 <input
                   type="search"
                   id="default-search"
-                  className="block w-[256px] border-0 p-1.5 ps-10 text-sm text-gray-900 rounded-lg bg-[#F2F2F2] dark:placeholder-gray-400"
+                  className="block w-[256px] border-0 p-1.5 ps-10 text-sm text-gray-900 rounded-lg dark:bg-gray-600 dark:text-white bg-[#F2F2F2] dark:placeholder-gray-300"
                   placeholder="What are you looking for？"
                 />
               </div>

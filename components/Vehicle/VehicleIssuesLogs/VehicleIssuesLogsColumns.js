@@ -30,7 +30,7 @@ export default function LongMenu() {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <MoreHorizIcon />
+        <MoreHorizIcon className="dark:text-white" />
       </IconButton>
       <Menu
         id="long-menu"

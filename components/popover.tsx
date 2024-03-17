@@ -40,7 +40,7 @@ function DriverKYCPop() {
         <div className="">
           <Popover placement="topRight" content={content} trigger="hover">
             <div>
-              <Image className="cursor-pointer w-[14px] h-[14px]"  src={info} alt="" />
+              <Image className="cursor-pointer w-[14px] h-[14px]" src={info} alt="" />
             </div>
           </Popover>
         </div>

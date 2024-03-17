@@ -25,6 +25,7 @@
 }
 
 * {
+  @apply transition-colors duration-300 ;
   box-sizing: border-box;
   padding: 0;
   margin: 0;

@@ -13,18 +13,18 @@ type DriverActivitiesProps = {
 
 function DriverActivities(props: DriverActivitiesProps) {
   return (
-    <div className="border-b h-[80px] flex items-center justify-between grow bg-white border-[#E6E6E6]">
+    <div className="border-b dark:border-gray-500 h-[80px] flex items-center justify-between grow bg-white dark:bg-gray-700 border-[#E6E6E6]">
       <div>
-        <p className="text-[#262626] text-sm font-normal leading-[18px] ">
+        <p className="text-[#262626] dark:text-white text-sm font-normal leading-[18px] ">
           {props.name}
         </p>
-        <p className="text-[#595959] font-normal text-xs pt-2 leading-[14.52px] ">
+        <p className="text-[#595959] dark:text-white font-normal text-xs pt-2 leading-[14.52px] ">
           Ratings: {props.rating}
         </p>
       </div>
 
       <div className="text-right flex flex-col">
-        <p className="text-[#8C8C8C] font-normal text-xs leading-4 ">
+        <p className="text-[#8C8C8C] dark:text-white font-normal text-xs leading-4 ">
           {props.lastUpdate}
         </p>
         <div

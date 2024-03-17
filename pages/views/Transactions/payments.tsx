@@ -1,10 +1,13 @@
 /* eslint-disable require-jsdoc */
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "../../../components/layout";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import PaymentTiles, { LastTile, MidTiles } from "../../../components/payment/paymentTiles";
+import PaymentTiles, {
+  LastTile,
+  MidTiles,
+} from "../../../components/payment/paymentTiles";
 import { BasicTable } from "../../../components/payment/BasicTable";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,6 +19,10 @@ import bell from "../../../assets/paymentbell.svg";
 import Header from "@/components/header";
 
 export default function Payments() {
+  const [weekly, setWeekly] = useState(false);
+
+  weekly ? <BasicTable /> : "";
+
   return (
     <>
       <div className="flex w-full">
@@ -31,31 +38,30 @@ export default function Payments() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
           <section className="w-full ">
             <div className="flex space-x-4 grow m-5">
               <PaymentTiles
                 icon={revenue}
                 entity1="Total Amount Received"
-                entity1value={2412570.00}
-                entity1differential={+15.80}
+                entity1value={2412570.0}
+                entity1differential={+15.8}
                 entity2="Total Daily"
                 entity2value={450}
-                entity2differential={+4.90}
-                
+                entity2differential={+4.9}
               />
               <MidTiles
                 icon={driver}
                 entity1="Total Drivers"
-                entity1value={1250}             
+                entity1value={1250}
                 entity2="Defaulted Drivers"
                 entity2value={1180}
                 entity3="Blocked Drivers"
                 entity3value={70}
-                entity1differential={+15.80}
-                entity2differential={-4.90}
-                entity3differential={+4.90}
+                entity1differential={+15.8}
+                entity2differential={-4.9}
+                entity3differential={+4.9}
               />
               <LastTile
                 icon={payment}
@@ -70,21 +76,22 @@ export default function Payments() {
 
             {/* Table */}
 
-            <div className="bg-white rounded-lg mx-5 px-[10px] pb-4 mb-12 mt-6 ">
+            <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 px-[10px] pb-4 mb-12 mt-6 ">
               <div className="flex justify-between ">
-                <h4 className="text-[#262626] font-medium text-[22px] leading-[30px] pl-[] pt-4 ">
+                <h4 className="text-[#262626] dark:text-white font-medium text-[22px] max-2xl:text-xl leading-[30px] pl-[] pt-4 ">
                   Payments
                 </h4>
-                <Link href={"/views/"}>
+                <Link href={""}>
                   <button
                     type="button"
-                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] rounded-[4px] w-[] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center mb-2 "
+                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] dark:border-0 rounded-[4px] focus:outline-none text-sm px-4 max-2xl:py-1 py-1.5 max-2xl:text-xs text-center inline-flex justify-center font-normal items-center mb-2 "
                   >
                     <Image src={bell} alt="bell icon" className="ml-0 mr-1" />
                     Send Payment Reminder
                   </button>
                 </Link>
               </div>
+              
               <BasicTable />
             </div>
           </section>

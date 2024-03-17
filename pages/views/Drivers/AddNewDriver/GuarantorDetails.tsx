@@ -63,21 +63,21 @@ export default function GuarantorDetails(prop: GuarantorProps) {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
-          <section className="bg-white rounded-lg m-[19px] p-4 mb-[47px]">
+          <section className="bg-white dark:bg-gray-700 rounded-lg m-[19px] p-4 mb-[47px]">
             <div className="pb-4">
-              <h3 className="font-medium text-[22px] leading-[30px] text-[#262626]">
+              <h3 className="font-medium text-[22px] leading-[30px] dark:text-white text-[#262626]">
                 Driver KYC
               </h3>
-              <p className="text-[#737373] font-medium leading-[30px] text-base">
+              <p className="text-[#737373] dark:text-gray-300  font-medium leading-[30px] text-base">
                 Complete this form to initiate background checks, ensuring we
                 meet regulatory requirements and protect our business from
                 potential risks.
               </p>
             </div>
             {/* Timeline */}
-            <div className="flex py-10 px-[44px] border-y items-center">
+            <div className="flex py-10 px-[44px] border-y dark:border-gray-500 items-center">
               <div className="bg-[#0C9064] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
                 <CheckOutlinedIcon fontSize="small" />
               </div>
@@ -114,12 +114,12 @@ export default function GuarantorDetails(prop: GuarantorProps) {
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 4
               </div>
-              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#8C8C8C]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] dark:text-white text-[#8C8C8C]">
                 Relative Details{" "}
               </p>
             </div>
 
-            <h3 className="font-medium leading-[30px] pt-4 text-lg text-[#262626]">
+            <h3 className="font-medium dark:text-white leading-[30px] pt-4 text-lg text-[#262626]">
               Identification Details (Guarantor)
             </h3>
 
@@ -148,7 +148,7 @@ export default function GuarantorDetails(prop: GuarantorProps) {
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
                   <Form
                     onSubmit={handleSubmit}
-                    className="bg-white border-0 pb-10"
+                    className="bg-white dark:bg-gray-700 border-0 pb-10"
                   >
                     <section className="">
                       <div className="flex gap-x-4 mt-3 w-full">
@@ -156,22 +156,22 @@ export default function GuarantorDetails(prop: GuarantorProps) {
                         <div className="w-[50%]">
                           <label
                             htmlFor="ghanaCardName"
-                            className="block mb-2 text-sm font-medium text-gray-900"
+                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                           >
                             Ghana Card Name{" "}
                           </label>
                           <Field
                             type="text"
                             id="ghanaCardName"
-                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Full name"
                             value={values.ghanaCardName}
                             onChange={handleChange}
                           />
-                          <p className="font-medium text-xs text-red-700">
+                          <p className="font-medium text-xs text-red-700 dark:text-red-400 ">
                             <ErrorMessage name="ghanaCardName" />
                           </p>
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                             Enter name as seen on the Ghana Card.
                           </p>
                         </div>
@@ -180,22 +180,22 @@ export default function GuarantorDetails(prop: GuarantorProps) {
                         <div className="w-[50%]">
                           <label
                             htmlFor="ghanaCardNumber"
-                            className="block mb-2 text-sm font-medium text-gray-900"
+                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                           >
                             Street Name{" "}
                           </label>
                           <Field
                             type="text"
                             id="ghanaCardNumber"
-                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="GHA-12345678-42"
                             value={values.ghanaCardNumber}
                             onChange={handleChange}
                           />
-                          <p className="font-medium text-xs text-red-700">
+                          <p className="font-medium text-xs text-red-700 dark:text-red-400 ">
                             <ErrorMessage name="ghanaCardNumber" />
                           </p>
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                             Enter the Ghana Card number beginning with the GHA
                             prefix
                           </p>
@@ -207,22 +207,22 @@ export default function GuarantorDetails(prop: GuarantorProps) {
                         <div className="w-[50%]">
                           <label
                             htmlFor="phone"
-                            className="block mb-2 text-sm font-medium text-[#04030F]"
+                            className="block mb-2 text-sm font-medium dark:text-white text-[#04030F]"
                           >
                             Phone
                           </label>
                           <Field
                             type="text"
                             id="phone"
-                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="+233 123 456 789"
                             value={values.phone}
                             onChange={handleChange}
                           />
-                          <p className="font-medium text-xs text-red-700">
+                          <p className="font-medium text-xs text-red-700 dark:text-red-400 ">
                             <ErrorMessage name="phone" />
                           </p>
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                             Enter phone number
                           </p>
                         </div>
@@ -231,22 +231,22 @@ export default function GuarantorDetails(prop: GuarantorProps) {
                         <div className="w-[50%]">
                           <label
                             htmlFor="houseAddress"
-                            className="block mb-2 text-sm font-medium text-gray-900"
+                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                           >
                             House Address{" "}
                           </label>
                           <Field
                             type="text"
                             id="houseAddress"
-                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Address"
                             value={values.houseAddress}
                             onChange={handleChange}
                           />
-                          <p className="font-medium text-xs text-red-700">
+                          <p className="font-medium text-xs text-red-700 dark:text-red-400 ">
                             <ErrorMessage name="houseAddress" />
                           </p>
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                             Enter house address
                           </p>
                         </div>
@@ -257,29 +257,29 @@ export default function GuarantorDetails(prop: GuarantorProps) {
                     <div className="w-full mt-4">
                       <label
                         htmlFor="gpsAddress"
-                        className="block mb-2 text-sm font-normal text-gray-900"
+                        className="block mb-2 text-sm font-normal dark:text-white text-gray-900"
                       >
                         GPS Address
                       </label>
                       <Field
                         type="text"
                         id="gpsAddress"
-                        className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 w-full text-sm rounded block p-2"
+                        className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 w-full text-sm rounded block p-2"
                         placeholder="GT-123-456"
                         value={values.gpsAddress}
                         onChange={handleChange}
                       />
-                      <p className="font-medium text-xs text-red-700">
+                      <p className="font-medium text-xs text-red-700 dark:text-red-400 ">
                         <ErrorMessage name="gpsAddress" />
                       </p>
-                      <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                      <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                         Enter Ghana Post Address
                       </p>
                     </div>
 
                     {/* Utility Bills */}
                     <section className="mt-5">
-                      <p className="text-[#262626] pb-5 font-medium text-base leading-[30px] ">
+                      <p className="text-[#262626] dark:text-white pb-5 font-medium text-base leading-[30px] ">
                         Upload Image of Guarantor
                       </p>
                       <div className="ml-2">
@@ -288,7 +288,7 @@ export default function GuarantorDetails(prop: GuarantorProps) {
 
                       <div className="flex mt-4 items-center">
                         <Image src={info} alt="info icon" className="w-4 h-4" />
-                        <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
+                        <p className="text-[#737373] dark:text-gray-300 pl-1 font-normal leading-[30px] text-sm ">
                           Ensure that images uploaded are clear and details are
                           clearly captured.
                         </p>
@@ -296,7 +296,7 @@ export default function GuarantorDetails(prop: GuarantorProps) {
                     </section>
 
                     <section className="mt-5">
-                      <h3 className="text-[#262626] font-medium text-base leading-[30px] ">
+                      <h3 className="text-[#262626] dark:text-white font-medium text-base leading-[30px] ">
                         Upload Ghana Card
                       </h3>
 
@@ -317,7 +317,7 @@ export default function GuarantorDetails(prop: GuarantorProps) {
 
                       <div className="flex mt-3 items-center">
                         <Image src={info} alt="info icon" className="w-4 h-4" />
-                        <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
+                        <p className="text-[#737373] dark:text-gray-300 pl-1 font-normal leading-[30px] text-sm ">
                           Ensure that images uploaded are clear and details are
                           clearly captured.
                         </p>
@@ -330,7 +330,7 @@ export default function GuarantorDetails(prop: GuarantorProps) {
                       >
                         <button
                           type="button"
-                          className="text-[#FFFFFF] border bg-[#007AF5] ml-auto rounded-[4px] w-[85px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
+                          className="text-[#FFFFFF] border dark:border-0 bg-[#007AF5] ml-auto rounded-[4px] w-[85px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
                         >
                           Previous
                         </button>
@@ -341,7 +341,7 @@ export default function GuarantorDetails(prop: GuarantorProps) {
                       >
                         <button
                           type="button"
-                          className="text-[#FFFFFF] border bg-[#007AF5] ml-auto rounded-[4px] w-[63px] border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center  mb-2 "
+                          className="text-[#FFFFFF] border dark:border-0 bg-[#007AF5] ml-auto rounded-[4px] w-[63px] border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center  mb-2 "
                         >
                           Next
                         </button>

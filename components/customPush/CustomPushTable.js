@@ -78,7 +78,7 @@ export const CustomPushTable = () => {
       value={pageSize}
       defaultValue={3}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border h-[30px] shadow-[0px_1px_2px_0px_#1B283614] text-center border-[#D9D9D9] text-xs text-[#BFBFBF] rounded px-1 py-1 "
+      className="border h-[30px] shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-600 dark:border-0 dark:text-white text-center border-[#D9D9D9] text-xs text-[#BFBFBF] rounded px-1 py-1 "
       placeholder=""
     >
       {[3, 10, 15, 20].map((pageSize) => (
@@ -94,7 +94,7 @@ export const CustomPushTable = () => {
       value={pageSize}
       defaultValue={3}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border h-[30px] shadow-[0px_1px_2px_0px_#1B283614] text-center text-xs border-[#D9D9D9] rounded px-1 py-1 "
+      className="border h-[30px] shadow-[0px_1px_2px_0px_#1B283614] text-center text-xs dark:bg-gray-600 dark:border-0 dark:text-white border-[#D9D9D9] rounded px-1 py-1 "
       aria-placeholder=""
     >
       {[3, 10, 15, 20].map((pageSize) => (
@@ -112,7 +112,7 @@ export const CustomPushTable = () => {
     <>
       {/* number of entries dropdown and Search bar */}
       <div className="flex items-center mt-6 ml-[10px]">
-        <p className="font-medium text-sm leading-[30px] mr-[33px] text-[#262626] ">
+        <p className="font-medium text-sm leading-[30px] dark:text-white mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
 
@@ -127,7 +127,7 @@ export const CustomPushTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-xs font-normal leading-[18px] h-[48px] pl-2 bg-[#FAFAFA] "
+                  className="text-left text-xs font-normal leading-[18px] h-[48px] text-[#262626] dark:text-white pl-2 dark:bg-gray-600 bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -156,7 +156,7 @@ export const CustomPushTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-[#595959] pl-2 text-xs font-normal leading-[18px] border-[#E6E6E6] border-y h-[48px] "
+                        className="text-[#595959] pl-2 text-xs dark:text-white font-normal leading-[18px] border-[#E6E6E6] dark:border-gray-600 border-y h-[48px] "
                       >
                         {cell.render("Cell")}
                       </td>
@@ -173,28 +173,28 @@ export const CustomPushTable = () => {
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
-          className="px-2 border rounded-sm "
+          className="px-2 border dark:border-0 dark:bg-gray-600 rounded-sm "
         >
           <ArrowBackIosOutlinedIcon fontSize="small" />
         </button>
 
-        <button className="border px-3 rounded" onClick={() => gotoPage(0)}>
+        <button className="border dark:border-0 dark:bg-gray-600 px-3 rounded" onClick={() => gotoPage(0)}>
           {" "}
           1{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(1)}>
+        <button className="border dark:border-0 dark:bg-gray-600 px-3 rounded" onClick={() => gotoPage(1)}>
           {" "}
           2{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(2)}>
+        <button className="border dark:border-0 dark:bg-gray-600 px-3 rounded" onClick={() => gotoPage(2)}>
           {" "}
           3{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(3)}>
+        <button className="border dark:border-0 dark:bg-gray-600 px-3 rounded" onClick={() => gotoPage(3)}>
           {" "}
           4{" "}
         </button>
-        <button className="border px-3 rounded" onClick={() => gotoPage(4)}>
+        <button className="border dark:border-0 dark:bg-gray-600 px-3 rounded" onClick={() => gotoPage(4)}>
           {" "}
           5{" "}
         </button>
@@ -202,7 +202,7 @@ export const CustomPushTable = () => {
         <button
           onClick={() => nextPage()}
           disabled={!canNextPage}
-          className="px-2 border rounded-sm "
+          className="px-2 border dark:border-0 dark:bg-gray-600 rounded-sm "
         >
           <ArrowForwardIosOutlinedIcon fontSize="small" />
         </button>

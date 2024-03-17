@@ -54,19 +54,19 @@ export default function VehicleImages(prop: UploadModel) {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
-          <section className="bg-[#FFFFFF] rounded-lg m-[19px] p-4">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
+          <section className="bg-[#FFFFFF] dark:bg-gray-700 rounded-lg m-[19px] p-4">
             <div className="pb-4">
-              <h3 className="font-medium text-[22px] leading-[30px] text-[#262626]">
+              <h3 className="font-medium text-[22px] leading-[30px] dark:text-white text-[#262626]">
                 Add Vehicle
               </h3>
-              <p className="text-[#737373] font-medium leading-[30px] text-base ">
+              <p className="text-[#737373] dark:text-gray-300 font-medium leading-[30px] text-base ">
                 Complete this form to add a vehicle.
               </p>
             </div>
             {/* Timeline */}
-            <div className="flex py-6 px-[44px] border-y items-center">
-              <div className="bg-[#0C9064] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
+            <div className="flex py-6 px-[44px] border-y dark:border-gray-500 items-center">
+              <div className="bg-[#0C9064] flex items-center justify-center w-8 h-8 text-white rounded-[100%] ">
                 <CheckOutlinedIcon fontSize="small" />
               </div>
               <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#0C9064]">
@@ -91,7 +91,7 @@ export default function VehicleImages(prop: UploadModel) {
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 3
               </div>
-              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#8C8C8C]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] dark:text-white text-[#8C8C8C]">
                 Registration Details
               </p>
             </div>
@@ -105,10 +105,10 @@ export default function VehicleImages(prop: UploadModel) {
                 }}
               >
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
-                  <Form onSubmit={handleSubmit} className="bg-white border-0 ">
+                  <Form onSubmit={handleSubmit} className="bg-white dark:bg-gray-700 border-0 ">
                     <div className="mt-4">
                       <h5>Vehicle Images</h5>
-                      <p className="text-[#737373] text-sm font-medium leading-[30px] pt-1">
+                      <p className="text-[#737373] dark:text-gray-300 text-sm font-medium leading-[30px] pt-1">
                         Upload images of the Vehicle. For sample images,
                         <Link
                           href={""}
@@ -125,38 +125,38 @@ export default function VehicleImages(prop: UploadModel) {
                       <div className="flex w-full gap-x-5 justify-between mt-3">
                         <div className="flex flex-col grow  items-center">
                           <VehicleImagesDropzone />
-                          <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                          <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
                             3/4 View
                           </p>
                         </div>
                         <div className="flex flex-col grow  items-center">
                           <VehicleImagesDropzone />
-                          <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                          <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
                             Front View
                           </p>
                         </div>
                         <div className="flex flex-col grow  items-center">
                           <VehicleImagesDropzone />
-                          <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                          <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
                             Right View
                           </p>
                         </div>
                         <div className="flex flex-col grow  items-center">
                           <VehicleImagesDropzone />
-                          <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                          <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
                             Left View
                           </p>
                         </div>
                         <div className="flex flex-col grow  items-center">
                           <VehicleImagesDropzone />
-                          <p className="text-[#737373]  font-medium text-xs leading-[30px] pt-2 ">
+                          <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
                             Rear View
                           </p>
                         </div>
                       </div>
                       <div className="flex mt-9 flex-col justify-start items-center">
                         <VehicleImagesDropzone1 />
-                        <p className="text-[#737373] font-medium text-xs leading-[30px] pt-2 ">
+                        <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
                           Dashboard View
                         </p>
                       </div>
@@ -165,7 +165,7 @@ export default function VehicleImages(prop: UploadModel) {
                       <Link href={"/views/Vehicles/AddVehicle/VehicleDetails"}>
                         <button
                           type="button"
-                          className="text-[#FFFFFF] border bg-[#8C8C8C] rounded-[4px] px-4 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center"
+                          className="text-[#FFFFFF] border dark:border-0 bg-[#8C8C8C] rounded-[4px] px-4 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center"
                         >
                           Back
                         </button>
@@ -175,7 +175,7 @@ export default function VehicleImages(prop: UploadModel) {
                       >
                         <button
                           type="button"
-                          className="text-[#FFFFFF] border bg-[#007AF5] rounded-[4px] px-4 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center"
+                          className="text-[#FFFFFF] border dark:border-0 bg-[#007AF5] rounded-[4px] px-4 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center"
                         >
                           Save & Next
                         </button>

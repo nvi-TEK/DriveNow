@@ -48,21 +48,21 @@ export default function ResidentialDetails() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
-          <section className="bg-white rounded-lg m-[19px] p-4 mb-[47px]">
+          <section className="bg-white dark:bg-gray-700 rounded-lg m-[19px] p-4 mb-[47px]">
             <div className="pb-4">
-              <h3 className="font-medium text-[22px] leading-[30px] text-[#262626]">
+              <h3 className="font-medium dark:text-white text-[22px] leading-[30px] text-[#262626]">
                 Driver KYC
               </h3>
-              <p className="text-[#737373] font-medium leading-[30px] text-base">
+              <p className="text-[#737373] dark:text-gray-300 font-medium leading-[30px] text-base">
                 Complete this form to initiate background checks, ensuring we
                 meet regulatory requirements and protect our business from
                 potential risks.
               </p>
             </div>
             {/* Timeline */}
-            <div className="flex py-10 px-[44px] border-y items-center">
+            <div className="flex py-10 px-[44px] border-y dark:border-gray-500 items-center">
               <div className="bg-[#0C9064] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
                 <CheckOutlinedIcon fontSize="small" />
               </div>
@@ -88,7 +88,7 @@ export default function ResidentialDetails() {
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 3
               </div>
-              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#8C8C8C]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] dark:text-white text-[#8C8C8C]">
                 Guarantor Details{" "}
               </p>
               <Image
@@ -99,12 +99,12 @@ export default function ResidentialDetails() {
               <div className="bg-[#8C8C8C] flex items-center justify-center ml-1 w-8 h-8 text-white rounded-[100%] ">
                 4
               </div>
-              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#8C8C8C]">
+              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] dark:text-white text-[#8C8C8C]">
                 Relative Details{" "}
               </p>
             </div>
 
-            <h3 className="font-medium leading-[30px] pt-4 text-lg text-[#262626] ">
+            <h3 className="font-medium leading-[30px] pt-4 text-lg dark:text-white text-[#262626] ">
               Residence Details (Driver)
             </h3>
 
@@ -129,7 +129,7 @@ export default function ResidentialDetails() {
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
                   <Form
                     onSubmit={handleSubmit}
-                    className="bg-white border-0 pb-10"
+                    className="bg-white dark:bg-gray-700 border-0 pb-10"
                   >
                     <section className="">
                       <div className="flex gap-x-4 mt-3 w-full">
@@ -137,14 +137,14 @@ export default function ResidentialDetails() {
                         <div className="w-[50%]">
                           <label
                             htmlFor="houseAddress"
-                            className="block mb-2 text-sm font-normal text-gray-900"
+                            className="block mb-2 dark:text-white text-sm font-normal text-gray-900"
                           >
                             House Address{" "}
                           </label>
                           <Field
                             type="text"
                             id="houseAddress"
-                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] dark:border-0 dark:bg-gray-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Address"
                             value={values.houseAddress}
                             onChange={handleChange}
@@ -152,7 +152,7 @@ export default function ResidentialDetails() {
                           <p className="font-medium text-xs text-red-700">
                             <ErrorMessage name="houseAddress" />
                           </p>
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                             Enter house address
                           </p>
                         </div>
@@ -161,14 +161,14 @@ export default function ResidentialDetails() {
                         <div className="w-[50%]">
                           <label
                             htmlFor="streetName"
-                            className="block mb-2 text-sm font-normal text-gray-900"
+                            className="block mb-2 text-sm dark:text-white font-normal text-gray-900"
                           >
                             Street Name{" "}
                           </label>
                           <Field
                             type="text"
                             id="streetName"
-                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] dark:border-0 dark:bg-gray-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Street Name"
                             value={values.streetName}
                             onChange={handleChange}
@@ -176,7 +176,7 @@ export default function ResidentialDetails() {
                           <p className="font-medium text-xs text-red-700">
                             <ErrorMessage name="streetName" />
                           </p>
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                             Enter Street Name.
                           </p>
                         </div>
@@ -187,14 +187,14 @@ export default function ResidentialDetails() {
                         <div className="w-[50%]">
                           <label
                             htmlFor="city"
-                            className="block mb-2 text-sm font-normal text-gray-900"
+                            className="block mb-2 text-sm dark:text-white font-normal text-gray-900"
                           >
                             City{" "}
                           </label>
                           <Field
                             type="text"
                             id="city"
-                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] dark:border-0 dark:bg-gray-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="City"
                             value={values.city}
                             onChange={handleChange}
@@ -202,7 +202,7 @@ export default function ResidentialDetails() {
                           <p className="font-medium text-xs text-red-700">
                             <ErrorMessage name="city" />
                           </p>
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                             Enter City
                           </p>
                         </div>
@@ -211,14 +211,14 @@ export default function ResidentialDetails() {
                         <div className="w-[50%]">
                           <label
                             htmlFor="region"
-                            className="block mb-2 text-sm font-normal text-gray-900"
+                            className="block mb-2 text-sm dark:text-white font-normal text-gray-900"
                           >
                             Region{" "}
                           </label>
                           <Field
                             type="text"
                             id="region"
-                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] dark:border-0 dark:bg-gray-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Region"
                             value={values.region}
                             onChange={handleChange}
@@ -226,7 +226,7 @@ export default function ResidentialDetails() {
                           <p className="font-medium text-xs text-red-700">
                             <ErrorMessage name="region" />
                           </p>
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                             Enter Region
                           </p>
                         </div>
@@ -235,20 +235,20 @@ export default function ResidentialDetails() {
 
                     {/* Utility Bills */}
                     <section className="mt-5 pb-4 ">
-                      <h3 className="font-medium leading-[30px] text-[#262626] text-base">
+                      <h3 className="font-medium leading-[30px] dark:text-white text-[#262626] text-base">
                         Upload an Image of Utility Bills{" "}
                       </h3>
 
                       <div className="flex mt-5 gap-x-5">
                         <div>
                           <StyledDropzone />
-                          <p className="pl-[0px] text-[#737373] text-xs font-normal leading-[30px] pt-3 ">
+                          <p className="pl-[0px] text-[#737373] dark:text-gray-300 text-xs font-normal leading-[30px] pt-3 ">
                             Upload an image of Water Bill
                           </p>
                         </div>
                         <div>
                           <StyledDropzone />
-                          <p className=" text-[#737373] text-xs  font-normal leading-[30px] pt-3 ">
+                          <p className=" text-[#737373] text-xs dark: dark:text-gray-300  font-normal leading-[30px] pt-3 ">
                             Upload an image of Electricity Bill
                           </p>
                         </div>
@@ -265,13 +265,13 @@ export default function ResidentialDetails() {
                     </section>
 
                     <section className="mt-4 pb-3">
-                      <p className="text-[#262626] pb-5 font-medium text-base leading-[30px]">
+                      <p className="text-[#262626] dark:text-white pb-5 font-medium text-base leading-[30px]">
                         Upload Image of Residence
                       </p>
                       <StyledDropzone />
                       <div className="flex mt-3 items-center">
                         <Image src={info} alt="info icon" className="w-4 h-4" />
-                        <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
+                        <p className="text-[#737373] dark:text-gray-300 pl-1 font-normal leading-[30px] text-sm ">
                           This image can only be uploaded by Fleet Manager/Fleet
                           Officer
                         </p>
@@ -284,7 +284,7 @@ export default function ResidentialDetails() {
                       >
                         <button
                           type="button"
-                          className="text-[#FFFFFF] border bg-[#007AF5] ml-auto rounded-[4px] w-[85px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
+                          className="text-[#FFFFFF] border bg-[#007AF5] dark:border-0  ml-auto rounded-[4px] w-[85px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
                         >
                           Previous
                         </button>
@@ -295,7 +295,7 @@ export default function ResidentialDetails() {
                       >
                         <button
                           type="button"
-                          className="text-[#FFFFFF] border bg-[#007AF5] ml-auto rounded-[4px] w-[63px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
+                          className="text-[#FFFFFF] border bg-[#007AF5] dark:border-0  ml-auto rounded-[4px] w-[63px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
                         >
                           Next{" "}
                         </button>

@@ -47,10 +47,10 @@ type LastTileProp = {
 
 function DashboardTiles(props: tileProp1) {
   return (
-    <div className="border shadow-[0px_1px_2px_0px_#1B283614] max-2xl:h-[110px] h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
+    <div className="border shadow-[0px_1px_2px_0px_#1B283614] max-2xl:h-[110px] dark:bg-gray-700 dark:border-0 h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
       <div className="flex items-center justify-between ">
         <div>
-          <Image src={props.icon} className="w-[30px] max-2xl:w-7"  alt="" />
+          <Image src={props.icon} className="w-[30px] max-2xl:w-7" alt="" />
         </div>
         <div>
           <TileDropdown />
@@ -58,11 +58,11 @@ function DashboardTiles(props: tileProp1) {
       </div>
       <section className="flex mt-4 max-2xl:mt-3">
         <div className="grow">
-          <p className="font-normal text-sm max-2xl:text-xs leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white text-sm max-2xl:text-xs leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex mt-2 max-2xl:mt-1 items-center">
-            <p className="text-[#262626] pt- max-2xl:text-lg leading-7 font-medium text-xl">
+            <p className="text-[#262626] pt- dark:text-white max-2xl:text-lg leading-7 font-medium text-xl">
               ₵{props.entity1value.toLocaleString()}
             </p>
             <p>{props.entity1differential}</p>
@@ -70,11 +70,11 @@ function DashboardTiles(props: tileProp1) {
         </div>
 
         <div className="grow">
-          <p className="font-normal text-sm max-2xl:text-xs leading-5 text-[#8C8C8C]">
+          <p className="font-normal dark:text-white text-sm max-2xl:text-xs leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex mt-2 max-2xl:mt-1 items-center">
-            <p className="text-[#262626]  max-2xl:text-lg leading-7 font-medium text-xl">
+            <p className="text-[#262626] dark:text-white max-2xl:text-lg leading-7 font-medium text-xl">
               {props.entity2value.toLocaleString()}
             </p>
             <p
@@ -96,7 +96,7 @@ function DashboardTiles(props: tileProp1) {
 // last tile
 function LastTile(props: LastTileProp) {
   return (
-    <div className="border shadow-[0px_1px_2px_0px_#1B283614] max-2xl:h-[110px] h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
+    <div className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-700 dark:border-0 max-2xl:h-[110px] h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
       <div className="flex items-center justify-between ">
         <div>
           <Image src={props.icon} className="w-[30px] max-2xl:w-7" alt="" />
@@ -107,21 +107,21 @@ function LastTile(props: LastTileProp) {
       </div>
       <section className="flex mt-4 max-2xl:mt-3">
         <div className="grow">
-          <p className="font-normal pt- max-2xl:text-xs text-sm leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white pt- max-2xl:text-xs text-sm leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
 
-          <p className="text-[#262626] pt-2 max-2xl:pt-1  leading-7 font-medium max-2xl:text-lg text-xl">
+          <p className="text-[#262626] dark:text-white pt-2 max-2xl:pt-1  leading-7 font-medium max-2xl:text-lg text-xl">
             {props.entity1value.toLocaleString()}
           </p>
         </div>
 
         <div className="grow">
-          <p className="font-normal pt- max-2xl:text-xs text-sm leading-5 text-[#8C8C8C]">
+          <p className="font-normal dark:text-white pt- max-2xl:text-xs text-sm leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex mt-2 max-2xl:mt-1 items-center">
-            <p className="text-[#262626]  max-2xl:text-lg leading-7 font-medium text-xl">
+            <p className="text-[#262626] dark:text-white max-2xl:text-lg leading-7 font-medium text-xl">
               {props.entity2value.toLocaleString()}
             </p>
           </div>
@@ -133,7 +133,7 @@ function LastTile(props: LastTileProp) {
 
 function MidTiles(props: midTileProp) {
   return (
-    <div className="border shadow-[0px_1px_2px_0px_#1B283614] max-2xl:h-[110px] h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
+    <div className="border dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] max-2xl:h-[110px] h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full  dark:bg-gray-700 bg-white rounded-t-lg border-[#E9ECEF]">
       <div className="flex items-center justify-between ">
         <div>
           <Image src={props.icon} className="w-[30px] max-2xl:w-7" alt="" />
@@ -144,11 +144,11 @@ function MidTiles(props: midTileProp) {
       </div>
       <section className="flex mt-4 max-2xl:mt-3">
         <div className="grow">
-          <p className="font-normal  text-sm max-2xl:text-xs leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white text-sm max-2xl:text-xs leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex mt-2 max-2xl:mt-1 items-center">
-            <p className="text-[#262626] max-2xl:text-lg leading-7 font-medium text-xl">
+            <p className="text-[#262626] dark:text-white max-2xl:text-lg leading-7 font-medium text-xl">
               {props.entity1value.toLocaleString()}
             </p>
             <p
@@ -164,11 +164,11 @@ function MidTiles(props: midTileProp) {
         </div>
 
         <div className="grow">
-          <p className="font-normal text-sm max-2xl:text-xs leading-5 text-[#8C8C8C]">
+          <p className="font-normal text-sm max-2xl:text-xs leading-5 dark:text-white text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex mt-2 max-2xl:mt-1 items-center">
-            <p className="text-[#262626] leading-7 max-2xl:text-lg font-medium text-xl">
+            <p className="text-[#262626] leading-7 dark:text-white max-2xl:text-lg font-medium text-xl">
               {props.entity2value.toLocaleString()}
             </p>
             <p
@@ -189,7 +189,7 @@ function MidTiles(props: midTileProp) {
 
 function DashboardTiles1(props: tileProp2) {
   return (
-    <div className="border shadow-[0px_1px_2px_0px_#1B283614] h-[8rem] max-2xl:h-[110px] max-lg:h-[50px] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
+    <div className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-700 dark:border-0 h-[8rem] max-2xl:h-[110px] max-lg:h-[50px] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <Image src={props.icon} className="w-[30px] max-2xl:w-7" alt="" />
         <div>
@@ -199,33 +199,33 @@ function DashboardTiles1(props: tileProp2) {
 
       <div className="flex mt-4 max-2xl:mt-3">
         <div className="grow">
-          <p className="font-normal max-2xl:text-xs text-sm leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white max-2xl:text-xs text-sm leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center pt-2 max-2xl:pt-1">
-            <p className="text-[#262626] pt-  leading-7 font-medium text-xl">
+            <p className="text-[#262626] pt- dark:text-white leading-7 font-medium text-xl">
               {props.entity1value.toLocaleString()}
             </p>
           </div>
         </div>
 
         <div className="grow">
-          <p className="font-normal max-2xl:text-xs text-sm leading-5 text-[#8C8C8C]">
+          <p className="font-normal dark:text-white max-2xl:text-xs text-sm leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex items-center pt-2 max-2xl:pt-1">
-            <p className="text-[#262626] max-2xl:text-lg  leading-7 font-medium text-xl">
+            <p className="text-[#262626] dark:text-white max-2xl:text-lg  leading-7 font-medium text-xl">
               {props.entity2value.toLocaleString()}
             </p>
           </div>
         </div>
 
         <div className="grow">
-          <p className="font-normal max-2xl:text-xs text-sm leading-5 text-[#8C8C8C]">
+          <p className="font-normal max-2xl:text-xs dark:text-white text-sm leading-5 text-[#8C8C8C]">
             {props.entity3}
           </p>
           <div className="flex items-center pt-2 max-2xl:pt-1">
-            <p className="text-[#262626] leading-7 max-2xl:text-lg font-medium text-xl">
+            <p className="text-[#262626] dark:text-white leading-7 max-2xl:text-lg font-medium text-xl">
               {props.entity3value.toLocaleString()}
             </p>
           </div>

@@ -35,7 +35,7 @@ export default function LongMenu() {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <MoreHorizIcon />
+        <MoreHorizIcon className="dark:text-white" />
       </IconButton>
       <Menu
         id="long-menu"
@@ -106,14 +106,19 @@ export const COLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    width: 70,
+    sortable: true,
   },
   {
     Header: "Full Name",
     accessor: "full_name",
+    width: 250,
+    sortable: true,
   },
   {
     Header: "Deposit Amount",
     accessor: "deposit_amount",
+    width: 110,
   },
   {
     Header: "Vehicle Repayment",
@@ -154,6 +159,7 @@ export const COLUMNS = [
   {
     Header: "Engine Status",
     accessor: "engine_status",
+    width: 120,
     Cell: (props) => {
       return (
         <div className="flex items-center gap-x-1">
@@ -183,10 +189,12 @@ export const COLUMNS = [
   {
     Header: "Engine Status Updated",
     accessor: "engine_status_updated",
+    width: 150 ,
   },
   {
     Header: "Completed Weeks (Invoices)",
     accessor: "completed_weeks",
+    width: 160,
   },
   {
     Header: "Action",

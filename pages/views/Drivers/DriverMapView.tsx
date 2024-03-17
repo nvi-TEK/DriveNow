@@ -28,7 +28,7 @@ export default function DriverKyc() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
           <section className="w-full pb-[130px] ">
             <div className="flex space-x-4 grow m-5">
               <ListOfVehiclesTiles
@@ -58,8 +58,8 @@ export default function DriverKyc() {
             </div>
 
             {/* Map */}
-            <div className="rounded-lg bg-white h-[443px] mx-5 mt-[24px]">
-              <h3 className="text-[#262626] p-4 font-medium leading-[30px] text-[22px]">
+            <div className="rounded-lg bg-white dark:bg-gray-700 h-[443px] mx-5 mt-[24px]">
+              <h3 className="text-[#262626] dark:text-white p-4 font-medium leading-[30px] text-[22px]">
                 Driver Map View
               </h3>
 
@@ -68,21 +68,21 @@ export default function DriverKyc() {
               </div>
             </div>
 
-            <section className="rounded-lg h-[115px] bg-white mx-5 mt-[18px]">
-              <h5 className="text-center font-medium leading-[30px] text-[22px] text-[#262626] pt-4">
+            <section className="rounded-lg h-[115px] dark:bg-gray-700 bg-white mx-5 mt-[18px]">
+              <h5 className="text-center font-medium leading-[30px] dark:text-white text-[22px] text-[#262626] pt-4">
                 Legend
               </h5>
               <div className="flex mt-4 justify-evenly">
                 <div className="flex items-center">
                   <Image src={onlinedriver} alt="red car icon" />
-                  <p className="text-[#262626] pl-4 leading-[30px] font-normal text-sm">
+                  <p className="text-[#262626] pl-4 dark:text-white leading-[30px] font-normal text-sm">
                     Online Driver
                   </p>
                 </div>
 
                 <div className="flex items-center">
                   <Image src={offlinedriver} alt="black car icon" />
-                  <p className="text-[#262626] pl-4 leading-[30px] font-normal text-sm">
+                  <p className="text-[#262626] pl-4 dark:text-white leading-[30px] font-normal text-sm">
                     Offline Driver
                   </p>
                 </div>

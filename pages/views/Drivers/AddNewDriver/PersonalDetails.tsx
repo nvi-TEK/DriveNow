@@ -62,25 +62,25 @@ export default function PersonalDetails(prop: PersonalProps) {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
-          <section className="bg-[#FFFFFF] rounded-lg m-[19px] p-4  ">
+          <section className="bg-[#FFFFFF] dark:bg-gray-700 rounded-lg m-[19px] p-4  ">
             <div className="pb-4">
-              <h3 className="font-medium text-[22px] leading-[30px] text-[#262626]">
+              <h3 className="font-medium text-[22px] leading-[30px] dark:text-white text-[#262626]">
                 Driver KYC
               </h3>
-              <p className="text-[#737373] font-medium leading-[30px] text-base ">
+              <p className="text-[#737373] dark:text-gray-400 font-medium leading-[30px] text-base ">
                 Complete this form to initiate background checks, ensuring we
                 meet regulatory requirements and protect our business from
                 potential risks.
               </p>
             </div>
             {/* Timeline */}
-            <div className="flex py-10 px-[44px] border-y items-center">
+            <div className="flex py-10 px-[44px] border-y dark:border-gray-500 items-center">
               <div className="bg-[#007AF5] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
                 1
               </div>
-              <p className="pl-[10px] text-nowrap font-bold text-sm leading-[30px] text-[#007AF5]">
+              <p className="pl-[10px] text-nowrap  font-bold text-sm leading-[30px] text-[#007AF5]">
                 Personal Details
               </p>
               <Image
@@ -118,7 +118,7 @@ export default function PersonalDetails(prop: PersonalProps) {
               </p>
             </div>
 
-            <h3 className="font-medium leading-[30px] pt-4 text-lg text-[#262626] ">
+            <h3 className="font-medium dark:text-white leading-[30px] pt-4 text-lg text-[#262626] ">
               Personal Details (Driver)
             </h3>
 
@@ -154,22 +154,22 @@ export default function PersonalDetails(prop: PersonalProps) {
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
                   <Form
                     onSubmit={handleSubmit}
-                    className="bg-white border-0   pb-10"
+                    className="bg-white dark:bg-gray-700 border-0   pb-10"
                   >
-                    <section className="border-b pb-4">
+                    <section className="border-b dark:border-gray-500 pb-4">
                       <div className="flex w-full gap-x-4 mt-[1.875rem]">
                         {/* First Name */}
                         <div className="w-[50%]">
                           <label
                             htmlFor="firstName"
-                            className="block mb-2 text-base font-medium leading-[30px] text-[#262626]"
+                            className="block mb-2 dark:text-white text-base font-medium leading-[30px] text-[#262626]"
                           >
                             First Name
                           </label>
                           <Field
                             type="text"
                             id="firstName"
-                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614]  border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614]  border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="First Name"
                             value={values.firstName}
                             onChange={handleChange}
@@ -178,7 +178,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                             <ErrorMessage name="firstName" />
                           </p>
 
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                             Enter First Name.
                           </p>
                         </div>
@@ -187,14 +187,14 @@ export default function PersonalDetails(prop: PersonalProps) {
                         <div className="w-[50%] ">
                           <label
                             htmlFor="lastName"
-                            className="block mb-2 text-base font-medium leading-[30px] text-[#262626]"
+                            className="block mb-2 text-base dark:text-white font-medium leading-[30px] text-[#262626]"
                           >
                             Last Name
                           </label>
                           <Field
                             type="text"
                             id="lastName"
-                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Last Name"
                             value={values.lastName}
                             onChange={handleChange}
@@ -203,7 +203,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                             <ErrorMessage name="lastName" />
                           </p>
 
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                             Enter Last Name.
                           </p>
                         </div>
@@ -214,14 +214,14 @@ export default function PersonalDetails(prop: PersonalProps) {
                         <div className="w-[50%]">
                           <label
                             htmlFor="phone"
-                            className="block mb-2 text-base font-medium leading-[30px] text-[#262626]"
+                            className="block mb-2 text-base dark:text-white font-medium leading-[30px] text-[#262626]"
                           >
                             Phone
                           </label>
                           <Field
                             type="text"
                             id="phone"
-                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2.5"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2.5"
                             placeholder="+233 123 456 789"
                             value={values.phone}
                             onChange={handleChange}
@@ -229,7 +229,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <p className="font-medium text-red-700">
                             <ErrorMessage name="phone" />
                           </p>
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                             Enter phone number
                           </p>
                         </div>
@@ -237,14 +237,14 @@ export default function PersonalDetails(prop: PersonalProps) {
                         <div className="w-[50%]">
                           <label
                             htmlFor="email"
-                            className="block mb-2 text-base font-medium leading-[30px] text-[#262626]"
+                            className="block mb-2 text-base dark:text-white font-medium leading-[30px] text-[#262626]"
                           >
                             Email address
                           </label>
                           <Field
                             type="text"
                             id="email"
-                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2.5"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2.5"
                             placeholder="example@email.com"
                             value={values.email}
                             onChange={handleChange}
@@ -252,7 +252,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <p className="font-medium text-red-700">
                             <ErrorMessage name="email" />
                           </p>
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] dark:text-gray-300 text-sm font-normal leading-[30px] pt-1">
                             Enter email address
                           </p>
                         </div>
@@ -260,7 +260,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                     </section>
 
                     <section className="mt-4">
-                      <h3 className="font-medium text-[#262626] text-lg ">
+                      <h3 className="font-medium dark:text-white text-[#262626] text-lg ">
                         Identification Details
                       </h3>
 
@@ -269,14 +269,14 @@ export default function PersonalDetails(prop: PersonalProps) {
                         <div className="w-[50%]">
                           <label
                             htmlFor="ghanaCardName"
-                            className="block mb-2 text-base font-medium leading-[30px] text-[#262626]"
+                            className="block mb-2 text-base dark:text-white font-medium leading-[30px] text-[#262626]"
                           >
                             Ghana Card Name
                           </label>
                           <Field
                             type="text"
                             id="ghanaCardName"
-                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="Full name"
                             value={values.ghanaCardName}
                             onChange={handleChange}
@@ -284,7 +284,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <p className="font-medium text-xs text-red-700">
                             <ErrorMessage name="ghanaCardName" />
                           </p>
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] text-sm dark:text-gray-300 font-normal leading-[30px] pt-1">
                             Enter name as seen on the Ghana Card.
                           </p>
                         </div>
@@ -292,14 +292,14 @@ export default function PersonalDetails(prop: PersonalProps) {
                         <div className="w-[50%]">
                           <label
                             htmlFor="ghanaCardNumber"
-                            className="block mb-2 text-base font-medium leading-[30px] text-[#262626]"
+                            className="block mb-2 text-base dark:text-white font-medium leading-[30px] text-[#262626]"
                           >
                             Ghana Card Number
                           </label>
                           <Field
                             type="text"
                             id="ghanaCardNumber"
-                            className="border border-gray-300 placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
                             placeholder="GHA-12345678-42"
                             value={values.ghanaCardNumber}
                             onChange={handleChange}
@@ -307,7 +307,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <p className="font-medium text-xs text-red-700">
                             <ErrorMessage name="ghanaCardNumber" />
                           </p>
-                          <p className="text-[#737373] text-sm font-normal leading-[30px] pt-1">
+                          <p className="text-[#737373] text-sm dark:text-gray-300 font-normal leading-[30px] pt-1">
                             Enter the Ghana Card number beginning with GHA.
                           </p>
                         </div>
@@ -315,16 +315,16 @@ export default function PersonalDetails(prop: PersonalProps) {
                     </section>
 
                     <div className="mt-5">
-                      <h4 className="text-sm pb-5 font-medium leading-[30px] text-[#262626]">
+                      <h4 className="text-sm pb-5 font-medium dark:text-white leading-[30px] text-[#262626]">
                         Upload Selfie image
                       </h4>
                       <StyledDropzone />
-                      <p className="pl-[30px] text-[#262626] text-base font-medium leading-[30px] pt-3 ">
+                      <p className="pl-[30px] text-[#262626] dark:text-white text-base font-medium leading-[30px] pt-3 ">
                         Profile Picture
                       </p>
                       <div className="flex pt-5 items-center">
                         <Image src={info} alt="info icon" className="w-4 h-4" />
-                        <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
+                        <p className="text-[#737373] dark:text-gray-300 pl-1 font-normal leading-[30px] text-sm ">
                           Ensure that images uploaded are clear and details are
                           clearly captured.
                         </p>
@@ -332,26 +332,26 @@ export default function PersonalDetails(prop: PersonalProps) {
                     </div>
 
                     <div className="mt-5">
-                      <h4 className="font-medium text-base leading-[30px] text-[#262626] ">
+                      <h4 className="font-medium text-base dark:text-white leading-[30px] text-[#262626] ">
                         Upload Ghana Card
                       </h4>
                       <div className="flex mt-5 gap-x-5">
                         <div>
                           <StyledDropzone />
-                          <p className="pl-[30px] text-[#262626] text-base font-medium leading-[30px] pt-3 ">
+                          <p className="pl-[30px] text-[#262626] dark:text-white text-base font-medium leading-[30px] pt-3 ">
                             Front
                           </p>
                         </div>
                         <div>
                           <StyledDropzone />
-                          <p className="pl-[30px] text-[#262626] text-base font-medium leading-[30px] pt-3 ">
+                          <p className="pl-[30px] text-[#262626] dark:text-white text-base font-medium leading-[30px] pt-3 ">
                             Back
                           </p>
                         </div>
                       </div>
                       <div className="flex mt-5 items-center">
                         <Image src={info} alt="info icon" className="w-4 h-4" />
-                        <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
+                        <p className="text-[#737373] dark:text-gray-300 pl-1 font-normal leading-[30px] text-sm ">
                           Ensure that images uploaded are clear and details are
                           clearly captured.
                         </p>
@@ -361,7 +361,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                     <div className="flex justify-between mt-5">
                       <button
                         type="button"
-                        className="text-[#FFFFFF] border bg-[#A6A6A6] rounded-[4px] w-[85px] border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center"
+                        className="text-[#FFFFFF] border bg-[#A6A6A6] dark:border-0 rounded-[4px] w-[85px] border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center"
                         disabled
                       >
                         Previous
@@ -372,7 +372,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                       >
                         <button
                           type="button"
-                          className="text-[#FFFFFF] border bg-[#007AF5] rounded-[4px] w-[63px] border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center mr-5"
+                          className="text-[#FFFFFF] border bg-[#007AF5] dark:border-0 rounded-[4px] w-[63px] border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center mr-5"
                         >
                           Next
                         </button>

@@ -28,7 +28,7 @@ export default function TileDropdown() {
         <Select
           className="text-[#8C8C8C]"
           defaultValue="This Week"
-          suffixIcon={<UnfoldMoreIcon />}
+          suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           popupMatchSelectWidth={false}
           variant="borderless"
           style={{ width: 100 }}
@@ -67,7 +67,7 @@ function TileDropdown1() {
         <Select
           className="text-[#8C8C8C]"
           defaultValue="This Week"
-          suffixIcon={<UnfoldMoreIcon />}
+          suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           variant="borderless"
           style={{ width: 106, font: "#8C8C8C" }}
           onChange={handleChange}
