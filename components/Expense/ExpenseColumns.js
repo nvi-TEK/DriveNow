@@ -81,27 +81,28 @@ export const EXPENSECOLUMNS = [
   {
     Header: "Category",
     accessor: "category",
-  },
-  {
-    Header: "Car Reg",
-    accessor: "car_reg",
+    sortable: true,
   },
 
   {
     Header: "Paid to",
-    accessor: "paid_to",
+    accessor: "paid_to",    sortable: true,
+
   },
   {
     Header: "Amount",
-    accessor: "amount",
+    accessor: "amount",    sortable: true,
+
   },
   {
     Header: "Approved By",
-    accessor: "approved_by",
+    accessor: "approved_by",    sortable: true,
+
   },
   {
     Header: "Requested By",
-    accessor: "requested_by",
+    accessor: "requested_by",    sortable: true,
+
   },
   {
     Header: "Dated on",
@@ -109,7 +110,8 @@ export const EXPENSECOLUMNS = [
   },
   {
     Header: "Status",
-    accessor: "status",
+    accessor: "status",    sortable: true,
+
     Cell: (props) => {
       return (
         <div className="max-2xl:text-xs text-sm "

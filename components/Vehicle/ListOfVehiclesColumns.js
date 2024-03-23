@@ -138,10 +138,12 @@ export const LISTOFVEHICLESCOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    sortable: true,
   },
   {
     Header: "Car Registration",
     accessor: "car_registration",
+    sortable: true,
   },
   {
     Header: "Car Make Model",

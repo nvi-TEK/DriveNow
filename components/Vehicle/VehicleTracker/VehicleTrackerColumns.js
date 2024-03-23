@@ -65,6 +65,7 @@ export const VEHICLETRACKERCOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    sortable: true,
   },
   {
     Header: "Car Registration",
@@ -73,6 +74,7 @@ export const VEHICLETRACKERCOLUMNS = [
   {
     Header: "Driver Name",
     accessor: "driver_name",
+    sortable: true,
   },
   {
     Header: "Car Speed",
@@ -87,7 +89,8 @@ export const VEHICLETRACKERCOLUMNS = [
           <div className="">
             <Image src={refresh} alt="refresh icon" />
           </div>
-          <div className="text-sm max-2xl:text-xs"
+          <div
+            className="text-sm max-2xl:text-xs"
             style={{
               color: props.value === "Active" ? "#0EA371" : "#DC4A41",
               backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
@@ -116,7 +119,8 @@ export const VEHICLETRACKERCOLUMNS = [
     accessor: "device_status",
     Cell: (props) => {
       return (
-        <div className="text-sm max-2xl:text-xs"
+        <div
+          className="text-sm max-2xl:text-xs"
           style={{
             color: props.value === "Online" ? "#0EA371" : "#DC4A41",
             backgroundColor: props.value === "Online" ? "#E7F6F1" : "#FBEDEC",

@@ -104,7 +104,6 @@ export const BasicTable = () => {
     <>
       {/* number of entries dropdown and Search bar */}
       <div className="flex items-center mt- justify-end mr-2">
-      
         <p className="font-medium dark:text-white leading-[30px] mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
@@ -119,22 +118,29 @@ export const BasicTable = () => {
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th
-                  {...column.getHeaderProps}
-                  {...column.getSortByToggleProps()}
+                  {...(column.sortable
+                    ? {
+                        ...column.getHeaderProps(column.getSortByToggleProps()),
+                      }
+                    : { ...column.getHeaderProps() })}
                   className="text-left font-normal dark:bg-gray-600 dark:text-white text-[#262626] leading-[18px] pl-2 h-[48px] bg-[#FAFAFA]"
                   style={{ minWidth: column.minWidth, width: column.width }}
                 >
                   {column.render("Header")}
                   <span>
-                    {column.isSorted ? (
-                      column.isSortedDesc ? (
-                        <UnfoldMoreOutlinedIcon fontSize="small" />
-                      ) : (
-                        <UnfoldMoreOutlinedIcon fontSize="small" />
-                      )
-                    ) : (
-                      <UnfoldMoreOutlinedIcon fontSize="small" />
-                    )}
+                  {column.sortable
+                      ? {
+                          ...(column.isSorted ? (
+                            column.isSortedDesc ? (
+                              <UnfoldMoreOutlinedIcon fontSize="small" />
+                            ) : (
+                              <UnfoldMoreOutlinedIcon fontSize="small" />
+                            )
+                          ) : (
+                            <UnfoldMoreOutlinedIcon fontSize="small" />
+                          )),
+                        }
+                      : ""}
                   </span>
                 </th>
               ))}
@@ -173,23 +179,38 @@ export const BasicTable = () => {
           <ArrowBackIosOutlinedIcon fontSize="small" />
         </button>
 
-        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(0)}>
+        <button
+          className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(0)}
+        >
           {" "}
           1{" "}
         </button>
-        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(1)}>
+        <button
+          className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(1)}
+        >
           {" "}
           2{" "}
         </button>
-        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(2)}>
+        <button
+          className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(2)}
+        >
           {" "}
           3{" "}
         </button>
-        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(3)}>
+        <button
+          className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(3)}
+        >
           {" "}
           4{" "}
         </button>
-        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(4)}>
+        <button
+          className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(4)}
+        >
           {" "}
           5{" "}
         </button>

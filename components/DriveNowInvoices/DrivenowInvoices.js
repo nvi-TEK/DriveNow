@@ -137,20 +137,28 @@ export const DrivenowInvoicesTable = () => {
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
+                  {...(column.sortable
+                    ? {
+                        ...column.getHeaderProps(column.getSortByToggleProps()),
+                      }
+                    : { ...column.getHeaderProps() })}
                   className="text-left font-normal text-[#262626] dark:text-white dark:bg-gray-800 leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
-                    {column.isSorted ? (
-                      column.isSortedDesc ? (
-                        <UnfoldMoreOutlinedIcon fontSize="small" />
-                      ) : (
-                        <UnfoldMoreOutlinedIcon fontSize="small" />
-                      )
-                    ) : (
-                      <UnfoldMoreOutlinedIcon fontSize="small" />
-                    )}
+                    {column.sortable
+                      ? {
+                          ...(column.isSorted ? (
+                            column.isSortedDesc ? (
+                              <UnfoldMoreOutlinedIcon fontSize="small" />
+                            ) : (
+                              <UnfoldMoreOutlinedIcon fontSize="small" />
+                            )
+                          ) : (
+                            <UnfoldMoreOutlinedIcon fontSize="small" />
+                          )),
+                        }
+                      : ""}
                   </span>
                 </th>
               ))}

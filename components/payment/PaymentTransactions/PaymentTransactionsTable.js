@@ -101,22 +101,29 @@ export const PaymentTransactionsTable = () => {
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th
-                  {...column.getHeaderProps}
-                  {...column.getSortByToggleProps()}
+                  {...(column.sortable
+                    ? {
+                        ...column.getHeaderProps(column.getSortByToggleProps()),
+                      }
+                    : { ...column.getHeaderProps() })}
                   className="text-left font-normal dark:bg-gray-600 dark:text-white text-[#262626] leading-[18px] pl-2 h-[48px] bg-[#FAFAFA]"
                   style={{ minWidth: column.minWidth, width: column.width }}
                 >
                   {column.render("Header")}
                   <span>
-                    {column.isSorted ? (
-                      column.isSortedDesc ? (
-                        <UnfoldMoreOutlinedIcon fontSize="small" />
-                      ) : (
-                        <UnfoldMoreOutlinedIcon fontSize="small" />
-                      )
-                    ) : (
-                      <UnfoldMoreOutlinedIcon fontSize="small" />
-                    )}
+                    {column.sortable
+                      ? {
+                          ...(column.isSorted ? (
+                            column.isSortedDesc ? (
+                              <UnfoldMoreOutlinedIcon fontSize="small" />
+                            ) : (
+                              <UnfoldMoreOutlinedIcon fontSize="small" />
+                            )
+                          ) : (
+                            <UnfoldMoreOutlinedIcon fontSize="small" />
+                          )),
+                        }
+                      : ""}
                   </span>
                 </th>
               ))}

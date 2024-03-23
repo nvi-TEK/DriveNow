@@ -5,8 +5,6 @@ import { PaymentTransactionsTable } from "./payment/PaymentTransactions/PaymentT
 import { DailyPaymentsTable } from "./payment/DailyPayments/DailyPaymentsTable";
 import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
 
-
-
 const handleChange = (value: string) => {
   console.log(`selected ${value}`);
 };
@@ -19,13 +17,13 @@ export default function TileDropdown() {
           colorText: "#8C8C8C",
           fontSize: 12,
           lineHeight: 1,
-          fontFamily: "Avenir Next LT Pro",
+          fontFamily: "Avenir",
         },
         components: {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "8px 50px 8px 8px",
+            optionPadding: "11px 50px 8px 8px",
           },
         },
       }}
@@ -37,7 +35,7 @@ export default function TileDropdown() {
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           popupMatchSelectWidth={false}
           variant="borderless"
-          style={{ width: 100 }}
+          style={{ width: 102 }}
           onChange={handleChange}
           options={[
             { value: "Today", label: "Today" },
@@ -59,12 +57,13 @@ function TileDropdown1() {
           colorText: "#8C8C8C",
           fontSize: 12,
           lineHeight: 1,
+          fontFamily: "Avenir",
         },
         components: {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "8px 0px 8px 8px",
+            optionPadding: "10px 0px 8px 8px",
           },
         },
       }}

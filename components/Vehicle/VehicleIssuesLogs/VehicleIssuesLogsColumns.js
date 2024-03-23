@@ -7,7 +7,6 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 // import pencil from "../../assets/pencil.png";
 import fileicon from "../../../assets/file.svg";
 
-
 const ITEM_HEIGHT = 56;
 
 export default function LongMenu() {
@@ -40,13 +39,13 @@ export default function LongMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        disableScrollLock= {true}
+        disableScrollLock={true}
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "28ch",
             position: "sticky",
-            marginRight: "30px"
+            marginRight: "30px",
           },
         }}
       >
@@ -63,14 +62,17 @@ export const VEHICLEISSUESLOGSCOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    sortable: true,
   },
   {
     Header: "Car Registration",
     accessor: "car_registration",
+    sortable: true,
   },
   {
     Header: "Category",
     accessor: "category",
+    sortable: true,
   },
   {
     Header: "Amount",

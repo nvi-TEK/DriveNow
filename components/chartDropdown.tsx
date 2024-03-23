@@ -13,12 +13,13 @@ export default function ChartDropdown() {
           colorText: "#8C8C8C",
           fontSize: 12,
           lineHeight: 1,
+          fontFamily: "Avenir",
         },
         components: {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "8px 0px 8px 8px",
+            optionPadding: "12px 0px 8px 8px",
           },
         },
       }}
@@ -29,7 +30,7 @@ export default function ChartDropdown() {
           defaultValue="This Year"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           variant="borderless"
-          style={{ width: 100 }}
+          style={{ width: 102 }}
           onChange={handleChange}
           options={[
             { value: "This Week", label: "This Week" },
@@ -50,12 +51,13 @@ function YearDropdown() {
           colorText: "#8C8C8C",
           fontSize: 12,
           lineHeight: 1,
+          fontFamily: "Avenir",
         },
         components: {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "8px 0px 8px 8px",
+            optionPadding: "12px 0px 8px 8px",
           },
         },
       }}
@@ -66,7 +68,7 @@ function YearDropdown() {
           defaultValue="2024"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           variant="borderless"
-          style={{ width: 71 }}
+          style={{ width: 69 }}
           onChange={handleChange}
           options={[
             { value: "2024", label: "2024" },
@@ -87,12 +89,13 @@ function CategoryDropdown() {
           colorText: "#8C8C8C",
           fontSize: 12,
           lineHeight: 1,
+          fontFamily: "Avenir",
         },
         components: {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "8px 0px 8px 8px",
+            optionPadding: "12px 0px 8px 8px",
           },
         },
       }}
@@ -103,7 +106,7 @@ function CategoryDropdown() {
           defaultValue="FLEET"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           variant="borderless"
-          style={{ width: 76 }}
+          style={{ width: 79 }}
           onChange={handleChange}
           options={[{ value: "FLEET", label: "FLEET" }]}
         />
@@ -120,12 +123,13 @@ function MonthDropdown() {
           colorText: "#8C8C8C",
           fontSize: 12,
           lineHeight: 1,
+          fontFamily: "Avenir",
         },
         components: {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "8px 0px 8px 8px",
+            optionPadding: "12px 0px 8px 8px",
           },
         },
       }}
@@ -136,7 +140,7 @@ function MonthDropdown() {
           defaultValue="JAN"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           variant="borderless"
-          style={{ width: 66 }}
+          style={{ width: 68 }}
           onChange={handleChange}
           options={[{ value: "JAN", label: "JAN" }]}
         />

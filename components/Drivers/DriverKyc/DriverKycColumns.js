@@ -59,23 +59,38 @@ export default function LongMenu() {
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="flex items-center text-[#595959] py-2.5 leading-[9.67px] font-normal text-sm ">
+        <MenuItem
+          onClick={handleClose}
+          className="flex items-center text-[#595959] py-2.5 leading-[9.67px] font-normal text-sm "
+        >
           <Image src={user} className="mr-2 w-5" alt="people icon" />
           Driver Profile
         </MenuItem>
-        <MenuItem className="flex items-center text-[#595959] py-2.5 leading-[9.67px] font-normal text-sm  " onClick={handleClose}>
+        <MenuItem
+          className="flex items-center text-[#595959] py-2.5 leading-[9.67px] font-normal text-sm  "
+          onClick={handleClose}
+        >
           <Image src={pencil} className="mr-2 w-5 " alt="pencil" />
           Update Agreement
         </MenuItem>
-        <MenuItem className="flex items-center text-[#595959] py-2.5 leading-[9.67px] font-normal text-sm  " onClick={handleClose}>
+        <MenuItem
+          className="flex items-center text-[#595959] py-2.5 leading-[9.67px] font-normal text-sm  "
+          onClick={handleClose}
+        >
           <Image src={power} className="mr-2 w-5 " alt="power icon" />
           Turn Off Engine Control
         </MenuItem>
-        <MenuItem className="flex items-center text-[#595959] py-2.5 leading-[9.67px] font-normal text-sm  " onClick={handleClose}>
+        <MenuItem
+          className="flex items-center text-[#595959] py-2.5 leading-[9.67px] font-normal text-sm  "
+          onClick={handleClose}
+        >
           <Image src={recycle} className="mr-2 w-5 " alt="recycle icon" />
           Restore Engine Control
         </MenuItem>
-        <MenuItem className="flex items-center py-2.5 leading-[9.67px] font-normal text-sm  " onClick={handleClose}>
+        <MenuItem
+          className="flex items-center py-2.5 leading-[9.67px] font-normal text-sm  "
+          onClick={handleClose}
+        >
           <Image src={bin} className="mr-2 w-5 " alt="bin icon" />
           <p className="text-[#DC4A41]">Terminate</p>
         </MenuItem>
@@ -88,15 +103,19 @@ export const DRIVERKYCCOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    sortable: true,
   },
   {
     Header: "Full Name",
     accessor: "full_name",
     width: 170,
+    sortable: true,
   },
   {
     Header: "Mobile Number",
     accessor: "mobile_number",
+    sortable: true,
+
   },
   {
     Header: "Email",
@@ -109,6 +128,8 @@ export const DRIVERKYCCOLUMNS = [
   {
     Header: "Engine Control",
     accessor: "engine_control",
+    sortable: true,
+
     Cell: (props) => {
       return (
         <div

@@ -106,6 +106,7 @@ export const COLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    sortable: true,
   },
   {
     Header: "Full Name",
@@ -125,6 +126,7 @@ export const COLUMNS = [
   {
     Header: "Additional Charges",
     accessor: "additional_charges",
+    sortable: true,
   },
   {
     Header: "Amount Received",
@@ -133,9 +135,12 @@ export const COLUMNS = [
   {
     Header: "Engine Control",
     accessor: "engine_control",
+    sortable: true,
+
     Cell: (props) => {
       return (
-        <div className="text-sm max-2xl:text-xs"
+        <div
+          className="text-sm max-2xl:text-xs"
           style={{
             color: props.value === "ON" ? "#0EA371" : "#DC4A41",
             backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
@@ -156,6 +161,7 @@ export const COLUMNS = [
   {
     Header: "Engine Status",
     accessor: "engine_status",
+    sortable: true,
     width: 120,
     Cell: (props) => {
       return (
@@ -163,7 +169,8 @@ export const COLUMNS = [
           <div className="">
             <Image src={refresh} alt="refresh icon" />
           </div>
-          <div className="text-sm max-2xl:text-xs"
+          <div
+            className="text-sm max-2xl:text-xs"
             style={{
               color: props.value === "Active" ? "#0EA371" : "#DC4A41",
               backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
@@ -185,7 +192,7 @@ export const COLUMNS = [
   {
     Header: "Engine Status Updated",
     accessor: "engine_status_updated",
-    width: 150 ,
+    width: 150,
   },
   {
     Header: "Completed Weeks (Invoices)",

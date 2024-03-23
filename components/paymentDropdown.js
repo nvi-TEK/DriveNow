@@ -20,6 +20,7 @@ export default function PaymentsDropdown() {
           fontSize: 12,
           lineHeight: 1,
           lineWidth: 0,
+          fontFamily: "Avenir",
         },
         components: {
           Select: {
@@ -33,7 +34,7 @@ export default function PaymentsDropdown() {
       }}
     >
       <Space className="flex" wrap>
-      <label className="text-[#262626] dark:text-white">Select:</label>
+        <label className="text-[#262626] dark:text-white">Select:</label>
         <Select
           id="abc"
           className="h-6 ml-2 border-0"

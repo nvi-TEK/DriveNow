@@ -95,18 +95,23 @@ export const ALLDRIVERSCOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    sortable: true,
   },
   {
     Header: "Full Name",
     accessor: "full_name",
+    sortable: true,
   },
   {
     Header: "Mobile Number",
     accessor: "mobile_number",
+    sortable: true,
   },
   {
     Header: "Status",
     accessor: "status",
+    sortable: true,
+
     Cell: (props) => {
       return (
         <div
@@ -132,6 +137,7 @@ export const ALLDRIVERSCOLUMNS = [
   {
     Header: "Agreed",
     accessor: "agreed",
+    sortable: true,
     Cell: (props) => {
       return (
         <div
@@ -160,6 +166,7 @@ export const ALLDRIVERSCOLUMNS = [
   {
     Header: "Engine Control",
     accessor: "engine_control",
+    sortable: true,
     Cell: (props) => {
       return (
         <div

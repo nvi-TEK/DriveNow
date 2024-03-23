@@ -115,21 +115,29 @@ export const PAYMENTTRANSACTIONSCOLUMNS = [
   {
     Header: "Full Name",
     accessor: "full_name",
+    sortable: true,
+
     width: 230,
   },
   {
     Header: "Amount Paid",
     accessor: "amount_paid",
+    sortable: true,
+
     width: 230,
   },
   {
     Header: "Previous Payment",
     accessor: "previous_payment",
+    sortable: true,
+
     width: 230,
   },
   {
     Header: "Next Due Payment",
     accessor: "next_due_payment",
+    sortable: true,
+
     width: 140,
   },
   {
@@ -140,6 +148,8 @@ export const PAYMENTTRANSACTIONSCOLUMNS = [
   {
     Header: "Date",
     accessor: "date",
+    sortable: true,
+
     width: 230,
   },
   {

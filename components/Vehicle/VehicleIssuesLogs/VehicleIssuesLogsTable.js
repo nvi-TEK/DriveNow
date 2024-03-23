@@ -127,20 +127,28 @@ export const VehicleIssuesLogsTable = () => {
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
+                  {...(column.sortable
+                    ? {
+                        ...column.getHeaderProps(column.getSortByToggleProps()),
+                      }
+                    : { ...column.getHeaderProps() })}
                   className="text-left font-normal leading-[18px] h-[48px] text-[#262626] dark:text-white dark:bg-gray-600 pl-2 bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
-                    {column.isSorted ? (
-                      column.isSortedDesc ? (
-                        <UnfoldMoreOutlinedIcon fontSize="small" />
-                      ) : (
-                        <UnfoldMoreOutlinedIcon fontSize="small" />
-                      )
-                    ) : (
-                      <UnfoldMoreOutlinedIcon fontSize="small" />
-                    )}
+                  {column.sortable
+                      ? {
+                          ...(column.isSorted ? (
+                            column.isSortedDesc ? (
+                              <UnfoldMoreOutlinedIcon fontSize="small" />
+                            ) : (
+                              <UnfoldMoreOutlinedIcon fontSize="small" />
+                            )
+                          ) : (
+                            <UnfoldMoreOutlinedIcon fontSize="small" />
+                          )),
+                        }
+                      : ""}
                   </span>
                 </th>
               ))}

@@ -106,11 +106,13 @@ export const DAILYPAYMENTSCOLUMNS = [
     Header: "ID",
     accessor: "id",
     width: 120,
+    sortable: true,
   },
   {
     Header: "Full Name",
     accessor: "full_name",
     width: 390,
+    sortable: true,
   },
   {
     Header: "Deposit Amount",
@@ -125,6 +127,8 @@ export const DAILYPAYMENTSCOLUMNS = [
   {
     Header: "Daily Payment",
     accessor: "daily_payment",
+    sortable: true,
+
     width: 260,
   },
   {
@@ -135,6 +139,8 @@ export const DAILYPAYMENTSCOLUMNS = [
   {
     Header: "Engine Control",
     accessor: "engine_control",
+    sortable: true,
+
     width: 300,
     Cell: (props) => {
       return (
@@ -159,6 +165,8 @@ export const DAILYPAYMENTSCOLUMNS = [
   {
     Header: "Engine Status",
     accessor: "engine_status",
+    sortable: true,
+
     width: 220,
     Cell: (props) => {
       return (
