@@ -30,18 +30,18 @@ export default function ExpenseTiles(props: ExpenseProp1) {
 
       <div className="flex mt-4 max-2xl:mt-3">
         <div className="grow">
-          <p className="font-normal dark:text-white text-sm max-2xl:text-[11px] leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center max-2xl:pt-1 pt-2">
-            <p className="text-[#262626] dark:text-white leading-7 font-medium max-2xl:text-lg text-xl">
+            <h2 className="text-[#262626] dark:text-white leading-7 font-medium">
               {props.entity1value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity1differential >= 0 ? "#0EA371" : "#DC4A41",
               }}
-              className="text-xs max-2xl:text-[11px] font-normal pl-2"
+              className="text-xs font-normal pl-2"
             >
               {props.entity1differential <= 0 ? "" : "+"}
               {props.entity1differential}%
@@ -50,14 +50,14 @@ export default function ExpenseTiles(props: ExpenseProp1) {
         </div>
 
         <div className="grow">
-          <p className="font-normal text-sm leading-5 dark:text-white max-2xl:text-[11px] text-[#8C8C8C]">
+          <p className="font-normal leading-5 dark:text-white text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex items-center max-2xl:pt-1 pt-2">
-            <p className="text-[#262626] leading-7 dark:text-white font-medium max-2xl:text-lg text-xl">
+            <h2 className="text-[#262626] leading-7 dark:text-white font-medium">
               {props.entity2value.toLocaleString()}
-            </p>
-            <p className="text-xs font-normal max-2xl:text-[11px] pl-2">
+            </h2>
+            <p className="text-xs font-normal pl-2">
               {props.entity2differential}
             </p>
           </div>

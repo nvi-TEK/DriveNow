@@ -6,6 +6,34 @@ import dashboardData from "./dashboardData.json";
 ChartJS.register(Tooltip);
 
 export const DashChart = () => {
+  const backgroundBar = {
+    id: "backgroundBar",
+    beforeDatasetsDraw(chart, args, pluginOptions) {
+      const {
+        data,
+        ctx,
+        chartArea: { top, bottom, left, right, width, height },
+        scales: { x, y },
+      } = chart;
+
+      ctx.save();
+      const segment = width / data.labels.length;
+      const barWidth =
+        segment *
+        data.datasets[0].barPercentage *
+        data.datasets[0].categoryPercentage;
+      ctx.fillStyle = "gray";
+      for (let i = 0; i < data.labels.length; i++) {
+        ctx.fillRect(
+          x.getPixelForValue(i) - barWidth / 2,
+          top,
+          barWidth,
+          height
+        );
+      }
+    },
+  };
+
   return (
     <div className="h-[260px] max-2xl:h-[235px] w-full px-4 pb-3">
       <Bar
@@ -19,11 +47,15 @@ export const DashChart = () => {
               borderRadius: 40,
               borderSkipped: false,
               barThickness: 14,
+              barPercentage: 0.9,
+              categoryPercentage: 0.9,
             },
           ],
         }}
+        config={{
+          plugins: [backgroundBar],
+        }}
         options={{
-         
           maintainAspectRatio: false,
           plugins: {
             legend: {
@@ -33,41 +65,41 @@ export const DashChart = () => {
           interaction: {
             mode: "index",
           },
-          
+
           scales: {
-           x:{ 
+            x: {
               grid: {
                 color: (context) => {
-                  if(context.index === 0){
-                    return '';
+                  if (context.index === 0) {
+                    return "";
                   } else {
-                    return 'rgba(102, 102, 102, 0.2)';
+                    return "rgba(102, 102, 102, 0.2)";
                   }
                 },
                 offset: true,
                 display: true,
                 drawOnChartArea: false,
                 drawBorder: false,
-                drawTicks: false
-              }, 
-              ticks:{
+                drawTicks: false,
+              },
+              ticks: {
                 display: true,
-                color: '#BFBFBF'
+                color: "#BFBFBF",
               },
             },
             y: {
               ticks: {
                 stepSize: 20,
-                color: '#BFBFBF',
-                display: true
+                color: "#BFBFBF",
+                display: true,
               },
               grid: {
                 display: false,
-            
+
                 offset: true,
                 drawOnChartArea: false,
                 drawBorder: false,
-                drawTicks: false
+                drawTicks: false,
               },
             },
           },

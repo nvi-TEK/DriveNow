@@ -100,7 +100,7 @@ export const DrivenowInvoicesTable = () => {
       abc
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
-        {pageSize} Items/Page
+          {pageSize} Items/Page
         </option>
       ))}
     </select>,
@@ -111,16 +111,16 @@ export const DrivenowInvoicesTable = () => {
   return (
     <>
       <div className="flex items-center justify-between ">
-        <h4 className="text-[#262626] dark:text-white font-medium text-[22px] leading-[30px]  pt-4 ">
+        <h1 className="text-[#262626] dark:text-white font-medium leading-[30px]  pt-4 ">
           Invoice Generated History
-        </h4>
+        </h1>
         <div className=" h-[10px]">
           <TableRange />
         </div>
       </div>
       {/* number of entries dropdown and Search bar */}
       <div className="flex items-center mt-6 justify-end mr-3">
-        <p className="font-medium dark:text-white text-xs leading-[30px] mr-[33px] text-[#262626] ">
+        <p className="font-medium dark:text-white leading-[30px] mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
 
@@ -138,7 +138,7 @@ export const DrivenowInvoicesTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-xs font-normal text-[#262626] dark:text-white dark:bg-gray-800 leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  className="text-left font-normal text-[#262626] dark:text-white dark:bg-gray-800 leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -167,7 +167,7 @@ export const DrivenowInvoicesTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className=" text-[#595959] pl-2 text-xs font-normal leading-[18px] dark:text-white dark:border-gray-500 border-y h-[48px] "
+                        className=" text-[#595959] pl-2 font-normal leading-[18px] dark:text-white dark:border-gray-500 border-y h-[48px] "
                       >
                         {cell.render("Cell")}
                       </td>
@@ -189,23 +189,38 @@ export const DrivenowInvoicesTable = () => {
           <ArrowBackIosOutlinedIcon className="" fontSize="small" />
         </button>
 
-        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(0)}>
+        <button
+          className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(0)}
+        >
           {" "}
           1{" "}
         </button>
-        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(1)}>
+        <button
+          className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(1)}
+        >
           {" "}
           2{" "}
         </button>
-        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(2)}>
+        <button
+          className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(2)}
+        >
           {" "}
           3{" "}
         </button>
-        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(3)}>
+        <button
+          className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(3)}
+        >
           {" "}
           4{" "}
         </button>
-        <button className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded" onClick={() => gotoPage(4)}>
+        <button
+          className="border dark:border-0 dark:bg-gray-600 text-[#262626] dark:text-white px-3 rounded"
+          onClick={() => gotoPage(4)}
+        >
           {" "}
           5{" "}
         </button>

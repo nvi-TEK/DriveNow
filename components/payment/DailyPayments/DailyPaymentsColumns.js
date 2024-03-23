@@ -3,14 +3,13 @@ import Image from "next/image";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
-import user from "../../assets/user.svg";
-import pencil from "../../assets/pencil.svg";
-import reassign from "../../assets/pencil.png";
-import power from "../../assets/power.svg";
-import recycle from "../../assets/recycle.svg";
-import vehicle from "../../assets/menuvehicle.svg";
-import fileicon from "../../assets/file.svg";
-import refresh from "../../assets/bluerecycle.svg";
+import user from "../../../assets/user.svg";
+import pencil from "../../../assets/pencil.svg";
+import power from "../../../assets/power.svg";
+import recycle from "../../../assets/recycle.svg";
+import vehicle from "../../../assets/menuvehicle.svg";
+import fileicon from "../../../assets/file.svg";
+import refresh from "../../../assets/bluerecycle.svg";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 const ITEM_HEIGHT = 86;
@@ -102,40 +101,44 @@ export default function LongMenu() {
   );
 }
 
-export const COLUMNS = [
+export const DAILYPAYMENTSCOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    width: 120,
   },
   {
     Header: "Full Name",
     accessor: "full_name",
-    width: 250,
-    sortable: true,
+    width: 390,
   },
   {
     Header: "Deposit Amount",
     accessor: "deposit_amount",
-    width: 120,
+    width: 200,
+  },
+  {
+    Header: "Total Amount Due",
+    accessor: "total_amount_due",
+    width: 250,
+  },
+  {
+    Header: "Daily Payment",
+    accessor: "daily_payment",
+    width: 260,
   },
   {
     Header: "Vehicle Repayment",
     accessor: "vehicle_repayment",
-  },
-  {
-    Header: "Additional Charges",
-    accessor: "additional_charges",
-  },
-  {
-    Header: "Amount Received",
-    accessor: "amount_received",
+    width: 200,
   },
   {
     Header: "Engine Control",
     accessor: "engine_control",
+    width: 300,
     Cell: (props) => {
       return (
-        <div className="text-sm max-2xl:text-xs"
+        <div
           style={{
             color: props.value === "ON" ? "#0EA371" : "#DC4A41",
             backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
@@ -148,7 +151,7 @@ export const COLUMNS = [
             fontWeight: "500",
           }}
         >
-          {props.value}
+          <p className="font-medium leading-4 ">{props.value}</p>
         </div>
       );
     },
@@ -156,14 +159,15 @@ export const COLUMNS = [
   {
     Header: "Engine Status",
     accessor: "engine_status",
-    width: 120,
+    width: 220,
     Cell: (props) => {
       return (
         <div className="flex items-center gap-x-1">
           <div className="">
             <Image src={refresh} alt="refresh icon" />
           </div>
-          <div className="text-sm max-2xl:text-xs"
+          <div
+            className="text-sm max-2xl:text-xs"
             style={{
               color: props.value === "Active" ? "#0EA371" : "#DC4A41",
               backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
@@ -185,12 +189,12 @@ export const COLUMNS = [
   {
     Header: "Engine Status Updated",
     accessor: "engine_status_updated",
-    width: 150 ,
+    width: 290,
   },
   {
     Header: "Completed Weeks (Invoices)",
     accessor: "completed_weeks",
-    width: 180,
+    width: 300,
   },
   {
     Header: "Action",

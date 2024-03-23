@@ -31,13 +31,13 @@ export default function VehicleTrackerTiles(props: VehicleTrackerProp) {
 
       <div className="flex mt-4">
         <div className="grow">
-          <p className="font-normal dark:text-white text-sm leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center grow pt-2">
-            <p className="text-[#262626] pt- dark:text-white leading-7 font-medium text-xl">
+            <h2 className="text-[#262626] dark:text-white leading-7 font-medium">
               {props.entity1value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity1differential >= 0 ? "#0EA371" : "#DC4A41",
@@ -51,22 +51,22 @@ export default function VehicleTrackerTiles(props: VehicleTrackerProp) {
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal text-sm dark:text-white leading-5 text-[#8C8C8C]">
+          <p className="font-normal dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] dark:text-white leading-7 font-medium text-xl">
+            <h2 className="text-[#262626] dark:text-white leading-7 font-medium">
               {props.entity2value.toLocaleString()}
-            </p>
+            </h2>
           </div>
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal text-sm dark:text-white leading-5 text-[#8C8C8C]">
+          <p className="font-normal dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity3}
           </p>
           <div className="items-center pt-2">
-            <p className="text-[#262626] leading-7 dark:text-white font-medium text-xl">
+            <p className="text-[#262626] leading-7 dark:text-white font-medium">
               {props.entity3value}
             </p>
           </div>

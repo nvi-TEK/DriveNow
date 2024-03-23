@@ -84,7 +84,7 @@ export default function customPush() {
                       <section className="w-[33%] ">
                         <label
                           htmlFor="group"
-                          className="block mb-2 dark:text-white text-sm pt-[10px] font-medium text-gray-900"
+                          className="block mb-2 dark:text-white pt-[10px] font-medium text-gray-900"
                         >
                           Select Group to Send
                         </label>
@@ -110,7 +110,7 @@ export default function customPush() {
                       <section className="w-[33%]">
                         <label
                           htmlFor="notification"
-                          className="block mb-2 dark:text-white text-sm pt-[10px] font-medium text-gray-900"
+                          className="block mb-2 dark:text-white pt-[10px] font-medium text-gray-900"
                         >
                           Select Notification Type
                         </label>
@@ -135,7 +135,7 @@ export default function customPush() {
                       <section className="w-[33%]">
                         <label
                           htmlFor="device"
-                          className="block mb-2 dark:text-white text-sm pt-[10px] font-medium text-gray-900"
+                          className="block mb-2 dark:text-white pt-[10px] font-medium text-gray-900"
                         >
                           Select Device Type
                         </label>
@@ -162,7 +162,7 @@ export default function customPush() {
                       <div className="w-[50%]">
                         <label
                           htmlFor="title"
-                          className="block mb-2 dark:text-white text-sm font-medium text-[#000000]"
+                          className="block mb-2 dark:text-white font-medium text-[#000000]"
                         >
                           Select Date
                         </label>
@@ -172,7 +172,7 @@ export default function customPush() {
                       <div className="w-[50%]">
                         <label
                           htmlFor="title"
-                          className="block mb-2 dark:text-white text-sm font-medium text-[#000000]"
+                          className="block mb-2 dark:text-white font-medium text-[#000000]"
                         >
                           Message Title
                         </label>
@@ -192,7 +192,7 @@ export default function customPush() {
                     <div className="mt-2">
                       <label
                         htmlFor="message"
-                        className="block mb-2 dark:text-white text-sm pt-[10px] font-medium text-gray-900"
+                        className="block mb-2 dark:text-white pt-[10px] font-medium text-gray-900"
                       >
                         Compose Notification Message
                       </label>
@@ -213,7 +213,7 @@ export default function customPush() {
                     <Link href={""}>
                       <button
                         type="button"
-                        className="text-[#FFFFFF] border bg-[#007AF5] dark:border-0  mt-[2%] rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-xs py-1.5 text-center inline-flex justify-center font-normal items-center ml-[] mr-2 mb-2"
+                        className="text-[#FFFFFF] border bg-[#007AF5] dark:border-0 mt-[2%] rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-sm py-1 text-center inline-flex justify-center font-normal items-center ml-[] mr-2 mb-2"
                       >
                         Send
                         <Image className="ml-[4px]" src={sendlogo} alt={""} />
@@ -225,9 +225,9 @@ export default function customPush() {
             </div>
 
             <div className="mb-[50px] mx-5 px-[10px] shadow-[0px_1px_2px_0px_#1B283614] rounded-lg pb-4 pt-3 dark:bg-gray-700 bg-white ">
-              <h3 className="text-[#262626] dark:text-white font-medium text-[22px] pt-4 pl-[10px] leading-[30px]">
+              <h1 className="text-[#262626] dark:text-white font-medium pt-4 pl-[10px] leading-[30px]">
                 Custom Push History
-              </h3>
+              </h1>
               <CustomPushTable />
             </div>
           </section>

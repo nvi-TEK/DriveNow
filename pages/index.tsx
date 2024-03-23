@@ -29,15 +29,15 @@ export default function SignIn() {
         <section className="flex w-full">
           <div id="signin" className="w-[50%] bg-contain bg-no-repeat h-screen">
             <Image
-              className="mt-[64px] ml-[41px]"
+              className="mt-[64px] max-2xl:mt-[44px] max-2xl:w-44 ml-[41px]"
               src={logo}
               alt="signin logo"
             />
 
-            <p className="text-[48px] mt-[22%] ml-[41px] leading-[64px] text-white font-bold w-[500px]">
+            <p className="text-[48px] mt-[22%] ml-[41px] max-2xl:text-[38px] max-2xl:w-[400px] max-2xl:leading-[48px] leading-[64px] text-white font-bold w-[500px]">
               Drive now with Eganow
             </p>
-            <p className="text-white pt-5 w-[510px] font-normal text-base ml-[41px] leading-[1.4rem]">
+            <p className="text-white pt-5 w-[510px] max-2xl:text-sm max-2xl:w-[460px] font-normal text-base ml-[41px] leading-[1.4rem]">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam
               nonummy nibh euismod tincidunt ut laoreet dolore magnaaliquam erat
               volutpat. veniam. quis nostrud exerci tation
@@ -65,15 +65,15 @@ export default function SignIn() {
               {({ handleSubmit, values, handleChange, setFieldValue }) => (
                 <Form onSubmit={handleSubmit}>
                   <div className="mt-[24%] ml-[20%] ">
-                    <p className="text-[#262626]  font-medium text-[32px] leading-[40px]">
+                    <p className="text-[#262626] max-2xl:text-[28px] font-medium text-[32px] leading-[40px]">
                       Sign in
                     </p>
 
-                    <div className="mt-6 ">
+                    <div className="mt-6 max-2xl:mt-4 ">
                       <Field
                         type="email"
                         id="email"
-                        className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-[75%] p-2.5"
+                        className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-[75%] max-2xl:p-1.5 p-2.5"
                         placeholder="Mail"
                         value={values.email}
                         onChange={handleChange}
@@ -83,11 +83,11 @@ export default function SignIn() {
                       </p>
                     </div>
 
-                    <div className=" mt-6">
+                    <div className=" mt-6 max-2xl:mt-5">
                       <Field
                         type="password"
                         id="password"
-                        className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-[75%] p-2.5"
+                        className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-[75%] max-2xl:p-1.5 p-2.5"
                         placeholder="Password"
                         value={values.password}
                         onChange={handleChange}
@@ -97,18 +97,18 @@ export default function SignIn() {
                       </p>
                     </div>
 
-                    <div className="mt-6">
+                    <div className="mt-6 max-2xl:mt-4">
                       <div className="flex items-center mr-auto  h-5">
                         <Field
                           type="checkbox"
                           name="checked"
                           value="remember"
-                          className="border-[#007AF5] text-[#007AF5] focus:ring-0"
+                          className="border-[#007AF5] text-[#007AF5] cursor-pointer max-2xl:w-3 max-2xl:h-3 focus:ring-0"
                         />
 
                         <label
                           htmlFor="remember"
-                          className="ml-2 text-sm font-normal text-[#818187] dark:text-gray-300"
+                          className="ml-2 text-sm max-2xl:text-xs font-normal text-[#818187] dark:text-gray-300"
                         >
                           Remember me
                         </label>
@@ -118,13 +118,13 @@ export default function SignIn() {
                     <Link href={"/views/dashboard"}>
                       <button
                         type="button"
-                        className="focus:outline-none text-[1.25rem] text-white bg-[#007AF5] font-medium rounded py-2  w-[75%] mb-2 mt-6"
+                        className="focus:outline-none text-[1.25rem] max-2xl:text-lg text-white bg-[#007AF5] font-medium rounded py-2 max-2xl:py-1 w-[75%] mb-2 max-2xl:mt-4 mt-6"
                       >
                         Sign In
                       </button>
                     </Link>
 
-                    <div className="flex  mt-6">
+                    <div className="flex max-2xl:mt-4 mt-6">
                       <Image src={question} alt="question mark icon" />
                       <Link
                         href="/views/Homeowner/forgotPassword"

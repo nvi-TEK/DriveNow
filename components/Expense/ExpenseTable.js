@@ -109,7 +109,7 @@ export const ExpenseTable = () => {
       {/* number of entries dropdown and Search bar */}
       <div className="flex items-center justify-between mt-6 ml-5">
         <div className="flex">
-          <div className="font-medium text-sm max-2xl:text-xs dark:text-white leading-[30px] mr-[33px] text-[#262626]">
+          <div className="font-medium dark:text-white leading-[30px] mr-[33px] text-[#262626]">
             Show {dropdown} entries
           </div>
 
@@ -118,7 +118,7 @@ export const ExpenseTable = () => {
         <Link href={"/views/Expense/AddExpenseForm"}>
           <button
             type="button"
-            className="text-[#FFFFFF] border bg-[#007AF5] rounded-[4px] dark:border-0 max-2xl:text-xs border-[#DADADA] focus:outline-none text-sm  px-4 py-1.5 max-2xl:py-1 text-center inline-flex justify-center font-normal items-center mr-2 "
+            className="text-[#FFFFFF] border bg-[#007AF5] rounded-[4px] dark:border-0  border-[#DADADA] focus:outline-none text-sm  px-4 py-1.5 max-2xl:py-1 text-center inline-flex justify-center font-normal items-center mr-2 "
           >
             <Image src={plus} className="mr-1" alt="plus sign" />
             Add Expense
@@ -134,7 +134,7 @@ export const ExpenseTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left max-2xl:text-xs text-sm font-normal leading-[18px] text-[#262626] dark:bg-gray-600 dark:text-white pl-2 h-[48px] bg-[#FAFAFA]"
+                  className="text-left font-normal leading-[18px] text-[#262626] dark:bg-gray-600 dark:text-white pl-2 h-[48px] bg-[#FAFAFA]"
                 >
                   {column.render("Header")}
                   <span>
@@ -163,7 +163,7 @@ export const ExpenseTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-[#595959] pl-2 max-2xl:text-xs text-sm font-normal dark:text-white dark:border-gray-500 leading-[18px] border-y h-[48px] "
+                        className="text-[#595959] pl-2 font-normal dark:text-white dark:border-gray-500 leading-[18px] border-y h-[48px] "
                       >
                         {cell.render("Cell")}
                       </td>
@@ -175,17 +175,6 @@ export const ExpenseTable = () => {
           })}
         </tbody>
       </table>
-      {/* <pre>
-        <code>
-          {JSON.stringify(
-            {
-              selectedFlatRows: selectedFlatRows.map((row) => row.original),
-            },
-            null,
-            2
-          )}
-        </code>
-      </pre> */}
 
       <div className="flex mt-5 pb-4 justify-end gap-x-2">
         <button

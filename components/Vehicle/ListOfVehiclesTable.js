@@ -77,7 +77,6 @@ export const ListOfVehiclesTable = () => {
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
       className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-600 dark:border-0 dark:text-white h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
-      place
     >
       {[10, 15, 20].map((pageSize) => (
         <option key={pageSize} value={pageSize}>
@@ -109,7 +108,7 @@ export const ListOfVehiclesTable = () => {
     <>
       {/* number of entries dropdown and Search bar */}
       <div className="flex items-center mt-6">
-        <p className="font-medium text-sm max-2xl:text-xs leading-[30px] mr-[33px] dark:text-white text-[#262626] ">
+        <p className="font-medium leading-[30px] mr-[33px] dark:text-white text-[#262626] ">
           Show {dropdown} entries
         </p>
 
@@ -127,7 +126,7 @@ export const ListOfVehiclesTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left max-2xl:text-xs text-sm font-normal leading-[18px] pl-2 h-[48px] dark:bg-gray-600 text-[#262626] dark:text-white bg-[#FAFAFA] "
+                  className="text-left font-normal leading-[18px] pl-2 h-[48px] dark:bg-gray-600 text-[#262626] dark:text-white bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -156,7 +155,7 @@ export const ListOfVehiclesTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-[#595959] pl-2 max-2xl:text-xs text-sm font-normal dark:text-white dark:border-gray-500 leading-[18px] border-y h-[48px]"
+                        className="text-[#595959] pl-2 font-normal dark:text-white dark:border-gray-500 leading-[18px] border-y h-[48px]"
                       >
                         {cell.render("Cell")}
                       </td>

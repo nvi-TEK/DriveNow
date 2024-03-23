@@ -9,6 +9,9 @@ import PaymentTiles, {
   MidTiles,
 } from "../../../components/payment/paymentTiles";
 import { BasicTable } from "../../../components/payment/BasicTable";
+import { DailyPaymentsTable } from "../../../components/payment/DailyPayments/DailyPaymentsTable";
+import { PaymentTransactionsTable } from "../../../components/payment/PaymentTransactions/PaymentTransactionsTable";
+
 import Link from "next/link";
 import Image from "next/image";
 import driver from "../../../assets/driver.svg";
@@ -17,12 +20,8 @@ import vehicle from "../../../assets/vehicle.svg";
 import payment from "../../../assets/payment.svg";
 import bell from "../../../assets/paymentbell.svg";
 import Header from "@/components/header";
-
+import PaymentsDropdown from "../../../components/paymentDropdown";
 export default function Payments() {
-  const [weekly, setWeekly] = useState(false);
-
-  weekly ? <BasicTable /> : "";
-
   return (
     <>
       <div className="flex w-full">
@@ -41,7 +40,7 @@ export default function Payments() {
         <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
           <section className="w-full ">
-            <div className="flex space-x-4 grow m-5">
+            <div className="flex space-x-4 grow m-5 max-2xl:m-4">
               <PaymentTiles
                 icon={revenue}
                 entity1="Total Amount Received"
@@ -76,23 +75,27 @@ export default function Payments() {
 
             {/* Table */}
 
-            <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 px-[10px] pb-4 mb-12 mt-6 ">
+            <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 max-2xl:mx-4 px-[10px] pb-4 mb-12 mt-6 max-2xl:mt-4 ">
               <div className="flex justify-between ">
-                <h4 className="text-[#262626] dark:text-white font-medium text-[22px] max-2xl:text-xl leading-[30px] pl-[] pt-4 ">
+                <h1 className="text-[#262626] dark:text-white font-medium leading-[30px] pl-[] pt-4 ">
                   Payments
-                </h4>
+                </h1>
                 <Link href={""}>
                   <button
                     type="button"
-                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] dark:border-0 rounded-[4px] focus:outline-none text-sm px-4 max-2xl:py-1 py-1.5 max-2xl:text-xs text-center inline-flex justify-center font-normal items-center mb-2 "
+                    className="text-[#FFFFFF] border mt-4 bg-[#007AF5] dark:border-0 rounded-[4px] focus:outline-none text-sm px-4 py-1.5 text-center inline-flex justify-center font-normal items-center mb-2 "
                   >
                     <Image src={bell} alt="bell icon" className="ml-0 mr-1" />
                     Send Payment Reminder
                   </button>
                 </Link>
               </div>
-              
-              <BasicTable />
+
+              <div className="mt-9">
+                <div>
+                  <PaymentsDropdown />
+                </div>
+              </div>
             </div>
           </section>
         </main>

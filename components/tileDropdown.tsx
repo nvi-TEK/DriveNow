@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Select, Space, ConfigProvider } from "antd";
+import { BasicTable } from "./payment/BasicTable";
+import { PaymentTransactionsTable } from "./payment/PaymentTransactions/PaymentTransactionsTable";
+import { DailyPaymentsTable } from "./payment/DailyPayments/DailyPaymentsTable";
 import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
+
+
+
 const handleChange = (value: string) => {
   console.log(`selected ${value}`);
 };

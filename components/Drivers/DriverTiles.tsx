@@ -46,58 +46,61 @@ export default function AllDriverTiles(props: driverTileProp1) {
 
       <div className="flex grow">
         <div className="grow">
-          <p className="font-normal dark:text-white mt-4 text-xs leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white mt-4 leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] pt- dark:text-white leading-7 font-medium text-lg">
+            <h2 className="text-[#262626] pt- dark:text-white leading-7 font-medium">
               {props.entity1value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity1differential >= 0 ? "#0EA371" : "#DC4A41",
               }}
               className="text-[10px] font-normal pl-2"
             >
-              {props.entity1differential <= 0? "":"+"}{props.entity1differential}%
+              {props.entity1differential <= 0 ? "" : "+"}
+              {props.entity1differential}%
             </p>
           </div>
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal pt-4 text-xs dark:text-white leading-5 text-[#8C8C8C]">
+          <p className="font-normal pt-4 dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] leading-7 dark:text-white font-medium text-lg">
+            <h2 className="text-[#262626] leading-7 dark:text-white font-medium">
               {props.entity2value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity2differential >= 0 ? "#0EA371" : "#DC4A41",
               }}
               className="text-[10px] font-normal pl-2 "
             >
-              {props.entity2differential <= 0? "":"+"}{props.entity2differential}%
+              {props.entity2differential <= 0 ? "" : "+"}
+              {props.entity2differential}%
             </p>
           </div>
         </div>
 
         <div className="ml-[4%] grow">
-          <p className="font-normal pt-4 text-xs dark:text-white leading-5 text-[#8C8C8C]">
+          <p className="font-normal pt-4 dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity3}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
+            <h2 className="text-[#262626] dark:text-white leading-7 font-medium">
               {props.entity3value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity3differential >= 0 ? "#0EA371" : "#DC4A41",
               }}
               className="text-[10px] font-normal pl-2"
             >
-              {props.entity3differential <= 0? "":"+"}{props.entity3differential}%
+              {props.entity3differential <= 0 ? "" : "+"}
+              {props.entity3differential}%
             </p>
           </div>
         </div>
@@ -120,13 +123,13 @@ function AllDriverTiles1(props: lastTileProp) {
 
       <div className="flex w-full pr-">
         <div className="grow">
-          <p className="font-normal dark:text-white pt-4 text-xs leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white pt-4 leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] pt- dark:text-white leading-7 font-medium text-lg">
+            <h2 className="text-[#262626] pt- dark:text-white leading-7 font-medium">
               {props.entity1value.toLocaleString()}
-            </p>
+            </h2>
             <p className="text-[10px] font-normal pl-2">
               {props.entity1differential}
             </p>
@@ -134,13 +137,13 @@ function AllDriverTiles1(props: lastTileProp) {
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal pt-4 text-xs dark:text-white leading-5 text-[#8C8C8C]">
+          <p className="font-normal pt-4 dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] leading-7 dark:text-white font-medium text-lg ">
+            <h2 className="text-[#262626] leading-7 dark:text-white font-medium ">
               {props.entity2value.toLocaleString()}
-            </p>
+            </h2>
             <p className="text-[10px] font-normal pl-2">
               {props.entity2differential}
             </p>
@@ -148,13 +151,13 @@ function AllDriverTiles1(props: lastTileProp) {
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal pt-4 text-xs leading-5 dark:text-white text-[#8C8C8C]">
+          <p className="font-normal pt-4 leading-5 dark:text-white text-[#8C8C8C]">
             {props.entity3}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
+            <h2 className="text-[#262626] dark:text-white leading-7 font-medium">
               {props.entity3value.toLocaleString()}
-            </p>
+            </h2>
             <p className="text-[10px] font-normal pl-2">
               {props.entity3differential}
             </p>

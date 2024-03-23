@@ -17,7 +17,6 @@ export default function ThemeToggle() {
   ) => {
     const { value, checked } = event.target;
 
-    console.log(`${value} is ${checked}`);
   };
 
 

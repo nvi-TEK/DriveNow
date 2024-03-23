@@ -44,13 +44,13 @@ export default function ListOfVehiclesTiles(props: ListOfVehiclesProp1) {
 
       <div className="flex">
         <div className="grow">
-          <p className="font-normal mt-4 dark:text-white text-sm leading-5 text-[#8C8C8C] ">
+          <p className="font-normal mt-4 dark:text-white   leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] pt- dark:text-white leading-7 font-medium text-xl">
+            <h2 className="text-[#262626] pt- dark:text-white leading-7 font-medium  ">
               {props.entity1value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity1differential >= 0 ? "#0EA371" : "#DC4A41",
@@ -64,13 +64,13 @@ export default function ListOfVehiclesTiles(props: ListOfVehiclesProp1) {
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal dark:text-white pt-4 text-sm leading-5 text-[#8C8C8C]">
+          <p className="font-normal dark:text-white pt-4 leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] dark:text-white leading-7 font-medium text-xl">
+            <h2 className="text-[#262626] dark:text-white leading-7 font-medium  ">
               {props.entity2value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity2differential >= 0 ? "#0EA371" : "#DC4A41",
@@ -84,13 +84,13 @@ export default function ListOfVehiclesTiles(props: ListOfVehiclesProp1) {
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal pt-4 text-sm dark:text-white leading-5 text-[#8C8C8C]">
+          <p className="font-normal pt-4   dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity3}
           </p>
           <div className="items-center flex pt-2">
-            <p className="text-[#262626] dark:text-white leading-7 font-medium text-xl">
+            <h2 className="text-[#262626] dark:text-white leading-7 font-medium  ">
               {props.entity3value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity3differential >= 0 ? "#0EA371" : "#DC4A41",
@@ -121,13 +121,13 @@ function ListofVehiclesTiles(props: ListofVehiclesProp) {
 
       <div className="flex">
         <div className="grow">
-          <p className="font-normal dark:text-white mt-4 text-sm leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white mt-4   leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] pt- dark:text-white leading-7 font-medium text-lg">
+            <h2 className="text-[#262626] pt- dark:text-white leading-7 font-medium ">
               {props.entity1value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity1differential >= 0 ? "#0EA371" : "#DC4A41",
@@ -141,21 +141,21 @@ function ListofVehiclesTiles(props: ListofVehiclesProp) {
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal pt-4 dark:text-white text-sm leading-5 text-[#8C8C8C]">
+          <p className="font-normal pt-4 dark:text-white   leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
-          <p className="text-[#262626] pt-2 dark:text-white leading-7 font-medium text-lg">
+          <h2 className="text-[#262626] pt-2 dark:text-white leading-7 font-medium ">
             {props.entity2value.toLocaleString()}
-          </p>
+          </h2>
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal pt-4 text-sm dark:text-white leading-5 text-[#8C8C8C]">
+          <p className="font-normal pt-4   dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity3}
           </p>
-          <p className="text-[#262626] pt-2 leading-7 dark:text-white font-medium text-lg">
+          <h2 className="text-[#262626] pt-2 leading-7 dark:text-white font-medium ">
             {props.entity3value.toLocaleString()}
-          </p>
+          </h2>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
 /* eslint-disable require-jsdoc */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import List from "./sidebarList";
-import logo from "../assets/logo.png";
 import dashboard from "../assets/dashboard.svg";
 import activedashboard from "../assets/activedashboard.svg";
 import heatmap from "../assets/heatmap.svg";
@@ -20,6 +20,8 @@ import downarrow from "../assets/downarrow.svg";
 import uparrow from "../assets/uparrow.svg";
 import driverside from "../assets/driverside.svg";
 import transactionside from "../assets/transactionside.svg";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Link from "next/link";
 import { HelpRounded } from "@mui/icons-material";
 import ThemeToggle from "./themeToggle";
@@ -34,12 +36,22 @@ function SideBar() {
     console.log(`${value} is ${checked}`);
   };
 
+  const [mounted, setMounted] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
   const router = useRouter();
   const [showDriver, setShowDriver] = useState(false);
   const [showTransaction, setShowTransaction] = useState(false);
   const [showVehicle, setShowVehicle] = useState(false);
 
-  const DriverArrow = showDriver ? uparrow : downarrow;
+  const DriverArrow =
+    resolvedTheme == "light" && showDriver
+      ? uparrow
+      : resolvedTheme == "dark" && showDriver
+      ? push
+      : downarrow;
   const TransactionArrow = showTransaction ? uparrow : downarrow;
   const VehicleArrow = showVehicle ? uparrow : downarrow;
 
@@ -55,6 +67,8 @@ function SideBar() {
               <List
                 icon={dashboard}
                 activeIcon={activedashboard}
+                // darkActiveIcon={settings}
+                // darkIcon={logo}
                 name={"Dashboard"}
                 url="/views/dashboard"
               />
@@ -79,7 +93,7 @@ function SideBar() {
             </Link>
 
             <div
-              className="flex ml-6 cursor-pointer max-2xl:pb-2 pb-2 justify-between items-center text-black"
+              className="flex ml-6 cursor-pointer max-2xl:pb-1 pb- justify-between items-center text-black"
               onClick={() => setShowDriver(!showDriver)}
             >
               <div className="flex dark:text-white max-2xl:text-[15px] max-2xl:py-0 py-2">
@@ -88,7 +102,7 @@ function SideBar() {
                   className="mr-2 max-2xl:w-5"
                   alt="tool icon"
                 />
-                Drivers
+                <p id="sidebar-text">Drivers</p>
               </div>
               <div>
                 <Image
@@ -130,7 +144,7 @@ function SideBar() {
                   className="mr-2 max-2xl:w-5"
                   alt="tool icon"
                 />
-                Transactions
+                <p id="sidebar-text">Transactions</p>
               </div>
               <Image
                 className="mr-4 max-2xl:w-4 h-5 w-5"
@@ -167,7 +181,7 @@ function SideBar() {
                   className="mr-2 max-2xl:w-5"
                   alt="tool icon"
                 />
-                Vehicle
+                <p id="sidebar-text">Vehicle</p>
               </div>
               <Image
                 className="mr-4 h-5 max-2xl:w-4 w-5"
@@ -222,8 +236,8 @@ function SideBar() {
               </Link>
             </div>
 
-            <div className="pt-[394px] flex justify-end items-center pr-5 ml-auto ">
-              <p className="text-[#262626] max-2xl:text-xs dark:text-white pr-1">
+            <div className="pt-[394px] flex justify-between items-center pr-5 ml-auto ">
+              <p className="text-[#262626] max-2xl:text-sm pl-4 dark:text-white pr-1">
                 Theme:
               </p>
               <ThemeToggle />

@@ -92,6 +92,7 @@ export const DRIVERKYCCOLUMNS = [
   {
     Header: "Full Name",
     accessor: "full_name",
+    width: 170,
   },
   {
     Header: "Mobile Number",
@@ -119,7 +120,6 @@ export const DRIVERKYCCOLUMNS = [
             width: "50px",
             paddingTop: "2px",
             paddingBottom: "2px",
-            fontSize: "12px",
             lineHeight: "16px",
             fontWeight: "500",
           }}
@@ -162,7 +162,6 @@ export const DRIVERKYCCOLUMNS = [
             paddingBottom: "1px",
 
             maxWidth: "45px",
-            fontSize: "12px",
             lineHeight: "16px",
             fontWeight: "500",
           }}

@@ -16,17 +16,17 @@ function KYC(props: KYCProp) {
   return (
     <div className="border-b max-2xl:h-[70px] h-[80px] flex items-center justify-between grow dark:bg-gray-700 bg-white dark:border-gray-500 border-[#E6E6E6]">
       <div>
-        <p className="text-[#595959] max-2xl:text-sm dark:text-white font-normal leading-[18px] ">
+        <p className="text-[#595959] dark:text-white font-normal leading-[18px] ">
           {props.name}
         </p>
-        <p className="font-medium max-2xl:text-[11px] dark:text-white text-xs pt-2 leading-[14.52px] ">
+        <h5 className="font-medium dark:text-white pt-2 leading-[14.52px] ">
           {props.description}
-        </p>
+        </h5>
       </div>
       <div className="ml-[] text-right">
-        <p className="text-[#8C8C8C] font-normal dark:text-white text-xs max-2xl:text-[11px] leading-4 ">
+        <h5 className="text-[#8C8C8C] font-normal dark:text-white leading-4 ">
           {props.date}
-        </p>
+        </h5>
         <div
           style={{
             backgroundColor:
@@ -38,7 +38,7 @@ function KYC(props: KYCProp) {
           }}
           className="px-2 text-right rounded-[2px] py-[2px] mt-2"
         >
-          <p
+          <h5
             style={{
               color:
                 props.status === "Completed"
@@ -47,10 +47,10 @@ function KYC(props: KYCProp) {
                   ? "#DC4A41"
                   : "#E8B123",
             }}
-            className="font-medium text-xs max-2xl:text-[11px] text-right leading-4"
+            className="font-medium text-right leading-4"
           >
             {props.status}
-          </p>
+          </h5>
         </div>
       </div>
     </div>

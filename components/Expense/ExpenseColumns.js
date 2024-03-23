@@ -112,7 +112,7 @@ export const EXPENSECOLUMNS = [
     accessor: "status",
     Cell: (props) => {
       return (
-        <div
+        <div className="max-2xl:text-xs text-sm "
           style={{
             color:
               props.value === "Paid"
@@ -132,7 +132,6 @@ export const EXPENSECOLUMNS = [
             paddingRight: "2px",
             paddingTop: "1px",
             paddingBottom: "1px",
-            fontSize: "12px",
             lineHeight: "16px",
             fontWeight: "500",
           }}

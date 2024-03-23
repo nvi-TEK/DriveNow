@@ -1,7 +1,9 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import { Button, ConfigProvider, Popover, Segmented } from "antd";
 import Image from "next/image";
 import info from "../assets/information_icon.svg";
+import avatar from "../assets/Avatar.svg"
 
 
 
@@ -26,6 +28,13 @@ const contract = (
 );
 
 function DriverKYCPop() {
+  const [mounted, setMounted] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+
+
   return (
     <ConfigProvider
       theme={{
@@ -40,7 +49,7 @@ function DriverKYCPop() {
         <div className="">
           <Popover placement="topRight" content={content} trigger="hover">
             <div>
-              <Image className="cursor-pointer w-[14px] h-[14px]" src={info} alt="" />
+              <Image className="cursor-pointer w-[14px] h-[14px]" src={resolvedTheme == "light"? info : info} alt="" />
             </div>
           </Popover>
         </div>
@@ -50,6 +59,11 @@ function DriverKYCPop() {
 }
 
 function ContractPop() {
+  const [mounted, setMounted] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
   return (
     <ConfigProvider
       theme={{
@@ -64,7 +78,7 @@ function ContractPop() {
         <div className="">
           <Popover placement="topRight" content={contract} trigger="hover">
             <div>
-              <Image className="cursor-pointer w-[14px] h-[14px]" src={info} alt="" />
+              <Image className="cursor-pointer w-[14px] h-[14px]" src={resolvedTheme== "light"? info : info} alt="" />
             </div>
           </Popover>
         </div>

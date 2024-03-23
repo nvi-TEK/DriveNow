@@ -86,9 +86,9 @@ export default function VehicleIssueLogs() {
 
             <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 mb-12 px-[10px] mt-6 ">
               <div className="flex justify-between ">
-                <h4 className="text-[#262626] dark:text-white font-medium text-[22px] leading-[30px] pt-4 ">
+                <h1 className="text-[#262626] dark:text-white font-medium text-[22px] leading-[30px] pt-4 ">
                   Vehicle Issue Log
-                </h4>
+                </h1>
                 <Link href={"AddVehicleIssue"}>
                   <button
                     type="button"

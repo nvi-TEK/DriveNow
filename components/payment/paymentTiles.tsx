@@ -62,29 +62,29 @@ function PaymentTiles(props: PaymentProp) {
       </div>
       <section className="flex mt-4">
         <div className="grow">
-          <p className="font-normal dark:text-white text-xs leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white  leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center">
-            <p className="text-[#262626] dark:text-white pt-2 leading-7 font-medium text-lg ">
+            <h2 className="text-[#262626] dark:text-white pt-2 leading-7 font-medium ">
               ₵{props.entity1value.toLocaleString()}
-            </p>
+            </h2>
           </div>
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal dark:text-white text-xs leading-5 text-[#8C8C8C]">
+          <p className="font-normal dark:text-white  leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex mt-2 items-center">
-            <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg ">
+            <h2 className="text-[#262626] dark:text-white leading-7 font-medium ">
               ₵{props.entity2value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity2differential >= 0 ? "#0EA371" : "#DC4A41",
               }}
-              className="text-xs font-normal pl-1"
+              className=" font-normal text-xs pl-1"
             >
               {props.entity2differential <= 0 ? "" : "+"}
               {props.entity2differential}%
@@ -110,18 +110,18 @@ function MidTiles(props: midTileProp) {
 
       <div className="flex ">
         <div className="grow">
-          <p className="font-normal dark:text-white mt-4 text-xs leading-5 text-[#8C8C8C] ">
+          <p className="font-normal dark:text-white mt-4  leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] pt- dark:text-white leading-7 font-medium text-lg">
+            <h2 className="text-[#262626] pt- dark:text-white leading-7 font-medium">
               {props.entity1value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity1differential >= 0 ? "#0EA371" : "#DC4A41",
               }}
-              className="text-[10px] font-normal pl-1"
+              className="text-xs font-normal pl-1"
             >
               {props.entity1differential <= 0 ? "" : "+"}
               {props.entity1differential}%
@@ -130,18 +130,18 @@ function MidTiles(props: midTileProp) {
         </div>
 
         <div className="ml-[] grow">
-          <p className="font-normal dark:text-white pt-4 text-xs leading-5 text-[#8C8C8C]">
+          <p className="font-normal dark:text-white pt-4  leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
+            <h2 className="text-[#262626] dark:text-white leading-7 font-medium">
               {props.entity2value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity2differential >= 0 ? "#0EA371" : "#DC4A41",
               }}
-              className="text-[10px] font-normal pl-1 "
+              className="text-xs font-normal pl-1 "
             >
               {props.entity2differential <= 0 ? "" : "+"}
               {props.entity2differential}%
@@ -149,19 +149,19 @@ function MidTiles(props: midTileProp) {
           </div>
         </div>
 
-        <div className="ml-[4%] grow">
-          <p className="font-normal pt-4 text-xs dark:text-white leading-5 text-[#8C8C8C]">
+        <div className="ml-[] grow">
+          <p className="font-normal pt-4  dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity3}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
+            <h2 className="text-[#262626] dark:text-white leading-7 font-medium">
               {props.entity3value.toLocaleString()}
-            </p>
+            </h2>
             <p
               style={{
                 color: props.entity3differential >= 0 ? "#0EA371" : "#DC4A41",
               }}
-              className="text-[10px] font-normal pl-1"
+              className="text-xs font-normal pl-1"
             >
               {props.entity3differential <= 0 ? "" : "+"}
               {props.entity3differential}%
@@ -184,36 +184,36 @@ function LastTile(props: tileProp2) {
       </div>
 
       <div className="flex ">
-        <div>
-          <p className="font-normal pt-4 text-xs dark:text-white leading-5 text-[#8C8C8C] ">
+        <div className="grow">
+          <p className="font-normal pt-4  dark:text-white leading-5 text-[#8C8C8C] ">
             {props.entity1}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] pt- dark:text-white leading-7 font-medium text-lg">
+            <h2 className="text-[#262626] pt- dark:text-white leading-7 font-medium">
               {props.entity1value.toLocaleString()}
-            </p>
+            </h2>
           </div>
         </div>
 
-        <div className="ml-[14%]">
-          <p className="font-normal pt-4 text-xs dark:text-white leading-5 text-[#8C8C8C]">
+        <div className="ml-[] grow">
+          <p className="font-normal pt-4  dark:text-white leading-5 text-[#8C8C8C]">
             {props.entity2}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
+            <h2 className="text-[#262626] dark:text-white leading-7 font-medium">
               {props.entity2value.toLocaleString()}
-            </p>
+            </h2>
           </div>
         </div>
 
-        <div className="ml-[19%]">
-          <p className="font-normal pt-4 dark:text-white text-xs leading-5 text-[#8C8C8C]">
+        <div className="ml-[] grow">
+          <p className="font-normal pt-4 dark:text-white  leading-5 text-[#8C8C8C]">
             {props.entity3}
           </p>
           <div className="flex items-center pt-2">
-            <p className="text-[#262626] dark:text-white leading-7 font-medium text-lg">
+            <h2 className="text-[#262626] dark:text-white leading-7 font-medium">
               {props.entity3value.toLocaleString()}
-            </p>
+            </h2>
           </div>
         </div>
       </div>

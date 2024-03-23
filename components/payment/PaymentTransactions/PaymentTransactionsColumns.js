@@ -3,14 +3,13 @@ import Image from "next/image";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
-import user from "../../assets/user.svg";
-import pencil from "../../assets/pencil.svg";
-import reassign from "../../assets/pencil.png";
-import power from "../../assets/power.svg";
-import recycle from "../../assets/recycle.svg";
-import vehicle from "../../assets/menuvehicle.svg";
-import fileicon from "../../assets/file.svg";
-import refresh from "../../assets/bluerecycle.svg";
+import user from "../../../assets/user.svg";
+import pencil from "../../../assets/pencil.svg";
+import power from "../../../assets/power.svg";
+import recycle from "../../../assets/recycle.svg";
+import vehicle from "../../../assets/menuvehicle.svg";
+import fileicon from "../../../assets/file.svg";
+import refresh from "../../../assets/bluerecycle.svg";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 const ITEM_HEIGHT = 86;
@@ -102,101 +101,52 @@ export default function LongMenu() {
   );
 }
 
-export const COLUMNS = [
+export const PAYMENTTRANSACTIONSCOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    width: 100,
+  },
+  {
+    Header: "Transaction ID",
+    accessor: "transaction_id",
+    width: 200,
   },
   {
     Header: "Full Name",
     accessor: "full_name",
-    width: 250,
-    sortable: true,
+    width: 230,
   },
   {
-    Header: "Deposit Amount",
-    accessor: "deposit_amount",
-    width: 120,
+    Header: "Amount Paid",
+    accessor: "amount_paid",
+    width: 230,
   },
   {
-    Header: "Vehicle Repayment",
-    accessor: "vehicle_repayment",
+    Header: "Previous Payment",
+    accessor: "previous_payment",
+    width: 230,
   },
   {
-    Header: "Additional Charges",
-    accessor: "additional_charges",
+    Header: "Next Due Payment",
+    accessor: "next_due_payment",
+    width: 140,
   },
   {
-    Header: "Amount Received",
-    accessor: "amount_received",
+    Header: "Total Additional Charges",
+    accessor: "total_additional_charges",
+    width: 230,
   },
   {
-    Header: "Engine Control",
-    accessor: "engine_control",
-    Cell: (props) => {
-      return (
-        <div className="text-sm max-2xl:text-xs"
-          style={{
-            color: props.value === "ON" ? "#0EA371" : "#DC4A41",
-            backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
-            borderRadius: "2px",
-            textAlign: "center",
-            width: "50px",
-            paddingTop: "2px",
-            paddingBottom: "2px",
-            lineHeight: "16px",
-            fontWeight: "500",
-          }}
-        >
-          {props.value}
-        </div>
-      );
-    },
-  },
-  {
-    Header: "Engine Status",
-    accessor: "engine_status",
-    width: 120,
-    Cell: (props) => {
-      return (
-        <div className="flex items-center gap-x-1">
-          <div className="">
-            <Image src={refresh} alt="refresh icon" />
-          </div>
-          <div className="text-sm max-2xl:text-xs"
-            style={{
-              color: props.value === "Active" ? "#0EA371" : "#DC4A41",
-              backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
-              borderRadius: "2px",
-              textAlign: "center",
-              width: "50px",
-              paddingTop: "2px",
-              paddingBottom: "2px",
-              lineHeight: "16px",
-              fontWeight: "500",
-            }}
-          >
-            {props.value}
-          </div>
-        </div>
-      );
-    },
-  },
-  {
-    Header: "Engine Status Updated",
-    accessor: "engine_status_updated",
-    width: 150 ,
-  },
-  {
-    Header: "Completed Weeks (Invoices)",
-    accessor: "completed_weeks",
-    width: 180,
+    Header: "Date",
+    accessor: "date",
+    width: 230,
   },
   {
     Header: "Action",
-    Cell: ({ original }) => (
+    Cell: ({}) => (
       <>
-        <LongMenu />{" "}
+        <LongMenu />
       </>
     ),
   },

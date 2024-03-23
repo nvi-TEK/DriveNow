@@ -7,8 +7,10 @@ import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import {DriverKycTable} from "../../../components/Drivers/DriverKyc/DriverKycTable"
-import AllDriverTiles, { AllDriverTiles1 } from "@/components/Drivers/DriverTiles";
+import { DriverKycTable } from "../../../components/Drivers/DriverKyc/DriverKycTable";
+import AllDriverTiles, {
+  AllDriverTiles1,
+} from "@/components/Drivers/DriverTiles";
 import Link from "next/link";
 import Image from "next/image";
 import driver from "../../../assets/driver.svg";
@@ -26,7 +28,7 @@ import Header from "@/components/header";
 export default function DriverKyc() {
   return (
     <>
-<div className="flex w-full">
+      <div className="flex w-full">
         <div className="w-full z-10">
           <Header name="Drivers" />
         </div>
@@ -40,32 +42,31 @@ export default function DriverKyc() {
 
         {/* Code goes into the main tag */}
         <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
-      
           <section className="w-full pb-[130px] ">
             <div className="flex space-x-4 grow m-5">
               <AllDriverTiles
                 icon={vehicle}
                 entity1="Total Vehicles"
                 entity1value={1250}
-                entity1differential={+15.80}
+                entity1differential={+15.8}
                 entity2="Active Vehicles"
                 entity2value={1180}
-                entity2differential={+4.90}
+                entity2differential={+4.9}
                 entity3="Damaged"
                 entity3value={70}
-                entity3differential={-4.90}
+                entity3differential={-4.9}
               />
               <AllDriverTiles
                 icon={driver}
                 entity1="Total Drivers"
                 entity1value={1250}
-                entity1differential={+15.80}
+                entity1differential={+15.8}
                 entity2="Online Drivers"
                 entity2value={1180}
                 entity3="Offline Drivers"
                 entity3value={70}
-                entity3differential={-4.90}
-                entity2differential={+4.90}
+                entity3differential={-4.9}
+                entity2differential={+4.9}
               />
               <AllDriverTiles1
                 icon={payment}
@@ -80,10 +81,8 @@ export default function DriverKyc() {
 
             {/* Table */}
             <div className="rounded-lg bg-white dark:bg-gray-700 mx-5 px-[10px] mt-[24px]">
-
-              
               <div className="relative overflow-x-auto bg-white dark:bg-gray-700 sm:rounded-t-md">
-              <DriverKycTable />
+                <DriverKycTable />
               </div>
             </div>
           </section>

@@ -154,10 +154,10 @@ export default function Expense() {
           </section>
 
           {/* Table */}
-          <div className="bg-white dark:bg-gray-700 mt-4 max-2xl:mt-2 rounded-[8px] mb-[67px] px-[10px] mx-5 ">
-            <h3 className="text-[22px] max-2xl:text-lg font-medium leading-[30px] pt-4 dark:text-white text-[#262626] ">
+          <div className="bg-white dark:bg-gray-700 mt-4 max-2xl:mt-4 rounded-[8px] mb-[67px] px-[10px] mx-5 ">
+            <h1 className="font-medium leading-[30px] pt-4 dark:text-white text-[#262626] ">
               Expense History
-            </h3>
+            </h1>
 
             <ExpenseTable />
           </div>

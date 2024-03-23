@@ -110,6 +110,7 @@ export const ALLDRIVERSCOLUMNS = [
     Cell: (props) => {
       return (
         <div
+          className="text-base max-2xl:text-sm"
           style={{
             color: props.value === "Online" ? "#0EA371" : "#DC4A41",
             backgroundColor: props.value === "Online" ? "#E7F6F1" : "#FBEDEC",
@@ -119,7 +120,6 @@ export const ALLDRIVERSCOLUMNS = [
             paddingRight: "2px",
             paddingTop: "2px",
             paddingBottom: "2px",
-            fontSize: "12px",
             lineHeight: "16px",
             fontWeight: "500",
           }}
@@ -127,7 +127,7 @@ export const ALLDRIVERSCOLUMNS = [
           {props.value}
         </div>
       );
-    }
+    },
   },
   {
     Header: "Agreed",
@@ -135,6 +135,7 @@ export const ALLDRIVERSCOLUMNS = [
     Cell: (props) => {
       return (
         <div
+          className="text-sm max-2xl:text-xs"
           style={{
             color: props.value === "Yes" ? "#0EA371" : "#DC4A41",
             backgroundColor: props.value === "Yes" ? "#E7F6F1" : "#FBEDEC",
@@ -143,7 +144,6 @@ export const ALLDRIVERSCOLUMNS = [
             width: "50px",
             paddingTop: "2px",
             paddingBottom: "2px",
-            fontSize: "12px",
             lineHeight: "16px",
             fontWeight: "500",
           }}
@@ -151,7 +151,7 @@ export const ALLDRIVERSCOLUMNS = [
           {props.value}
         </div>
       );
-    }
+    },
   },
   {
     Header: "App Version",
@@ -163,6 +163,7 @@ export const ALLDRIVERSCOLUMNS = [
     Cell: (props) => {
       return (
         <div
+          className="text-sm max-2xl:text-xs"
           style={{
             color: props.value === "ON" ? "#0EA371" : "#DC4A41",
             backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
@@ -171,7 +172,6 @@ export const ALLDRIVERSCOLUMNS = [
             width: "50px",
             paddingTop: "2px",
             paddingBottom: "2px",
-            fontSize: "12px",
             lineHeight: "16px",
             fontWeight: "500",
           }}
@@ -179,7 +179,7 @@ export const ALLDRIVERSCOLUMNS = [
           {props.value}
         </div>
       );
-    }
+    },
   },
   {
     Header: "Location Updated",

@@ -103,17 +103,9 @@ export const BasicTable = () => {
   return (
     <>
       {/* number of entries dropdown and Search bar */}
-
-      <div>
-        <label
-          htmlFor="select"
-          className="block mb-2 text-sm max-2xl:text-xs font-medium dark:text-white leading-[30px] text-[#262626]"
-        >
-          Select:
-        </label>
-      </div>
-      <div className="flex items-center mt-6 justify-end mr-2">
-        <p className="font-medium dark:text-white text-xs leading-[30px] mr-[33px] text-[#262626] ">
+      <div className="flex items-center mt- justify-end mr-2">
+      
+        <p className="font-medium dark:text-white leading-[30px] mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
 
@@ -129,7 +121,7 @@ export const BasicTable = () => {
                 <th
                   {...column.getHeaderProps}
                   {...column.getSortByToggleProps()}
-                  className="text-left text-sm max-2xl:text-xs font-normal dark:bg-gray-600 dark:text-white text-[#262626] leading-[18px] pl-2 h-[48px] bg-[#FAFAFA]"
+                  className="text-left font-normal dark:bg-gray-600 dark:text-white text-[#262626] leading-[18px] pl-2 h-[48px] bg-[#FAFAFA]"
                   style={{ minWidth: column.minWidth, width: column.width }}
                 >
                   {column.render("Header")}
@@ -159,7 +151,7 @@ export const BasicTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-[#595959] pl-2 max-2xl:text-xs text-sm dark:text-white dark:border-gray-500 font-normal leading-[18px] border-y h-[48px]"
+                        className="text-[#595959] pl-2 dark:text-white dark:border-gray-500 font-normal leading-[18px] border-y h-[48px]"
                       >
                         {cell.render("Cell")}
                       </td>

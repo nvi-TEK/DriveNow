@@ -67,7 +67,7 @@ export default function LongMenu() {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <MoreHorizIcon className="dark:text-white"/>
+        <MoreHorizIcon className="dark:text-white" />
       </IconButton>
       <Menu
         id="long-menu"
@@ -96,7 +96,7 @@ export default function LongMenu() {
         </MenuItem>
 
         <MenuItem
-          onClick={handleClose}
+          onClick={openModal}
           component={Link}
           href={""}
           className="flex font-normal text-[#595959] text-sm leading-[18px] py-2.5"
@@ -104,6 +104,17 @@ export default function LongMenu() {
           <Image src={file} className="mr-2 w-6 " alt="x" />
           Update Sim
         </MenuItem>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          ariaHideApp={false}
+          shouldCloseOnOverlayClick={false}
+          overlayClassName=""
+          style={customStyles}
+        >
+          <div>abc</div>
+        </Modal>
+
         <MenuItem
           className="flex font-normal text-[#595959] text-sm leading-[18px] py-2.5"
           onClick={handleClose}

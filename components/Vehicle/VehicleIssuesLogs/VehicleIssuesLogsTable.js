@@ -110,7 +110,7 @@ export const VehicleIssuesLogsTable = () => {
     <>
       {/* number of entries dropdown and Search bar */}
       <div className="flex items-center mt-6  ml-3">
-        <p className="font-medium dark:text-white text-sm leading-[30px] mr-[33px] text-[#262626] ">
+        <p className="font-medium dark:text-white leading-[30px] mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
 
@@ -128,7 +128,7 @@ export const VehicleIssuesLogsTable = () => {
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="text-left text-xs font-normal leading-[18px] h-[48px] text-[#262626] dark:text-white dark:bg-gray-600 pl-2 bg-[#FAFAFA] "
+                  className="text-left font-normal leading-[18px] h-[48px] text-[#262626] dark:text-white dark:bg-gray-600 pl-2 bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -157,7 +157,7 @@ export const VehicleIssuesLogsTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-[#595959] pl-2 text-xs font-normal dark:text-white dark:border-gray-500 leading-[18px] border-y h-[48px]"
+                        className="text-[#595959] pl-2 font-normal dark:text-white dark:border-gray-500 leading-[18px] border-y h-[48px]"
                       >
                         {cell.render("Cell")}
                       </td>

@@ -4,7 +4,9 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 export const VehicleTrackerFilter = ({ filter, setFilter }) => {
   return (
     <span className="flex items-center">
-    <p className="text-xs leading-[30px] font-medium text-[#262626] dark:text-white ">Search:</p>
+      <p className="leading-[30px] font-medium text-[#262626] dark:text-white ">
+        Search:
+      </p>
       <input
         value={filter || ""}
         onChange={(e) => setFilter(e.target.value)}

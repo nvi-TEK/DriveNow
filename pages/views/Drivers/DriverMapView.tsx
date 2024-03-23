@@ -59,9 +59,9 @@ export default function DriverKyc() {
 
             {/* Map */}
             <div className="rounded-lg bg-white dark:bg-gray-700 h-[443px] mx-5 mt-[24px]">
-              <h3 className="text-[#262626] dark:text-white p-4 font-medium leading-[30px] text-[22px]">
+              <h1 className="text-[#262626] dark:text-white p-4 font-medium leading-[30px]">
                 Driver Map View
-              </h3>
+              </h1>
 
               <div className="h-[365px] px-4 ">
                 <DriverMap />
@@ -75,14 +75,14 @@ export default function DriverKyc() {
               <div className="flex mt-4 justify-evenly">
                 <div className="flex items-center">
                   <Image src={onlinedriver} alt="red car icon" />
-                  <p className="text-[#262626] pl-4 dark:text-white leading-[30px] font-normal text-sm">
+                  <p className="text-[#262626] pl-4 dark:text-white leading-[30px] font-normal">
                     Online Driver
                   </p>
                 </div>
 
                 <div className="flex items-center">
                   <Image src={offlinedriver} alt="black car icon" />
-                  <p className="text-[#262626] pl-4 dark:text-white leading-[30px] font-normal text-sm">
+                  <p className="text-[#262626] pl-4 dark:text-white leading-[30px] font-normal">
                     Offline Driver
                   </p>
                 </div>
