@@ -10,6 +10,7 @@ import Image from "next/image";
 import { DashChart } from "../../components/dashboard/dashboardColumnChart";
 import driver from "../../assets/driver.svg";
 import vehicle from "../../assets/vehicle.svg";
+import repair from "../../assets/repair.svg";
 import payment from "../../assets/payment.svg";
 import { DashboardTiles1, LastTile, MidTiles } from "@/components/tiles";
 import DashboardStack from "@/components/stackedChart";
@@ -90,7 +91,7 @@ export default function Dashboard() {
               />
 
               <LastTile
-                icon={payment}
+                icon={repair}
                 entity1="Active Repairs"
                 entity1value={450}
                 entity2="Completed"

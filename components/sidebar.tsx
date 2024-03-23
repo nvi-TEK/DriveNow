@@ -93,7 +93,7 @@ function SideBar() {
             </Link>
 
             <div
-              className="flex ml-6 cursor-pointer max-2xl:pb-1 pb- justify-between items-center text-black"
+              className="flex ml-6 cursor-pointer max-2xl:pb-1 pb-2 justify-between items-center text-black"
               onClick={() => setShowDriver(!showDriver)}
             >
               <div className="flex dark:text-white max-2xl:text-[15px] max-2xl:py-0 py-2">
@@ -223,7 +223,7 @@ function SideBar() {
             </Link>
 
             <div className="flex justify-center ">
-              <hr className="h-px my-6 max-2xl:my-1 w-[85%] dark:bg-gray-500 bg-[#E6E6E6] border-0" />
+              <hr className="h-px my-1 w-[85%] dark:bg-gray-500 bg-[#E6E6E6] border-0" />
             </div>
 
             <div>
