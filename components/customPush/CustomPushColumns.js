@@ -2,41 +2,43 @@ export const CUSTOMPUSHCOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
-    sortable : true
+    sortable: true,
+    width: 160,
   },
   {
     Header: "Sender",
     accessor: "sender",
-    sortable:true
+    width: 630,
+    sortable: true,
   },
   {
     Header: "Group",
     accessor: "group",
-    sortable:false
-
+    width: 580,
+    sortable: true,
   },
   {
     Header: "Push Type",
     accessor: "push_type",
-    sortable:false
-
+    width: 360,
+    sortable: true,
   },
   {
     Header: "Message",
     accessor: "message",
-    sortable:false
-
+    width: 2930,
+    sortable: false,
   },
   {
     Header: "Receiver Count",
     accessor: "receiver_count",
-    sortable:false
-
+    width: 460,
+    sortable: false,
   },
   {
     Header: "Date",
     accessor: "date",
-    sortable:false
-
+    width: 10,
+    sortable: false,
   },
 ];

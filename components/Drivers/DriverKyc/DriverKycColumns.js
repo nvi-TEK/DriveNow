@@ -104,30 +104,36 @@ export const DRIVERKYCCOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    width: 294,
     sortable: true,
   },
   {
     Header: "Full Name",
     accessor: "full_name",
-    width: 170,
+    width:1270,
     sortable: true,
   },
   {
     Header: "Mobile Number",
     accessor: "mobile_number",
+    width: 1220,
     sortable: true,
   },
   {
     Header: "Email",
     accessor: "email",
+    sortable: false,
+    width: 20,
   },
   {
     Header: "App Version",
     accessor: "app_version",
+    width: 20,
   },
   {
     Header: "Engine Control",
     accessor: "engine_control",
+    width: 300,
     sortable: true,
 
     Cell: (props) => {
@@ -153,10 +159,12 @@ export const DRIVERKYCCOLUMNS = [
   {
     Header: "Registration Date",
     accessor: "registration_date",
+    width: 150,
   },
   {
     Header: "Documents Uploaded",
     accessor: "documents_uploaded",
+    width: 200,
     Cell: (props) => {
       return (
         <div
@@ -195,6 +203,7 @@ export const DRIVERKYCCOLUMNS = [
   {
     Header: "Date Approved",
     accessor: "date_approved",
+    width: 90,
   },
   {
     Header: "Action",

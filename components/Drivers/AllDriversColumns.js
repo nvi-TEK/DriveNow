@@ -49,7 +49,7 @@ export default function LongMenu() {
             width: "24ch",
             position: "sticky",
             marginRight: "50px",
-            fontFamily: "Avenir"
+            fontFamily: "Avenir",
           },
         }}
       >
@@ -96,21 +96,24 @@ export const ALLDRIVERSCOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    width: 120,
     sortable: true,
   },
   {
     Header: "Full Name",
     accessor: "full_name",
+    width: 800,
     sortable: true,
   },
   {
     Header: "Mobile Number",
     accessor: "mobile_number",
+    width: 700,
     sortable: true,
   },
   {
     Header: "Status",
-    accessor: "status",
+    accessor: "status", width:400,
     sortable: true,
 
     Cell: (props) => {
@@ -123,6 +126,7 @@ export const ALLDRIVERSCOLUMNS = [
             borderRadius: "2px",
             textAlign: "center",
             paddingLeft: "2px",
+            width: "65px",
             paddingRight: "2px",
             paddingTop: "2px",
             paddingBottom: "2px",
@@ -130,7 +134,7 @@ export const ALLDRIVERSCOLUMNS = [
             fontWeight: "500",
           }}
         >
-          {props.value}
+          <p>{props.value}</p>
         </div>
       );
     },
@@ -138,19 +142,22 @@ export const ALLDRIVERSCOLUMNS = [
   {
     Header: "Agreed",
     accessor: "agreed",
+    width: 300,
     sortable: true,
     Cell: (props) => {
       return (
         <div
-          className="text-sm max-2xl:text-xs"
+        id="table40"
+          className="text-base max-2xl:text-sm"
           style={{
             color: props.value === "Yes" ? "#0EA371" : "#DC4A41",
             backgroundColor: props.value === "Yes" ? "#E7F6F1" : "#FBEDEC",
             borderRadius: "2px",
             textAlign: "center",
-            width: "50px",
             paddingTop: "2px",
             paddingBottom: "2px",
+            paddingLeft: "2px",
+            paddingRight: "2px",
             lineHeight: "16px",
             fontWeight: "500",
           }}
@@ -163,10 +170,12 @@ export const ALLDRIVERSCOLUMNS = [
   {
     Header: "App Version",
     accessor: "app_version",
+    width: 400,
   },
   {
     Header: "Engine Control",
     accessor: "engine_control",
+    width: 391,
     sortable: true,
     Cell: (props) => {
       return (
@@ -177,7 +186,7 @@ export const ALLDRIVERSCOLUMNS = [
             backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
             borderRadius: "2px",
             textAlign: "center",
-            width: "50px",
+            width: "40px",
             paddingTop: "2px",
             paddingBottom: "2px",
             lineHeight: "16px",
@@ -192,13 +201,16 @@ export const ALLDRIVERSCOLUMNS = [
   {
     Header: "Location Updated",
     accessor: "location_updated",
+    width: 350,
   },
   {
     Header: "Active Hours",
     accessor: "active_hours",
+    width: 300,
   },
   {
     Header: "Action",
+    width: 100,
     Cell: ({ original }) => (
       <>
         <LongMenu />{" "}

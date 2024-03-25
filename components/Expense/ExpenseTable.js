@@ -139,6 +139,7 @@ export const ExpenseTable = () => {
                       }
                     : { ...column.getHeaderProps() })}
                   className="text-left font-normal leading-[18px] text-[#262626] dark:bg-gray-600 dark:text-white pl-2 h-[48px] bg-[#FAFAFA]"
+                  style={{ minWidth: column.minWidth, width: column.width }}
                 >
                   {column.render("Header")}
                   <span>

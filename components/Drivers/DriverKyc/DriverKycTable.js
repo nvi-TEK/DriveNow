@@ -143,10 +143,11 @@ export const DriverKycTable = () => {
                       }
                     : { ...column.getHeaderProps() })}
                   className="text-left font-normal text-[#262626] dark:text-white dark:bg-gray-600 leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  style={{ minWidth: column.minWidth, width: column.width }}
                 >
                   {column.render("Header")}
                   <span>
-                  {column.sortable
+                    {column.sortable
                       ? {
                           ...(column.isSorted ? (
                             column.isSortedDesc ? (
@@ -197,23 +198,38 @@ export const DriverKycTable = () => {
           <ArrowBackIosOutlinedIcon fontSize="small" />
         </button>
 
-        <button className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded" onClick={() => gotoPage(0)}>
+        <button
+          className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded"
+          onClick={() => gotoPage(0)}
+        >
           {" "}
           1{" "}
         </button>
-        <button className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded" onClick={() => gotoPage(1)}>
+        <button
+          className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded"
+          onClick={() => gotoPage(1)}
+        >
           {" "}
           2{" "}
         </button>
-        <button className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded" onClick={() => gotoPage(2)}>
+        <button
+          className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded"
+          onClick={() => gotoPage(2)}
+        >
           {" "}
           3{" "}
         </button>
-        <button className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded" onClick={() => gotoPage(3)}>
+        <button
+          className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded"
+          onClick={() => gotoPage(3)}
+        >
           {" "}
           4{" "}
         </button>
-        <button className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded" onClick={() => gotoPage(4)}>
+        <button
+          className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded"
+          onClick={() => gotoPage(4)}
+        >
           {" "}
           5{" "}
         </button>

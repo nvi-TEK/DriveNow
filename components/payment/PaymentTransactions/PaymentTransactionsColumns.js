@@ -117,28 +117,28 @@ export const PAYMENTTRANSACTIONSCOLUMNS = [
     accessor: "full_name",
     sortable: true,
 
-    width: 230,
+    width: 480,
   },
   {
     Header: "Amount Paid",
     accessor: "amount_paid",
     sortable: true,
 
-    width: 230,
+    width: 260,
   },
   {
     Header: "Previous Payment",
     accessor: "previous_payment",
     sortable: true,
 
-    width: 230,
+    width: 350,
   },
   {
     Header: "Next Due Payment",
     accessor: "next_due_payment",
     sortable: true,
 
-    width: 140,
+    width: 220,
   },
   {
     Header: "Total Additional Charges",

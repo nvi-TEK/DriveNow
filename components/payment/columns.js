@@ -52,7 +52,7 @@ export default function LongMenu() {
             width: "195px",
             position: "sticky",
             marginRight: "55px",
-            fontFamily: "Avenir"
+            fontFamily: "Avenir",
           },
         }}
       >
@@ -107,35 +107,40 @@ export const COLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    width: 110,
     sortable: true,
   },
   {
     Header: "Full Name",
     accessor: "full_name",
-    width: 250,
+    width: 500,
     sortable: true,
   },
   {
     Header: "Deposit Amount",
     accessor: "deposit_amount",
-    width: 120,
+    width: 160,
   },
   {
     Header: "Vehicle Repayment",
     accessor: "vehicle_repayment",
+    width: 170,
   },
   {
     Header: "Additional Charges",
     accessor: "additional_charges",
+    width: 170,
     sortable: true,
   },
   {
     Header: "Amount Received",
     accessor: "amount_received",
+    width: 170,
   },
   {
     Header: "Engine Control",
     accessor: "engine_control",
+    width: 190,
     sortable: true,
 
     Cell: (props) => {
@@ -162,8 +167,9 @@ export const COLUMNS = [
   {
     Header: "Engine Status",
     accessor: "engine_status",
+
     sortable: true,
-    width: 120,
+    width: 220,
     Cell: (props) => {
       return (
         <div className="flex items-center gap-x-1">
@@ -193,12 +199,12 @@ export const COLUMNS = [
   {
     Header: "Engine Status Updated",
     accessor: "engine_status_updated",
-    width: 150,
+    width: 290,
   },
   {
     Header: "Completed Weeks (Invoices)",
     accessor: "completed_weeks",
-    width: 180,
+    width: 260,
   },
   {
     Header: "Action",

@@ -128,6 +128,7 @@ export const AllDriversTable = () => {
                       }
                     : { ...column.getHeaderProps() })}
                   className="text-left font-normal text-[#262626] dark:text-white dark:bg-gray-600 leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  style={{ minWidth: column.minWidth, width: column.width }}
                 >
                   {column.render("Header")}
                   <span>

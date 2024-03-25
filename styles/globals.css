@@ -105,6 +105,22 @@ p {
   width: clamp(200px, 1vw, 350px);
 }
 
+#table40 {
+  width: clamp(35px, 2.7vw, 50px);
+}
+
+#expense-table-status{
+  font-size: clamp(14px, 1vw, 16px);
+  padding-left: clamp(1px, 0.1vw, 2px);
+  padding-right: clamp(1px, 0.1vw, 2px);}
+
+#t-engine-status {
+  /* width: clamp(50px, 0.1vw, 50px); */
+  font-size: clamp(14px, 1vw, 16px);
+  padding-left: clamp(6px, 0.3vw, 8px);
+  padding-right: clamp(6px, 0.3vw, 8px);
+}
+
 /* .gradient {
   background: linear-gradient(308.18deg, #fdbc87 6.12%, #d0650d 93.32%);
 } */

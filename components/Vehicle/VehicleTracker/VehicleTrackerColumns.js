@@ -91,7 +91,7 @@ export const VEHICLETRACKERCOLUMNS = [
             <Image src={refresh} alt="refresh icon" />
           </div>
           <div
-            className="text-sm max-2xl:text-xs"
+            className="text-base max-2xl:text-sm"
             style={{
               color: props.value === "Active" ? "#0EA371" : "#DC4A41",
               backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
@@ -121,7 +121,7 @@ export const VEHICLETRACKERCOLUMNS = [
     Cell: (props) => {
       return (
         <div
-          className="text-sm max-2xl:text-xs"
+          className="text-base max-2xl:text-sm"
           style={{
             color: props.value === "Online" ? "#0EA371" : "#DC4A41",
             backgroundColor: props.value === "Online" ? "#E7F6F1" : "#FBEDEC",

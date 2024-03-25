@@ -106,24 +106,24 @@ export const DAILYPAYMENTSCOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
-    width: 120,
+    width: 170,
     sortable: true,
   },
   {
     Header: "Full Name",
     accessor: "full_name",
-    width: 390,
+    width: 630,
     sortable: true,
   },
   {
     Header: "Deposit Amount",
     accessor: "deposit_amount",
-    width: 200,
+    width: 160,
   },
   {
     Header: "Total Amount Due",
     accessor: "total_amount_due",
-    width: 250,
+    width: 310,
   },
   {
     Header: "Daily Payment",
@@ -135,7 +135,7 @@ export const DAILYPAYMENTSCOLUMNS = [
   {
     Header: "Vehicle Repayment",
     accessor: "vehicle_repayment",
-    width: 200,
+    width: 160,
   },
   {
     Header: "Engine Control",
@@ -151,7 +151,7 @@ export const DAILYPAYMENTSCOLUMNS = [
             backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
             borderRadius: "2px",
             textAlign: "center",
-            width: "50px",
+            width: "40px",
             paddingTop: "2px",
             paddingBottom: "2px",
             lineHeight: "16px",
@@ -168,7 +168,7 @@ export const DAILYPAYMENTSCOLUMNS = [
     accessor: "engine_status",
     sortable: true,
 
-    width: 220,
+    width: 260,
     Cell: (props) => {
       return (
         <div className="flex items-center gap-x-1">
@@ -176,15 +176,15 @@ export const DAILYPAYMENTSCOLUMNS = [
             <Image src={refresh} alt="refresh icon" />
           </div>
           <div
-            className="text-sm max-2xl:text-xs"
+            id="t-engine-status"
             style={{
               color: props.value === "Active" ? "#0EA371" : "#DC4A41",
               backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
               borderRadius: "2px",
               textAlign: "center",
-              width: "50px",
               paddingTop: "2px",
               paddingBottom: "2px",
+
               lineHeight: "16px",
               fontWeight: "500",
             }}
@@ -198,12 +198,12 @@ export const DAILYPAYMENTSCOLUMNS = [
   {
     Header: "Engine Status Updated",
     accessor: "engine_status_updated",
-    width: 290,
+    width: 370,
   },
   {
     Header: "Completed Weeks (Invoices)",
     accessor: "completed_weeks",
-    width: 300,
+    width: 420,
   },
   {
     Header: "Action",

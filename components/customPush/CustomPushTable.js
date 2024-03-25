@@ -131,6 +131,7 @@ export const CustomPushTable = () => {
                       }
                     : { ...column.getHeaderProps() })}
                   className="text-left font-normal leading-[18px] h-[48px] text-[#262626] dark:text-white pl-2 dark:bg-gray-600 bg-[#FAFAFA] "
+                  style={{ minWidth: column.minWidth, width: column.width }}
                 >
                   {column.render("Header")}
                   <span>

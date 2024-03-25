@@ -77,44 +77,52 @@ export const EXPENSECOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
+    width: 60,
   },
   {
     Header: "Category",
     accessor: "category",
+    width: 380,
     sortable: true,
   },
 
   {
     Header: "Paid to",
-    accessor: "paid_to",    sortable: true,
-
+    accessor: "paid_to",
+    sortable: true,
+    width: 290,
   },
   {
     Header: "Amount",
-    accessor: "amount",    sortable: true,
-
+    accessor: "amount",
+    sortable: true,
+    width: 180,
   },
   {
     Header: "Approved By",
-    accessor: "approved_by",    sortable: true,
-
+    accessor: "approved_by",
+    sortable: true,
+    width: 340,
   },
   {
     Header: "Requested By",
-    accessor: "requested_by",    sortable: true,
-
+    accessor: "requested_by",
+    width: 350,
+    sortable: true,
   },
   {
     Header: "Dated on",
+    width: 180,
     accessor: "dated_on",
   },
   {
     Header: "Status",
-    accessor: "status",    sortable: true,
-
+    accessor: "status",
+    sortable: true,
     Cell: (props) => {
       return (
-        <div className="max-2xl:text-xs text-sm "
+        <div
+          id="expense-table-status"
           style={{
             color:
               props.value === "Paid"
@@ -130,10 +138,8 @@ export const EXPENSECOLUMNS = [
                 : "#FBF6E9",
             borderRadius: "2px",
             textAlign: "center",
-            paddingLeft: "2px",
-            paddingRight: "2px",
-            paddingTop: "1px",
-            paddingBottom: "1px",
+            paddingTop: "2px",
+            paddingBottom: "2px",
             lineHeight: "16px",
             fontWeight: "500",
           }}
@@ -146,6 +152,7 @@ export const EXPENSECOLUMNS = [
   {
     Header: "Description",
     accessor: "description",
+    width: 350,
   },
   {
     Header: "Action",
