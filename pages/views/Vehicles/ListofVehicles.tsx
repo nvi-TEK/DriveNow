@@ -90,7 +90,7 @@ export default function ListOfVehicles() {
 
             {/* Table */}
 
-            <div className="bg-white dark:bg-gray-700 rounded-lg px-[10px] mx-5 mb-12 mt-6 ">
+            <div className="bg-white dark:bg-gray-700 rounded-lg px-[10px] mx-5 mb-[140px] mt-6 ">
               <div className="flex justify-between pt-4 items-center">
                 <h1 className="text-[#262626] dark:text-white font-medium leading-[30px]">
                   List of Vehicles{" "}

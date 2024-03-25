@@ -74,7 +74,7 @@ export default function DriveNowInvoices() {
 
             {/* Table */}
 
-            <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 max-2xl:mx-4 px-[10px] mb-12 mt-6 max-2xl:mt-4 ">
+            <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 max-2xl:mx-4 px-[10px] mb-[142px] mt-6 max-2xl:mt-4 ">
               <div className="flex pt-4 justify-between ">
                 <h1 className="text-[#262626] dark:text-white font-medium leading-[30px] ">
                   Invoice Generated History

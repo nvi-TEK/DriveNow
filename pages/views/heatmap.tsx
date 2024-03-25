@@ -25,14 +25,14 @@ export default function Heatmap() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full  xg:min-h-screen">
-          <section className="w-full mb-0">
-            <div className="absolute w-full mb-0">
+        <main className="bg-white border-0 w-full xg:min-h-screen">
+          <section className="w-full relative bg-white border-0 mb-0">
+            <div className="w-full mb-0">
               <Maps />
             </div>
-            <div className="w-[22%] shadow-[opx_0px_12.8px_0px_#1B28361A] rounded-[4px] overflow-y-scroll no-scrollbar pt-0 pb-4 mt-[138px] h-[770px] max-2xl:h-[610px] inset-y-0 right-0 z-10 absolute bg-white dark:bg-gray-700 mb-0 ">
-              <div className="bg-white dark:bg-gray-700 z-20 pt-4 rounded-t-[4px] w-full absolute pl-4">
-                <h3 className="text-[#595959] dark:text-white text-2xl font-medium leading-7 ">
+            <div className="w-[22%] shadow-[opx_0px_12.8px_0px_#1B28361A] rounded-[4px] overflow-y-scroll no-scrollbar pt-0 pb-4 mt-[82px] h-[770px] max-2xl:h-[610px] inset-y-0 right-0 z-10 absolute bg-white dark:bg-gray-700 mb-0 ">
+              <div className="bg-white dark:bg-gray-700 z-20 pt-4 sticky rounded-t-[4px] w-full  pl-4">
+                <h3 className="text-[#595959] dark:text-white text-2xl  font-medium leading-7 ">
                   Driver Activities
                 </h3>
               </div>

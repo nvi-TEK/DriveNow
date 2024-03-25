@@ -1,4 +1,3 @@
-"use client";
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable require-jsdoc */
 import React from "react";
@@ -15,7 +14,7 @@ import payment from "../../assets/payment.svg";
 import { DashboardTiles1, LastTile, MidTiles } from "@/components/tiles";
 import DashboardStack from "@/components/stackedChart";
 import DashboardTiles from "@/components/tiles";
-import { ContractPop } from "@/components/popover";
+import  { ContractPop } from "@/components/popover";
 import revenue from "../../assets/revenue.svg";
 import Header from "@/components/header";
 import DriverKYCPop from "../../components/popover";

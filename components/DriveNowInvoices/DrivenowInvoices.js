@@ -123,7 +123,7 @@ export const DrivenowInvoicesTable = () => {
       </div>
 
       {/* Table */}
-      <table {...getTableProps()} className="mt-7 bg-[#FFFFFF]">
+      <table {...getTableProps()} className="mt-7">
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>

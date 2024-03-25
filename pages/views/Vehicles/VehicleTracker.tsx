@@ -86,7 +86,7 @@ export default function VehicleTracker() {
               />
             </div>
 
-            <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 px-[10px] mb-12 mt-6 ">
+            <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 px-[10px] mb-[140px] mt-6 ">
               <div className="flex justify-between ">
                 <h4 className="text-[#262626] dark:text-white font-medium text-[22px] leading-[30px] pt-4 ">
                   Vehicle Tracker

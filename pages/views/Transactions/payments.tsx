@@ -75,7 +75,7 @@ export default function Payments() {
 
             {/* Table */}
 
-            <div className="bg-white  dark:bg-gray-700 rounded-lg mx-5 max-2xl:mx-4 px-[10px] pb-4 mb-12 mt-6 max-2xl:mt-4 ">
+            <div className="bg-white  dark:bg-gray-700 rounded-lg mx-5 max-2xl:mx-4 px-[10px] pb-4 mb-[140px] mt-6 max-2xl:mt-4 ">
               <div className="flex justify-between ">
                 <h1 className="text-[#262626] dark:text-white font-medium leading-[30px] pl-[] pt-4 ">
                   Payments

@@ -84,7 +84,7 @@ export default function VehicleIssueLogs() {
               />
             </div>
 
-            <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 mb-12 px-[10px] mt-6 ">
+            <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 mb-[140px] px-[10px] mt-6 ">
               <div className="flex justify-between ">
                 <h1 className="text-[#262626] dark:text-white font-medium text-[22px] leading-[30px] pt-4 ">
                   Vehicle Issue Log

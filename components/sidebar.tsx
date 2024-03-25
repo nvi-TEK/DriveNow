@@ -56,194 +56,187 @@ function SideBar() {
   const VehicleArrow = showVehicle ? uparrow : downarrow;
 
   return (
-    <>
-      <aside
-        className="z-10 rounded-r-lg w-[17.6%] flex-shrink-0"
-        aria-label="Sidebar"
-      >
-        <aside className="bg-white dark:bg-gray-700 border-r dark:border-0 dark: pt-4 pb-7 shadow-[0px_4px_16px_0px_#0000001A] overflow-x-visible rounded-r-lg scroll-smooth no-scrollbar">
-          <ul className="space-y-2 max-2xl:space-y-2 text-white">
-            <Link href={"/views/dashboard"} as="">
-              <List
-                icon={dashboard}
-                activeIcon={activedashboard}
-                // darkActiveIcon={settings}
-                // darkIcon={logo}
-                name={"Dashboard"}
-                url="/views/dashboard"
-              />
-            </Link>
+    <aside
+      className="z-10 bg-white dark:bg-gray-700 rounded-r-lg w-[17.6%] h- flex-shrink-0"
+      aria-label="Sidebar"
+    >
+      <aside className="bg-white h-full dark:bg-gray-700 border-r dark:border-0 dark: pt-4 pb-9 shadow-[0px_4px_16px_0px_#0000001A] overflow-x-visible rounded-r-lg scroll-smooth no-scrollbar">
+        <ul className="space-y-2 max-2xl:space-y-2 text-white">
+          <Link href={"/views/dashboard"} as="">
+            <List
+              icon={dashboard}
+              activeIcon={activedashboard}
+              // darkActiveIcon={settings}
+              // darkIcon={logo}
+              name={"Dashboard"}
+              url="/views/dashboard"
+            />
+          </Link>
 
-            <Link href={"/views/heatmap"} as="">
-              <List
-                icon={heatmap}
-                activeIcon={activeheatmap}
-                name={"Heat Map"}
-                url="/views/heatmap"
-              />
-            </Link>
+          <Link href={"/views/heatmap"} as="">
+            <List
+              icon={heatmap}
+              activeIcon={activeheatmap}
+              name={"Heat Map"}
+              url="/views/heatmap"
+            />
+          </Link>
 
-            <Link href={"/views/customPush"} as="">
-              <List
-                icon={push}
-                activeIcon={activepush}
-                name={"Custom Push/SMS"}
-                url="/views/customPush"
-              />
-            </Link>
+          <Link href={"/views/customPush"} as="">
+            <List
+              icon={push}
+              activeIcon={activepush}
+              name={"Custom Push/SMS"}
+              url="/views/customPush"
+            />
+          </Link>
 
-            <div
-              className="flex ml-6 cursor-pointer max-2xl:pb-1 pb-2 justify-between items-center text-black"
-              onClick={() => setShowDriver(!showDriver)}
-            >
-              <div className="flex dark:text-white max-2xl:text-[15px] max-2xl:py-0 py-2">
-                <Image
-                  src={driverside}
-                  className="mr-2 max-2xl:w-5"
-                  alt="tool icon"
-                />
-                <p id="sidebar-text">Drivers</p>
-              </div>
-              <div>
-                <Image
-                  className="mr-4 h-5 max-2xl:w-4 w-5"
-                  src={DriverArrow}
-                  alt="arrow"
-                />
-              </div>
-            </div>
-            <div className="pl-6 max-2xl:pl-2">
-              {showDriver ? (
-                <>
-                  <Link href={"/views/Drivers/AllDrivers"} as="">
-                    <List
-                      name={"All Drivers"}
-                      url="/views/Drivers/AllDrivers"
-                    />
-                  </Link>
-                  <Link href={"/views/Drivers/DriverMapView"} as="">
-                    <List
-                      name={"Driver Map View"}
-                      url="/views/Drivers/DriverMapView"
-                    />
-                  </Link>
-                  <Link href={"/views/Drivers/DriverKyc"} as="">
-                    <List name={"Driver KYC"} url="/views/Drivers/DriverKyc" />
-                  </Link>
-                </>
-              ) : null}
-            </div>
-
-            <div
-              className="flex ml-6 cursor-pointer max-2xl:pb-2 pb-2 justify-between items-center text-black"
-              onClick={() => setShowTransaction(!showTransaction)}
-            >
-              <div className="flex dark:text-white max-2xl:text-[15px]">
-                <Image
-                  src={transactionside}
-                  className="mr-2 max-2xl:w-5"
-                  alt="tool icon"
-                />
-                <p id="sidebar-text">Transactions</p>
-              </div>
+          <div
+            className="flex ml-6 cursor-pointer max-2xl:pb-1 pb-2 justify-between items-center text-black"
+            onClick={() => setShowDriver(!showDriver)}
+          >
+            <div className="flex dark:text-white max-2xl:text-[15px] max-2xl:py-0 py-2">
               <Image
-                className="mr-4 max-2xl:w-4 h-5 w-5"
-                src={TransactionArrow}
-                alt="arrow"
+                src={driverside}
+                className="mr-2 max-2xl:w-5"
+                alt="tool icon"
               />
+              <p id="sidebar-text">Drivers</p>
             </div>
-            <div className="pl-6 max-2xl:pl-2">
-              {showTransaction ? (
-                <>
-                  <Link href={"/views/Transactions/payments"} as="">
-                    <List
-                      name={"Payments"}
-                      url="/views/Transactions/payments"
-                    />
-                  </Link>
-                  <Link href={"/views/Transactions/DrivenowInvoices"} as="">
-                    <List
-                      name={"DriveNow Invoices"}
-                      url="/views/Transactions/DrivenowInvoices"
-                    />
-                  </Link>
-                </>
-              ) : null}
-            </div>
-
-            <div
-              className="flex ml-6 cursor-pointer justify-between items-center text-black"
-              onClick={() => setShowVehicle(!showVehicle)}
-            >
-              <div className="flex max-2xl:text-[15px] dark:text-white max-2xl:py-0 py-2">
-                <Image
-                  src={vehicle}
-                  className="mr-2 max-2xl:w-5"
-                  alt="tool icon"
-                />
-                <p id="sidebar-text">Vehicle</p>
-              </div>
+            <div>
               <Image
                 className="mr-4 h-5 max-2xl:w-4 w-5"
-                src={VehicleArrow}
+                src={DriverArrow}
                 alt="arrow"
               />
             </div>
-            <div className="pl-6 max-2xl:pl-2">
-              {showVehicle ? (
-                <>
-                  <Link href={"/views/Vehicles/ListofVehicles"} as="">
-                    <List
-                      name={"List of Vehicles"}
-                      url="/views/Vehicles/ListofVehicles"
-                    />
-                  </Link>
-                  <Link href={"/views/Vehicles/VehicleIssuesLogs"} as="">
-                    <List
-                      name={"Vehicle Issues Logs"}
-                      url="/views/Vehicles/VehicleIssuesLogs"
-                    />
-                  </Link>
-                  <Link href={"/views/Vehicles/VehicleTracker"} as="">
-                    <List
-                      name={"Vehicle Tracker"}
-                      url="/views/Vehicles/VehicleTracker"
-                    />
-                  </Link>
-                </>
-              ) : null}
-            </div>
-            <Link href={"/views/expense"} as="">
-              <List
-                icon={expense}
-                activeIcon={activeexpense}
-                name={"Expense"}
-                url="/views/expense"
+          </div>
+          <div className="pl-6 max-2xl:pl-2">
+            {showDriver ? (
+              <>
+                <Link href={"/views/Drivers/AllDrivers"} as="">
+                  <List name={"All Drivers"} url="/views/Drivers/AllDrivers" />
+                </Link>
+                <Link href={"/views/Drivers/DriverMapView"} as="">
+                  <List
+                    name={"Driver Map View"}
+                    url="/views/Drivers/DriverMapView"
+                  />
+                </Link>
+                <Link href={"/views/Drivers/DriverKyc"} as="">
+                  <List name={"Driver KYC"} url="/views/Drivers/DriverKyc" />
+                </Link>
+              </>
+            ) : null}
+          </div>
+
+          <div
+            className="flex ml-6 cursor-pointer max-2xl:pb-2 pb-2 justify-between items-center text-black"
+            onClick={() => setShowTransaction(!showTransaction)}
+          >
+            <div className="flex dark:text-white max-2xl:text-[15px]">
+              <Image
+                src={transactionside}
+                className="mr-2 max-2xl:w-5"
+                alt="tool icon"
               />
+              <p id="sidebar-text">Transactions</p>
+            </div>
+            <Image
+              className="mr-4 max-2xl:w-4 h-5 w-5"
+              src={TransactionArrow}
+              alt="arrow"
+            />
+          </div>
+          <div className="pl-6 max-2xl:pl-2">
+            {showTransaction ? (
+              <>
+                <Link href={"/views/Transactions/payments"} as="">
+                  <List name={"Payments"} url="/views/Transactions/payments" />
+                </Link>
+                <Link href={"/views/Transactions/DrivenowInvoices"} as="">
+                  <List
+                    name={"DriveNow Invoices"}
+                    url="/views/Transactions/DrivenowInvoices"
+                  />
+                </Link>
+              </>
+            ) : null}
+          </div>
+
+          <div
+            className="flex ml-6 cursor-pointer justify-between items-center text-black"
+            onClick={() => setShowVehicle(!showVehicle)}
+          >
+            <div className="flex max-2xl:text-[15px] dark:text-white max-2xl:py-0 py-2">
+              <Image
+                src={vehicle}
+                className="mr-2 max-2xl:w-5"
+                alt="tool icon"
+              />
+              <p id="sidebar-text">Vehicle</p>
+            </div>
+            <Image
+              className="mr-4 h-5 max-2xl:w-4 w-5"
+              src={VehicleArrow}
+              alt="arrow"
+            />
+          </div>
+          <div className="pl-6 max-2xl:pl-2">
+            {showVehicle ? (
+              <>
+                <Link href={"/views/Vehicles/ListofVehicles"} as="">
+                  <List
+                    name={"List of Vehicles"}
+                    url="/views/Vehicles/ListofVehicles"
+                  />
+                </Link>
+                <Link href={"/views/Vehicles/VehicleIssuesLogs"} as="">
+                  <List
+                    name={"Vehicle Issues Logs"}
+                    url="/views/Vehicles/VehicleIssuesLogs"
+                  />
+                </Link>
+                <Link href={"/views/Vehicles/VehicleTracker"} as="">
+                  <List
+                    name={"Vehicle Tracker"}
+                    url="/views/Vehicles/VehicleTracker"
+                  />
+                </Link>
+              </>
+            ) : null}
+          </div>
+          <Link href={"/views/expense"} as="">
+            <List
+              icon={expense}
+              activeIcon={activeexpense}
+              name={"Expense"}
+              url="/views/expense"
+            />
+          </Link>
+
+          <div className="flex justify-center">
+            <hr className="h-px my-1 w-[85%] dark:bg-gray-500 bg-[#E6E6E6] border-0" />
+          </div>
+
+          <div>
+            <Link href={""}>
+              <List icon={settings} name={"Settings"} url="" />
             </Link>
 
-            <div className="flex justify-center ">
-              <hr className="h-px my-1 w-[85%] dark:bg-gray-500 bg-[#E6E6E6] border-0" />
-            </div>
-
-            <div>
-              <Link href={""}>
-                <List icon={settings} name={"Settings"} url="" />
-              </Link>
-
-              <Link href={""} as="">
-                <List icon={help} name={"Help"} url="" />
-              </Link>
-            </div>
-
-            <div className="pt-[394px] flex justify-between items-center pr-5 ml-auto ">
+            <Link href={""} as="">
+              <List icon={help} name={"Help"} url="" />
+            </Link>
+          </div>
+          {/* 
+            <div className=" flex justify-between items-center pr-5 ml-auto ">
               <p className="text-[#262626] max-2xl:text-sm pl-4 dark:text-white pr-1">
                 Theme:
               </p>
               <ThemeToggle />
-            </div>
+            </div> */}
 
-            {/* <div className="flex pb-7 h-[52px] pt-[394px] max-2xl:pt-[290px] pl-6">
+          {/* <div className="flex pb-7 h-[52px] pt-[394px] max-2xl:pt-[290px] pl-6">
               <div>
                 <Image
                   src={darkmode}
@@ -276,10 +269,9 @@ function SideBar() {
                 </label>
               </div>
             </div> */}
-          </ul>
-        </aside>
+        </ul>
       </aside>
-    </>
+    </aside>
   );
 }
 

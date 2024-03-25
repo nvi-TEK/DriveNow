@@ -29,7 +29,7 @@ function List(props: sideBarProp) {
           : ""
       }
     >
-      <div className="flex items-center py-3 max-2xl:py-2 mx-2 pl-4 rounded-lg text-base font-medium dark:hover:bg-gray-600  hover:bg-[#F1F8FF]">
+      <div className="flex items-center py-3 max-2xl:py-2 mx-2 pl-4 rounded-lg text-base font-medium dark:hover:bg-gray-600 hover:bg-[#F1F8FF]">
         <Image
           src={
             router.pathname == props.url && resolvedTheme == "light"
