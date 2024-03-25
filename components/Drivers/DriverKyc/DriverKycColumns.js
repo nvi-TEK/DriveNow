@@ -52,47 +52,48 @@ export default function LongMenu() {
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
-            width: "27ch",
+            width: "225px",
             position: "sticky",
             marginRight: "50px",
+            fontFamily: "Avenir",
             paddingTop: "",
           },
         }}
       >
         <MenuItem
           onClick={handleClose}
-          className="flex items-center text-[#595959] py-2.5 leading-[9.67px] font-normal text-sm "
+          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm"
         >
           <Image src={user} className="mr-2 w-5" alt="people icon" />
           Driver Profile
         </MenuItem>
         <MenuItem
-          className="flex items-center text-[#595959] py-2.5 leading-[9.67px] font-normal text-sm  "
+          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm "
           onClick={handleClose}
         >
           <Image src={pencil} className="mr-2 w-5 " alt="pencil" />
           Update Agreement
         </MenuItem>
         <MenuItem
-          className="flex items-center text-[#595959] py-2.5 leading-[9.67px] font-normal text-sm  "
+          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm "
           onClick={handleClose}
         >
-          <Image src={power} className="mr-2 w-5 " alt="power icon" />
+          <Image src={power} className="mr-2 w-5" alt="power icon" />
           Turn Off Engine Control
         </MenuItem>
         <MenuItem
-          className="flex items-center text-[#595959] py-2.5 leading-[9.67px] font-normal text-sm  "
+          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm "
           onClick={handleClose}
         >
-          <Image src={recycle} className="mr-2 w-5 " alt="recycle icon" />
+          <Image src={recycle} className="mr-2 w-5" alt="recycle icon" />
           Restore Engine Control
         </MenuItem>
         <MenuItem
-          className="flex items-center py-2.5 leading-[9.67px] font-normal text-sm  "
+          className="flex items-center py-1.5 leading-[9.67px] font-normal text-sm "
           onClick={handleClose}
         >
-          <Image src={bin} className="mr-2 w-5 " alt="bin icon" />
-          <p className="text-[#DC4A41]">Terminate</p>
+          <Image src={bin} className="mr-2 w-5" alt="bin icon" />
+          <p className="text-[#DC4A41] leading-[9.67px] text-sm">Terminate</p>
         </MenuItem>
       </Menu>
     </>
@@ -115,7 +116,6 @@ export const DRIVERKYCCOLUMNS = [
     Header: "Mobile Number",
     accessor: "mobile_number",
     sortable: true,
-
   },
   {
     Header: "Email",

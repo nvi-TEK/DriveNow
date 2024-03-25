@@ -14,7 +14,7 @@ import recycle from "../../assets/recycle.svg";
 import modalclose from "../../assets/modalclose.png";
 import vehicle from "../../assets/menuvehicle.svg";
 
-const ITEM_HEIGHT = 86;
+const ITEM_HEIGHT = 96;
 
 export default function LongMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -81,15 +81,16 @@ export default function LongMenu() {
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4,
-            width: "210px",
+            width: "200px",
             position: "sticky",
-            marginRight: "90px",
+            marginRight: "76px",
+            fontFamily: "Avenir",
           },
         }}
       >
         <MenuItem
           onClick={handleClose}
-          className="flex font-normal text-[#595959] text-sm leading-[18px] py-2.5"
+          className="flex font-normal text-[#595959] text-sm leading-[18px] py-2"
         >
           <Image src={pencil} className="mr-2 w-6" alt="checkmark" />
           Edit Vehicle{" "}
@@ -99,7 +100,7 @@ export default function LongMenu() {
           onClick={openModal}
           component={Link}
           href={""}
-          className="flex font-normal text-[#595959] text-sm leading-[18px] py-2.5"
+          className="flex font-normal text-[#595959] text-sm leading-[18px] py-2"
         >
           <Image src={file} className="mr-2 w-6 " alt="x" />
           Update Sim
@@ -116,18 +117,18 @@ export default function LongMenu() {
         </Modal>
 
         <MenuItem
-          className="flex font-normal text-[#595959] text-sm leading-[18px] py-2.5"
+          className="flex font-normal text-[#595959] text-sm leading-[18px] py-2"
           onClick={handleClose}
         >
           <Image src={recycle} className="mr-2 w-6 " alt="x" />
           Update Status{" "}
         </MenuItem>
         <MenuItem
-          className="flex font-normal text-[#595959] text-sm leading-[18px] py-2.5"
+          className="flex font-normal items-center text-[#595959] text-sm leading-[18px] py-2"
           onClick={handleClose}
         >
           <Image src={vehicle} className="mr-2 w-6 " alt="off icon" />
-          <p className="text-[#DC4A41]">Delete</p>{" "}
+          <p className="text-[#DC4A41] text-sm">Delete</p>{" "}
         </MenuItem>
       </Menu>
     </>

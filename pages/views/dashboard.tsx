@@ -15,11 +15,14 @@ import payment from "../../assets/payment.svg";
 import { DashboardTiles1, LastTile, MidTiles } from "@/components/tiles";
 import DashboardStack from "@/components/stackedChart";
 import DashboardTiles from "@/components/tiles";
-import MouseOverPopover, { ContractPop } from "@/components/popover";
+import { ContractPop } from "@/components/popover";
 import revenue from "../../assets/revenue.svg";
 import Header from "@/components/header";
 import DriverKYCPop from "../../components/popover";
 import ChartDropdown from "@/components/chartDropdown";
+import { propagateServerField } from "next/dist/server/lib/render-server";
+
+
 
 export default function Dashboard() {
   return (
@@ -109,7 +112,7 @@ export default function Dashboard() {
                       Total Revenue
                     </h5>
                     <h2 className="dark:text-white font-medium pt-2 max-2xl:pt-1 leading-7 text-[#262626]">
-                      ₵2,412,570.00
+                       ₵2,412,570.00
                     </h2>
                   </div>
                   <div>

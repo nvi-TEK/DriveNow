@@ -101,6 +101,10 @@ p {
   font-size: clamp(14px, 1vw, 16px);
 }
 
+#doughnut {
+  width: clamp(200px, 1vw, 350px);
+}
+
 /* .gradient {
   background: linear-gradient(308.18deg, #fdbc87 6.12%, #d0650d 93.32%);
 } */

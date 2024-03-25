@@ -49,10 +49,11 @@ export default function LongMenu() {
             width: "25ch",
             position: "sticky",
             marginRight: "30px",
+            fontFamily: "Avenir",
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="flex ">
+        <MenuItem onClick={handleClose} className="flex items-center text-sm">
           <Image src={viewmap} className="mr-2 w-6" alt="map" />
           View on map
         </MenuItem>

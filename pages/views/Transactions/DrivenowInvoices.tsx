@@ -7,16 +7,19 @@ import KYC from "@/components/driverKYC";
 import Head from "next/head";
 import Layout from "../../../components/layout";
 import DrivenowInvoicesTiles, {
-  DrivenowInvoicesTiles1, LastTile,
+  DrivenowInvoicesTiles1,
+  LastTile,
 } from "../../../components/DriveNowInvoices/DrivenowTiles";
 import { DrivenowInvoicesTable } from "../../../components/DriveNowInvoices/DrivenowInvoices";
 import Link from "next/link";
 import Image from "next/image";
+import { TableRange } from "@/components/dateRange";
 import driver from "../../../assets/driver.svg";
 import revenue from "../../../assets/revenue.svg";
 import vehicle from "../../../assets/vehicle_icon.png";
 import payment from "../../../assets/payment.svg";
 import Header from "@/components/header";
+import { DriveNowInvoicesDropdown } from "@/components/paymentDropdown";
 
 export default function DriveNowInvoices() {
   return (
@@ -72,7 +75,17 @@ export default function DriveNowInvoices() {
             {/* Table */}
 
             <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 max-2xl:mx-4 px-[10px] mb-12 mt-6 max-2xl:mt-4 ">
-              <DrivenowInvoicesTable />
+              <div className="flex pt-4 justify-between ">
+                <h1 className="text-[#262626] dark:text-white font-medium leading-[30px] ">
+                  Invoice Generated History
+                </h1>
+                <div className="h-[10px] mt-[3px]">
+                  <TableRange />
+                </div>
+              </div>
+              <div className="mt-9 relative">
+                <DriveNowInvoicesDropdown />
+              </div>
             </div>
           </section>
         </main>

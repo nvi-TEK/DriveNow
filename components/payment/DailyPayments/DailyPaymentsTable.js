@@ -102,8 +102,8 @@ export const DailyPaymentsTable = () => {
   return (
     <>
       {/* number of entries dropdown and Search bar */}
-      <div className="flex items-center justify-end mr-2">
-        <p className="font-medium dark:text-white leading-[30px] mr-[33px] text-[#262626] ">
+      <div className="flex items-center ml-[360px] absolute top-0 right-0 justify-end mr-9">
+        <p className="font-medium dark:text-white  mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
 

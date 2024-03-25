@@ -48,53 +48,54 @@ export default function LongMenu() {
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
-            width: "220px",
+            width: "195px",
             position: "sticky",
             marginRight: "55px",
+            fontFamily: "Avenir",
           },
         }}
       >
         <MenuItem
           onClick={handleClose}
-          className="flex text-[#595959] py-2 font-normal leading-3 text-sm"
+          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
         >
           <Image src={user} className="mr-2 w-5" alt="checkmark" />
           Driver Profile
         </MenuItem>
         <MenuItem
-          className="flex text-[#595959] py-2 font-normal leading-3 text-sm"
+          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
           <Image src={pencil} className="mr-2 w-5 " alt="x" />
           Re-assign Vehicle
         </MenuItem>
         <MenuItem
-          className="flex text-[#595959] py-2 font-normal leading-3 text-sm"
+          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
           <Image src={fileicon} className="mr-2 w-5 " alt="x" />
           Invoice History
         </MenuItem>
         <MenuItem
-          className="flex text-[#595959] py-2 font-normal leading-3 text-sm"
+          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
           <Image src={power} className="mr-2 w-5 " alt="off icon" />
           Turn Off Engine Control
         </MenuItem>
         <MenuItem
-          className="flex text-[#595959] py-2 font-normal leading-3 text-sm"
+          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
           <Image src={recycle} className="mr-2 w-5 " alt="x" />
           Restore Engine Control
         </MenuItem>
         <MenuItem
-          className="text-[#DC4A41] flex py-2 font-normal leading-3 text-sm"
+          className="text-[#DC4A41] flex py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
           <Image src={vehicle} className="mr-2 w-5 " alt="x" />
-          <p className="text-[#DC4A41] text-sm font-normal">Block Vehicle</p>
+          <p className="text-[#DC4A41] text-xs font-normal">Block Vehicle</p>
         </MenuItem>
       </Menu>
     </>

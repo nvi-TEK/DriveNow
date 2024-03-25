@@ -46,10 +46,11 @@ export default function LongMenu() {
             width: "28ch",
             position: "sticky",
             marginRight: "30px",
+            fontFamily: "Avenir",
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="flex">
+        <MenuItem onClick={handleClose} className="flex items-center text-sm">
           <Image src={fileicon} className="mr-2 w-6" alt="checkmark" />
           Raise an Expense
         </MenuItem>

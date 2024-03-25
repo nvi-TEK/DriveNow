@@ -109,17 +109,9 @@ export const DrivenowInvoicesTable = () => {
   const { globalFilter } = state;
 
   return (
-    <>
-      <div className="flex items-center justify-between ">
-        <h1 className="text-[#262626] dark:text-white font-medium leading-[30px]  pt-4 ">
-          Invoice Generated History
-        </h1>
-        <div className=" h-[10px]">
-          <TableRange />
-        </div>
-      </div>
+    <div className="">
       {/* number of entries dropdown and Search bar */}
-      <div className="flex items-center mt-6 justify-end mr-3">
+      <div className="flex items-center ml-[360px] absolute top-[0px] right-0 justify-end mr-9">
         <p className="font-medium dark:text-white leading-[30px] mr-[33px] text-[#262626] ">
           Show {dropdown} entries
         </p>
@@ -131,7 +123,7 @@ export const DrivenowInvoicesTable = () => {
       </div>
 
       {/* Table */}
-      <table {...getTableProps()} className="mt-7 w-full">
+      <table {...getTableProps()} className="mt-7 bg-[#FFFFFF]">
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -143,6 +135,7 @@ export const DrivenowInvoicesTable = () => {
                       }
                     : { ...column.getHeaderProps() })}
                   className="text-left font-normal text-[#262626] dark:text-white dark:bg-gray-800 leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  style={{ minWidth: column.minWidth, width: column.width }}
                 >
                   {column.render("Header")}
                   <span>
@@ -245,6 +238,6 @@ export const DrivenowInvoicesTable = () => {
           {dropdown2}
         </p>
       </div>
-    </>
+    </div>
   );
 };

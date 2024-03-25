@@ -10,7 +10,7 @@ import power from "../../assets/power.svg";
 import recycle from "../../assets/recycle.svg";
 import bin from "../../assets/bin.svg";
 
-const ITEM_HEIGHT = 56;
+const ITEM_HEIGHT = 86;
 
 export default function LongMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -49,40 +49,41 @@ export default function LongMenu() {
             width: "24ch",
             position: "sticky",
             marginRight: "50px",
+            fontFamily: "Avenir"
           },
         }}
       >
         <MenuItem
           onClick={handleClose}
-          className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-sm   "
+          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm   "
         >
           <Image src={user} className="mr-2 w-5" alt="people icon" />
           Driver Profile
         </MenuItem>
         <MenuItem
-          className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-sm   "
+          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm   "
           onClick={handleClose}
         >
           <Image src={pencil} className="mr-2 w-5 " alt="pencil" />
           Update Agreement
         </MenuItem>
         <MenuItem
-          className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-sm   "
+          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm   "
           onClick={handleClose}
         >
-          <Image src={power} className="mr-2 w-5 " alt="power icon" />
+          <Image src={power} className="mr-2 w-7 " alt="power icon" />
           Turn Off Engine Control
         </MenuItem>
         <MenuItem
-          className="flex items-center text-[#595959] py-2 leading-[9.67px] font-normal text-sm    "
+          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm    "
           onClick={handleClose}
         >
           <Image src={recycle} className="mr-2 w-5 " alt="recycle icon" />
           Restore Engine Control
         </MenuItem>
-        <MenuItem className="flex py-2 items-center" onClick={handleClose}>
+        <MenuItem className="flex py-1.5 items-center" onClick={handleClose}>
           <Image src={bin} className="mr-2 w-5 " alt="bin icon" />
-          <p className="text-[#DC4A41]  leading-[9.67px] font-normal text-sm ">
+          <p className="text-[#DC4A41] leading-[9.67px] font-normal text-sm ">
             Terminate
           </p>
         </MenuItem>

@@ -109,43 +109,43 @@ export default function Expense() {
               </div>
 
               <div className="flex px-4 mt-6 max-2xl:mt-5 gap-3 max-2xl:gap-2 flex-wrap">
-                <div className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center leading-4 text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div id="doughnut-legend" className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center leading-4 text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#0076EC] rounded-[50%]"></div>
                   Car Insurance
                 </div>
-                <div className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center leading-4 text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div id="doughnut-legend" className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center leading-4 text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#492FB2] rounded-[50%]"></div>
                   Deposit Refund
                 </div>
-                <div className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div id="doughnut-legend" className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#CD39E5] rounded-[50%]"></div>
                   Petty Cash
                 </div>
-                <div className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div id="doughnut-legend" className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#19C098] rounded-[50%]"></div>
                   Utilities
                 </div>
-                <div className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div id="doughnut-legend" className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#FFA723] rounded-[50%]"></div>
                   Stationaries
                 </div>
-                <div className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div id="doughnut-legend" className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#0E7CFF] rounded-[50%]"></div>
                   Employee Transportation
                 </div>
-                <div className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div id="doughnut-legend" className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#FF2C91] rounded-[50%]"></div>
                   System
                 </div>
-                <div className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div id="doughnut-legend" className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#83E521] rounded-[50%]"></div>
                   Staff Costs
                 </div>
-                <div className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div id="doughnut-legend" className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#3FBBD7] rounded-[50%]"></div>
                   Driver Support
                 </div>
-                <div className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
+                <div id="doughnut-legend" className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3">
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#FB3232] rounded-[50%]"></div>
                   General Vehicle Maintenance
                 </div>

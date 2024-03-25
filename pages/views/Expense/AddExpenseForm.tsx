@@ -54,7 +54,8 @@ export default function AddExpense() {
       backgroundColor: "white",
     },
     overlay: {
-      backgroundColor: "#0000008C",
+      backgroundColor: "#0000008F",
+      zIndex: 1000,
     },
   };
   return (
