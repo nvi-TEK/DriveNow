@@ -1,14 +1,16 @@
 /* eslint-disable require-jsdoc */
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
+import Link from "next/link";
+import Modal from "react-modal";
 import tableaction from "../../assets/tableaction.png";
-import approve from "../../assets/approvecheck.png";
-import details from "../../assets/viewdetails.png";
-import decline from "../../assets/x.png";
+import approve from "../../assets/check.svg";
+import details from "../../assets/viewdetails.svg";
+import decline from "../../assets/declinex.svg";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 const ITEM_HEIGHT = 48;
@@ -23,6 +25,36 @@ export default function LongMenu() {
     setAnchorEl(null);
   };
 
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "60%",
+      right: "20%",
+      bottom: "auto",
+      marginRight: "-80%",
+      transform: "translate(-80%, -55%)",
+      padding: "0",
+      width: "308px",
+      height: "183px",
+      border: "0",
+      borderRadius: "8px 8px 8px 8px",
+      backgroundColor: "",
+    },
+    overlay: {
+      backgroundColor: "#0000008F",
+      zIndex: 1000,
+    },
+  };
   return (
     <>
       <IconButton
@@ -53,10 +85,27 @@ export default function LongMenu() {
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="py-2 flex">
-          <Image src={details} className="mr-2" alt="checkmark" />
-          View Details
-        </MenuItem>
+        <Link href={""}>
+          <MenuItem
+            onClick={openModal}
+            component={Link}
+            href={""}
+            className="py-2 flex"
+          >
+            <Image src={details} className="mr-2" alt="checkmark" />
+            View Details
+          </MenuItem>
+          <Modal
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            ariaHideApp={false}
+            shouldCloseOnOverlayClick={false}
+            overlayClassName=""
+            style={customStyles}
+          >
+            <div>abc</div>
+          </Modal>
+        </Link>
         <MenuItem onClick={handleClose} className="flex py-2">
           <Image src={approve} className="mr-2" alt="checkmark" />
           Approve

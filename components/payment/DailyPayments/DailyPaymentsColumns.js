@@ -106,7 +106,7 @@ export const DAILYPAYMENTSCOLUMNS = [
   {
     Header: "ID",
     accessor: "id",
-    width: 170,
+    width: 259,
     sortable: true,
   },
   {
@@ -142,7 +142,7 @@ export const DAILYPAYMENTSCOLUMNS = [
     accessor: "engine_control",
     sortable: true,
 
-    width: 300,
+    width: 390,
     Cell: (props) => {
       return (
         <div
@@ -168,7 +168,7 @@ export const DAILYPAYMENTSCOLUMNS = [
     accessor: "engine_status",
     sortable: true,
 
-    width: 260,
+    width: 290,
     Cell: (props) => {
       return (
         <div className="flex items-center gap-x-1">
@@ -198,12 +198,12 @@ export const DAILYPAYMENTSCOLUMNS = [
   {
     Header: "Engine Status Updated",
     accessor: "engine_status_updated",
-    width: 370,
+    width: 570,
   },
   {
     Header: "Completed Weeks (Invoices)",
     accessor: "completed_weeks",
-    width: 420,
+    width: 620,
   },
   {
     Header: "Action",

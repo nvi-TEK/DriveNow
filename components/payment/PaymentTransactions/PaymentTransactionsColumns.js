@@ -131,7 +131,7 @@ export const PAYMENTTRANSACTIONSCOLUMNS = [
     accessor: "previous_payment",
     sortable: true,
 
-    width: 350,
+    width: 380,
   },
   {
     Header: "Next Due Payment",

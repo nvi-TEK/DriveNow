@@ -107,13 +107,13 @@ export const COLUMNS = [
   {
     Header: "ID",
     accessor: "id",
-    width: 110,
+    width: 127,
     sortable: true,
   },
   {
     Header: "Full Name",
     accessor: "full_name",
-    width: 500,
+    width: 530,
     sortable: true,
   },
   {
@@ -124,7 +124,7 @@ export const COLUMNS = [
   {
     Header: "Vehicle Repayment",
     accessor: "vehicle_repayment",
-    width: 170,
+    width: 140,
   },
   {
     Header: "Additional Charges",
@@ -153,8 +153,8 @@ export const COLUMNS = [
             borderRadius: "2px",
             textAlign: "center",
             width: "50px",
-            paddingTop: "2px",
-            paddingBottom: "2px",
+            paddingTop: "px",
+
             lineHeight: "16px",
             fontWeight: "500",
           }}
@@ -185,7 +185,7 @@ export const COLUMNS = [
               textAlign: "center",
               width: "50px",
               paddingTop: "2px",
-              paddingBottom: "2px",
+              paddingBottom: "1px",
               lineHeight: "16px",
               fontWeight: "500",
             }}
@@ -204,7 +204,7 @@ export const COLUMNS = [
   {
     Header: "Completed Weeks (Invoices)",
     accessor: "completed_weeks",
-    width: 260,
+    width: 270,
   },
   {
     Header: "Action",

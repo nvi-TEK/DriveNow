@@ -80,6 +80,8 @@ th {
   font-size: clamp(16px, 0.9vw, 18px);
 }
 
+
+
 td {
   font-size: clamp(14px, 1vw, 16px);
 }
