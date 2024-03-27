@@ -31,7 +31,7 @@ function DriverActivities(props: DriverActivitiesProps) {
           style={{
             backgroundColor: props.status === "Online" ? "#E7F6F1" : "#FBEDEC",
           }}
-          className="px-3 rounded-sm text-right py-[2px] place-self-end mt-2"
+          className="px-3 rounded-sm text-right pt-[3px] place-self-end mt-2"
         >
           <h5
             style={{

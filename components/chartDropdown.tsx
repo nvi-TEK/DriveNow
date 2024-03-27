@@ -142,7 +142,7 @@ function MonthDropdown() {
           variant="borderless"
           style={{ width: 68 }}
           onChange={handleChange}
-          options={[{ value: "JAN", label: "JAN" }]}
+          options={[{ value: "JAN", label: "JAN" },{ value: "FEB", label: "FEB" },{ value: "MAR", label: "MAR" },{ value: "APR", label: "APR" },]}
         />
       </Space>
     </ConfigProvider>

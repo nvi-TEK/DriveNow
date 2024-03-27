@@ -176,7 +176,7 @@ function DrivenowInvoicesTiles1(props: DrivenowInvoicesProp2) {
           </p>
           <div className="flex items-center pt-2">
             <h2 className="text-[#262626] dark:text-white leading-7 font-medium">
-              ₵{props.entity1value.toLocaleString()}
+              ₵{props.entity1value.toLocaleString(undefined, {maximumFractionDigits: 2, minimumFractionDigits: 2})}
             </h2>
           </div>
         </div>

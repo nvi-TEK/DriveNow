@@ -52,6 +52,7 @@ const DashboardStack = () => {
       x: {
         grid: {
           drawOnChartArea: false,
+          drawTicks: false,
         },
         ticks: {
           color: "#BFBFBF",
@@ -60,7 +61,12 @@ const DashboardStack = () => {
         stacked: true,
       },
       y: {
-        grid: {},
+        border: {
+          display: false,
+        },
+        grid: {
+          drawTicks: false,
+        },
         ticks: {
           stepSize: 90,
           color: "#BFBFBF",

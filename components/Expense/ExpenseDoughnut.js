@@ -21,8 +21,8 @@ export default function DoughnutChart() {
       {
         label: "",
         data: [
-          180000000, 160000000, 250000000, 200000000, 250000000, 400000000,
-          330000000, 180000000, 240000000, 500000000,
+          180000, 160000, 250000, 200000, 200000, 400000, 330000, 180000,
+          240000, 500000,
         ],
         backgroundColor: [
           "#0076EC",
@@ -39,6 +39,7 @@ export default function DoughnutChart() {
         borderRadius: 80,
         borderWidth: 0,
         cutout: "80%",
+        spacing: 3,
       },
     ],
   };
@@ -60,7 +61,14 @@ export default function DoughnutChart() {
       ctx.font = "bold 16px Avenir";
       ctx.fillStyle = "#262626";
       ctx.textAlign = "center";
-      ctx.fillText(`₵${sum.toLocaleString()}`, centerX, centerY - 5);
+      ctx.fillText(
+        `₵${sum.toLocaleString(undefined, {
+          maximumFractionDigits: 2,
+          minimumFractionDigits: 2,
+        })}`,
+        centerX,
+        centerY - 5
+      );
       ctx.restore();
 
       ctx.font = "normal 14px Avenir";

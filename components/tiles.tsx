@@ -63,7 +63,7 @@ function DashboardTiles(props: tileProp1) {
           </p>
           <div className="flex mt-2 max-2xl:mt-1 items-center">
             <h2 className="text-[#262626] pt- dark:text-white  leading-7 font-medium">
-              ₵{props.entity1value.toLocaleString()}
+              ₵{props.entity1value.toLocaleString(undefined, {maximumFractionDigits: 2, minimumFractionDigits: 2})}
             </h2>
             <p>{props.entity1differential}</p>
           </div>

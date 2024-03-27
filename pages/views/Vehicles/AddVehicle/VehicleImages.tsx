@@ -105,7 +105,10 @@ export default function VehicleImages(prop: UploadModel) {
                 }}
               >
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
-                  <Form onSubmit={handleSubmit} className="bg-white dark:bg-gray-700 border-0 ">
+                  <Form
+                    onSubmit={handleSubmit}
+                    className="bg-white dark:bg-gray-700 border-0 "
+                  >
                     <div className="mt-4">
                       <h5>Vehicle Images</h5>
                       <p className="text-[#737373] dark:text-gray-300 text-sm font-medium leading-[30px] pt-1">
@@ -121,40 +124,41 @@ export default function VehicleImages(prop: UploadModel) {
                       </p>
                     </div>
                     {/* dropzones */}
-                    <div>
-                      <div className="flex w-full gap-x-5 justify-between mt-3">
-                        <div className="flex flex-col grow  items-center">
-                          <VehicleImagesDropzone />
-                          <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
-                            3/4 View
-                          </p>
-                        </div>
-                        <div className="flex flex-col grow  items-center">
-                          <VehicleImagesDropzone />
-                          <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
-                            Front View
-                          </p>
-                        </div>
-                        <div className="flex flex-col grow  items-center">
-                          <VehicleImagesDropzone />
-                          <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
-                            Right View
-                          </p>
-                        </div>
-                        <div className="flex flex-col grow  items-center">
-                          <VehicleImagesDropzone />
-                          <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
-                            Left View
-                          </p>
-                        </div>
-                        <div className="flex flex-col grow  items-center">
-                          <VehicleImagesDropzone />
-                          <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
-                            Rear View
-                          </p>
-                        </div>
+
+                    <div className="grid grid-cols-5 justify-items-start mt-3">
+                      <div className="flex flex-col items-center  ">
+                        <VehicleImagesDropzone />
+                        <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
+                          3/4 View
+                        </p>
                       </div>
-                      <div className="flex mt-9 flex-col justify-start items-center">
+                      <div className="flex flex-col items-center  ">
+                        <VehicleImagesDropzone />
+                        <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
+                          Front View
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-center  ">
+                        <VehicleImagesDropzone />
+                        <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
+                          Right View
+                        </p>
+                      </div>
+                      <div className="flex flex-col  items-center  ">
+                        <VehicleImagesDropzone />
+                        <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
+                          Left View
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-center  ">
+                        <VehicleImagesDropzone />
+                        <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
+                          Rear View
+                        </p>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-5 justify-items-start">
+                      <div className="flex mt-9 flex-col items-center ">
                         <VehicleImagesDropzone1 />
                         <p className="text-[#737373] dark:text-gray-300 font-medium text-xs leading-[30px] pt-2 ">
                           Dashboard View

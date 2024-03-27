@@ -5,106 +5,115 @@ import dashboardData from "./dashboardData.json";
 
 ChartJS.register(Tooltip);
 
-export const DashChart = () => {
+export default function DashChart() {
+  const data = {
+    labels: dashboardData.map((data) => data.label),
+    datasets: [
+      {
+        label: "",
+        data: dashboardData.map((data) => data.value),
+        backgroundColor: "#1F8FFF",
+        borderRadius: 40,
+        borderSkipped: false,
+        barThickness: 13,
+      },
+    ],
+  };
+
+  const options = {
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    interaction: {
+      mode: "index",
+    },
+
+    scales: {
+      x: {
+        border: {
+          display: false,
+        },
+        grid: {
+          offset: true,
+
+          display: false,
+          drawOnChartArea: true,
+          drawBorder: false,
+          drawTicks: false,
+        },
+        ticks: {
+          display: true,
+          color: "#BFBFBF",
+        },
+      },
+      y: {
+        border: {
+          display: false,
+        },
+        ticks: {
+          stepSize: 20,
+          color: "#BFBFBF",
+          display: true,
+        },
+        grid: {
+          display: false,
+
+          offset: true,
+          drawOnChartArea: false,
+          drawborder: false,
+          drawTicks: false,
+        },
+      },
+    },
+  };
+
   const backgroundBar = {
     id: "backgroundBar",
     beforeDatasetsDraw(chart, args, pluginOptions) {
       const {
-        data,
         ctx,
-        chartArea: { top, bottom, left, right, width, height },
+        chartArea: { top, bottom, height },
         scales: { x, y },
       } = chart;
 
-      ctx.save();
-      const segment = width / data.labels.length;
-      const barWidth =
-        segment *
-        data.datasets[0].barPercentage *
-        data.datasets[0].categoryPercentage;
-      ctx.fillStyle = "gray";
-      for (let i = 0; i < data.labels.length; i++) {
-        ctx.fillRect(
-          x.getPixelForValue(i) - barWidth / 2,
+      ctx.beginPath();
+      const width = chart.getDatasetMeta(0).data[0].width;
+      ctx.fillStyle = "#F1F8FF";
+      chart.getDatasetMeta(0).data.forEach((dataPoint, index) => {
+        ctx.roundRect(
+          x.getPixelForValue(index) - width / 2,
           top,
-          barWidth,
-          height
+          width,
+          height,
+          40
         );
-      }
+        ctx.fill();
+      });
+
+      // ctx.save();
+      // const segment = width / data.labels.length;
+      // const barWidth =
+      //   segment *
+      //   data.datasets[0].barPercentage *
+      //   data.datasets[0].categoryPercentage;
+      // ctx.fillStyle = "gray";
+      // for (let i = 0; i < data.labels.length; i++) {
+      //   ctx.fillRect(
+      //     x.getPixelForValue(i) - barWidth / 2,
+      //     top,
+      //     barWidth,
+      //     height
+      //   );
+      // }
     },
   };
 
   return (
     <div className="h-[260px] max-2xl:h-[235px] w-full px-4 pb-3">
-      <Bar
-        data={{
-          labels: dashboardData.map((data) => data.label),
-          datasets: [
-            {
-              label: "",
-              data: dashboardData.map((data) => data.value),
-              backgroundColor: "#1F8FFF",
-              borderRadius: 40,
-              borderSkipped: false,
-              barThickness: 14,
-              barPercentage: 0.9,
-              categoryPercentage: 0.9,
-            },
-          ],
-        }}
-        config={{
-          plugins: [backgroundBar],
-        }}
-        options={{
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            },
-          },
-          interaction: {
-            mode: "index",
-          },
-
-          scales: {
-            x: {
-              grid: {
-                color: (context) => {
-                  if (context.index === 0) {
-                    return "";
-                  } else {
-                    return "rgba(102, 102, 102, 0.2)";
-                  }
-                },
-                offset: true,
-                display: true,
-                drawOnChartArea: false,
-                drawBorder: false,
-                drawTicks: false,
-              },
-              ticks: {
-                display: true,
-                color: "#BFBFBF",
-              },
-            },
-            y: {
-              ticks: {
-                stepSize: 20,
-                color: "#BFBFBF",
-                display: true,
-              },
-              grid: {
-                display: false,
-
-                offset: true,
-                drawOnChartArea: false,
-                drawBorder: false,
-                drawTicks: false,
-              },
-            },
-          },
-        }}
-      />
+      <Bar data={data} options={options} plugins={[backgroundBar]}></Bar>
     </div>
   );
-};
+}

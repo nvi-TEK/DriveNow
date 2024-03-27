@@ -24,7 +24,7 @@ const baseStyle = {
 
 const VehicleStyle = {
   display: "flex",
-  width: "100%",
+  width: "188px",
   height: "200px",
   alignItems: "center",
   padding: "50px",
@@ -41,7 +41,7 @@ const VehicleStyle = {
 };
 const LastDropzoneStyle = {
   display: "flex",
-  width: "17.9%",
+  width: "188px",
   height: "200px",
   alignItems: "center",
   padding: "50px",

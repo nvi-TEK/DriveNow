@@ -6,7 +6,7 @@ import Head from "next/head";
 import Layout from "../../components/layout";
 import Link from "next/link";
 import Image from "next/image";
-import { DashChart } from "../../components/dashboard/dashboardColumnChart";
+import DashChart from "../../components/dashboard/dashboardColumnChart";
 import driver from "../../assets/driver.svg";
 import vehicle from "../../assets/vehicle.svg";
 import repair from "../../assets/repair.svg";
@@ -14,14 +14,12 @@ import payment from "../../assets/payment.svg";
 import { DashboardTiles1, LastTile, MidTiles } from "@/components/tiles";
 import DashboardStack from "@/components/stackedChart";
 import DashboardTiles from "@/components/tiles";
-import  { ContractPop } from "@/components/popover";
+import { ContractPop } from "@/components/popover";
 import revenue from "../../assets/revenue.svg";
 import Header from "@/components/header";
 import DriverKYCPop from "../../components/popover";
 import ChartDropdown from "@/components/chartDropdown";
 import { propagateServerField } from "next/dist/server/lib/render-server";
-
-
 
 export default function Dashboard() {
   return (
@@ -45,7 +43,7 @@ export default function Dashboard() {
               <DashboardTiles
                 icon={revenue}
                 entity1="Revenue"
-                entity1value={2412570.0}
+                entity1value={2412570}
                 entity2="Total Payments"
                 entity2value={450}
                 entity2differential={-20.5}
@@ -76,7 +74,7 @@ export default function Dashboard() {
               <DashboardTiles
                 icon={revenue}
                 entity1="Revenue"
-                entity1value={2412570}
+                entity1value={2412570.5}
                 entity2="Volume"
                 entity2value={450}
                 entity2differential={+18.5}
@@ -111,7 +109,7 @@ export default function Dashboard() {
                       Total Revenue
                     </h5>
                     <h2 className="dark:text-white font-medium pt-2 max-2xl:pt-1 leading-7 text-[#262626]">
-                       ₵2,412,570.00
+                      ₵2,412,570.00
                     </h2>
                   </div>
                   <div>
@@ -123,31 +121,31 @@ export default function Dashboard() {
                   <DashboardStack />
                 </div>
 
-                <div className="flex mt-6 px-[32px] justify-evenly ">
-                  <div className="flex">
+                <div className="flex mt-6 px-[32px] items-center justify-evenly ">
+                  <div className="flex items-center">
                     <div className="h-[14px] w-[14px] rounded bg-[#A6D2FF]"></div>
-                    <p className="font-normal text-xs dark:text-white pl-1 leading-[14px] text-[#585858]">
+                    <p className="font-normal text-xs pt-[3px] dark:text-white pl-1 leading-[14px] text-[#585858]">
                       Online Payment
                     </p>
                   </div>
 
-                  <div className="flex">
+                  <div className="flex items-center">
                     <div className="h-[14px] w-[14px] rounded bg-[#1F8FFF]"></div>
-                    <p className="font-normal text-xs dark:text-white pl-1 leading-[14px] text-[#585858]">
+                    <p className="font-normal text-xs pt-[3px] dark:text-white pl-1 leading-[14px] text-[#585858]">
                       Manual Payment
                     </p>
                   </div>
 
-                  <div className="flex">
+                  <div className="flex items-center">
                     <div className="h-[14px] w-[14px] rounded bg-[#D52D4D]"></div>
-                    <p className="font-normal text-xs dark:text-white pl-1 leading-[14px] text-[#585858]">
+                    <p className="font-normal text-xs pt-[3px] dark:text-white pl-1 leading-[14px] text-[#585858]">
                       Loss
                     </p>
                   </div>
 
-                  <div className="flex">
+                  <div className="flex items-center">
                     <div className="h-[14px] w-[14px] rounded bg-[#FFDBE2]"></div>
-                    <p className="font-normal text-xs dark:text-white pl-1 leading-[14px] text-[#585858]">
+                    <p className="font-normal text-xs pt-[3px] dark:text-white pl-1 leading-[14px] text-[#585858]">
                       Maintenance
                     </p>
                   </div>

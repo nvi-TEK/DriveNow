@@ -67,7 +67,7 @@ function PaymentTiles(props: PaymentProp) {
           </p>
           <div className="flex items-center">
             <h2 className="text-[#262626] dark:text-white pt-2 leading-7 font-medium ">
-              ₵{props.entity1value.toLocaleString()}
+              ₵{props.entity1value.toLocaleString(undefined, {maximumFractionDigits: 2, minimumFractionDigits: 2})}
             </h2>
           </div>
         </div>
