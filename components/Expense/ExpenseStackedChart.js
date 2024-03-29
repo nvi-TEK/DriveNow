@@ -20,12 +20,16 @@ const ExpenseStack = () => {
         data: expenseStackData.map((data) => data.value1),
         backgroundColor: "#0076EC",
         barThickness: 32,
+        borderWidth: 0.72,
+        borderColor: "#0076EC",
       },
       {
         label: "",
         data: expenseStackData.map((data) => data.value2),
         backgroundColor: "#BDE6FF",
         barThickness: 32,
+        borderWidth: 0.72,
+        borderColor: "#0076EC",
       },
     ],
   };
@@ -47,7 +51,8 @@ const ExpenseStack = () => {
           drawTicks: false,
         },
         ticks: {
-          color: "#BFBFBF",
+          color: "#585858",
+          padding: 4,
         },
         stacked: true,
       },
@@ -60,7 +65,8 @@ const ExpenseStack = () => {
         },
         ticks: {
           stepSize: 90,
-          color: "#BFBFBF",
+          color: "#585858",
+          padding: 7,
         },
 
         stacked: true,

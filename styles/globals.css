@@ -80,8 +80,6 @@ th {
   font-size: clamp(16px, 0.9vw, 18px);
 }
 
-
-
 td {
   font-size: clamp(14px, 1vw, 16px);
 }
@@ -99,12 +97,15 @@ h1 {
   font-size: clamp(22px, 1.5vw, 24px);
 }
 
+
+
 p {
   font-size: clamp(14px, 1vw, 16px);
 }
 
 #doughnut {
-  width: clamp(200px, 1vw, 350px);
+  width: clamp(200px, 1vw, 250px);
+  height: clamp(200px, 1vw, 250px);
 }
 
 #table40 {

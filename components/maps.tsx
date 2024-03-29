@@ -5,10 +5,11 @@ export default function Maps() {
   return (
     <div className="">
       <APIProvider apiKey={""}>
-        <Map id="heatmap"
+        <Map
+          id="heatmap"
           style={{ width: "100%", height: "910px" }}
-          defaultCenter={{ lat: 5.5593, lng: 0.1974 }}
-          defaultZoom={12}
+          defaultCenter={{ lat: 5.7348, lng: 0.0302 }}
+          defaultZoom={15}
           gestureHandling={"greedy"}
           disableDefaultUI={true}
         />

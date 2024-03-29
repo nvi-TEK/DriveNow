@@ -1,9 +1,21 @@
-import { Chart as ChartJS, ArcElement, Tooltip, defaults } from "chart.js";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 
-ChartJS.register(ArcElement, Tooltip);
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function DoughnutChart() {
+  const getOrCreateLegendList = (chart, id) => {
+    const legendContainer = document.getElementById(id);
+    let listContainer = legendContainer.querySelector("ul");
+
+    if (!listContainer) {
+      listContainer = document.createElement("ul");
+      listContainer.className - "listContainer";
+      legendContainer.appendChild(listContainer);
+    }
+    return listContainer;
+  };
+
   const data = {
     labels: [
       "Car Insurance",
@@ -21,7 +33,7 @@ export default function DoughnutChart() {
       {
         label: "",
         data: [
-          180000, 160000, 250000, 200000, 200000, 400000, 330000, 180000,
+          180000, 160000.29, 250000, 200000, 200000, 400000, 330000, 180000,
           240000, 500000,
         ],
         backgroundColor: [
@@ -43,6 +55,7 @@ export default function DoughnutChart() {
       },
     ],
   };
+
 
   const doughnutLabel = {
     id: "doughnutLabel",
@@ -79,10 +92,33 @@ export default function DoughnutChart() {
     },
   };
 
-  const config = {
-    data,
-    options: {},
-    plugins: [doughnutLabel],
+  const htmlLegendPlugin = {
+    id: "htmlLegend",
+    afterUpdate(chart, args, options) {
+      const ul = getOrCreateLegendList(chart, options.containerID);
+
+      while (ul.firstChild) {
+        ul.firstChild.remove();
+      }
+
+      const items = chart.options.plugins.legend.labels.generateLabels(chart);
+
+      items.forEach((item) => {
+        const li = document.createElement("li");
+        li.className = "li";
+
+        const boxSpan = document.createElement("span");
+        boxSpan.className = "boxSpan";
+
+        const textContainer = document.createElement("p");
+        textContainer.className = "textContainer";
+
+        li.appendChild(boxSpan);
+        li.appendChild(textContainer);
+
+        ul.appendChild(li);
+      });
+    },
   };
 
   const options = {
@@ -90,9 +126,13 @@ export default function DoughnutChart() {
       legend: {
         display: false,
       },
+      htmlLegend: {
+        containerID: "legend-container",
+      },
     },
   };
 
+  
   let sum = 0;
   for (let i = 0; i < data.datasets[0].data.length; i++) {
     sum += data.datasets[0].data[i];
@@ -103,9 +143,10 @@ export default function DoughnutChart() {
       <Doughnut
         data={data}
         options={options}
-        config={config}
         plugins={[doughnutLabel]}
       ></Doughnut>
+
+      {/* <div id="legend-container"></div> */}
     </div>
   );
 }

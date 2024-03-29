@@ -76,7 +76,7 @@ export default function PersonalDetails(prop: PersonalProps) {
               </p>
             </div>
             {/* Timeline */}
-            <div className="flex py-10 px-[44px] border-y dark:border-gray-500 items-center">
+            <div className="flex py-6 px-[44px] border-y dark:border-gray-500 items-center">
               <div className="bg-[#007AF5] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
                 1
               </div>
@@ -122,7 +122,7 @@ export default function PersonalDetails(prop: PersonalProps) {
               Personal Details (Driver)
             </h3>
 
-            <div className="mt-2 mb-12 border-0  mx-">
+            <div className=" mb-12 border-0  mx-">
               <Formik<PersonalProps>
                 initialValues={{
                   firstName: "",
@@ -157,7 +157,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                     className="bg-white dark:bg-gray-700 border-0   pb-10"
                   >
                     <section className="border-b dark:border-gray-500 pb-4">
-                      <div className="flex w-full gap-x-4 mt-[1.875rem]">
+                      <div className="flex w-full gap-x-4 mt-2">
                         {/* First Name */}
                         <div className="w-[50%]">
                           <label
@@ -169,7 +169,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <Field
                             type="text"
                             id="firstName"
-                            className="border placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614]  border-gray-300 text-gray-900 text-sm rounded block w-full p-2"
+                            className="border placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 text-gray-900 text-sm rounded block py-2 w-full "
                             placeholder="First Name"
                             value={values.firstName}
                             onChange={handleChange}
@@ -194,7 +194,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <Field
                             type="text"
                             id="lastName"
-                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full py-2"
                             placeholder="Last Name"
                             value={values.lastName}
                             onChange={handleChange}
@@ -209,7 +209,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                         </div>
                       </div>
 
-                      <div className="flex gap-x-4 mt-[1.25rem]">
+                      <div className="flex gap-x-4 mt-2">
                         {/* phone number */}
                         <div className="w-[50%]">
                           <label
@@ -221,7 +221,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <Field
                             type="text"
                             id="phone"
-                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2.5"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full py-2"
                             placeholder="+233 123 456 789"
                             value={values.phone}
                             onChange={handleChange}
@@ -244,7 +244,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <Field
                             type="text"
                             id="email"
-                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2.5"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full py-2"
                             placeholder="example@email.com"
                             value={values.email}
                             onChange={handleChange}
@@ -276,7 +276,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <Field
                             type="text"
                             id="ghanaCardName"
-                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full py-2"
                             placeholder="Full name"
                             value={values.ghanaCardName}
                             onChange={handleChange}
@@ -299,7 +299,7 @@ export default function PersonalDetails(prop: PersonalProps) {
                           <Field
                             type="text"
                             id="ghanaCardNumber"
-                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full p-2"
+                            className="border border-gray-300 placeholder-[#BFBFBF] dark:bg-gray-600 dark:border-0 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full py-2"
                             placeholder="GHA-12345678-42"
                             value={values.ghanaCardNumber}
                             onChange={handleChange}

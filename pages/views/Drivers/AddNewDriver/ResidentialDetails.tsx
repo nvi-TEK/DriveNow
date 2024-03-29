@@ -62,7 +62,7 @@ export default function ResidentialDetails() {
               </p>
             </div>
             {/* Timeline */}
-            <div className="flex py-10 px-[44px] border-y dark:border-gray-500 items-center">
+            <div className="flex py-6 px-[44px] border-y dark:border-gray-500 items-center">
               <div className="bg-[#0C9064] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
                 <CheckOutlinedIcon fontSize="small" />
               </div>

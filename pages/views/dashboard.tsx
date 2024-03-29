@@ -19,6 +19,7 @@ import revenue from "../../assets/revenue.svg";
 import Header from "@/components/header";
 import DriverKYCPop from "../../components/popover";
 import ChartDropdown from "@/components/chartDropdown";
+import BasicModal from "../../components/test"
 import { propagateServerField } from "next/dist/server/lib/render-server";
 
 export default function Dashboard() {
@@ -178,7 +179,7 @@ export default function Dashboard() {
             </div>
 
             {/* Driver KYC  */}
-            <div className="mt-6 max-2xl:mt-4 bg-[#FFFFFF] dark:bg-gray-700 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg ml-5 max-2xl:ml-4 h-[685px] overflow-y-scroll no-scrollbar pb-5 w-[25%] ">
+            <div id="dashboardKYC" className="mt-6 max-2xl:mt-4 bg-[#FFFFFF] dark:bg-gray-700 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg ml-5 max-2xl:ml-4 overflow-y-scroll no-scrollbar h-[840px] max-2xl:h-[685px] pb-5 w-[25%] ">
               <div
                 id="kyc-child"
                 className="flex z- absolute w-[19.6%] mt-0 p-4 bg-white dark:bg-gray-700  justify-between rounded-t-lg items-center"
@@ -186,6 +187,7 @@ export default function Dashboard() {
                 <h6 className="dark:text-white font-medium leading-[22px] text-[#262626]">
                   Driver KYC
                 </h6>
+
 
                 <div className="">
                   <DriverKYCPop />

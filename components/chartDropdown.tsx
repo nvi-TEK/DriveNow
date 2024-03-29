@@ -29,6 +29,8 @@ export default function ChartDropdown() {
           className="text-[#8C8C8C]"
           defaultValue="This Year"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
+          popupMatchSelectWidth={false}
+          popupClassName="p-2"
           variant="borderless"
           style={{ width: 102 }}
           onChange={handleChange}
@@ -57,18 +59,24 @@ function YearDropdown() {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "12px 0px 8px 8px",
+            optionPadding: "16px 70px 12px 8px",
+            optionHeight: 34,
           },
         },
       }}
     >
       <Space wrap>
         <Select
+        id="yearDropdown"
           className="text-[#8C8C8C]"
           defaultValue="2024"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
+          popupMatchSelectWidth={false}
+          popupClassName="p-2"
+          dropdownStyle={{gap: "15px"}}
+          placement="bottomRight"
           variant="borderless"
-          style={{ width: 69 }}
+          style={{ width: 68 }}
           onChange={handleChange}
           options={[
             { value: "2024", label: "2024" },
@@ -105,6 +113,8 @@ function CategoryDropdown() {
           className="text-[#8C8C8C]"
           defaultValue="FLEET"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
+          popupMatchSelectWidth={false}
+          popupClassName="p-2"
           variant="borderless"
           style={{ width: 79 }}
           onChange={handleChange}
@@ -139,10 +149,17 @@ function MonthDropdown() {
           className="text-[#8C8C8C]"
           defaultValue="JAN"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
+          popupMatchSelectWidth={false}
+          popupClassName="p-2"
           variant="borderless"
           style={{ width: 68 }}
           onChange={handleChange}
-          options={[{ value: "JAN", label: "JAN" },{ value: "FEB", label: "FEB" },{ value: "MAR", label: "MAR" },{ value: "APR", label: "APR" },]}
+          options={[
+            { value: "JAN", label: "JAN" },
+            { value: "FEB", label: "FEB" },
+            { value: "MAR", label: "MAR" },
+            { value: "APR", label: "APR" },
+          ]}
         />
       </Space>
     </ConfigProvider>

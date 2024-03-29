@@ -56,6 +56,7 @@ const DashboardStack = () => {
         },
         ticks: {
           color: "#BFBFBF",
+          padding: 4,
         },
 
         stacked: true,
@@ -70,6 +71,7 @@ const DashboardStack = () => {
         ticks: {
           stepSize: 90,
           color: "#BFBFBF",
+          padding: 7,
         },
 
         stacked: true,

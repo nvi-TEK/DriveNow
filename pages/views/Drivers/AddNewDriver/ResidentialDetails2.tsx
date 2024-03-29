@@ -63,7 +63,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
               </p>
 
               {/* Timeline */}
-              <div className="flex mx-4 py-10 px-[44px] border-y items-center">
+              <div className="flex mx-4 py-6 px-[44px] border-y items-center">
                 <div className="bg-[#0C9064] flex items-center justify-center  w-8 h-8 text-white rounded-[100%] ">
                   <CheckOutlinedIcon fontSize="small" />
                 </div>
