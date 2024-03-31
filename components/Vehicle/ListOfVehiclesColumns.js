@@ -2,7 +2,6 @@
 /* eslint-disable require-jsdoc */
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
@@ -13,9 +12,6 @@ import recycle from "../../assets/recycle.svg";
 import modalclose from "../../assets/x.svg";
 import vehicle from "../../assets/menuvehicle.svg";
 import Box from "@mui/material/Box";
-
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import UpdateStatusDropdown from "../Dropdown";
 
@@ -24,14 +20,12 @@ const ITEM_HEIGHT = 96;
 export default function LongMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-  const close = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
   };
-
 
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
   const openModal = () => {
@@ -44,7 +38,6 @@ export default function LongMenu() {
   const [modalIsOpen1, setModalIsOpen1] = React.useState(false);
   const openModal1 = () => {
     setModalIsOpen1(true);
-    close
   };
   const closeModal1 = () => {
     setModalIsOpen1(false);
@@ -99,6 +92,8 @@ export default function LongMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        onClick={handleClose}
+        keepMounted
         disableScrollLock={true}
         PaperProps={{
           style: {
@@ -119,7 +114,7 @@ export default function LongMenu() {
         </MenuItem>
 
         {/* update Sim */}
-        <div>
+        <Box>
           <MenuItem
             onClick={openModal}
             className="flex font-normal text-[#595959] text-sm leading-[18px] py-2"
@@ -159,7 +154,10 @@ export default function LongMenu() {
                 />
               </div>
               <div className="flex justify-end mt-4 gap-x-4 items-center ">
-                <button onClick={closeModal} className="h-[28px] px-3 text-[#595959] text-sm leading-[18px] font-normal border-0">
+                <button
+                  onClick={closeModal}
+                  className="h-[28px] px-3 text-[#595959] text-sm leading-[18px] font-normal border-0"
+                >
                   Cancel
                 </button>
                 <button className="h-[28px] px-3 bg-[#007AF5] text-sm text-[#FFFFFF] rounded-[4px]">
@@ -168,7 +166,7 @@ export default function LongMenu() {
               </div>
             </Box>
           </Modal>
-        </div>
+        </Box>
 
         {/* update status */}
         <div>

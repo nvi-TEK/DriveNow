@@ -110,7 +110,7 @@ export const DRIVERKYCCOLUMNS = [
   {
     Header: "Full Name",
     accessor: "full_name",
-    width:1270,
+    width: 1270,
     sortable: true,
   },
   {
@@ -133,7 +133,7 @@ export const DRIVERKYCCOLUMNS = [
   {
     Header: "Engine Control",
     accessor: "engine_control",
-    width: 300,
+    width: 500,
     sortable: true,
 
     Cell: (props) => {
@@ -144,11 +144,13 @@ export const DRIVERKYCCOLUMNS = [
             backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
             borderRadius: "2px",
             textAlign: "center",
-            width: "50px",
             paddingTop: "2px",
             paddingBottom: "2px",
+            paddingLeft: "8px",
+            paddingRight: "8px",
             lineHeight: "16px",
             fontWeight: "500",
+            display: "inline-block",
           }}
         >
           {props.value}
@@ -189,8 +191,9 @@ export const DRIVERKYCCOLUMNS = [
             textAlign: "center",
             paddingTop: "1px",
             paddingBottom: "1px",
-
-            maxWidth: "45px",
+            paddingLeft: "8px",
+            paddingRight: "8px",
+            display: "inline-block",
             lineHeight: "16px",
             fontWeight: "500",
           }}

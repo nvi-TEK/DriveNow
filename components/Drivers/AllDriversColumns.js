@@ -125,13 +125,13 @@ export const ALLDRIVERSCOLUMNS = [
             backgroundColor: props.value === "Online" ? "#E7F6F1" : "#FBEDEC",
             borderRadius: "2px",
             textAlign: "center",
-            paddingLeft: "2px",
-            width: "65px",
-            paddingRight: "2px",
+            paddingLeft: "6px",
+            paddingRight: "6px",
             paddingTop: "2px",
             paddingBottom: "2px",
             lineHeight: "16px",
             fontWeight: "500",
+            display: "inline-block",
           }}
         >
           <p>{props.value}</p>
@@ -146,6 +146,7 @@ export const ALLDRIVERSCOLUMNS = [
     sortable: true,
     Cell: (props) => {
       return (
+        <div className="flex justify-center ">
         <div
         id="table40"
           className="text-base max-2xl:text-sm"
@@ -156,13 +157,15 @@ export const ALLDRIVERSCOLUMNS = [
             textAlign: "center",
             paddingTop: "2px",
             paddingBottom: "2px",
-            paddingLeft: "2px",
-            paddingRight: "2px",
+            paddingLeft: "6px",
+            paddingRight: "6px",
             lineHeight: "16px",
             fontWeight: "500",
+            display: "inline-block"
           }}
         >
           {props.value}
+        </div>
         </div>
       );
     },
@@ -180,15 +183,16 @@ export const ALLDRIVERSCOLUMNS = [
     Cell: (props) => {
       return (
         <div
-          className="text-sm max-2xl:text-xs"
+          className="text-sm inline-block max-2xl:text-xs"
           style={{
             color: props.value === "ON" ? "#0EA371" : "#DC4A41",
             backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
             borderRadius: "2px",
             textAlign: "center",
-            width: "40px",
             paddingTop: "2px",
             paddingBottom: "2px",
+            paddingLeft: "6px",
+            paddingRight: "6px",
             lineHeight: "16px",
             fontWeight: "500",
           }}

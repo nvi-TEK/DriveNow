@@ -95,7 +95,7 @@ function SideBar() {
             className="flex ml-6 cursor-pointer max-2xl:pb-1 pb-2 justify-between items-center text-black"
             onClick={() => setShowDriver(!showDriver)}
           >
-            <div className="flex dark:text-white max-2xl:text-[15px] max-2xl:py-0 py-2">
+            <div className="flex  dark:text-white max-2xl:text-[15px] max-2xl:py-0 py-2">
               <Image
                 src={driverside}
                 className="mr-2 max-2xl:w-5"
@@ -111,7 +111,7 @@ function SideBar() {
               />
             </div>
           </div>
-          <div className="pl-6 max-2xl:pl-2">
+          <div className="pl-6  max-2xl:pl-2">
             {showDriver ? (
               <>
                 <Link href={"/views/Drivers/AllDrivers"} as="">

@@ -120,23 +120,25 @@ export const VEHICLETRACKERCOLUMNS = [
     accessor: "device_status",
     Cell: (props) => {
       return (
-        <div
-          className="text-base max-2xl:text-sm"
-          style={{
-            color: props.value === "Online" ? "#0EA371" : "#DC4A41",
-            backgroundColor: props.value === "Online" ? "#E7F6F1" : "#FBEDEC",
-            borderRadius: "2px",
-            textAlign: "center",
-            paddingLeft: "2px",
-            paddingRight: "2px",
-            paddingTop: "2px",
-            paddingBottom: "2px",
-            lineHeight: "16px",
-            fontWeight: "500",
-            width: "50px",
-          }}
-        >
-          {props.value}
+        <div className="">
+          <div
+            className="text-base max-2xl:text-sm"
+            style={{
+              color: props.value === "Online" ? "#0EA371" : "#DC4A41",
+              backgroundColor: props.value === "Online" ? "#E7F6F1" : "#FBEDEC",
+              borderRadius: "2px",
+              textAlign: "center",
+              paddingLeft: "6px",
+              paddingRight: "6px",
+              paddingTop: "2px",
+              paddingBottom: "2px",
+              lineHeight: "16px",
+              fontWeight: "500",
+              display: "inline-block"
+            }}
+          >
+            {props.value}
+          </div>
         </div>
       );
     },

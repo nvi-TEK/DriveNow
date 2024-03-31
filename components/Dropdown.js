@@ -20,7 +20,7 @@ export default function UpdateStatusDropdown() {
           Select: {
             optionActiveBg: "#F1F8FF",
             optionSelectedColor: "#007AF5",
-            optionPadding: "10px 0px 8px 8px",
+            optionPadding: "15px 0px 15px 8px",
           },
         },
       }}
@@ -32,9 +32,9 @@ export default function UpdateStatusDropdown() {
           getPopupContainer={() => document.getElementById("update")}
           suffixIcon={<KeyboardArrowDownIcon className="dark:text-white" />}
           popupClassName="p-2"
+          placeholder="Select"
           style={{ width: 250, font: "#8C8C8C" }}
           onChange={handleChange}
-          defaultValue="Awaiting Allocation"
           options={[
             { value: "Awaiting Allocation", label: "Awaiting Allocation" },
             {

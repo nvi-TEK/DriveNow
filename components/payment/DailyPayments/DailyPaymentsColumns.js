@@ -151,11 +151,13 @@ export const DAILYPAYMENTSCOLUMNS = [
             backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
             borderRadius: "2px",
             textAlign: "center",
-            width: "40px",
             paddingTop: "2px",
             paddingBottom: "2px",
+            paddingLeft: "8px",
+            paddingRight: "8px",
             lineHeight: "16px",
             fontWeight: "500",
+            display: "inline-block",
           }}
         >
           <p className="font-medium leading-4 ">{props.value}</p>
@@ -184,7 +186,9 @@ export const DAILYPAYMENTSCOLUMNS = [
               textAlign: "center",
               paddingTop: "2px",
               paddingBottom: "2px",
-
+              paddingLeft: "8px",
+              paddingRight: "8px",
+              display: "inline-block",
               lineHeight: "16px",
               fontWeight: "500",
             }}

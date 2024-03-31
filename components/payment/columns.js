@@ -152,9 +152,10 @@ export const COLUMNS = [
             backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
             borderRadius: "2px",
             textAlign: "center",
-            width: "50px",
-            paddingTop: "px",
-
+            paddingTop: "2px",
+            paddingRight: "8px",
+            paddingLeft: "8px",
+            display: "inline-block",
             lineHeight: "16px",
             fontWeight: "500",
           }}
@@ -177,15 +178,15 @@ export const COLUMNS = [
             <Image src={refresh} alt="refresh icon" />
           </div>
           <div
-            className="text-sm max-2xl:text-xs"
+            className="text-sm font-medi max-2xl:text-xs"
             style={{
               color: props.value === "Active" ? "#0EA371" : "#DC4A41",
               backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
               borderRadius: "2px",
-              textAlign: "center",
-              width: "50px",
               paddingTop: "2px",
               paddingBottom: "1px",
+              paddingRight: "8px",
+              paddingLeft: "8px",
               lineHeight: "16px",
               fontWeight: "500",
             }}

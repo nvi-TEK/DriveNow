@@ -6,12 +6,14 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import Link from "next/link";
-import Modal from "react-modal";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
 import tableaction from "../../assets/tableaction.png";
 import approve from "../../assets/check.svg";
 import details from "../../assets/viewdetails.svg";
 import decline from "../../assets/declinex.svg";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import MoreDetails from "./MoreDetails";
 
 const ITEM_HEIGHT = 48;
 
@@ -25,36 +27,29 @@ export default function LongMenu() {
     setAnchorEl(null);
   };
 
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
   const openModal = () => {
     setModalIsOpen(true);
   };
-
   const closeModal = () => {
     setModalIsOpen(false);
   };
 
-  const customStyles = {
-    content: {
-      top: "50%",
-      left: "60%",
-      right: "20%",
-      bottom: "auto",
-      marginRight: "-80%",
-      transform: "translate(-80%, -55%)",
-      padding: "0",
-      width: "308px",
-      height: "183px",
-      border: "0",
-      borderRadius: "8px 8px 8px 8px",
-      backgroundColor: "",
-    },
-    overlay: {
-      backgroundColor: "#0000008F",
-      zIndex: 1000,
-    },
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    // height:605,
+    // width: 929,
+    borderRadius: "8px",
+    bgcolor: "background.paper",
+    border: "0px",
+    paddingLeft: "24px",
+    paddingRight: "24px",
+    zIndex: 1,
   };
+
   return (
     <>
       <IconButton
@@ -65,7 +60,7 @@ export default function LongMenu() {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <MoreHorizIcon className="dark:text-white" />{" "}
+        <MoreHorizIcon className="dark:text-white" />
       </IconButton>
       <Menu
         id="long-menu"
@@ -75,17 +70,20 @@ export default function LongMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        onClick={handleClose}
+        keepMounted
         disableScrollLock={true}
         PaperProps={{
           style: {
-            maxHeight: ITEM_HEIGHT * 4.5,
-            width: "25ch",
+            maxHeight: ITEM_HEIGHT * 4,
+            width: "200px",
             position: "sticky",
-            marginRight: "60px",
+            marginRight: "76px",
+            fontFamily: "Avenir",
           },
         }}
       >
-        <Link href={""}>
+        <Box>
           <MenuItem
             onClick={openModal}
             component={Link}
@@ -96,16 +94,33 @@ export default function LongMenu() {
             View Details
           </MenuItem>
           <Modal
-            isOpen={modalIsOpen}
-            onRequestClose={closeModal}
-            ariaHideApp={false}
-            shouldCloseOnOverlayClick={false}
-            overlayClassName=""
-            style={customStyles}
+            open={modalIsOpen}
+            onClose={closeModal}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+            disableScrollLock={true}
           >
-            <div>abc</div>
+            <Box sx={style}>
+              <MoreDetails
+                expenseType="Part Replacement Expense"
+                date="3 February, 2023"
+                time="01:09 pm"
+                costCenter="Fleet"
+                expenseCategory="Fleet Management"
+                expenseLine="Part Replacement"
+                carRegistrationNumber="GT 9909-22"
+                requestedBy="Benjamin@feenix.technology"
+                approvedBy="Geoffrey@feenix.technology"
+                bankName="GT Bank"
+                accountNumber={30305546454509}
+                paidTo="Vendor"
+                expenseStatus="Done"
+                description="For fixing David Mantey’s side mirror covers which were stolen while the vehicle was parked at the office."
+                amount={4000.0}
+              />
+            </Box>
           </Modal>
-        </Link>
+        </Box>
         <MenuItem onClick={handleClose} className="flex py-2">
           <Image src={approve} className="mr-2" alt="checkmark" />
           Approve
@@ -170,30 +185,33 @@ export const EXPENSECOLUMNS = [
     sortable: true,
     Cell: (props) => {
       return (
-        <div
-          id="expense-table-status"
-          style={{
-            color:
-              props.value === "Paid"
-                ? "#0EA371"
-                : props.value === "Declined"
-                ? "#DC4A41"
-                : "#E8B123",
-            backgroundColor:
-              props.value === "Paid"
-                ? "#E7F6F1"
-                : props.value === "Declined"
-                ? "#FBEDEC"
-                : "#FBF6E9",
-            borderRadius: "2px",
-            textAlign: "center",
-            paddingTop: "2px",
-            paddingBottom: "2px",
-            lineHeight: "16px",
-            fontWeight: "500",
-          }}
-        >
-          {props.value}
+        <div className="flex justify-center ">
+          <div
+            id="expense-table-status"
+            style={{
+              color:
+                props.value === "Paid"
+                  ? "#0EA371"
+                  : props.value === "Declined"
+                  ? "#DC4A41"
+                  : "#E8B123",
+              backgroundColor:
+                props.value === "Paid"
+                  ? "#E7F6F1"
+                  : props.value === "Declined"
+                  ? "#FBEDEC"
+                  : "#FBF6E9",
+              borderRadius: "2px",
+              paddingTop: "3px",
+              paddingBottom: "3px",
+              paddingLeft: "6px",
+              paddingRight: "6px",
+              lineHeight: "16px",
+              fontWeight: "500",
+            }}
+          >
+            <p className="">{props.value}</p>
+          </div>
         </div>
       );
     },
