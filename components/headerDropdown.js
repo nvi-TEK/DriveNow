@@ -52,7 +52,6 @@ export default function LongMenu() {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "201px",
             position: "sticky",
-            fontFamily: "Avenir LT Pro",
           },
         }}
       >

@@ -43,14 +43,14 @@
 
 html,
 body {
-  font-family: Avenir;
+  font-family: "Avenir";
 
   max-width: 100vw;
   overflow-x: hidden;
 }
 
 body {
-  font-family: Avenir;
+  font-family: "Avenir";
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -116,17 +116,12 @@ p {
 
 #expense-table-status {
   font-size: clamp(14px, 1vw, 16px);
-
 }
-
 
 #t-engine-status {
   /* width: clamp(50px, 0.1vw, 50px); */
   font-size: clamp(14px, 1vw, 16px);
-
 }
-
-
 
 #signin {
   background: url("../assets/signin.jpg");
@@ -138,9 +133,9 @@ p {
   font-family: "Avenir";
 }
 
-.ant-select-selection {
+/* .ant-select-selection {
   background-color: green;
-}
+} */
 
 #tdrops > div {
   margin-top: "410px";
