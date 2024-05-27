@@ -1,0 +1,37 @@
+{
+    "name": "nodes/core",
+    "description": "Required for all Nodes packages",
+    "keywords": [
+        "nodes",
+        "core",
+        "helpers",
+        "tools",
+        "laravel"
+    ],
+    "license": "MIT",
+    "homepage": "http://nodesagency.com",
+    "authors": [
+        {
+            "name": "Casper Rasmussen",
+            "email": "cr@nodes.dk",
+            "role": "CTO"
+        }
+    ],
+    "require": {
+        "illuminate/support": "5.2.*||5.3.*||5.4.*||5.5.*||5.6.*",
+        "symfony/http-kernel": "2.8.*||3.0.*||3.1.*||3.2.*||3.3.*||4.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+           "Nodes\\": "src/"
+        },
+        "files": [
+            "src/Support/Helpers/Config.php",
+            "src/Support/Helpers/Filesystem.php",
+            "src/Support/Helpers/Install.php",
+            "src/Support/Helpers/Request.php",
+            "src/Support/Helpers/String.php",
+            "src/Support/Helpers/UserAgent.php"
+        ]
+    }
+}
