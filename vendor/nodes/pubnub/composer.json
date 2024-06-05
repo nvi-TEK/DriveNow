@@ -1,0 +1,30 @@
+{
+    "name": "nodes/pubnub",
+    "description": "Broadcast events with PubNub in your Laravel project",
+    "keywords": [
+        "nodes",
+        "pubnub",
+        "laravel",
+        "events",
+        "broadcast"
+    ],
+    "license": "MIT",
+    "homepage": "http://nodesagency.com",
+    "authors": [
+        {
+            "name": "Morten Rugaard",
+            "email": "moru@nodes.dk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "laravel/framework": "5.1.*||5.2.*||5.3.*||5.4.*",
+        "nodes/core": "^1.0",
+        "pubnub/pubnub": "3.7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nodes\\Services\\Pubnub\\": "src"
+        }
+    }
+}
