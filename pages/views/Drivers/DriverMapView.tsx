@@ -15,11 +15,7 @@ import DriverMap from "@/components/Drivers/DriverMap";
 export default function DriverKyc() {
   return (
     <>
-      <div className="flex w-full">
-        <div className="w-full z-10">
-          <Header name="Driver Map View" />
-        </div>
-      </div>
+      <Header name="Driver Map View" />
       <Layout>
         <Head>
           <title>Driver KYC</title>
@@ -28,7 +24,7 @@ export default function DriverKyc() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-dm-600 w-full xg:min-h-screen">
           <section className="w-full pb-[130px] ">
             <div className="flex space-x-4 grow m-5">
               <ListOfVehiclesTiles
@@ -58,7 +54,7 @@ export default function DriverKyc() {
             </div>
 
             {/* Map */}
-            <div className="rounded-lg bg-white dark:bg-gray-700 h-[443px] mx-5 mt-[24px]">
+            <div className="rounded-lg bg-white dark:bg-dm-700 h-[443px] mx-5 mt-[24px]">
               <h1 className="text-[#262626] dark:text-white p-4 font-medium leading-[30px]">
                 Driver Map View
               </h1>
@@ -68,7 +64,7 @@ export default function DriverKyc() {
               </div>
             </div>
 
-            <section className="rounded-lg h-[115px] dark:bg-gray-700 bg-white mx-5 mt-[18px]">
+            <section className="rounded-lg h-[115px] dark:bg-dm-700 bg-white mx-5 mt-[18px]">
               <h5 className="text-center font-medium leading-[30px] dark:text-white text-[22px] text-[#262626] pt-4">
                 Legend
               </h5>

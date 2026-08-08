@@ -79,11 +79,11 @@ export const DriverKycTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border shadow-[0px_1px_2px_0px_#1B283614] dark:text-white dark:border-0 dark:bg-gray-600 h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
+      className="border cursor-pointer shadow-[0px_1px_2px_0px_#1B283614] dark:text-white dark:border-0 dark:bg-dm-600 h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
       {[10, 15, 20].map((pageSize) => (
-        <option key={pageSize} value={pageSize}>
+        <option key={pageSize} value={pageSize} className="dark:text-white dark:bg-dm-600">
           {pageSize}
         </option>
       ))}
@@ -94,12 +94,12 @@ export const DriverKycTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border shadow-[0px_1px_2px_0px_#1B283614] dark:text-white dark:border-0 dark:bg-gray-600 h-[30px] text-xs text-center border-[#D9D9D9] rounded px-1 py-1 "
+      className="border cursor-pointer shadow-[0px_1px_2px_0px_#1B283614] dark:text-white dark:border-0 dark:bg-dm-600 h-[30px] text-xs text-center border-[#D9D9D9] rounded px-1 py-1 "
       aria-placeholder=""
     >
       abc
       {[10, 15, 20].map((pageSize) => (
-        <option key={pageSize} value={pageSize}>
+        <option key={pageSize} value={pageSize} className="dark:text-white dark:bg-dm-600">
           {pageSize} Items/Page
         </option>
       ))}
@@ -123,7 +123,7 @@ export const DriverKycTable = () => {
         <Link href={"/views/Drivers/AddNewDriver/PersonalDetails"}>
           <button
             type="button"
-            className="text-[#FFFFFF] border bg-[#007AF5] ml-auto rounded-[4px] px-2.5 border-[#DADADA] dark:border-0 focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center mb-2 "
+            className="text-[#FFFFFF] border bg-[#007AF5] ml-auto rounded-[4px] px-2.5 border-[#DADADA] dark:border-0 focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center cursor-pointer mb-2 "
           >
             <Image src={plus} alt="Plus sign" className="mr-1" /> Add New Driver
           </button>
@@ -142,7 +142,7 @@ export const DriverKycTable = () => {
                         ...column.getHeaderProps(column.getSortByToggleProps()),
                       }
                     : { ...column.getHeaderProps() })}
-                  className="text-left font-normal text-[#262626] dark:text-white dark:bg-gray-600 leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
+                  className="text-left font-normal text-[#262626] dark:text-white dark:bg-dm-600 leading-[18px] pl-2 h-[48px] bg-[#FAFAFA] "
                   style={{ minWidth: column.minWidth, width: column.width }}
                 >
                   {column.render("Header")}
@@ -176,7 +176,7 @@ export const DriverKycTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="font-normal leading-[18px] text-[#595959] dark:border-gray-500 dark:text-white border-y p-2 "
+                        className="font-normal leading-[18px] text-[#595959] dark:border-dm-500 dark:text-white border-y p-2 "
                       >
                         {cell.render("Cell")}
                       </td>
@@ -193,41 +193,41 @@ export const DriverKycTable = () => {
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
-          className="px-2 border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] rounded-sm "
+          className="px-2 border dark:border-0 text-[#262626] dark:bg-dm-600 dark:text-white text-[] rounded-sm  cursor-pointer disabled:cursor-not-allowed"
         >
           <ArrowBackIosOutlinedIcon fontSize="small" />
         </button>
 
         <button
-          className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded"
+          className="border dark:border-0 text-[#262626] dark:bg-dm-600 dark:text-white text-[] px-3 rounded cursor-pointer"
           onClick={() => gotoPage(0)}
         >
           {" "}
           1{" "}
         </button>
         <button
-          className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded"
+          className="border dark:border-0 text-[#262626] dark:bg-dm-600 dark:text-white text-[] px-3 rounded cursor-pointer"
           onClick={() => gotoPage(1)}
         >
           {" "}
           2{" "}
         </button>
         <button
-          className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded"
+          className="border dark:border-0 text-[#262626] dark:bg-dm-600 dark:text-white text-[] px-3 rounded cursor-pointer"
           onClick={() => gotoPage(2)}
         >
           {" "}
           3{" "}
         </button>
         <button
-          className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded"
+          className="border dark:border-0 text-[#262626] dark:bg-dm-600 dark:text-white text-[] px-3 rounded cursor-pointer"
           onClick={() => gotoPage(3)}
         >
           {" "}
           4{" "}
         </button>
         <button
-          className="border dark:border-0 text-[#262626] dark:bg-gray-600 dark:text-white text-[] px-3 rounded"
+          className="border dark:border-0 text-[#262626] dark:bg-dm-600 dark:text-white text-[] px-3 rounded cursor-pointer"
           onClick={() => gotoPage(4)}
         >
           {" "}
@@ -237,7 +237,7 @@ export const DriverKycTable = () => {
         <button
           onClick={() => nextPage()}
           disabled={!canNextPage}
-          className="px-2 border dark:border-0 dark:bg-gray-600 dark:text-white text-[#262626] rounded-sm "
+          className="px-2 border dark:border-0 dark:bg-dm-600 dark:text-white text-[#262626] rounded-sm  cursor-pointer disabled:cursor-not-allowed"
         >
           <ArrowForwardIosOutlinedIcon fontSize="small" />
         </button>

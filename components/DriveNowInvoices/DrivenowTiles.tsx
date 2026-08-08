@@ -40,7 +40,7 @@ type DrivenowInvoicesProp2 = {
 
 export default function DrivenowInvoicesTiles(props: DrivenowInvoicesProp1) {
   return (
-    <div className="border h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] dark:bg-gray-700 dark:border-0 bg-white shadow-[0px_1px_2px_0px_#1B283614] grow rounded-t-lg border-[#E9ECEF]">
+    <div className="border h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] dark:bg-dm-700 dark:border-0 bg-white shadow-[0px_1px_2px_0px_#1B283614] grow rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />
@@ -115,7 +115,7 @@ export default function DrivenowInvoicesTiles(props: DrivenowInvoicesProp1) {
 }
 function LastTile(props: LastTileProp) {
   return (
-    <div className="border h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white dark:bg-gray-700 dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] grow rounded-t-lg border-[#E9ECEF]">
+    <div className="border h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white dark:bg-dm-700 dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] grow rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />
@@ -159,7 +159,7 @@ function LastTile(props: LastTileProp) {
 
 function DrivenowInvoicesTiles1(props: DrivenowInvoicesProp2) {
   return (
-    <div className="border h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white dark:bg-gray-700 dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] grow rounded-t-lg border-[#E9ECEF]">
+    <div className="border h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white dark:bg-dm-700 dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] grow rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />

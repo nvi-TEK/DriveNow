@@ -1,14 +1,21 @@
 import React from "react";
-import { Select, Space, ConfigProvider } from "antd";
+import { Select, Space, ConfigProvider, theme as antdTheme } from "antd";
+import { useTheme } from "next-themes";
 import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
 const handleChange = (value: string) => {
   console.log(`selected ${value}`);
 };
 
 export default function ChartDropdown() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <ConfigProvider
       theme={{
+        algorithm:
+          resolvedTheme === "dark"
+            ? antdTheme.darkAlgorithm
+            : antdTheme.defaultAlgorithm,
         token: {
           colorText: "#8C8C8C",
           fontSize: 12,
@@ -26,7 +33,7 @@ export default function ChartDropdown() {
     >
       <Space wrap>
         <Select
-          className="text-[#8C8C8C]"
+          className="text-[#8C8C8C] cursor-pointer"
           defaultValue="This Year"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           popupMatchSelectWidth={false}
@@ -46,9 +53,15 @@ export default function ChartDropdown() {
 }
 
 function YearDropdown() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <ConfigProvider
       theme={{
+        algorithm:
+          resolvedTheme === "dark"
+            ? antdTheme.darkAlgorithm
+            : antdTheme.defaultAlgorithm,
         token: {
           colorText: "#8C8C8C",
           fontSize: 12,
@@ -68,7 +81,7 @@ function YearDropdown() {
       <Space wrap>
         <Select
         id="yearDropdown"
-          className="text-[#8C8C8C]"
+          className="text-[#8C8C8C] cursor-pointer"
           defaultValue="2024"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           popupMatchSelectWidth={false}
@@ -90,9 +103,15 @@ function YearDropdown() {
 }
 
 function CategoryDropdown() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <ConfigProvider
       theme={{
+        algorithm:
+          resolvedTheme === "dark"
+            ? antdTheme.darkAlgorithm
+            : antdTheme.defaultAlgorithm,
         token: {
           colorText: "#8C8C8C",
           fontSize: 12,
@@ -110,7 +129,7 @@ function CategoryDropdown() {
     >
       <Space wrap>
         <Select
-          className="text-[#8C8C8C]"
+          className="text-[#8C8C8C] cursor-pointer"
           defaultValue="FLEET"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           popupMatchSelectWidth={false}
@@ -126,9 +145,15 @@ function CategoryDropdown() {
 }
 
 function MonthDropdown() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <ConfigProvider
       theme={{
+        algorithm:
+          resolvedTheme === "dark"
+            ? antdTheme.darkAlgorithm
+            : antdTheme.defaultAlgorithm,
         token: {
           colorText: "#8C8C8C",
           fontSize: 12,
@@ -146,7 +171,7 @@ function MonthDropdown() {
     >
       <Space wrap>
         <Select
-          className="text-[#8C8C8C]"
+          className="text-[#8C8C8C] cursor-pointer"
           defaultValue="JAN"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           popupMatchSelectWidth={false}

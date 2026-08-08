@@ -44,6 +44,7 @@ export default function LongMenu() {
         onClose={handleClose}
         disableScrollLock={true}
         PaperProps={{
+          className: "dark:bg-dm-700",
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "25ch",
@@ -53,8 +54,8 @@ export default function LongMenu() {
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="flex items-center text-sm">
-          <Image src={viewmap} className="mr-2 w-6" alt="map" />
+        <MenuItem onClick={handleClose} className="flex items-center text-sm dark:text-white dark:hover:bg-dm-600">
+          <Image src={viewmap} className="mr-2 w-6 dark:brightness-0 dark:invert" alt="map" />
           View on map
         </MenuItem>
       </Menu>
@@ -91,19 +92,11 @@ export const VEHICLETRACKERCOLUMNS = [
             <Image src={refresh} alt="refresh icon" />
           </div>
           <div
-            className="text-base max-2xl:text-sm"
-            style={{
-              color: props.value === "Active" ? "#0EA371" : "#DC4A41",
-              backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
-              borderRadius: "2px",
-              textAlign: "center",
-              paddingTop: "1px",
-              paddingLeft: "6px",
-              paddingRight: "6px",
-              paddingBottom: "1px",
-              lineHeight: "16px",
-              fontWeight: "500",
-            }}
+            className={`text-base max-2xl:text-sm rounded-sm text-center px-1.5 py-px leading-4 font-medium ${
+              props.value === "Active"
+                ? "text-[#0EA371] dark:text-[#34D399] bg-[#E7F6F1] dark:bg-[#0EA37133]"
+                : "text-[#DC4A41] dark:text-[#F87171] bg-[#FBEDEC] dark:bg-[#DC4A4133]"
+            }`}
           >
             {props.value}
           </div>
@@ -122,20 +115,11 @@ export const VEHICLETRACKERCOLUMNS = [
       return (
         <div className="">
           <div
-            className="text-base max-2xl:text-sm"
-            style={{
-              color: props.value === "Online" ? "#0EA371" : "#DC4A41",
-              backgroundColor: props.value === "Online" ? "#E7F6F1" : "#FBEDEC",
-              borderRadius: "2px",
-              textAlign: "center",
-              paddingLeft: "6px",
-              paddingRight: "6px",
-              paddingTop: "2px",
-              paddingBottom: "2px",
-              lineHeight: "16px",
-              fontWeight: "500",
-              display: "inline-block"
-            }}
+            className={`text-base max-2xl:text-sm rounded-sm text-center px-1.5 py-0.5 leading-4 font-medium inline-block ${
+              props.value === "Online"
+                ? "text-[#0EA371] dark:text-[#34D399] bg-[#E7F6F1] dark:bg-[#0EA37133]"
+                : "text-[#DC4A41] dark:text-[#F87171] bg-[#FBEDEC] dark:bg-[#DC4A4133]"
+            }`}
           >
             {props.value}
           </div>

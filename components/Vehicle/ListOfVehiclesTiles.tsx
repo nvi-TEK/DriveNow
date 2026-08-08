@@ -32,7 +32,7 @@ type ListofVehiclesProp = {
 
 export default function ListOfVehiclesTiles(props: ListOfVehiclesProp1) {
   return (
-    <div className="border dark:border-0 dark:bg-gray-700 shadow-[0px_1px_2px_0px_#1B283614] h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white grow rounded-t-lg border-[#E9ECEF]">
+    <div className="border dark:border-0 dark:bg-dm-700 shadow-[0px_1px_2px_0px_#1B283614] h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white grow rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />
@@ -109,7 +109,7 @@ export default function ListOfVehiclesTiles(props: ListOfVehiclesProp1) {
 
 function ListofVehiclesTiles(props: ListofVehiclesProp) {
   return (
-    <div className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-700 dark:border-0 h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white grow rounded-t-lg border-[#E9ECEF]">
+    <div className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-dm-700 dark:border-0 h-[8rem] p-4 pt-3 pr-0 rounded-lg w-[30px] bg-white grow rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />

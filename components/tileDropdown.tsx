@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Select, Space, ConfigProvider } from "antd";
+import { Select, Space, ConfigProvider, theme as antdTheme } from "antd";
+import { useTheme } from "next-themes";
 import { BasicTable } from "./payment/BasicTable";
 import { PaymentTransactionsTable } from "./payment/PaymentTransactions/PaymentTransactionsTable";
 import { DailyPaymentsTable } from "./payment/DailyPayments/DailyPaymentsTable";
@@ -11,9 +12,15 @@ const handleChange = (value: string) => {
 };
 
 export default function TileDropdown() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <ConfigProvider
       theme={{
+        algorithm:
+          resolvedTheme === "dark"
+            ? antdTheme.darkAlgorithm
+            : antdTheme.defaultAlgorithm,
         token: {
           colorText: "#8C8C8C",
           fontSize: 12,
@@ -31,7 +38,7 @@ export default function TileDropdown() {
     >
       <Space wrap>
         <Select
-          className="text-[#8C8C8C]"
+          className="text-[#8C8C8C] cursor-pointer"
           defaultValue="This Week"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           popupMatchSelectWidth={false}
@@ -52,9 +59,15 @@ export default function TileDropdown() {
 }
 
 function TileDropdown1() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <ConfigProvider
       theme={{
+        algorithm:
+          resolvedTheme === "dark"
+            ? antdTheme.darkAlgorithm
+            : antdTheme.defaultAlgorithm,
         token: {
           colorText: "#8C8C8C",
           fontSize: 12,
@@ -72,7 +85,7 @@ function TileDropdown1() {
     >
       <Space wrap>
         <Select
-          className="text-[#8C8C8C]"
+          className="text-[#8C8C8C] cursor-pointer"
           defaultValue="This Week"
           suffixIcon={<UnfoldMoreIcon className="dark:text-white" />}
           popupMatchSelectWidth={false}

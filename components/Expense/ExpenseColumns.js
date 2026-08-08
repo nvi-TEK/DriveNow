@@ -1,6 +1,7 @@
 /* eslint-disable require-jsdoc */
 
 import React, { useState } from "react";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -18,6 +19,7 @@ import MoreDetails from "./MoreDetails";
 const ITEM_HEIGHT = 48;
 
 export default function LongMenu() {
+  const { resolvedTheme } = useTheme();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -43,7 +45,7 @@ export default function LongMenu() {
     // height:605,
     // width: 929,
     borderRadius: "8px",
-    bgcolor: "background.paper",
+    bgcolor: resolvedTheme === "dark" ? "#2A2A2A" : "background.paper",
     border: "0px",
     paddingLeft: "24px",
     paddingRight: "24px",
@@ -74,6 +76,7 @@ export default function LongMenu() {
         keepMounted
         disableScrollLock={true}
         PaperProps={{
+          className: "dark:bg-dm-700",
           style: {
             maxHeight: ITEM_HEIGHT * 4,
             width: "200px",
@@ -88,9 +91,9 @@ export default function LongMenu() {
             onClick={openModal}
             component={Link}
             href={""}
-            className="py-2 flex"
+            className="py-2 flex dark:text-white dark:hover:bg-dm-600"
           >
-            <Image src={details} className="mr-2" alt="checkmark" />
+            <Image src={details} className="mr-2 dark:brightness-0 dark:invert" alt="checkmark" />
             View Details
           </MenuItem>
           <Modal
@@ -121,15 +124,15 @@ export default function LongMenu() {
             </Box>
           </Modal>
         </Box>
-        <MenuItem onClick={handleClose} className="flex py-2">
-          <Image src={approve} className="mr-2" alt="checkmark" />
+        <MenuItem onClick={handleClose} className="flex py-2 dark:text-white dark:hover:bg-dm-600">
+          <Image src={approve} className="mr-2 dark:brightness-0 dark:invert" alt="checkmark" />
           Approve
         </MenuItem>
         <MenuItem
-          className="text-[#DC4A41] text-sm font-normal py-2 leading-[18px]"
+          className="text-[#DC4A41] text-sm font-normal py-2 leading-[18px] dark:hover:bg-dm-600"
           onClick={handleClose}
         >
-          <Image src={decline} className="mr-2" alt="x" />
+          <Image src={decline} className="mr-2 dark:brightness-0 dark:invert" alt="x" />
           <p className="text-[#DC4A41] font-normal">Decline</p>
         </MenuItem>
       </Menu>
@@ -188,27 +191,13 @@ export const EXPENSECOLUMNS = [
         <div className="flex justify-center ">
           <div
             id="expense-table-status"
-            style={{
-              color:
-                props.value === "Paid"
-                  ? "#0EA371"
-                  : props.value === "Declined"
-                  ? "#DC4A41"
-                  : "#E8B123",
-              backgroundColor:
-                props.value === "Paid"
-                  ? "#E7F6F1"
-                  : props.value === "Declined"
-                  ? "#FBEDEC"
-                  : "#FBF6E9",
-              borderRadius: "2px",
-              paddingTop: "3px",
-              paddingBottom: "3px",
-              paddingLeft: "6px",
-              paddingRight: "6px",
-              lineHeight: "16px",
-              fontWeight: "500",
-            }}
+            className={`rounded-sm py-[3px] px-1.5 leading-4 font-medium ${
+              props.value === "Paid"
+                ? "text-[#0EA371] dark:text-[#34D399] bg-[#E7F6F1] dark:bg-[#0EA37133]"
+                : props.value === "Declined"
+                ? "text-[#DC4A41] dark:text-[#F87171] bg-[#FBEDEC] dark:bg-[#DC4A4133]"
+                : "text-[#E8B123] dark:text-[#FBBF24] bg-[#FBF6E9] dark:bg-[#E8B12333]"
+            }`}
           >
             <p className="">{props.value}</p>
           </div>

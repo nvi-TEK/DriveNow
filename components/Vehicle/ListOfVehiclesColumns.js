@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable require-jsdoc */
 import React, { useState } from "react";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -18,6 +19,7 @@ import UpdateStatusDropdown from "../Dropdown";
 const ITEM_HEIGHT = 96;
 
 export default function LongMenu() {
+  const { resolvedTheme } = useTheme();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -51,7 +53,7 @@ export default function LongMenu() {
     width: 306,
     height: 181,
     borderRadius: "8px",
-    bgcolor: "background.paper",
+    bgcolor: resolvedTheme === "dark" ? "#2A2A2A" : "background.paper",
     border: "0px",
     paddingLeft: "24px",
     paddingRight: "24px",
@@ -66,7 +68,7 @@ export default function LongMenu() {
     width: 306,
     height: 181,
     borderRadius: "8px",
-    bgcolor: "background.paper",
+    bgcolor: resolvedTheme === "dark" ? "#2A2A2A" : "background.paper",
     border: "0px",
     paddingLeft: "24px",
     paddingRight: "24px",
@@ -96,6 +98,7 @@ export default function LongMenu() {
         keepMounted
         disableScrollLock={true}
         PaperProps={{
+          className: "dark:bg-dm-700",
           style: {
             maxHeight: ITEM_HEIGHT * 4,
             width: "200px",
@@ -107,9 +110,9 @@ export default function LongMenu() {
       >
         <MenuItem
           onClick={handleClose}
-          className="flex font-normal text-[#595959] text-sm leading-[18px] py-2"
+          className="flex font-normal text-[#595959] dark:text-white dark:hover:bg-dm-600 text-sm leading-[18px] py-2"
         >
-          <Image src={pencil} className="mr-2 w-6" alt="checkmark" />
+          <Image src={pencil} className="mr-2 w-6 dark:brightness-0 dark:invert" alt="checkmark" />
           Edit Vehicle{" "}
         </MenuItem>
 
@@ -117,9 +120,9 @@ export default function LongMenu() {
         <Box>
           <MenuItem
             onClick={openModal}
-            className="flex font-normal text-[#595959] text-sm leading-[18px] py-2"
+            className="flex font-normal text-[#595959] dark:text-white dark:hover:bg-dm-600 text-sm leading-[18px] py-2"
           >
-            <Image src={file} className="mr-2 w-6 " alt="x" />
+            <Image src={file} className="mr-2 w-6 dark:brightness-0 dark:invert" alt="x" />
             Update Sim
           </MenuItem>
           <Modal
@@ -131,7 +134,7 @@ export default function LongMenu() {
           >
             <Box sx={style}>
               <div className="flex mt-[18px] items-center justify-between">
-                <p className="pl-">Update Sim for GT 9202-22</p>
+                <p className="pl- dark:text-white">Update Sim for GT 9202-22</p>
                 <Image
                   src={modalclose}
                   alt="close button"
@@ -142,25 +145,25 @@ export default function LongMenu() {
               <div className="mt-5">
                 <label
                   htmlFor="simNumber"
-                  className="block mb-1 text-sm font-normal text-[#262626]"
+                  className="block mb-1 text-sm font-normal text-[#262626] dark:text-white"
                 >
                   <span className="text-[#DC4A41] ">*</span> Sim Number:
                 </label>
                 <input
                   type="text"
                   id="amount"
-                  className="border border-[#D9D9D9] placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 text-sm rounded block w-full h-[32px]"
+                  className="border border-[#D9D9D9] dark:border-0 dark:bg-dm-600 placeholder-[#BFBFBF] dark:placeholder-dm-300 shadow-[0px_1px_2px_0px_#1B283614] text-gray-900 dark:text-white text-sm rounded block w-full h-[32px]"
                   placeholder="Enter"
                 />
               </div>
               <div className="flex justify-end mt-4 gap-x-4 items-center ">
                 <button
                   onClick={closeModal}
-                  className="h-[28px] px-3 text-[#595959] text-sm leading-[18px] font-normal border-0"
+                  className="h-[28px] px-3 text-[#595959] dark:text-white dark:hover:bg-dm-600 text-sm leading-[18px] font-normal border-0 cursor-pointer"
                 >
                   Cancel
                 </button>
-                <button className="h-[28px] px-3 bg-[#007AF5] text-sm text-[#FFFFFF] rounded-[4px]">
+                <button className="h-[28px] px-3 bg-[#007AF5] text-sm text-[#FFFFFF] rounded-[4px] cursor-pointer">
                   Update
                 </button>
               </div>
@@ -171,10 +174,10 @@ export default function LongMenu() {
         {/* update status */}
         <div>
           <MenuItem
-            className="flex font-normal text-[#595959] text-sm leading-[18px] py-2"
+            className="flex font-normal text-[#595959] dark:text-white dark:hover:bg-dm-600 text-sm leading-[18px] py-2"
             onClick={openModal1}
           >
-            <Image src={recycle} className="mr-2 w-6 " alt="x" />
+            <Image src={recycle} className="mr-2 w-6 dark:brightness-0 dark:invert" alt="x" />
             Update Status{" "}
           </MenuItem>
           <Modal
@@ -186,7 +189,7 @@ export default function LongMenu() {
           >
             <Box sx={style1}>
               <div className="flex mt-[18px] items-center justify-between">
-                <p className="pl-">Update Status of GT 9202-22</p>
+                <p className="pl- dark:text-white">Update Status of GT 9202-22</p>
                 <Image
                   src={modalclose}
                   alt="close button"
@@ -197,7 +200,7 @@ export default function LongMenu() {
               <div className="mt-5">
                 <label
                   htmlFor="simNumber"
-                  className="block mb-1 text-sm font-normal text-[#262626]"
+                  className="block mb-1 text-sm font-normal text-[#262626] dark:text-white"
                 >
                   <span className="text-[#DC4A41] ">*</span> Status of Vehicle
                 </label>
@@ -206,11 +209,11 @@ export default function LongMenu() {
               <div className="flex justify-end mt-4 gap-x-4 items-center ">
                 <button
                   onClick={closeModal1}
-                  className="h-[28px] px-3 text-[#595959] text-sm leading-[18px] font-normal border-0"
+                  className="h-[28px] px-3 text-[#595959] dark:text-white dark:hover:bg-dm-600 text-sm leading-[18px] font-normal border-0 cursor-pointer"
                 >
                   Cancel
                 </button>
-                <button className="h-[28px] px-3 bg-[#007AF5] text-sm text-[#FFFFFF] rounded-[4px]">
+                <button className="h-[28px] px-3 bg-[#007AF5] text-sm text-[#FFFFFF] rounded-[4px] cursor-pointer">
                   Update
                 </button>
               </div>
@@ -218,10 +221,10 @@ export default function LongMenu() {
           </Modal>
         </div>
         <MenuItem
-          className="flex font-normal items-center text-[#595959] text-sm leading-[18px] py-2"
+          className="flex font-normal items-center text-[#595959] dark:text-white dark:hover:bg-dm-600 text-sm leading-[18px] py-2"
           onClick={handleClose}
         >
-          <Image src={vehicle} className="mr-2 w-6 " alt="off icon" />
+          <Image src={vehicle} className="mr-2 w-6 dark:brightness-0 dark:invert" alt="off icon" />
           <p className="text-[#DC4A41] text-sm">Delete</p>{" "}
         </MenuItem>
       </Menu>

@@ -48,55 +48,57 @@ export default function LongMenu() {
         onClose={handleClose}
         disableScrollLock={true}
         PaperProps={{
+          className: "dark:bg-dm-700",
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "201px",
             position: "sticky",
+            fontFamily: "Avenir"
           },
         }}
       >
         <MenuItem
           onClick={handleClose}
-          className="flex text-sm font-normal leading-[18px] text-[#262626] py-2.5 "
+          className="flex text-sm font-normal leading-[18px] dark:text-white dark:hover:bg-dm-600 text-[#262626] py-2.5 "
         >
-          <Image src={user} className="mr-2 w-6" alt="pencil" />
+          <Image src={user} className="mr-2 w-6 dark:brightness-0 dark:invert" alt="pencil" />
           User Profile
         </MenuItem>
         <MenuItem
-          className="flex text-sm font-normal leading-[18px] text-[#262626] py-2.5 "
+          className="flex text-sm font-normal leading-[18px] dark:text-white dark:hover:bg-dm-600 text-[#262626] py-2.5 "
           onClick={handleClose}
         >
-          <Image src={settings} className="mr-2 w-6 " alt="x" />
+          <Image src={settings} className="mr-2 w-6 dark:brightness-0 dark:invert" alt="x" />
           Settings
         </MenuItem>
         <MenuItem
-          className="flex text-sm font-normal leading-[18px] text-[#262626] py-2.5 "
+          className="flex text-sm font-normal leading-[18px] dark:text-white dark:hover:bg-dm-600 text-[#262626] py-2.5 "
           onClick={handleClose}
         >
-          <Image src={lock} className="mr-2 w-6 " alt="x" />
+          <Image src={lock} className="mr-2 w-6 dark:brightness-0 dark:invert" alt="x" />
           Change Password
         </MenuItem>
         <MenuItem
-          className="flex text-sm font-normal leading-[18px] text-[#262626] py-2.5 "
+          className="flex text-sm font-normal leading-[18px] dark:text-white dark:hover:bg-dm-600 text-[#262626] py-2.5 "
           onClick={handleClose}
         >
           System
         </MenuItem>
         <MenuItem
-          className="flex text-sm font-normal leading-[18px] text-[#262626] py-2.5 "
+          className="flex text-sm font-normal leading-[18px] dark:text-white dark:hover:bg-dm-600 text-[#262626] py-2.5 "
           onClick={handleClose}
         >
           Configuration
         </MenuItem>
         <MenuItem
-          className="flex text-sm font-normal leading-[18px] text-[#262626] py-2.5  "
+          className="flex text-sm font-normal leading-[18px] dark:text-white dark:hover:bg-dm-600 text-[#262626] py-2.5  "
           onClick={handleClose}
         >
           Help Documentation
         </MenuItem>
 
         <MenuItem
-          className="flex text-sm font-normal text-[#DC4A41] leading-[18px] py-2.5 "
+          className="flex text-sm font-normal text-[#DC4A41] leading-[18px] py-2.5 dark:hover:bg-dm-600"
           component={Link}
           href="/"
           onClick={handleClose}

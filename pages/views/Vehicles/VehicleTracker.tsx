@@ -47,11 +47,7 @@ export default function VehicleTracker() {
 
   return (
     <>
-      <div className="flex w-full">
-        <div className="w-full z-10">
-          <Header name="Vehicles Tracker" />
-        </div>
-      </div>
+      <Header name="Vehicles Tracker" />
       <Layout>
         <Head>
           <title>Vehicle Tracker</title>
@@ -60,7 +56,7 @@ export default function VehicleTracker() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-dm-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
           <section className="w-full ">
             <div className="flex space-x-4 grow m-5">
@@ -86,7 +82,7 @@ export default function VehicleTracker() {
               />
             </div>
 
-            <div className="bg-white dark:bg-gray-700 rounded-lg mx-5 px-[10px] mb-[140px] mt-6 ">
+            <div className="bg-white dark:bg-dm-700 rounded-lg mx-5 px-[10px] mb-[140px] mt-6 ">
               <div className="flex justify-between ">
                 <h4 className="text-[#262626] dark:text-white font-medium text-[22px] leading-[30px] pt-4 ">
                   Vehicle Tracker

@@ -19,7 +19,7 @@ type VehicleIssuesLogsProp1 = {
 
 export default function VehicleIssuesLogsTiles(props: VehicleIssuesLogsProp1) {
   return (
-    <div className="border h-[8rem] p-4 pt-3 pr-0 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg dark:border-0 dark:bg-gray-700 bg-white grow border-[#E9ECEF]">
+    <div className="border h-[8rem] p-4 pt-3 pr-0 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg dark:border-0 dark:bg-dm-700 bg-white grow border-[#E9ECEF]">
       <div className="flex items-center justify-between">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />

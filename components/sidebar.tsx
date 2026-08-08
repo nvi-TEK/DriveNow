@@ -10,9 +10,6 @@ import heatmap from "../assets/heatmap.svg";
 import activeheatmap from "../assets/activeheatmap.svg";
 import push from "../assets/push.svg";
 import activepush from "../assets/activepush.svg";
-import settings from "../assets/settings.svg";
-import help from "../assets/help.svg";
-import darkmode from "../assets/moon-star.svg";
 import expense from "../assets/expense.svg";
 import activeexpense from "../assets/activeexpense.svg";
 import vehicle from "../assets/vehicleside.svg";
@@ -27,47 +24,53 @@ import { HelpRounded } from "@mui/icons-material";
 import ThemeToggle from "./themeToggle";
 
 function SideBar() {
-  const selectChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-    eventTarget: string
-  ) => {
-    const { value, checked } = event.target;
-
-    console.log(`${value} is ${checked}`);
-  };
-
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
 
   const router = useRouter();
-  const [showDriver, setShowDriver] = useState(false);
-  const [showTransaction, setShowTransaction] = useState(false);
-  const [showVehicle, setShowVehicle] = useState(false);
 
-  const DriverArrow =
-    resolvedTheme == "light" && showDriver
-      ? uparrow
-      : resolvedTheme == "dark" && showDriver
-      ? push
-      : downarrow;
+  const driverUrls = [
+    "/views/Drivers/AllDrivers",
+    "/views/Drivers/DriverMapView",
+    "/views/Drivers/DriverKyc",
+  ];
+  const transactionUrls = [
+    "/views/Transactions/payments",
+    "/views/Transactions/DrivenowInvoices",
+  ];
+  const vehicleUrls = [
+    "/views/Vehicles/ListofVehicles",
+    "/views/Vehicles/VehicleIssuesLogs",
+    "/views/Vehicles/VehicleTracker",
+  ];
+
+  const [showDriver, setShowDriver] = useState(
+    driverUrls.includes(router.pathname)
+  );
+  const [showTransaction, setShowTransaction] = useState(
+    transactionUrls.includes(router.pathname)
+  );
+  const [showVehicle, setShowVehicle] = useState(
+    vehicleUrls.includes(router.pathname)
+  );
+
+  const DriverArrow = showDriver ? uparrow : downarrow;
   const TransactionArrow = showTransaction ? uparrow : downarrow;
   const VehicleArrow = showVehicle ? uparrow : downarrow;
 
   return (
     <aside
-      className="z-10 bg-white dark:bg-gray-700 rounded-r-lg w-[17.6%] h- flex-shrink-0"
+      className="z-10 w-[17.6%] flex-shrink-0 h-[calc(100vh-4rem)] max-2xl:h-[calc(100vh-55px)] sticky top-[4rem] max-2xl:top-[55px]"
       aria-label="Sidebar"
     >
-      <aside className="bg-white h-full dark:bg-gray-700 border-r dark:border-0 dark: pt-4 pb-9 shadow-[0px_4px_16px_0px_#0000001A] overflow-x-visible rounded-r-lg scroll-smooth no-scrollbar">
-        <ul className="space-y-2 max-2xl:space-y-2 text-white">
+      <div className="bg-white dark:bg-dm-700 rounded-r-lg h-full border-r dark:border-0 pt-4 shadow-[0px_4px_16px_0px_#0000001A] overflow-x-visible overflow-y-auto no-scrollbar">
+        <ul className="flex flex-col h-full gap-2 text-white">
           <Link href={"/views/dashboard"} as="">
             <List
               icon={dashboard}
               activeIcon={activedashboard}
-              // darkActiveIcon={settings}
-              // darkIcon={logo}
               name={"Dashboard"}
               url="/views/dashboard"
             />
@@ -92,120 +95,126 @@ function SideBar() {
           </Link>
 
           <div
-            className="flex ml-6 cursor-pointer max-2xl:pb-1 pb-2 justify-between items-center text-black"
+            className={`flex items-center justify-between py-3 max-2xl:py-2 mx-2 pl-4 cursor-pointer rounded-lg text-black hover:bg-[#F1F8FF] dark:hover:bg-dm-600 ${
+              driverUrls.includes(router.pathname)
+                ? "bg-[#F1F8FF] dark:bg-dm-600"
+                : ""
+            }`}
             onClick={() => setShowDriver(!showDriver)}
           >
-            <div className="flex  dark:text-white max-2xl:text-[15px] max-2xl:py-0 py-2">
+            <div className="flex dark:text-white max-2xl:text-[15px]">
               <Image
                 src={driverside}
-                className="mr-2 max-2xl:w-5"
+                className="mr-2 w-5 max-2xl:w-5 dark:brightness-0 dark:invert"
                 alt="tool icon"
               />
-              <p id="sidebar-text">Drivers</p>
+              <p id="sidebar-text" className="leading-5">Drivers</p>
             </div>
             <div>
               <Image
-                className="mr-4 h-5 max-2xl:w-4 w-5"
+                className="mr-4 h-5 max-2xl:w-4 w-5 dark:brightness-0 dark:invert"
                 src={DriverArrow}
                 alt="arrow"
               />
             </div>
           </div>
-          <div className="pl-6  max-2xl:pl-2">
-            {showDriver ? (
-              <>
-                <Link href={"/views/Drivers/AllDrivers"} as="">
-                  <List name={"All Drivers"} url="/views/Drivers/AllDrivers" />
-                </Link>
-                <Link href={"/views/Drivers/DriverMapView"} as="">
-                  <List
-                    name={"Driver Map View"}
-                    url="/views/Drivers/DriverMapView"
-                  />
-                </Link>
-                <Link href={"/views/Drivers/DriverKyc"} as="">
-                  <List name={"Driver KYC"} url="/views/Drivers/DriverKyc" />
-                </Link>
-              </>
-            ) : null}
-          </div>
+          {showDriver ? (
+            <div className="pl-6 max-2xl:pl-2 flex flex-col gap-2">
+              <Link href={"/views/Drivers/AllDrivers"} as="">
+                <List name={"All Drivers"} url="/views/Drivers/AllDrivers" />
+              </Link>
+              <Link href={"/views/Drivers/DriverMapView"} as="">
+                <List
+                  name={"Driver Map View"}
+                  url="/views/Drivers/DriverMapView"
+                />
+              </Link>
+              <Link href={"/views/Drivers/DriverKyc"} as="">
+                <List name={"Driver KYC"} url="/views/Drivers/DriverKyc" />
+              </Link>
+            </div>
+          ) : null}
 
           <div
-            className="flex ml-6 cursor-pointer max-2xl:pb-2 pb-2 justify-between items-center text-black"
+            className={`flex items-center justify-between py-3 max-2xl:py-2 mx-2 pl-4 cursor-pointer rounded-lg text-black hover:bg-[#F1F8FF] dark:hover:bg-dm-600 ${
+              transactionUrls.includes(router.pathname)
+                ? "bg-[#F1F8FF] dark:bg-dm-600"
+                : ""
+            }`}
             onClick={() => setShowTransaction(!showTransaction)}
           >
             <div className="flex dark:text-white max-2xl:text-[15px]">
               <Image
                 src={transactionside}
-                className="mr-2 max-2xl:w-5"
+                className="mr-2 w-5 max-2xl:w-5 dark:brightness-0 dark:invert"
                 alt="tool icon"
               />
-              <p id="sidebar-text">Transactions</p>
+              <p id="sidebar-text" className="leading-5">Transactions</p>
             </div>
             <Image
-              className="mr-4 max-2xl:w-4 h-5 w-5"
+              className="mr-4 max-2xl:w-4 h-5 w-5 dark:brightness-0 dark:invert"
               src={TransactionArrow}
               alt="arrow"
             />
           </div>
-          <div className="pl-6 max-2xl:pl-2">
-            {showTransaction ? (
-              <>
-                <Link href={"/views/Transactions/payments"} as="">
-                  <List name={"Payments"} url="/views/Transactions/payments" />
-                </Link>
-                <Link href={"/views/Transactions/DrivenowInvoices"} as="">
-                  <List
-                    name={"DriveNow Invoices"}
-                    url="/views/Transactions/DrivenowInvoices"
-                  />
-                </Link>
-              </>
-            ) : null}
-          </div>
+          {showTransaction ? (
+            <div className="pl-6 max-2xl:pl-2 flex flex-col gap-2">
+              <Link href={"/views/Transactions/payments"} as="">
+                <List name={"Payments"} url="/views/Transactions/payments" />
+              </Link>
+              <Link href={"/views/Transactions/DrivenowInvoices"} as="">
+                <List
+                  name={"DriveNow Invoices"}
+                  url="/views/Transactions/DrivenowInvoices"
+                />
+              </Link>
+            </div>
+          ) : null}
 
           <div
-            className="flex ml-6 cursor-pointer justify-between items-center text-black"
+            className={`flex items-center justify-between py-3 max-2xl:py-2 mx-2 pl-4 cursor-pointer rounded-lg text-black hover:bg-[#F1F8FF] dark:hover:bg-dm-600 ${
+              vehicleUrls.includes(router.pathname)
+                ? "bg-[#F1F8FF] dark:bg-dm-600"
+                : ""
+            }`}
             onClick={() => setShowVehicle(!showVehicle)}
           >
-            <div className="flex max-2xl:text-[15px] dark:text-white max-2xl:py-0 py-2">
+            <div className="flex max-2xl:text-[15px] dark:text-white">
               <Image
                 src={vehicle}
-                className="mr-2 max-2xl:w-5"
+                className="mr-2 w-5 max-2xl:w-5 dark:brightness-0 dark:invert"
                 alt="tool icon"
               />
-              <p id="sidebar-text">Vehicle</p>
+              <p id="sidebar-text" className="leading-5">Vehicle</p>
             </div>
             <Image
-              className="mr-4 h-5 max-2xl:w-4 w-5"
+              className="mr-4 h-5 max-2xl:w-4 w-5 dark:brightness-0 dark:invert"
               src={VehicleArrow}
               alt="arrow"
             />
           </div>
-          <div className="pl-6 max-2xl:pl-2">
-            {showVehicle ? (
-              <>
-                <Link href={"/views/Vehicles/ListofVehicles"} as="">
-                  <List
-                    name={"List of Vehicles"}
-                    url="/views/Vehicles/ListofVehicles"
-                  />
-                </Link>
-                <Link href={"/views/Vehicles/VehicleIssuesLogs"} as="">
-                  <List
-                    name={"Vehicle Issues Logs"}
-                    url="/views/Vehicles/VehicleIssuesLogs"
-                  />
-                </Link>
-                <Link href={"/views/Vehicles/VehicleTracker"} as="">
-                  <List
-                    name={"Vehicle Tracker"}
-                    url="/views/Vehicles/VehicleTracker"
-                  />
-                </Link>
-              </>
-            ) : null}
-          </div>
+          {showVehicle ? (
+            <div className="pl-6 max-2xl:pl-2 flex flex-col gap-2">
+              <Link href={"/views/Vehicles/ListofVehicles"} as="">
+                <List
+                  name={"List of Vehicles"}
+                  url="/views/Vehicles/ListofVehicles"
+                />
+              </Link>
+              <Link href={"/views/Vehicles/VehicleIssuesLogs"} as="">
+                <List
+                  name={"Vehicle Issues Logs"}
+                  url="/views/Vehicles/VehicleIssuesLogs"
+                />
+              </Link>
+              <Link href={"/views/Vehicles/VehicleTracker"} as="">
+                <List
+                  name={"Vehicle Tracker"}
+                  url="/views/Vehicles/VehicleTracker"
+                />
+              </Link>
+            </div>
+          ) : null}
           <Link href={"/views/expense"} as="">
             <List
               icon={expense}
@@ -215,62 +224,14 @@ function SideBar() {
             />
           </Link>
 
-          <div className="flex justify-center">
-            <hr className="h-px my-1 w-[85%] dark:bg-gray-500 bg-[#E6E6E6] border-0" />
+          <div className="flex ml-6 mr-4 mt-auto pb-4 justify-between items-center text-black">
+            <p className="text-[#262626] max-2xl:text-sm dark:text-white">
+              Theme
+            </p>
+            <ThemeToggle />
           </div>
-
-          <div>
-            <Link href={""}>
-              <List icon={settings} name={"Settings"} url="" />
-            </Link>
-
-            <Link href={""} as="">
-              <List icon={help} name={"Help"} url="" />
-            </Link>
-          </div>
-          {/* 
-            <div className=" flex justify-between items-center pr-5 ml-auto ">
-              <p className="text-[#262626] max-2xl:text-sm pl-4 dark:text-white pr-1">
-                Theme:
-              </p>
-              <ThemeToggle />
-            </div> */}
-
-          {/* <div className="flex pb-7 h-[52px] pt-[394px] max-2xl:pt-[290px] pl-6">
-              <div>
-                <Image
-                  src={darkmode}
-                  className="max-2xl:w-5"
-                  alt="darkmode switch"
-                />
-              </div>
-
-              <p className="text-[#262626] dark:text-white max-2xl:text-[15px] ml-2 ">
-                Dark mode
-              </p>
-
-              <div className="ml-auto">
-                <label className="relative inline-flex items-center cursor-pointer">
-                  <input
-                    type="checkbox"
-                    value="7"
-                    name="switch"
-                    onChange={(event) =>
-                      selectChange(event, event.target.tagName)
-                    }
-                    className="sr-only peer"
-                  />
-                  <div
-                    className="w-12 h-7 mr-4 pl-1 bg-[#D9D9D9] dark:bg-gray-500 rounded-[2.5rem] peer 
-                                        peer-checked:after:translate-x-5 peer-checked:after:border-white after:content-[''] 
-                                        after:absolute after:top-1  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
-                                        peer-checked:bg-black"
-                  ></div>
-                </label>
-              </div>
-            </div> */}
         </ul>
-      </aside>
+      </div>
     </aside>
   );
 }

@@ -20,8 +20,8 @@ function Header(prop: pageProp) {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div className="bg-white dark:border-gray-700 border-b z-20">
-      <div className="flex w-full h-[4rem] max-2xl:h-[55px] shadow-[0px_4px_16px_0px_#0000001A] items-center dark:bg-gray-700 dark:border-gray-500 border-[#E6E6E6] pr-4 bg-white">
+    <div className="bg-white dark:border-dm-700 border-b z-20 sticky top-0">
+      <div className="flex w-full h-[4rem] max-2xl:h-[55px] shadow-[0px_4px_16px_0px_#0000001A] items-center dark:bg-dm-700 dark:border-dm-500 border-[#E6E6E6] pr-4 bg-white">
         <Link href={"/views/dashboard"}>
           <Image
             src={logo}
@@ -52,7 +52,7 @@ function Header(prop: pageProp) {
             <div className="relative">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <svg
-                  className="w-4 h-4 text-gray-500 dark:text-gray-300"
+                  className="w-4 h-4 text-gray-500 dark:text-dm-300"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -70,7 +70,7 @@ function Header(prop: pageProp) {
               <input
                 type="search"
                 id="default-search"
-                className="block w-[256px] border-0 p-1.5 ps-10 text-sm text-gray-900 rounded-lg dark:bg-gray-600 dark:text-white bg-[#F2F2F2] dark:placeholder-gray-300"
+                className="block w-[256px] border-0 p-1.5 ps-10 text-sm text-gray-900 rounded-lg dark:bg-dm-600 dark:text-white bg-[#F2F2F2] dark:placeholder-dm-300"
                 placeholder="What are you looking for？"
               />
             </div>
@@ -79,9 +79,9 @@ function Header(prop: pageProp) {
           {/* Notification bell */}
           <div className="ml-[3%]">
             <Image
-              className="cursor-pointer max-2xl:w-5 w-[14px] h-[14px]"
+              className="cursor-pointer max-2xl:w-5 w-[14px] h-[14px] dark:brightness-0 dark:invert"
               alt="Notification bell"
-              src={resolvedTheme == "light" ? avatar : bell}
+              src={bell}
             />
           </div>
 

@@ -1,10 +1,11 @@
 /* eslint-disable require-jsdoc */
 import React, { useMemo } from "react";
 import { useDropzone } from "react-dropzone";
+import { useTheme } from "next-themes";
 import plus from "../assets/dropzoneplus.svg";
 import Image from "next/image";
 
-const baseStyle = {
+const dropzoneBaseStyle = (resolvedTheme) => ({
   display: "flex",
   width: "188px",
   height: "200px",
@@ -14,48 +15,13 @@ const baseStyle = {
   paddingLeft: "73px",
   borderWidth: 1,
   borderRadius: 8,
-  borderColor: "#BFBFBF",
+  borderColor: resolvedTheme === "dark" ? "#5C5C5C" : "#BFBFBF",
   borderStyle: "dashed",
-  backgroundColor: "#fafafa",
-  color: "#bdbdbd",
+  backgroundColor: resolvedTheme === "dark" ? "#404040" : "#fafafa",
+  color: resolvedTheme === "dark" ? "#B0B0B0" : "#bdbdbd",
   outline: "none",
   transition: "border .24s ease-in-out",
-};
-
-const VehicleStyle = {
-  display: "flex",
-  width: "188px",
-  height: "200px",
-  alignItems: "center",
-  padding: "50px",
-  justifyItems: "center",
-  paddingLeft: "73px",
-  borderWidth: 1,
-  borderRadius: 8,
-  borderColor: "#BFBFBF",
-  borderStyle: "dashed",
-  backgroundColor: "#fafafa",
-  color: "#bdbdbd",
-  outline: "none",
-  transition: "border .24s ease-in-out",
-};
-const LastDropzoneStyle = {
-  display: "flex",
-  width: "188px",
-  height: "200px",
-  alignItems: "center",
-  padding: "50px",
-  justifyItems: "center",
-  paddingLeft: "73px",
-  borderWidth: 1,
-  borderRadius: 8,
-  borderColor: "#BFBFBF",
-  borderStyle: "dashed",
-  backgroundColor: "#fafafa",
-  color: "#bdbdbd",
-  outline: "none",
-  transition: "border .24s ease-in-out",
-};
+});
 
 const focusedStyle = {
   borderColor: "#2196f3",
@@ -70,17 +36,18 @@ const rejectStyle = {
 };
 
 export default function StyledDropzone() {
+  const { resolvedTheme } = useTheme();
   const { getRootProps, getInputProps, isFocused, isDragAccept, isDragReject } =
     useDropzone({ accept: { "image/*": [] } });
 
   const style = useMemo(
     () => ({
-      ...baseStyle,
+      ...dropzoneBaseStyle(resolvedTheme),
       ...(isFocused ? focusedStyle : {}),
       ...(isDragAccept ? acceptStyle : {}),
       ...(isDragReject ? rejectStyle : {}),
     }),
-    [isFocused, isDragAccept, isDragReject]
+    [isFocused, isDragAccept, isDragReject, resolvedTheme]
   );
 
   return (
@@ -98,17 +65,18 @@ export default function StyledDropzone() {
 }
 
 function VehicleImagesDropzone() {
+  const { resolvedTheme } = useTheme();
   const { getRootProps, getInputProps, isFocused, isDragAccept, isDragReject } =
     useDropzone({ accept: { "image/*": [] } });
 
   const style = useMemo(
     () => ({
-      ...VehicleStyle,
+      ...dropzoneBaseStyle(resolvedTheme),
       ...(isFocused ? focusedStyle : {}),
       ...(isDragAccept ? acceptStyle : {}),
       ...(isDragReject ? rejectStyle : {}),
     }),
-    [isFocused, isDragAccept, isDragReject]
+    [isFocused, isDragAccept, isDragReject, resolvedTheme]
   );
 
   return (
@@ -126,17 +94,18 @@ function VehicleImagesDropzone() {
 }
 
 function VehicleImagesDropzone1() {
+  const { resolvedTheme } = useTheme();
   const { getRootProps, getInputProps, isFocused, isDragAccept, isDragReject } =
     useDropzone({ accept: { "image/*": [] } });
 
   const style = useMemo(
     () => ({
-      ...LastDropzoneStyle,
+      ...dropzoneBaseStyle(resolvedTheme),
       ...(isFocused ? focusedStyle : {}),
       ...(isDragAccept ? acceptStyle : {}),
       ...(isDragReject ? rejectStyle : {}),
     }),
-    [isFocused, isDragAccept, isDragReject]
+    [isFocused, isDragAccept, isDragReject, resolvedTheme]
   );
 
   return (

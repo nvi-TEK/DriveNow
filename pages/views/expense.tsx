@@ -21,11 +21,7 @@ import {
 export default function Expense() {
   return (
     <>
-      <div className="flex w-full">
-        <div className="w-full z-10">
-          <Header name="Expense" />
-        </div>
-      </div>
+      <Header name="Expense" />
 
       <Layout>
         <Head>
@@ -35,7 +31,7 @@ export default function Expense() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-dm-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
           <section className="w-full flex">
             <div className="flex grow gap-x-4 pr-5 ml-5 mt-5 max-2xl:mt-4">
@@ -60,7 +56,7 @@ export default function Expense() {
           </section>
 
           <section className="flex">
-            <div className="bg-white dark:bg-gray-700 ml-5 mt-6 max-2xl:mt-4 rounded-lg w-[62.03%] max-2xl:h-[450px] h-[500px]">
+            <div className="bg-white dark:bg-dm-700 ml-5 mt-6 max-2xl:mt-4 rounded-lg w-[62.03%] max-2xl:h-[450px] h-[500px]">
               <div>
                 <div className="flex justify-between items-center pt-6 max-2xl:pt-3 pb-4 max-2xl:pb-2 ">
                   <h6 className="text-[#262626] pl-6 dark:text-white font-bold leading-[14.06px] text-sm">
@@ -96,7 +92,7 @@ export default function Expense() {
                 </div>
               </div>
             </div>
-            <section className="bg-white dark:bg-gray-700 mt-6 max-2xl:mt-4 ml-4 w-[38%] h-[500px] max-2xl:h-[450px] rounded-[8px] mr-5">
+            <section className="bg-white dark:bg-dm-700 mt-6 max-2xl:mt-4 ml-4 w-[38%] h-[500px] max-2xl:h-[450px] rounded-[8px] mr-5">
               {/* Doughnut chart */}
               <div className="flex justify-between">
                 <h4 className="p-6 max-2xl:p-4 font-bold text-sm text-[#262626] dark:text-white leading-[21.6px]   ">
@@ -115,70 +111,70 @@ export default function Expense() {
               <div className="flex px-4 mt-6 max-2xl:mt-5 gap-3 max-2xl:gap-2 flex-wrap">
                 <div
                   id="doughnut-legend"
-                  className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center leading-4 text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
+                  className="flex dark:text-white dark:border-0 dark:bg-dm-600 text-[#262626] items-center leading-4 text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
                 >
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#0076EC] rounded-[50%]"></div>
                   Car Insurance
                 </div>
                 <div
                   id="doughnut-legend"
-                  className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center leading-4 text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
+                  className="flex dark:text-white dark:border-0 dark:bg-dm-600 text-[#262626] items-center leading-4 text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
                 >
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#492FB2] rounded-[50%]"></div>
                   Deposit Refund
                 </div>
                 <div
                   id="doughnut-legend"
-                  className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
+                  className="flex dark:text-white dark:border-0 dark:bg-dm-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
                 >
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#CD39E5] rounded-[50%]"></div>
                   Petty Cash
                 </div>
                 <div
                   id="doughnut-legend"
-                  className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
+                  className="flex dark:text-white dark:border-0 dark:bg-dm-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
                 >
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#19C098] rounded-[50%]"></div>
                   Utilities
                 </div>
                 <div
                   id="doughnut-legend"
-                  className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
+                  className="flex dark:text-white dark:border-0 dark:bg-dm-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
                 >
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#FFA723] rounded-[50%]"></div>
                   Stationaries
                 </div>
                 <div
                   id="doughnut-legend"
-                  className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
+                  className="flex dark:text-white dark:border-0 dark:bg-dm-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
                 >
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#0E7CFF] rounded-[50%]"></div>
                   Employee Transportation
                 </div>
                 <div
                   id="doughnut-legend"
-                  className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
+                  className="flex dark:text-white dark:border-0 dark:bg-dm-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
                 >
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#FF2C91] rounded-[50%]"></div>
                   System
                 </div>
                 <div
                   id="doughnut-legend"
-                  className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
+                  className="flex dark:text-white dark:border-0 dark:bg-dm-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
                 >
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#83E521] rounded-[50%]"></div>
                   Staff Costs
                 </div>
                 <div
                   id="doughnut-legend"
-                  className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
+                  className="flex dark:text-white dark:border-0 dark:bg-dm-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
                 >
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#3FBBD7] rounded-[50%]"></div>
                   Driver Support
                 </div>
                 <div
                   id="doughnut-legend"
-                  className="flex dark:text-white dark:border-0 dark:bg-gray-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
+                  className="flex dark:text-white dark:border-0 dark:bg-dm-600 text-[#262626] items-center text-xs rounded-[4px] border border-[#E6E6E6] py-[2px] px-3"
                 >
                   <div className="w-[10px] mr-1 h-[10px] border bg-[#FB3232] rounded-[50%]"></div>
                   General Vehicle Maintenance
@@ -188,7 +184,7 @@ export default function Expense() {
           </section>
 
           {/* Table */}
-          <div className="bg-white dark:bg-gray-700 mt-4 max-2xl:mt-4 rounded-[8px] mb-[67px] px-[10px] mx-5 ">
+          <div className="bg-white dark:bg-dm-700 mt-4 max-2xl:mt-4 rounded-[8px] mb-[67px] px-[10px] mx-5 ">
             <h1 className="font-medium leading-[30px] pt-4 dark:text-white text-[#262626] ">
               Expense History
             </h1>

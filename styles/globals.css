@@ -46,11 +46,11 @@ body {
   font-family: "Avenir";
 
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
   font-family: "Avenir";
+  overflow-x: hidden;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -129,9 +129,9 @@ p {
   background-size: cover;
 }
 
-.MuiMenuItem-root {
+/* .MuiMenuItem-root {
   font-family: "Avenir";
-}
+} */
 
 /* .ant-select-selection {
   background-color: green;

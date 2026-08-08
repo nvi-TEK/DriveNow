@@ -10,7 +10,7 @@ export const VehicleTrackerFilter = ({ filter, setFilter }) => {
       <input
         value={filter || ""}
         onChange={(e) => setFilter(e.target.value)}
-        className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-600 dark:text-white dark:border-0 placeholder-[#BFBFBF] w-[173px] text-sm pl-3 ml-3 py-1 border-[#D9D9D9] rounded text-black"
+        className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-dm-600 dark:text-white dark:border-0 placeholder-[#BFBFBF] w-[173px] text-sm pl-3 ml-3 py-1 border-[#D9D9D9] rounded text-black"
         placeholder="Search"
       />
     </span>

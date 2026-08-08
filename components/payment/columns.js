@@ -47,6 +47,7 @@ export default function LongMenu() {
         onClose={handleClose}
         disableScrollLock={true}
         PaperProps={{
+          className: "dark:bg-dm-700",
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "195px",
@@ -58,44 +59,44 @@ export default function LongMenu() {
       >
         <MenuItem
           onClick={handleClose}
-          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
+          className="flex text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1 font-normal leading-3 text-xs"
         >
-          <Image src={user} className="mr-2 w-5" alt="checkmark" />
+          <Image src={user} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="checkmark" />
           Driver Profile
         </MenuItem>
         <MenuItem
-          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
+          className="flex text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
-          <Image src={pencil} className="mr-2 w-5 " alt="x" />
+          <Image src={pencil} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="x" />
           Re-assign Vehicle
         </MenuItem>
         <MenuItem
-          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
+          className="flex text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
-          <Image src={fileicon} className="mr-2 w-5" alt="x" />
+          <Image src={fileicon} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="x" />
           Invoice History
         </MenuItem>
         <MenuItem
-          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
+          className="flex text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
-          <Image src={power} className="mr-2 w-5" alt="off icon" />
+          <Image src={power} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="off icon" />
           Turn Off Engine Control
         </MenuItem>
         <MenuItem
-          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
+          className="flex text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
-          <Image src={recycle} className="mr-2 w-5 " alt="x" />
+          <Image src={recycle} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="x" />
           Restore Engine Control
         </MenuItem>
         <MenuItem
-          className="text-[#DC4A41] flex items-center py-1 font-normal leading-3 text-xs"
+          className="text-[#DC4A41] flex items-center py-1 font-normal leading-3 text-xs dark:hover:bg-dm-600"
           onClick={handleClose}
         >
-          <Image src={vehicle} className="mr-2 w-5 " alt="x" />
+          <Image src={vehicle} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="x" />
           <p className="text-[#DC4A41] text-xs font-normal">Block Vehicle</p>
         </MenuItem>
       </Menu>
@@ -146,19 +147,11 @@ export const COLUMNS = [
     Cell: (props) => {
       return (
         <div
-          className="text-sm max-2xl:text-xs"
-          style={{
-            color: props.value === "ON" ? "#0EA371" : "#DC4A41",
-            backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
-            borderRadius: "2px",
-            textAlign: "center",
-            paddingTop: "2px",
-            paddingRight: "8px",
-            paddingLeft: "8px",
-            display: "inline-block",
-            lineHeight: "16px",
-            fontWeight: "500",
-          }}
+          className={`text-sm max-2xl:text-xs rounded-sm text-center pt-0.5 px-2 inline-block leading-4 font-medium ${
+            props.value === "ON"
+              ? "text-[#0EA371] dark:text-[#34D399] bg-[#E7F6F1] dark:bg-[#0EA37133]"
+              : "text-[#DC4A41] dark:text-[#F87171] bg-[#FBEDEC] dark:bg-[#DC4A4133]"
+          }`}
         >
           {props.value}
         </div>
@@ -178,18 +171,11 @@ export const COLUMNS = [
             <Image src={refresh} alt="refresh icon" />
           </div>
           <div
-            className="text-sm font-medi max-2xl:text-xs"
-            style={{
-              color: props.value === "Active" ? "#0EA371" : "#DC4A41",
-              backgroundColor: props.value === "Active" ? "#E7F6F1" : "#FBEDEC",
-              borderRadius: "2px",
-              paddingTop: "2px",
-              paddingBottom: "1px",
-              paddingRight: "8px",
-              paddingLeft: "8px",
-              lineHeight: "16px",
-              fontWeight: "500",
-            }}
+            className={`text-sm font-medi max-2xl:text-xs rounded-sm pt-0.5 pb-px px-2 leading-4 font-medium ${
+              props.value === "Active"
+                ? "text-[#0EA371] dark:text-[#34D399] bg-[#E7F6F1] dark:bg-[#0EA37133]"
+                : "text-[#DC4A41] dark:text-[#F87171] bg-[#FBEDEC] dark:bg-[#DC4A4133]"
+            }`}
           >
             {props.value}
           </div>

@@ -13,7 +13,7 @@ type DriverActivitiesProps = {
 
 function DriverActivities(props: DriverActivitiesProps) {
   return (
-    <div className="border-b dark:border-gray-500 h-[80px] flex items-center justify-between grow bg-white dark:bg-gray-700 border-[#E6E6E6]">
+    <div className="border-b dark:border-dm-500 h-[80px] flex items-center justify-between grow bg-white dark:bg-dm-700 border-[#E6E6E6]">
       <div>
         <p className="text-[#262626] dark:text-white font-normal leading-[18px] ">
           {props.name}
@@ -28,16 +28,18 @@ function DriverActivities(props: DriverActivitiesProps) {
           {props.lastUpdate}
         </h5>
         <div
-          style={{
-            backgroundColor: props.status === "Online" ? "#E7F6F1" : "#FBEDEC",
-          }}
-          className="px-3 rounded-sm text-right pt-[3px] place-self-end mt-2"
+          className={`px-3 rounded-sm text-right pt-[3px] place-self-end mt-2 ${
+            props.status === "Online"
+              ? "bg-[#E7F6F1] dark:bg-[#0EA37133]"
+              : "bg-[#FBEDEC] dark:bg-[#DC4A4133]"
+          }`}
         >
           <h5
-            style={{
-              color: props.status === "Online" ? "#0EA371" : "#DC4A41",
-            }}
-            className="font-medium text-right leading-4"
+            className={`font-medium text-right leading-4 ${
+              props.status === "Online"
+                ? "text-[#0EA371] dark:text-[#34D399]"
+                : "text-[#DC4A41] dark:text-[#F87171]"
+            }`}
           >
             {props.status}
           </h5>

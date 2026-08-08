@@ -1,5 +1,6 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
+import { useTheme } from "next-themes";
 import expenseStackData from "../../components/Expense/expenseStackData.json";
 import {
   Chart as ChartJS,
@@ -12,6 +13,7 @@ import {
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip);
 
 const ExpenseStack = () => {
+  const { resolvedTheme } = useTheme();
   const data = {
     labels: expenseStackData.map((data) => data.label),
     datasets: [
@@ -51,7 +53,7 @@ const ExpenseStack = () => {
           drawTicks: false,
         },
         ticks: {
-          color: "#585858",
+          color: "#BFBFBF",
           padding: 4,
         },
         stacked: true,
@@ -62,10 +64,11 @@ const ExpenseStack = () => {
         },
         grid: {
           drawTicks: false,
+          color: resolvedTheme === "dark" ? "#5C5C5C" : "rgba(0, 0, 0, 0.1)",
         },
         ticks: {
           stepSize: 90,
-          color: "#585858",
+          color: "#BFBFBF",
           padding: 7,
         },
 

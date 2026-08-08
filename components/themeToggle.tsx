@@ -11,15 +11,6 @@ export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
-  const selectChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-    eventTarget: string
-  ) => {
-    const { value, checked } = event.target;
-
-  };
-
-
   useEffect(() => setMounted(true), []);
 
   if (!mounted)
@@ -39,7 +30,7 @@ export default function ThemeToggle() {
 
     
   if (resolvedTheme === "dark") {
-    return <WbSunnyIcon className="cursor-pointer" onClick={() => setTheme("light")} />;
+    return <WbSunnyIcon className="cursor-pointer text-white" onClick={() => setTheme("light")} />;
   }
 
   if (resolvedTheme === "light") {

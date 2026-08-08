@@ -44,6 +44,7 @@ export default function LongMenu() {
         onClose={handleClose}
         disableScrollLock={true}
         PaperProps={{
+          className: "dark:bg-dm-700",
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "24ch",
@@ -55,34 +56,34 @@ export default function LongMenu() {
       >
         <MenuItem
           onClick={handleClose}
-          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm   "
+          className="flex items-center text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1.5 leading-[9.67px] font-normal text-sm   "
         >
-          <Image src={user} className="mr-2 w-5" alt="people icon" />
+          <Image src={user} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="people icon" />
           Driver Profile
         </MenuItem>
         <MenuItem
-          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm   "
+          className="flex items-center text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1.5 leading-[9.67px] font-normal text-sm   "
           onClick={handleClose}
         >
-          <Image src={pencil} className="mr-2 w-5 " alt="pencil" />
+          <Image src={pencil} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="pencil" />
           Update Agreement
         </MenuItem>
         <MenuItem
-          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm   "
+          className="flex items-center text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1.5 leading-[9.67px] font-normal text-sm   "
           onClick={handleClose}
         >
-          <Image src={power} className="mr-2 w-7 " alt="power icon" />
+          <Image src={power} className="mr-2 w-7 dark:brightness-0 dark:invert" alt="power icon" />
           Turn Off Engine Control
         </MenuItem>
         <MenuItem
-          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm    "
+          className="flex items-center text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1.5 leading-[9.67px] font-normal text-sm    "
           onClick={handleClose}
         >
-          <Image src={recycle} className="mr-2 w-5 " alt="recycle icon" />
+          <Image src={recycle} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="recycle icon" />
           Restore Engine Control
         </MenuItem>
-        <MenuItem className="flex py-1.5 items-center" onClick={handleClose}>
-          <Image src={bin} className="mr-2 w-5 " alt="bin icon" />
+        <MenuItem className="flex py-1.5 items-center dark:hover:bg-dm-600" onClick={handleClose}>
+          <Image src={bin} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="bin icon" />
           <p className="text-[#DC4A41] leading-[9.67px] font-normal text-sm ">
             Terminate
           </p>
@@ -119,20 +120,11 @@ export const ALLDRIVERSCOLUMNS = [
     Cell: (props) => {
       return (
         <div
-          className="text-base max-2xl:text-sm"
-          style={{
-            color: props.value === "Online" ? "#0EA371" : "#DC4A41",
-            backgroundColor: props.value === "Online" ? "#E7F6F1" : "#FBEDEC",
-            borderRadius: "2px",
-            textAlign: "center",
-            paddingLeft: "6px",
-            paddingRight: "6px",
-            paddingTop: "2px",
-            paddingBottom: "2px",
-            lineHeight: "16px",
-            fontWeight: "500",
-            display: "inline-block",
-          }}
+          className={`text-base max-2xl:text-sm rounded-sm text-center px-1.5 py-0.5 leading-4 font-medium inline-block ${
+            props.value === "Online"
+              ? "text-[#0EA371] dark:text-[#34D399] bg-[#E7F6F1] dark:bg-[#0EA37133]"
+              : "text-[#DC4A41] dark:text-[#F87171] bg-[#FBEDEC] dark:bg-[#DC4A4133]"
+          }`}
         >
           <p>{props.value}</p>
         </div>
@@ -149,20 +141,11 @@ export const ALLDRIVERSCOLUMNS = [
         <div className="flex justify-center ">
         <div
         id="table40"
-          className="text-base max-2xl:text-sm"
-          style={{
-            color: props.value === "Yes" ? "#0EA371" : "#DC4A41",
-            backgroundColor: props.value === "Yes" ? "#E7F6F1" : "#FBEDEC",
-            borderRadius: "2px",
-            textAlign: "center",
-            paddingTop: "2px",
-            paddingBottom: "2px",
-            paddingLeft: "6px",
-            paddingRight: "6px",
-            lineHeight: "16px",
-            fontWeight: "500",
-            display: "inline-block"
-          }}
+          className={`text-base max-2xl:text-sm rounded-sm text-center px-1.5 py-0.5 leading-4 font-medium inline-block ${
+            props.value === "Yes"
+              ? "text-[#0EA371] dark:text-[#34D399] bg-[#E7F6F1] dark:bg-[#0EA37133]"
+              : "text-[#DC4A41] dark:text-[#F87171] bg-[#FBEDEC] dark:bg-[#DC4A4133]"
+          }`}
         >
           {props.value}
         </div>
@@ -183,19 +166,11 @@ export const ALLDRIVERSCOLUMNS = [
     Cell: (props) => {
       return (
         <div
-          className="text-sm inline-block max-2xl:text-xs"
-          style={{
-            color: props.value === "ON" ? "#0EA371" : "#DC4A41",
-            backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
-            borderRadius: "2px",
-            textAlign: "center",
-            paddingTop: "2px",
-            paddingBottom: "2px",
-            paddingLeft: "6px",
-            paddingRight: "6px",
-            lineHeight: "16px",
-            fontWeight: "500",
-          }}
+          className={`text-sm inline-block max-2xl:text-xs rounded-sm text-center px-1.5 py-0.5 leading-4 font-medium ${
+            props.value === "ON"
+              ? "text-[#0EA371] dark:text-[#34D399] bg-[#E7F6F1] dark:bg-[#0EA37133]"
+              : "text-[#DC4A41] dark:text-[#F87171] bg-[#FBEDEC] dark:bg-[#DC4A4133]"
+          }`}
         >
           {props.value}
         </div>

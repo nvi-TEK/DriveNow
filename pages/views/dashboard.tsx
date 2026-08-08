@@ -25,11 +25,7 @@ import { propagateServerField } from "next/dist/server/lib/render-server";
 export default function Dashboard() {
   return (
     <>
-      <div className="flex w-full">
-        <div className="w-full z-10">
-          <Header name="Dashboard" />
-        </div>
-      </div>
+      <Header name="Dashboard" />
       <Layout>
         <Head>
           <title>Dashboard</title>
@@ -38,7 +34,7 @@ export default function Dashboard() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-dm-600 w-full xg:min-h-screen">
           <section className="w-full px-5 max-2xl:px-4  ">
             <div className="flex gap-4 mt-4 grow">
               <DashboardTiles
@@ -103,7 +99,7 @@ export default function Dashboard() {
 
           <section className="flex px-5 max-2xl:px-4 justify-between mb-5">
             <div className="mt-6 max-2xl:mt-4 w-[74%] ">
-              <div className="bg-white dark:bg-gray-700 h-[657px] max-2xl:h-[512px] shadow-[0px_1px_2px_0px_#1B283614] rounded-[8px]">
+              <div className="bg-white dark:bg-dm-700 h-[657px] max-2xl:h-[512px] shadow-[0px_1px_2px_0px_#1B283614] rounded-[8px]">
                 <div className="p-5 pb-3 pr-2 flex  justify-between">
                   <div>
                     <h5 className="text-[#777777] dark:text-white font-medium leading-[14.06px]">
@@ -154,7 +150,7 @@ export default function Dashboard() {
               </div>
 
               {/* Contracts chart */}
-              <div className="bg-white dark:bg-gray-700 shadow-[0px_1px_2px_0px_#1B283614] pt-[15px] rounded-[8px] max-2xl:mt-4 mt-5">
+              <div className="bg-white dark:bg-dm-700 shadow-[0px_1px_2px_0px_#1B283614] pt-[15px] rounded-[8px] max-2xl:mt-4 mt-5">
                 <div className="flex items-center justify-between mb-[33px]">
                   <div className="flex items-center">
                     <h6 className="text-[#262626] dark:text-white font-medium leading-[22px] pl-5">
@@ -179,10 +175,10 @@ export default function Dashboard() {
             </div>
 
             {/* Driver KYC  */}
-            <div id="dashboardKYC" className="mt-6 max-2xl:mt-4 bg-[#FFFFFF] dark:bg-gray-700 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg ml-5 max-2xl:ml-4 overflow-y-scroll no-scrollbar h-[840px] max-2xl:h-[685px] pb-5 w-[25%] ">
+            <div id="dashboardKYC" className="mt-6 max-2xl:mt-4 bg-[#FFFFFF] dark:bg-dm-700 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg ml-5 max-2xl:ml-4 overflow-y-scroll no-scrollbar h-[840px] max-2xl:h-[685px] pb-5 w-[25%] ">
               <div
                 id="kyc-child"
-                className="flex z- absolute w-[19.6%] mt-0 p-4 bg-white dark:bg-gray-700  justify-between rounded-t-lg items-center"
+                className="flex z- absolute w-[19.6%] mt-0 p-4 bg-white dark:bg-dm-700  justify-between rounded-t-lg items-center"
               >
                 <h6 className="dark:text-white font-medium leading-[22px] text-[#262626]">
                   Driver KYC

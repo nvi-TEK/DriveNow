@@ -9,10 +9,10 @@ type PaymentBubbleProp = {
 export default function Bubble(props: PaymentBubbleProp) {
     const color =
         props.status === "Online"
-            ? "bg-[#E7F6F1] text-[#0EA371] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg list-disc"
+            ? "bg-[#E7F6F1] dark:bg-[#0EA37133] text-[#0EA371] dark:text-[#34D399] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg list-disc"
             : props.status === "Offline"
-            ? "bg-[#FBEDEC] text-[#DC4A41] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
-            : "text-black text-sm font-medium mr-2 px-3 py-0.5 rounded-lg";
+            ? "bg-[#FBEDEC] dark:bg-[#DC4A4133] text-[#DC4A41] dark:text-[#F87171] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
+            : "text-black dark:text-white text-sm font-medium mr-2 px-3 py-0.5 rounded-lg";
     return (
         <>
             <span className={`${color}`}>{props.status}</span>
@@ -24,10 +24,10 @@ export default function Bubble(props: PaymentBubbleProp) {
 function AgreedBubble(props: PaymentBubbleProp) {
     const color =
         props.agreed === "Yes"
-            ? "bg-[#E7F6F1] text-[#0EA371] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg list-disc"
+            ? "bg-[#E7F6F1] dark:bg-[#0EA37133] text-[#0EA371] dark:text-[#34D399] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg list-disc"
             : props.agreed === "No"
-            ? "bg-[#FBEDEC] text-[#DC4A41] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
-            : "text-black text-sm font-medium mr-2 px-3 py-0.5 rounded-lg";
+            ? "bg-[#FBEDEC] dark:bg-[#DC4A4133] text-[#DC4A41] dark:text-[#F87171] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
+            : "text-black dark:text-white text-sm font-medium mr-2 px-3 py-0.5 rounded-lg";
     return (
         <>
             <span className={`${color}`}>{props.agreed}</span>
@@ -39,10 +39,10 @@ function AgreedBubble(props: PaymentBubbleProp) {
 function EngineControlBubble(props: PaymentBubbleProp) {
     const color =
         props.engineControl == "ON"
-            ? "bg-[#E7F6F1] text-[#0EA371] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg list-disc"
+            ? "bg-[#E7F6F1] dark:bg-[#0EA37133] text-[#0EA371] dark:text-[#34D399] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg list-disc"
             : props.engineControl === "OFF"
-            ? "bg-[#FBEDEC] text-[#DC4A41] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
-            : "text-black text-sm font-medium mr-2 px-3 py-0.5 rounded-lg";
+            ? "bg-[#FBEDEC] dark:bg-[#DC4A4133] text-[#DC4A41] dark:text-[#F87171] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
+            : "text-black dark:text-white text-sm font-medium mr-2 px-3 py-0.5 rounded-lg";
     return (
         <>
             <span className={`${color}`}>{props.engineControl}</span>

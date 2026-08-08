@@ -1,9 +1,12 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+import { useTheme } from "next-themes";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function DoughnutChart() {
+  const { resolvedTheme } = useTheme();
+
   const getOrCreateLegendList = (chart, id) => {
     const legendContainer = document.getElementById(id);
     let listContainer = legendContainer.querySelector("ul");
@@ -59,20 +62,18 @@ export default function DoughnutChart() {
 
   const doughnutLabel = {
     id: "doughnutLabel",
-    beforeDatasetsDraw(chart, args, plugins, options, config) {
-      const {
-        ctx,
-        data,
-        chartArea: { top, bottom },
-      } = chart;
+    beforeDatasetsDraw(chart, args, pluginOptions) {
+      const { ctx } = chart;
 
       const centerX = chart.getDatasetMeta(0).data[0].x;
       const centerY = chart.getDatasetMeta(0).data[0].y;
 
+      const isDark = pluginOptions.resolvedTheme === "dark";
+
       ctx.save();
 
       ctx.font = "bold 16px Avenir";
-      ctx.fillStyle = "#262626";
+      ctx.fillStyle = isDark ? "#FFFFFF" : "#262626";
       ctx.textAlign = "center";
       ctx.fillText(
         `₵${sum.toLocaleString(undefined, {
@@ -85,7 +86,7 @@ export default function DoughnutChart() {
       ctx.restore();
 
       ctx.font = "normal 14px Avenir";
-      ctx.fillStyle = "#8C8C8C";
+      ctx.fillStyle = isDark ? "#B0B0B0" : "#8C8C8C";
       ctx.textAlign = "center";
       ctx.fillText("Total Expenses", centerX, centerY + 25);
       ctx.restore();
@@ -128,6 +129,9 @@ export default function DoughnutChart() {
       },
       htmlLegend: {
         containerID: "legend-container",
+      },
+      doughnutLabel: {
+        resolvedTheme,
       },
     },
   };

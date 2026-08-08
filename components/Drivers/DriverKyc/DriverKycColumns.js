@@ -50,6 +50,7 @@ export default function LongMenu() {
         onClose={handleClose}
         disableScrollLock={true}
         PaperProps={{
+          className: "dark:bg-dm-700",
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "225px",
@@ -62,37 +63,37 @@ export default function LongMenu() {
       >
         <MenuItem
           onClick={handleClose}
-          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm"
+          className="flex items-center text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1.5 leading-[9.67px] font-normal text-sm"
         >
-          <Image src={user} className="mr-2 w-5" alt="people icon" />
+          <Image src={user} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="people icon" />
           Driver Profile
         </MenuItem>
         <MenuItem
-          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm "
+          className="flex items-center text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1.5 leading-[9.67px] font-normal text-sm "
           onClick={handleClose}
         >
-          <Image src={pencil} className="mr-2 w-5 " alt="pencil" />
+          <Image src={pencil} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="pencil" />
           Update Agreement
         </MenuItem>
         <MenuItem
-          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm "
+          className="flex items-center text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1.5 leading-[9.67px] font-normal text-sm "
           onClick={handleClose}
         >
-          <Image src={power} className="mr-2 w-5" alt="power icon" />
+          <Image src={power} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="power icon" />
           Turn Off Engine Control
         </MenuItem>
         <MenuItem
-          className="flex items-center text-[#595959] py-1.5 leading-[9.67px] font-normal text-sm "
+          className="flex items-center text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1.5 leading-[9.67px] font-normal text-sm "
           onClick={handleClose}
         >
-          <Image src={recycle} className="mr-2 w-5" alt="recycle icon" />
+          <Image src={recycle} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="recycle icon" />
           Restore Engine Control
         </MenuItem>
         <MenuItem
-          className="flex items-center py-1.5 leading-[9.67px] font-normal text-sm "
+          className="flex items-center py-1.5 leading-[9.67px] font-normal text-sm dark:hover:bg-dm-600"
           onClick={handleClose}
         >
-          <Image src={bin} className="mr-2 w-5" alt="bin icon" />
+          <Image src={bin} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="bin icon" />
           <p className="text-[#DC4A41] leading-[9.67px] text-sm">Terminate</p>
         </MenuItem>
       </Menu>
@@ -139,19 +140,11 @@ export const DRIVERKYCCOLUMNS = [
     Cell: (props) => {
       return (
         <div
-          style={{
-            color: props.value === "ON" ? "#0EA371" : "#DC4A41",
-            backgroundColor: props.value === "ON" ? "#E7F6F1" : "#FBEDEC",
-            borderRadius: "2px",
-            textAlign: "center",
-            paddingTop: "2px",
-            paddingBottom: "2px",
-            paddingLeft: "8px",
-            paddingRight: "8px",
-            lineHeight: "16px",
-            fontWeight: "500",
-            display: "inline-block",
-          }}
+          className={`rounded-sm text-center px-2 py-0.5 leading-4 font-medium inline-block ${
+            props.value === "ON"
+              ? "text-[#0EA371] dark:text-[#34D399] bg-[#E7F6F1] dark:bg-[#0EA37133]"
+              : "text-[#DC4A41] dark:text-[#F87171] bg-[#FBEDEC] dark:bg-[#DC4A4133]"
+          }`}
         >
           {props.value}
         </div>
@@ -170,33 +163,13 @@ export const DRIVERKYCCOLUMNS = [
     Cell: (props) => {
       return (
         <div
-          style={{
-            color:
-              props.value === "5/5"
-                ? "#0EA371"
-                : props.value === "0/5"
-                ? "#DC4A41"
-                : props.value === "1/5"
-                ? "#DC4A41"
-                : "#E8B123",
-            backgroundColor:
-              props.value === "5/5"
-                ? "#E7F6F1"
-                : props.value === "0/5"
-                ? "#FBEDEC"
-                : props.value === "1/5"
-                ? "#FBEDEC"
-                : "#FBF6E9",
-            borderRadius: "2px",
-            textAlign: "center",
-            paddingTop: "1px",
-            paddingBottom: "1px",
-            paddingLeft: "8px",
-            paddingRight: "8px",
-            display: "inline-block",
-            lineHeight: "16px",
-            fontWeight: "500",
-          }}
+          className={`rounded-sm text-center py-px px-2 inline-block leading-4 font-medium ${
+            props.value === "5/5"
+              ? "text-[#0EA371] dark:text-[#34D399] bg-[#E7F6F1] dark:bg-[#0EA37133]"
+              : props.value === "0/5" || props.value === "1/5"
+              ? "text-[#DC4A41] dark:text-[#F87171] bg-[#FBEDEC] dark:bg-[#DC4A4133]"
+              : "text-[#E8B123] dark:text-[#FBBF24] bg-[#FBF6E9] dark:bg-[#E8B12333]"
+          }`}
         >
           {props.value}
         </div>

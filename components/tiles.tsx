@@ -47,7 +47,7 @@ type LastTileProp = {
 
 function DashboardTiles(props: tileProp1) {
   return (
-    <div className="border shadow-[0px_1px_2px_0px_#1B283614] max-2xl:h-[110px] dark:bg-gray-700 dark:border-0 h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
+    <div className="border shadow-[0px_1px_2px_0px_#1B283614] max-2xl:h-[110px] dark:bg-dm-700 dark:border-0 h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
       <div className="flex items-center justify-between ">
         <div>
           <Image src={props.icon} className="w-[30px] max-2xl:w-7" alt="" />
@@ -96,7 +96,7 @@ function DashboardTiles(props: tileProp1) {
 // last tile
 function LastTile(props: LastTileProp) {
   return (
-    <div className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-700 dark:border-0 max-2xl:h-[110px] h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
+    <div className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-dm-700 dark:border-0 max-2xl:h-[110px] h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
       <div className="flex items-center justify-between ">
         <div>
           <Image src={props.icon} className="w-[30px] max-2xl:w-7" alt="" />
@@ -133,7 +133,7 @@ function LastTile(props: LastTileProp) {
 
 function MidTiles(props: midTileProp) {
   return (
-    <div className="border dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] max-2xl:h-[110px] h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full  dark:bg-gray-700 bg-white rounded-t-lg border-[#E9ECEF]">
+    <div className="border dark:border-0 shadow-[0px_1px_2px_0px_#1B283614] max-2xl:h-[110px] h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full  dark:bg-dm-700 bg-white rounded-t-lg border-[#E9ECEF]">
       <div className="flex items-center justify-between ">
         <div>
           <Image src={props.icon} className="w-[30px] max-2xl:w-7" alt="" />
@@ -189,7 +189,7 @@ function MidTiles(props: midTileProp) {
 
 function DashboardTiles1(props: tileProp2) {
   return (
-    <div className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-700 dark:border-0 h-[8rem] max-2xl:h-[110px] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
+    <div className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-dm-700 dark:border-0 h-[8rem] max-2xl:h-[110px] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <Image src={props.icon} className="w-[30px] max-2xl:w-7" alt="" />
         <div>

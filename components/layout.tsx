@@ -12,8 +12,8 @@ export default function Layout({ children }: layoutType) {
   return (
     <div suppressHydrationWarning>
       {/* <Providers> */}
-      <section className="w-full dark: bg-white">
-        <div className="flex flex-grow dark: border-0 bg-[#F2F2F2]">
+      <section className="w-full bg-[#F2F2F2] dark:bg-dm-600">
+        <div className="flex flex-grow border-0 bg-[#F2F2F2] dark:bg-dm-600">
           <SideBar />
           {children}
         </div>

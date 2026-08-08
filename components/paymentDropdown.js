@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Select, Space, ConfigProvider } from "antd";
+import { Select, Space, ConfigProvider, theme as antdTheme } from "antd";
+import { useTheme } from "next-themes";
 import { BasicTable } from "./payment/BasicTable";
 import { PaymentTransactionsTable } from "./payment/PaymentTransactions/PaymentTransactionsTable";
 import { DailyPaymentsTable } from "./payment/DailyPayments/DailyPaymentsTable";
@@ -9,6 +10,7 @@ import { DrivenowInvoicesTable } from "./DriveNowInvoices/DrivenowInvoices";
 
 export default function PaymentsDropdown() {
   const [selected, setSelected] = useState("Weekly Payments");
+  const { resolvedTheme } = useTheme();
 
   const handleChange = (value) => {
     setSelected(value);
@@ -16,6 +18,10 @@ export default function PaymentsDropdown() {
   return (
     <ConfigProvider
       theme={{
+        algorithm:
+          resolvedTheme === "dark"
+            ? antdTheme.darkAlgorithm
+            : antdTheme.defaultAlgorithm,
         token: {
           colorText: "#FFFFFF",
           fontSize: 12,
@@ -38,7 +44,7 @@ export default function PaymentsDropdown() {
         <label className="text-[#262626] dark:text-white">Select:</label>
         <Select
           id="abc"
-          className="h-6 ml-2 border-0"
+          className="h-6 ml-2 border-0 cursor-pointer"
           defaultValue={"weekly Payments"}
           popupClassName=""
           dropdownStyle={{ BackgroundColor: "black" }}
@@ -67,6 +73,7 @@ export default function PaymentsDropdown() {
 
 function DriveNowInvoicesDropdown() {
   const [selected, setSelected] = useState("Weekly Invoices");
+  const { resolvedTheme } = useTheme();
 
   const handleChange = (value) => {
     setSelected(value);
@@ -74,6 +81,10 @@ function DriveNowInvoicesDropdown() {
   return (
     <ConfigProvider
       theme={{
+        algorithm:
+          resolvedTheme === "dark"
+            ? antdTheme.darkAlgorithm
+            : antdTheme.defaultAlgorithm,
         token: {
           colorText: "#FFFFFF",
           fontSize: 12,
@@ -96,7 +107,7 @@ function DriveNowInvoicesDropdown() {
         <label className="text-[#262626] dark:text-white">Select:</label>
         <Select
           id="abc"
-          className="h-6 ml-2 border-0"
+          className="h-6 ml-2 border-0 cursor-pointer"
           defaultValue={"Weekly Invoices"}
           popupClassName=""
           dropdownStyle={{ BackgroundColor: "black" }}

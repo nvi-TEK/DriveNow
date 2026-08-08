@@ -1,11 +1,14 @@
 import React from "react";
 import { Chart as ChartJS, defaults, Tooltip } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
+import { useTheme } from "next-themes";
 import dashboardData from "./dashboardData.json";
 
 ChartJS.register(Tooltip);
 
 export default function DashChart() {
+  const { resolvedTheme } = useTheme();
+
   const data = {
     labels: dashboardData.map((data) => data.label),
     datasets: [
@@ -25,6 +28,9 @@ export default function DashChart() {
     plugins: {
       legend: {
         display: false,
+      },
+      backgroundBar: {
+        resolvedTheme,
       },
     },
     interaction: {
@@ -81,7 +87,7 @@ export default function DashChart() {
 
       ctx.beginPath();
       const width = chart.getDatasetMeta(0).data[0].width;
-      ctx.fillStyle = "#F1F8FF";
+      ctx.fillStyle = pluginOptions.resolvedTheme === "dark" ? "#2A2A2A" : "#F1F8FF";
       chart.getDatasetMeta(0).data.forEach((dataPoint, index) => {
         ctx.roundRect(
           x.getPixelForValue(index) - width / 2,

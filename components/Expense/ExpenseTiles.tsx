@@ -18,7 +18,7 @@ type ExpenseProp1 = {
 
 export default function ExpenseTiles(props: ExpenseProp1) {
   return (
-    <div className="h-[8rem] max-2xl:h-[110px] dark:bg-gray-700 dark:border-0 p-4 pt-3 max-2xl:pt-2 pr-0 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg bg-white grow  border-[#E9ECEF]">
+    <div className="h-[8rem] max-2xl:h-[110px] dark:bg-dm-700 dark:border-0 p-4 pt-3 max-2xl:pt-2 pr-0 shadow-[0px_1px_2px_0px_#1B283614] rounded-lg bg-white grow  border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={props.icon} className="w-[30px] max-2xl:w-7" alt="" />

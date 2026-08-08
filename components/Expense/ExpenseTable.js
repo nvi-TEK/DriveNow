@@ -78,10 +78,10 @@ export const ExpenseTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-600 dark:border-0 dark:text-white border-[#D9D9D9] text-[#BFBFBF] h-[30px] text-center rounded px-1 py-1 "
+      className="border cursor-pointer shadow-[0px_1px_2px_0px_#1B283614] dark:bg-dm-600 dark:border-0 dark:text-white border-[#D9D9D9] text-[#BFBFBF] h-[30px] text-center rounded px-1 py-1 "
     >
       {[3, 5, 10, 15, 20].map((pageSize) => (
-        <option key={pageSize} value={pageSize}>
+        <option key={pageSize} value={pageSize} className="dark:text-white dark:bg-dm-600">
           {pageSize}
         </option>
       ))}
@@ -92,10 +92,10 @@ export const ExpenseTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-600 dark:border-0 dark:text-white border-[#D9D9D9] h-[30px] text-[#595959] text-center text-xs rounded px-1 py-1 "
+      className="border cursor-pointer shadow-[0px_1px_2px_0px_#1B283614] dark:bg-dm-600 dark:border-0 dark:text-white border-[#D9D9D9] h-[30px] text-[#595959] text-center text-xs rounded px-1 py-1 "
     >
       {[3, 5, 10, 15, 20].map((pageSize) => (
-        <option key={pageSize} value={pageSize}>
+        <option key={pageSize} value={pageSize} className="dark:text-white dark:bg-dm-600">
           {pageSize} Items/Page
         </option>
       ))}
@@ -118,7 +118,7 @@ export const ExpenseTable = () => {
         <Link href={"/views/Expense/AddExpenseForm"}>
           <button
             type="button"
-            className="text-[#FFFFFF] border bg-[#007AF5] rounded-[4px] dark:border-0  border-[#DADADA] focus:outline-none text-sm  px-4 py-1.5 max-2xl:py-1 text-center inline-flex justify-center font-normal items-center mr-2 "
+            className="text-[#FFFFFF] border bg-[#007AF5] rounded-[4px] dark:border-0  border-[#DADADA] focus:outline-none text-sm  px-4 py-1.5 max-2xl:py-1 text-center inline-flex justify-center font-normal items-center cursor-pointer mr-2 "
           >
             <Image src={plus} className="mr-1" alt="plus sign" />
             Add Expense
@@ -138,7 +138,7 @@ export const ExpenseTable = () => {
                         ...column.getHeaderProps(column.getSortByToggleProps()),
                       }
                     : { ...column.getHeaderProps() })}
-                  className="text-left font-normal leading-[18px] text-[#262626] dark:bg-gray-600 dark:text-white pl-2 h-[48px] bg-[#FAFAFA]"
+                  className="text-left font-normal leading-[18px] text-[#262626] dark:bg-dm-600 dark:text-white pl-2 h-[48px] bg-[#FAFAFA]"
                   style={{ minWidth: column.minWidth, width: column.width }}
                 >
                   {column.render("Header")}
@@ -172,7 +172,7 @@ export const ExpenseTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-[#595959] pl-2 font-normal dark:text-white dark:border-gray-500 leading-[18px] border-y h-[48px] "
+                        className="text-[#595959] pl-2 font-normal dark:text-white dark:border-dm-500 leading-[18px] border-y h-[48px] "
                       >
                         {cell.render("Cell")}
                       </td>
@@ -189,41 +189,41 @@ export const ExpenseTable = () => {
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
-          className="px-2 border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white rounded-sm "
+          className="px-2 border dark:bg-dm-600 dark:border-0 text-[#595959] dark:text-white rounded-sm  cursor-pointer disabled:cursor-not-allowed"
         >
           <ArrowBackIosOutlinedIcon fontSize="small" />
         </button>
 
         <button
-          className="border dark:bg-gray-600 dark:border-0 dark:text-white text-[#595959] px-3 rounded"
+          className="border dark:bg-dm-600 dark:border-0 dark:text-white text-[#595959] px-3 rounded cursor-pointer"
           onClick={() => gotoPage(0)}
         >
           {" "}
           1{" "}
         </button>
         <button
-          className="border dark:bg-gray-600 dark:border-0 dark:text-white text-[#595959] px-3 rounded"
+          className="border dark:bg-dm-600 dark:border-0 dark:text-white text-[#595959] px-3 rounded cursor-pointer"
           onClick={() => gotoPage(1)}
         >
           {" "}
           2{" "}
         </button>
         <button
-          className="border dark:bg-gray-600 dark:border-0 dark:text-white text-[#595959] px-3 rounded"
+          className="border dark:bg-dm-600 dark:border-0 dark:text-white text-[#595959] px-3 rounded cursor-pointer"
           onClick={() => gotoPage(2)}
         >
           {" "}
           3{" "}
         </button>
         <button
-          className="border dark:bg-gray-600 dark:border-0 dark:text-white text-[#595959] px-3 rounded"
+          className="border dark:bg-dm-600 dark:border-0 dark:text-white text-[#595959] px-3 rounded cursor-pointer"
           onClick={() => gotoPage(3)}
         >
           {" "}
           4{" "}
         </button>
         <button
-          className="border dark:bg-gray-600 dark:border-0 dark:text-white text-[#595959] px-3 rounded"
+          className="border dark:bg-dm-600 dark:border-0 dark:text-white text-[#595959] px-3 rounded cursor-pointer"
           onClick={() => gotoPage(4)}
         >
           {" "}
@@ -233,7 +233,7 @@ export const ExpenseTable = () => {
         <button
           onClick={() => nextPage()}
           disabled={!canNextPage}
-          className="px-2 border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white rounded-sm "
+          className="px-2 border dark:bg-dm-600 dark:border-0 text-[#595959] dark:text-white rounded-sm  cursor-pointer disabled:cursor-not-allowed"
         >
           <ArrowForwardIosOutlinedIcon fontSize="small" />
         </button>

@@ -41,6 +41,7 @@ export default function LongMenu() {
         onClose={handleClose}
         disableScrollLock={true}
         PaperProps={{
+          className: "dark:bg-dm-700",
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "28ch",
@@ -50,8 +51,8 @@ export default function LongMenu() {
           },
         }}
       >
-        <MenuItem onClick={handleClose} className="flex items-center text-sm">
-          <Image src={fileicon} className="mr-2 w-6" alt="checkmark" />
+        <MenuItem onClick={handleClose} className="flex items-center text-sm dark:text-white dark:hover:bg-dm-600">
+          <Image src={fileicon} className="mr-2 w-6 dark:brightness-0 dark:invert" alt="checkmark" />
           Raise an Expense
         </MenuItem>
       </Menu>

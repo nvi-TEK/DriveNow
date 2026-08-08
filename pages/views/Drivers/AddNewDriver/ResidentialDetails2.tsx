@@ -38,11 +38,7 @@ type UploadModel = {
 export default function ResidentialDetails(prop: ResidentialProps) {
   return (
     <>
-      <div className="flex w-full">
-        <div className="w-full z-10">
-          <Header name="All Drivers" secondName=" / Drivers KYC" />
-        </div>
-      </div>
+      <Header name="All Drivers" secondName=" / Drivers KYC" />
       <Layout>
         <Head>
           <title>Add New Driver</title>
@@ -252,7 +248,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
                           <Image
                             src={info}
                             alt="info icon"
-                            className="w-4 h-4"
+                            className="w-4 h-4 dark:brightness-0 dark:invert"
                           />
                           <p className="text-[#737373] pl-1 font-normal leading-[30px] text-sm ">
                             This image can only be uploaded by Fleet
@@ -267,7 +263,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
                         >
                           <button
                             type="button"
-                            className="text-[#FFFFFF] border mt-[57px] bg-[#007AF5] ml-auto rounded-[4px] w-[85px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
+                            className="text-[#FFFFFF] border mt-[57px] bg-[#007AF5] ml-auto rounded-[4px] w-[85px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center cursor-pointer mr-5 mb-2 "
                           >
                             Previous
                           </button>
@@ -278,7 +274,7 @@ export default function ResidentialDetails(prop: ResidentialProps) {
                         >
                           <button
                             type="button"
-                            className="text-[#FFFFFF] border mt-[57px] bg-[#007AF5] ml-auto rounded-[4px] w-[63px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center mr-5 mb-2 "
+                            className="text-[#FFFFFF] border mt-[57px] bg-[#007AF5] ml-auto rounded-[4px] w-[63px] border-[#DADADA] focus:outline-none text-sm   py-1.5 text-center inline-flex justify-center font-normal items-center cursor-pointer mr-5 mb-2 "
                           >
                             Next{" "}
                           </button>

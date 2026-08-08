@@ -49,11 +49,7 @@ export default function ListOfVehicles() {
 
   return (
     <>
-      <div className="flex w-full">
-        <div className="w-full z-10">
-          <Header name="Vehicles" />
-        </div>
-      </div>
+      <Header name="Vehicles" />
       <Layout>
         <Head>
           <title>List of Vehicles</title>
@@ -62,7 +58,7 @@ export default function ListOfVehicles() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-dm-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
           <section className="w-full ">
             <div className="flex space-x-4 grow m-5">
@@ -90,7 +86,7 @@ export default function ListOfVehicles() {
 
             {/* Table */}
 
-            <div className="bg-white dark:bg-gray-700 rounded-lg px-[10px] mx-5 mb-[140px] mt-6 ">
+            <div className="bg-white dark:bg-dm-700 rounded-lg px-[10px] mx-5 mb-[140px] mt-6 ">
               <div className="flex justify-between pt-4 items-center">
                 <h1 className="text-[#262626] dark:text-white font-medium leading-[30px]">
                   List of Vehicles{" "}
@@ -98,7 +94,7 @@ export default function ListOfVehicles() {
                 <Link href={"/views/Vehicles/AddVehicle/VehicleDetails"}>
                   <button
                     type="button"
-                    className="text-[#FFFFFF] border bg-[#007AF5] dark:border-0 rounded-[4px] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center"
+                    className="text-[#FFFFFF] border bg-[#007AF5] dark:border-0 rounded-[4px] focus:outline-none text-sm px-4 py-1.5 text-[14px] text-center inline-flex justify-center font-normal items-center cursor-pointer"
                   >
                     <Image src={plus} alt="plus sign" className="ml-0 mr-1" />
                     Add New Vehicle

@@ -48,11 +48,7 @@ export default function VehicleDetails(prop: DetailsProps) {
 
   return (
     <>
-      <div className="flex w-full">
-        <div className="w-full z-10">
-          <Header name="Add Vehicle" />
-        </div>
-      </div>
+      <Header name="Add Vehicle" />
       <Layout>
         <Head>
           <title>Add New Driver</title>
@@ -61,19 +57,19 @@ export default function VehicleDetails(prop: DetailsProps) {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] dark:bg-gray-600 w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-dm-600 w-full xg:min-h-screen">
           {/* Bottom menu */}
-          <section className="bg-[#FFFFFF] dark:bg-gray-700 rounded-lg m-[19px] p-4  ">
+          <section className="bg-[#FFFFFF] dark:bg-dm-700 rounded-lg m-[19px] p-4  ">
             <div className="pb-4">
               <h3 className="font-medium text-xl dark:text-white leading-[30px] text-[#262626]">
                 Add Vehicle
               </h3>
-              <p className="text-[#737373] font-medium leading-[30px] dark:text-gray-300  text-sm ">
+              <p className="text-[#737373] font-medium leading-[30px] dark:text-dm-300  text-sm ">
                 Complete this form to add a vehicle.
               </p>
             </div>
             {/* Timeline */}
-            <div className="flex py-6 px-[44px] border-y dark:border-gray-500 box-border items-center">
+            <div className="flex py-6 px-[44px] border-y dark:border-dm-500 box-border items-center">
               <div className="bg-[#007AF5] flex items-center justify-center w-8 h-8 text-white rounded-[100%] ">
                 1
               </div>
@@ -135,7 +131,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
                   <Form
                     onSubmit={handleSubmit}
-                    className="bg-white dark:bg-gray-700 border-0 "
+                    className="bg-white dark:bg-dm-700 border-0 "
                   >
                     <section className=" pb-4">
                       <div className="flex w-full gap-x-4 mt-[1.875rem]">
@@ -150,7 +146,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                           <Field
                             type="text"
                             id="vehicleManufacturer"
-                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 dark:border-0 dark:bg-gray-600 dark:text-white text-gray-900 text-sm rounded block w-full p-1.5"
+                            className="border placeholder-[#BFBFBF] shadow-[0px_1px_2px_0px_#1B283614] border-gray-300 dark:border-0 dark:bg-dm-600 dark:text-white text-gray-900 text-sm rounded block w-full p-1.5"
                             placeholder="e.g Toyota"
                             value={values.vehicleManufacturer}
                             onChange={handleChange}
@@ -171,7 +167,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                           <Field
                             type="text"
                             id="vehicleModel"
-                            className="border border-gray-300 dark:border-0 dark:bg-gray-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
+                            className="border border-gray-300 dark:border-0 dark:bg-dm-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
                             placeholder="e.g Yaris"
                             value={values.vehicleModel}
                             onChange={handleChange}
@@ -194,7 +190,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                           <Field
                             type="text"
                             id="yearOfMake"
-                            className="border border-gray-300 dark:border-0 dark:bg-gray-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
+                            className="border border-gray-300 dark:border-0 dark:bg-dm-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
                             placeholder="e.g 2010"
                             value={values.yearOfMake}
                             onChange={handleChange}
@@ -214,7 +210,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                           <Field
                             type="text"
                             id="registrationNumber"
-                            className="border border-gray-300 dark:border-0 dark:bg-gray-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
+                            className="border border-gray-300 dark:border-0 dark:bg-dm-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
                             placeholder="e.g GT - 123 23"
                             value={values.registrationNumber}
                             onChange={handleChange}
@@ -222,7 +218,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                           <p className="font-medium text-xs text-red-700 dark:text-red-300">
                             <ErrorMessage name="registrationNumber" />
                           </p>
-                          <p className="text-[#737373] dark:text-gray-300 text-xs font-normal leading-[16px] pt-1">
+                          <p className="text-[#737373] dark:text-dm-300 text-xs font-normal leading-[16px] pt-1">
                             Always include a Hyphen ( - )
                           </p>
                         </div>
@@ -242,7 +238,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                           <Field
                             type="text"
                             id="vehicleColor"
-                            className="border border-gray-300 dark:border-0 dark:bg-gray-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
+                            className="border border-gray-300 dark:border-0 dark:bg-dm-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
                             placeholder="e.g Red"
                             value={values.vehicleColor}
                             onChange={handleChange}
@@ -263,7 +259,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                           <Field
                             type="text"
                             id="mileage"
-                            className="border border-gray-300 dark:border-0 dark:bg-gray-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
+                            className="border border-gray-300 dark:border-0 dark:bg-dm-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
                             placeholder="e.g 150,000 km"
                             value={values.mileage}
                             onChange={handleChange}
@@ -271,7 +267,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                           <p className="font-medium text-xs text-red-700 dark:text-red-300">
                             <ErrorMessage name="mileage" />
                           </p>
-                          <p className="text-[#737373] text-xs dark:text-gray-300 font-normal leading-[16px] pt-1">
+                          <p className="text-[#737373] text-xs dark:text-dm-300 font-normal leading-[16px] pt-1">
                             Always include kilometers (km)
                           </p>
                         </div>
@@ -291,7 +287,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                           <Field
                             id="transmissionType"
                             as="select"
-                            className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] dark:border-0 dark:bg-gray-600 dark:text-white border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
+                            className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] dark:border-0 dark:bg-dm-600 dark:text-white cursor-pointer border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
                             value={values.transmissionType}
                             onChange={handleChange}
                           >
@@ -317,7 +313,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                           <Field
                             type="text"
                             id="chasisNumber"
-                            className="border border-gray-300 dark:border-0  dark:bg-gray-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
+                            className="border border-gray-300 dark:border-0  dark:bg-dm-600 dark:text-white shadow-[0px_1px_2px_0px_#1B283614] placeholder-[#BFBFBF] text-gray-900 text-sm rounded block w-full p-1.5"
                             placeholder="e.g ATCXG23435534"
                             value={values.chasisNumber}
                             onChange={handleChange}
@@ -340,7 +336,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                       <Field
                         id="vehicleStatus"
                         as="select"
-                        className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] dark:border-0 dark:bg-gray-600 dark:text-white grow border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
+                        className="bg-[#FFFFFF] border shadow-[0px_1px_2px_0px_#1B283614] dark:border-0 dark:bg-dm-600 dark:text-white cursor-pointer grow border-[#D9D9D9] placeholder-[#BFBFBF] text-gray-900 text-sm rounded-[4px] block w-full py-1.5 "
                         value={values.vehicleStatus}
                         onChange={handleChange}
                       >
@@ -358,7 +354,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                     <div className="flex justify-between mt-5">
                       <button
                         type="button"
-                        className="text-[#FFFFFF] border dark:border-0 bg-[#8C8C8C] rounded-[4px] px-4 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center"
+                        className="text-[#FFFFFF] border dark:border-0 bg-[#8C8C8C] rounded-[4px] px-4 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center cursor-pointer"
                         disabled
                       >
                         Back
@@ -367,7 +363,7 @@ export default function VehicleDetails(prop: DetailsProps) {
                       <Link href={"/views/Vehicles/AddVehicle/VehicleImages"}>
                         <button
                           type="button"
-                          className="text-[#FFFFFF] border dark:border-0 bg-[#007AF5] rounded-[4px] px-4 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center"
+                          className="text-[#FFFFFF] border dark:border-0 bg-[#007AF5] rounded-[4px] px-4 border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center cursor-pointer"
                         >
                           Save & Next
                         </button>

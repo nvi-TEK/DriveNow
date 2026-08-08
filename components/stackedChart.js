@@ -1,5 +1,6 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
+import { useTheme } from "next-themes";
 import dashboardStackData from "../components/dashboard/dashboardStackData.json";
 import {
   Chart as ChartJS,
@@ -12,6 +13,7 @@ import {
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip);
 
 const DashboardStack = () => {
+  const { resolvedTheme } = useTheme();
   const data = {
     labels: dashboardStackData.map((data) => data.label),
     datasets: [
@@ -67,6 +69,7 @@ const DashboardStack = () => {
         },
         grid: {
           drawTicks: false,
+          color: resolvedTheme === "dark" ? "#5C5C5C" : "rgba(0, 0, 0, 0.1)",
         },
         ticks: {
           stepSize: 90,

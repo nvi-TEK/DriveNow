@@ -12,6 +12,7 @@ import Link from "next/link";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Modal from "react-modal";
+import { useTheme } from "next-themes";
 import closebutton from "../../../assets/darkclose.png";
 import StyledDropzone from "@/components/dropzones/AddExpenseDropzone";
 import attach from "../../../assets/attachment_icon.png";
@@ -29,6 +30,7 @@ type AddExpenseProp = {
 };
 
 export default function AddExpense() {
+  const { resolvedTheme } = useTheme();
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
@@ -51,7 +53,7 @@ export default function AddExpense() {
       width: "645px",
       height: "347px",
       borderRadius: "8px",
-      backgroundColor: "white",
+      backgroundColor: resolvedTheme === "dark" ? "#2A2A2A" : "white",
     },
     overlay: {
       backgroundColor: "#0000008F",
@@ -60,11 +62,7 @@ export default function AddExpense() {
   };
   return (
     <>
-      <div className="flex w-full">
-        <div className="w-full z-10">
-          <Header name="Add Expense" />
-        </div>
-      </div>
+      <Header name="Add Expense" />
       <Layout>
         <Head>
           <title>Add Expense</title>
@@ -73,7 +71,7 @@ export default function AddExpense() {
         </Head>
 
         {/* Code goes into the main tag */}
-        <main className="bg-[#F2F2F2] w-full xg:min-h-screen">
+        <main className="bg-[#F2F2F2] dark:bg-dm-600 w-full xg:min-h-screen">
           <section className="w-full ">
             <div className="mt-[18px] rounded-lg mb-12 shadow mx-6">
               <Formik<AddExpenseProp>
@@ -105,12 +103,12 @@ export default function AddExpense() {
                 {({ handleSubmit, values, handleChange, setFieldValue }) => (
                   <Form
                     onSubmit={handleSubmit}
-                    className="bg-white shadow-lg rounded-lg px-[1rem] pb-4"
+                    className="bg-white dark:bg-dm-700 shadow-lg rounded-lg px-[1rem] pb-4"
                   >
-                    <h3 className="font-medium pt-4 text-[22px] leading-[30px] text-[#262626]">
+                    <h3 className="font-medium pt-4 text-[22px] leading-[30px] text-[#262626] dark:text-white">
                       Add Expense
                     </h3>
-                    <p className="text-base font-medium pt-2 leading-[30px] text-[#737373]  ">
+                    <p className="text-base font-medium pt-2 leading-[30px] text-[#737373] dark:text-dm-300  ">
                       Complete this form to create an expense.
                     </p>
 
@@ -118,14 +116,14 @@ export default function AddExpense() {
                       <div className="w-[50%]">
                         <label
                           htmlFor="costCenter"
-                          className="block mb-2 text-sm font-normal text-[#000000]"
+                          className="block mb-2 text-sm font-normal text-[#000000] dark:text-white"
                         >
                           Cost Center
                         </label>
                         <Field
                           type="text"
                           id="costCenter"
-                          className="border border-gray-300 bg-[#F0F0F0] text-gray-900 text-sm rounded w-[100%]  p-1.5"
+                          className="border border-gray-300 dark:border-0 bg-[#F0F0F0] dark:bg-dm-600 text-gray-900 dark:text-dm-300 text-sm rounded w-[100%]  p-1.5"
                           placeholder=""
                           value={values.amount}
                           onChange={handleChange}
@@ -135,7 +133,7 @@ export default function AddExpense() {
                       <div className="w-[50%]">
                         <label
                           htmlFor="costCenter"
-                          className="block mb-2 text-sm font-normal text-[#000000]"
+                          className="block mb-2 text-sm font-normal text-[#000000] dark:text-white"
                         >
                           Date
                         </label>
@@ -147,21 +145,21 @@ export default function AddExpense() {
                       <div className="w-[50%]">
                         <label
                           htmlFor="expenseCategory"
-                          className="block mb-2 text-sm font-normal text-[#404040]"
+                          className="block mb-2 text-sm font-normal text-[#404040] dark:text-white"
                         >
                           Expense Category
                         </label>
                         <Field
                           id="expenseCategory"
                           as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900  text-sm rounded-[4px] block w-full p-1.5 "
+                          className="bg-[#FFFFFF] dark:bg-dm-600 border border-[#D9D9D9] dark:border-0 cursor-pointer text-gray-900 dark:text-white  text-sm rounded-[4px] block w-full p-1.5 "
                           value={values.expenseCategory}
                           onChange={handleChange}
                         >
                           <option
                             disabled={true}
                             value={""}
-                            className="text-[#BFBFBF]"
+                            className="text-[#BFBFBF] dark:text-dm-300"
                           >
                             Choose an expense category
                           </option>
@@ -170,7 +168,7 @@ export default function AddExpense() {
                           <option>Employee Cost</option>
                           <option>Current Provision for Tax</option>
                         </Field>
-                        <p className="font-medium text-xs text-red-700">
+                        <p className="font-medium text-xs text-red-700 dark:text-red-400">
                           <ErrorMessage name="expenseCategory" />
                         </p>
                       </div>
@@ -178,14 +176,14 @@ export default function AddExpense() {
                       <div className="w-[50%] ">
                         <label
                           htmlFor="createdBy"
-                          className="block mb-2 text-sm font-normal text-[#404040]"
+                          className="block mb-2 text-sm font-normal text-[#404040] dark:text-white"
                         >
                           Created By
                         </label>
                         <Field
                           type="text"
                           id="createdBy"
-                          className="border border-gray-300 bg-[#F0F0F0] text-gray-900 text-sm rounded  w-full p-1.5"
+                          className="border border-gray-300 dark:border-0 bg-[#F0F0F0] dark:bg-dm-600 text-gray-900 dark:text-dm-300 text-sm rounded  w-full p-1.5"
                           placeholder=""
                           value={values.amount}
                           onChange={handleChange}
@@ -195,10 +193,10 @@ export default function AddExpense() {
                     </div>
 
                     <section className="mt-3">
-                      <h3 className="font-medium text-lg text-[#404040] leading-[18px] ">
+                      <h3 className="font-medium text-lg text-[#404040] dark:text-white leading-[18px] ">
                         Expense Line
                       </h3>
-                      <p className="pt-1 text-[#6F6F6F] text-sm leading-[18px] font-normal ">
+                      <p className="pt-1 text-[#6F6F6F] dark:text-dm-300 text-sm leading-[18px] font-normal ">
                         Add Expense information to the expense line.
                       </p>
 
@@ -206,14 +204,14 @@ export default function AddExpense() {
                         <div className="mt-5 w-[50%]">
                           <label
                             htmlFor="expenseLine"
-                            className="block mb-2 text-sm font-medium text-gray-900"
+                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                           >
                             Expense Line
                           </label>
                           <Field
                             id="expenseLine"
                             as="select"
-                            className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
+                            className="bg-[#FFFFFF] dark:bg-dm-600 border border-[#D9D9D9] dark:border-0 cursor-pointer text-gray-900 dark:text-white text-sm rounded-[4px] block w-full p-1.5 "
                             value={values.expenseLine}
                             onChange={handleChange}
                           >
@@ -225,7 +223,7 @@ export default function AddExpense() {
                             <option>Vehicle Maintenance</option>
                             <option>Driver Support</option>
                           </Field>
-                          <p className="font-medium text-xs text-red-700">
+                          <p className="font-medium text-xs text-red-700 dark:text-red-400">
                             <ErrorMessage name="expenseLine" />
                           </p>
                         </div>
@@ -233,17 +231,17 @@ export default function AddExpense() {
                         <div className="w-[50%] mt-5">
                           <label
                             htmlFor="attachment"
-                            className="block mb-2 text-sm font-medium text-[#404040]"
+                            className="block mb-2 text-sm font-medium text-[#404040] dark:text-white"
                           >
                             Upload Invoice (.png, .jpeg, .pdf)
                           </label>
                           <Link href={""}>
                             <div
                               onClick={openModal}
-                              className="flex items-center cursor-pointer pl-2 border w-full border-dashed h-[34px] rounded-lg   border-[#BFBFBF]"
+                              className="flex items-center cursor-pointer pl-2 border w-full border-dashed h-[34px] rounded-lg   border-[#BFBFBF] dark:border-dm-500"
                             >
                               <Image src={attach} alt="attachment icon" />
-                              <p className="text-[#BFBFBF] font-medium text-sm pl-1 leading-[18px]">
+                              <p className="text-[#BFBFBF] dark:text-dm-300 font-medium text-sm pl-1 leading-[18px]">
                                 Attachment
                               </p>
                             </div>
@@ -255,9 +253,9 @@ export default function AddExpense() {
                               overlayClassName=""
                               style={customStyles}
                             >
-                              <div className="w-[643px] h-[345px] border rounded-lg px-[32px] bg-white">
+                              <div className="w-[643px] h-[345px] border dark:border-0 rounded-lg px-[32px] bg-white dark:bg-dm-700">
                                 <section className="flex justify-between mb-[40] items-center h-[50px] rounded-t-lg">
-                                  <p className="mr-auto text-[#404040] text-[22px] leading-[18px] font-bold">
+                                  <p className="mr-auto text-[#404040] dark:text-white text-[22px] leading-[18px] font-bold">
                                     Upload Invoice
                                   </p>
                                   <div
@@ -274,10 +272,10 @@ export default function AddExpense() {
                                 <StyledDropzone />
 
                                 <div className="flex mt-3 justify-between">
-                                  <p className="font-medium text-xs leading-[18px] text-[#8C8C8C] ">
+                                  <p className="font-medium text-xs leading-[18px] text-[#8C8C8C] dark:text-dm-300">
                                     Supported formats: png, jpeg, pdf
                                   </p>
-                                  <p className="font-medium text-xs leading-[18px] text-[#8C8C8C] ">
+                                  <p className="font-medium text-xs leading-[18px] text-[#8C8C8C] dark:text-dm-300">
                                     Maximum file size: 20 MB
                                   </p>
                                 </div>
@@ -287,11 +285,11 @@ export default function AddExpense() {
                         </div>
                       </section>
 
-                      <div className="flex mt-5 gap-x-5 border-b pb-7 ">
+                      <div className="flex mt-5 gap-x-5 border-b dark:border-dm-500 pb-7 ">
                         <div className="w-[50%]">
                           <label
                             htmlFor="description"
-                            className="block mb-2 text-sm font-normal leading-[18px] text-[#404040] "
+                            className="block mb-2 text-sm font-normal leading-[18px] text-[#404040] dark:text-white"
                           >
                             Description
                           </label>
@@ -299,12 +297,12 @@ export default function AddExpense() {
                             id="description"
                             as="textarea"
                             rows={10}
-                            className="block p-2.5 w-full h-[100px] text-sm text-gray-900 bg-[#FFFFFF] rounded-[4px] border border-gray-300"
+                            className="block p-2.5 w-full h-[100px] text-sm text-gray-900 dark:text-white bg-[#FFFFFF] dark:bg-dm-600 rounded-[4px] border border-gray-300 dark:border-0"
                             placeholder="Enter Description"
                             value={values.description}
                             onChange={handleChange}
                           />
-                          <p className="font-medium text-xs  text-red-700">
+                          <p className="font-medium text-xs  text-red-700 dark:text-red-400">
                             <ErrorMessage name="description" />
                           </p>
                         </div>
@@ -312,19 +310,19 @@ export default function AddExpense() {
                         <div className="w-[50%]">
                           <label
                             htmlFor="amount"
-                            className="block mb-2 text-sm font-normal  text-[#000000]"
+                            className="block mb-2 text-sm font-normal  text-[#000000] dark:text-white"
                           >
                             Amount (GH₵)
                           </label>
                           <Field
                             type="text"
                             id="amount"
-                            className="border border-gray-300 text-gray-900 text-sm rounded block w-full p-1.5"
+                            className="border border-gray-300 dark:border-0 dark:bg-dm-600 text-gray-900 dark:text-white text-sm rounded block w-full p-1.5"
                             placeholder="Amount"
                             value={values.amount}
                             onChange={handleChange}
                           />
-                          <p className="font-medium text-xs text-red-700">
+                          <p className="font-medium text-xs text-red-700 dark:text-red-400">
                             <ErrorMessage name="amount" />
                           </p>
                         </div>
@@ -332,24 +330,24 @@ export default function AddExpense() {
                     </section>
 
                     <section className="mt-4">
-                      <h3 className="font-medium text-lg text-[#404040] leading-[18px] ">
+                      <h3 className="font-medium text-lg text-[#404040] dark:text-white leading-[18px] ">
                         Payment Details
                       </h3>
-                      <p className="pt-1 text-[#6F6F6F] text-sm leading-[18px] font-normal ">
+                      <p className="pt-1 text-[#6F6F6F] dark:text-dm-300 text-sm leading-[18px] font-normal ">
                         Add payment information to the expense request.
                       </p>
 
                       <div className="mt-5">
                         <label
                           htmlFor="payTo"
-                          className="block mb-2 text-sm pt-[10px] font-medium text-gray-900"
+                          className="block mb-2 text-sm pt-[10px] font-medium text-gray-900 dark:text-white"
                         >
                           Pay to
                         </label>
                         <Field
                           id="payTo"
                           as="select"
-                          className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-[100%] p-1.5 "
+                          className="bg-[#FFFFFF] dark:bg-dm-600 border border-[#D9D9D9] dark:border-0 cursor-pointer text-gray-900 dark:text-white text-sm rounded-[4px] block w-[100%] p-1.5 "
                           value={values.payTo}
                           onChange={handleChange}
                         >
@@ -361,10 +359,10 @@ export default function AddExpense() {
                           <option>Geoffrey@teksol.com</option>
                           <option>Kweku@teksol.com</option>
                         </Field>
-                        <p className="text-[#A6A6A6] pt-[10px] font-normal leading-[18px] text-sm">
+                        <p className="text-[#A6A6A6] dark:text-dm-300 pt-[10px] font-normal leading-[18px] text-sm">
                           Select a name from the list
                         </p>
-                        <p className="font-medium text-xs text-red-700">
+                        <p className="font-medium text-xs text-red-700 dark:text-red-400">
                           <ErrorMessage name="payTo" />
                         </p>
                       </div>
@@ -373,14 +371,14 @@ export default function AddExpense() {
                         <div className="w-[50%] ">
                           <label
                             htmlFor="bank"
-                            className="block mb-2 text-sm font-medium text-gray-900"
+                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                           >
                             Bank Name
                           </label>
                           <Field
                             id="bank"
                             as="select"
-                            className="bg-[#FFFFFF] border border-[#D9D9D9] text-gray-900 text-sm rounded-[4px] block w-full p-1.5 "
+                            className="bg-[#FFFFFF] dark:bg-dm-600 border border-[#D9D9D9] dark:border-0 cursor-pointer text-gray-900 dark:text-white text-sm rounded-[4px] block w-full p-1.5 "
                             value={values.bank}
                             onChange={handleChange}
                           >
@@ -392,10 +390,10 @@ export default function AddExpense() {
                             <option>Ecobank</option>
                             <option>Standard Chartered</option>
                           </Field>
-                          <p className="text-[#A6A6A6] pt-[10px] font-normal leading-[18px] text-sm">
+                          <p className="text-[#A6A6A6] dark:text-dm-300 pt-[10px] font-normal leading-[18px] text-sm">
                             Select a name from the list
                           </p>
-                          <p className="font-medium text-xs text-red-700">
+                          <p className="font-medium text-xs text-red-700 dark:text-red-400">
                             <ErrorMessage name="bank" />
                           </p>
                         </div>
@@ -403,30 +401,30 @@ export default function AddExpense() {
                         <div className="w-[50%]">
                           <label
                             htmlFor="accountNumber"
-                            className="block mb-2 text-sm font-normal  text-[#000000]"
+                            className="block mb-2 text-sm font-normal  text-[#000000] dark:text-white"
                           >
                             Account Number
                           </label>
                           <Field
                             type="text"
                             id="accountNumber"
-                            className="border border-gray-300 text-gray-900 text-sm rounded block w-full p-1.5"
+                            className="border border-gray-300 dark:border-0 dark:bg-dm-600 text-gray-900 dark:text-white text-sm rounded block w-full p-1.5"
                             placeholder="Enter account number"
                             value={values.accountNumber}
                             onChange={handleChange}
                           />
-                          <div className="h-[35px] w-[500px] gap-x-2 flex items-center bg-[#FFFAE7] rounded-b-xl ">
+                          <div className="h-[35px] w-[500px] gap-x-2 flex items-center bg-[#FFFAE7] dark:bg-[#D6AA0033] rounded-b-xl ">
                             <Image
                               src={yellowinfo}
                               className="ml-3 "
                               alt="info icon"
                             />
-                            <p className="text-[#D6AA00] text-sm font-normal leading-[18px] ">
+                            <p className="text-[#D6AA00] dark:text-[#FBBF24] text-sm font-normal leading-[18px] ">
                               NB: Enter mobile number if bank name is Mobile
                               Money
                             </p>
                           </div>
-                          <p className="font-medium text-xs text-red-700">
+                          <p className="font-medium text-xs text-red-700 dark:text-red-400">
                             <ErrorMessage name="accountNumber" />
                           </p>
                         </div>
@@ -437,7 +435,7 @@ export default function AddExpense() {
                       <Link href={"/views/expense"}>
                         <button
                           type="button"
-                          className="text-[#404040] border bg-[#E1E1E1] mt-4 rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center ml- mr-2 "
+                          className="text-[#404040] dark:text-white border dark:border-0 bg-[#E1E1E1] dark:bg-dm-600 mt-4 rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center ml- mr-2 cursor-pointer"
                         >
                           Cancel
                         </button>
@@ -445,7 +443,7 @@ export default function AddExpense() {
                       <Link href={""}>
                         <button
                           type="button"
-                          className="text-[#FFFFFF] border bg-[#007AF5] mt-4 rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center ml- mr "
+                          className="text-[#FFFFFF] border bg-[#007AF5] mt-4 rounded-[4px] w-[84px] border-[#DADADA] focus:outline-none text-sm py-1.5 text-center inline-flex justify-center font-normal items-center ml- mr cursor-pointer"
                         >
                           Submit
                         </button>

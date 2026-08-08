@@ -46,6 +46,7 @@ export default function LongMenu() {
         onClose={handleClose}
         disableScrollLock={true}
         PaperProps={{
+          className: "dark:bg-dm-700",
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "195px",
@@ -56,44 +57,44 @@ export default function LongMenu() {
       >
         <MenuItem
           onClick={handleClose}
-          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
+          className="flex text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1 font-normal leading-3 text-xs"
         >
-          <Image src={user} className="mr-2 w-5" alt="checkmark" />
+          <Image src={user} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="checkmark" />
           Driver Profile
         </MenuItem>
         <MenuItem
-          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
+          className="flex text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
-          <Image src={pencil} className="mr-2 w-5 " alt="x" />
+          <Image src={pencil} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="x" />
           Re-assign Vehicle
         </MenuItem>
         <MenuItem
-          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
+          className="flex text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
-          <Image src={fileicon} className="mr-2 w-5 " alt="x" />
+          <Image src={fileicon} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="x" />
           Invoice History
         </MenuItem>
         <MenuItem
-          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
+          className="flex text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
-          <Image src={power} className="mr-2 w-5 " alt="off icon" />
+          <Image src={power} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="off icon" />
           Turn Off Engine Control
         </MenuItem>
         <MenuItem
-          className="flex text-[#595959] py-1 font-normal leading-3 text-xs"
+          className="flex text-[#595959] dark:text-white dark:hover:bg-dm-600 py-1 font-normal leading-3 text-xs"
           onClick={handleClose}
         >
-          <Image src={recycle} className="mr-2 w-5 " alt="x" />
+          <Image src={recycle} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="x" />
           Restore Engine Control
         </MenuItem>
         <MenuItem
-          className="text-[#DC4A41] flex py-1 font-normal leading-3 text-xs"
+          className="text-[#DC4A41] flex py-1 font-normal leading-3 text-xs dark:hover:bg-dm-600"
           onClick={handleClose}
         >
-          <Image src={vehicle} className="mr-2 w-5 " alt="x" />
+          <Image src={vehicle} className="mr-2 w-5 dark:brightness-0 dark:invert" alt="x" />
           <p className="text-[#DC4A41] text-xs font-normal">Block Vehicle</p>
         </MenuItem>
       </Menu>

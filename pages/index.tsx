@@ -43,7 +43,7 @@ export default function SignIn() {
               volutpat. veniam. quis nostrud exerci tation
             </p>
           </div>
-          <div className="w-[50%] border h-screen ">
+          <div className="w-[50%] dark:bg-dm-700 h-screen ">
             <Formik<SignInProp>
               initialValues={{
                 email: "",
@@ -65,7 +65,7 @@ export default function SignIn() {
               {({ handleSubmit, values, handleChange, setFieldValue }) => (
                 <Form onSubmit={handleSubmit}>
                   <div className="mt-[24%] ml-[20%] ">
-                    <p className="text-[#262626] max-2xl:text-[28px] font-medium text-[32px] leading-[40px]">
+                    <p className="text-[#262626] dark:text-white max-2xl:text-[28px] font-medium text-[32px] leading-[40px]">
                       Sign in
                     </p>
 
@@ -73,7 +73,7 @@ export default function SignIn() {
                       <Field
                         type="email"
                         id="email"
-                        className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-[75%] max-2xl:p-1.5 p-2.5"
+                        className="border placeholder-[#BFBFBF] dark:placeholder-dm-300 border-gray-300 dark:border-0 dark:bg-dm-600 text-gray-900 dark:text-white text-sm rounded block w-[75%] max-2xl:p-1.5 p-2.5"
                         placeholder="Mail"
                         value={values.email}
                         onChange={handleChange}
@@ -87,7 +87,7 @@ export default function SignIn() {
                       <Field
                         type="password"
                         id="password"
-                        className="border placeholder-[#BFBFBF] border-gray-300 text-gray-900 text-sm rounded block w-[75%] max-2xl:p-1.5 p-2.5"
+                        className="border placeholder-[#BFBFBF] dark:placeholder-dm-300 border-gray-300 dark:border-0 dark:bg-dm-600 text-gray-900 dark:text-white text-sm rounded block w-[75%] max-2xl:p-1.5 p-2.5"
                         placeholder="Password"
                         value={values.password}
                         onChange={handleChange}
@@ -103,12 +103,12 @@ export default function SignIn() {
                           type="checkbox"
                           name="checked"
                           value="remember"
-                          className="border-[#007AF5] text-[#007AF5] cursor-pointer max-2xl:w-3 max-2xl:h-3 focus:ring-0"
+                          className="border-[#007AF5] dark:bg-dm-600 dark:border-dm-500 text-[#007AF5] cursor-pointer max-2xl:w-3 max-2xl:h-3 focus:ring-0 focus:ring-offset-0 focus:outline-none"
                         />
 
                         <label
                           htmlFor="remember"
-                          className="ml-2 text-sm max-2xl:text-xs font-normal text-[#818187] dark:text-gray-300"
+                          className="ml-2 text-sm max-2xl:text-xs font-normal text-[#818187] dark:text-dm-300"
                         >
                           Remember me
                         </label>
@@ -118,7 +118,7 @@ export default function SignIn() {
                     <Link href={"/views/dashboard"}>
                       <button
                         type="button"
-                        className="focus:outline-none text-[1.25rem] max-2xl:text-lg text-white bg-[#007AF5] font-medium rounded py-2 max-2xl:py-1 w-[75%] mb-2 max-2xl:mt-4 mt-6"
+                        className="focus:outline-none text-[1.25rem] max-2xl:text-lg text-white bg-[#007AF5] font-medium rounded py-2 max-2xl:py-1 w-[75%] mb-2 max-2xl:mt-4 mt-6 cursor-pointer"
                       >
                         Sign In
                       </button>

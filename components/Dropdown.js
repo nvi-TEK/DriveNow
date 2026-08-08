@@ -1,5 +1,6 @@
 import React from "react";
-import { Select, Space, ConfigProvider } from "antd";
+import { Select, Space, ConfigProvider, theme as antdTheme } from "antd";
+import { useTheme } from "next-themes";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const handleChange = (value) => {
@@ -7,9 +8,15 @@ const handleChange = (value) => {
 };
 
 export default function UpdateStatusDropdown() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <ConfigProvider
       theme={{
+        algorithm:
+          resolvedTheme === "dark"
+            ? antdTheme.darkAlgorithm
+            : antdTheme.defaultAlgorithm,
         token: {
           colorText: "",
           fontSize: 12,
@@ -28,7 +35,7 @@ export default function UpdateStatusDropdown() {
       <Space wrap>
         <div className="relative" id="update"></div>
         <Select
-          className="text-[#8C8C8C]"
+          className="text-[#8C8C8C] cursor-pointer"
           getPopupContainer={() => document.getElementById("update")}
           suffixIcon={<KeyboardArrowDownIcon className="dark:text-white" />}
           popupClassName="p-2"

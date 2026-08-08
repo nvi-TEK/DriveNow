@@ -21,35 +21,36 @@ function List(props: sideBarProp) {
 
   useEffect(() => setMounted(true), []);
 
+  const isActive = router.pathname == props.url;
+  const iconSrc = isActive ? props.activeIcon : props.icon;
+
   return (
     <li
       className={
-        router.pathname == props.url
-          ? "bg-[#F1F8FF] dark:bg-gray-600 mx-2 rounded-lg text-[]"
+        isActive
+          ? "bg-[#F1F8FF] dark:bg-dm-600 mx-2 rounded-lg text-[]"
           : ""
       }
     >
-      <div className="flex items-center py-3 max-2xl:py-2 mx-2 pl-4 rounded-lg text-base font-medium dark:hover:bg-gray-600 hover:bg-[#F1F8FF]">
-        <Image
-          src={
-            router.pathname == props.url ? props.activeIcon : props.icon
-
-            // router.pathname == props.url && resolvedTheme == "light"
-            //   ? props.activeIcon
-            //   : router.pathname == props.url && resolvedTheme == "dark"
-            //   ? props.darkActiveIcon
-            //   : router.pathname !== props.url && resolvedTheme == "light"
-            //   ? props.icon
-            //   : props.darkIcon
-          }
-          className="max-2xl:w-5"
-          alt=""
-        />
+      <div className="flex items-center py-3 max-2xl:py-2 mx-2 pl-4 rounded-lg text-base font-medium dark:hover:bg-dm-600 hover:bg-[#F1F8FF]">
+        {iconSrc ? (
+          <Image
+            src={iconSrc}
+            className={
+              isActive
+                ? "w-5 max-2xl:w-5"
+                : "w-5 max-2xl:w-5 dark:brightness-0 dark:invert"
+            }
+            alt=""
+          />
+        ) : (
+          <span className="w-5 max-2xl:w-5" aria-hidden="true" />
+        )}
         <span
           id="sidebar-text"
           className={
             router.pathname == props.url
-              ? "flex-1 ml-2 leading-5 whitespace-nowrap text-base max-2xl:text-[15px] dark:text-blue-300 font-normal text-[#007AF5]"
+              ? "flex-1 ml-2 leading-5 whitespace-nowrap text-base max-2xl:text-[15px] font-normal text-[#007AF5]"
               : "flex-1 ml-2 leading-5 whitespace-nowrap text-base max-2xl:text-[15px] dark:text-white font-normal text-[#262626]"
           }
         >

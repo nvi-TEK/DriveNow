@@ -76,12 +76,12 @@ export const VehicleIssuesLogsTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border shadow-[0px_1px_2px_0px_#1B283614] dark:border-0 dark:bg-gray-600 dark:text-white h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
+      className="border cursor-pointer shadow-[0px_1px_2px_0px_#1B283614] dark:border-0 dark:bg-dm-600 dark:text-white h-[30px] text-center border-[#D9D9D9] text-[#BFBFBF] rounded px-1 py-1 "
       place
     >
       abc
       {[10, 15, 20].map((pageSize) => (
-        <option key={pageSize} value={pageSize}>
+        <option key={pageSize} value={pageSize} className="dark:text-white dark:bg-dm-600">
           {pageSize}
         </option>
       ))}
@@ -92,12 +92,12 @@ export const VehicleIssuesLogsTable = () => {
     <select
       value={pageSize}
       onChange={(e) => setPageSize(Number(e.target.value))}
-      className="border shadow-[0px_1px_2px_0px_#1B283614] dark:border-0 dark:bg-gray-600 dark:text-white h-[30px] text-center border-[#D9D9D9] text-xs rounded px-1 py-1 "
+      className="border cursor-pointer shadow-[0px_1px_2px_0px_#1B283614] dark:border-0 dark:bg-dm-600 dark:text-white h-[30px] text-center border-[#D9D9D9] text-xs rounded px-1 py-1 "
       aria-placeholder=""
     >
       abc
       {[10, 15, 20].map((pageSize) => (
-        <option key={pageSize} value={pageSize}>
+        <option key={pageSize} value={pageSize} className="dark:text-white dark:bg-dm-600">
           {pageSize} Items/Page
         </option>
       ))}
@@ -132,7 +132,7 @@ export const VehicleIssuesLogsTable = () => {
                         ...column.getHeaderProps(column.getSortByToggleProps()),
                       }
                     : { ...column.getHeaderProps() })}
-                  className="text-left font-normal leading-[18px] h-[48px] text-[#262626] dark:text-white dark:bg-gray-600 pl-2 bg-[#FAFAFA] "
+                  className="text-left font-normal leading-[18px] h-[48px] text-[#262626] dark:text-white dark:bg-dm-600 pl-2 bg-[#FAFAFA] "
                 >
                   {column.render("Header")}
                   <span>
@@ -165,7 +165,7 @@ export const VehicleIssuesLogsTable = () => {
                     <>
                       <td
                         {...cell.getCellProps()}
-                        className="text-[#595959] pl-2 font-normal dark:text-white dark:border-gray-500 leading-[18px] border-y h-[48px]"
+                        className="text-[#595959] pl-2 font-normal dark:text-white dark:border-dm-500 leading-[18px] border-y h-[48px]"
                       >
                         {cell.render("Cell")}
                       </td>
@@ -182,41 +182,41 @@ export const VehicleIssuesLogsTable = () => {
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
-          className="px-2 border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white rounded-sm "
+          className="px-2 border dark:bg-dm-600 dark:border-0 text-[#595959] dark:text-white rounded-sm  cursor-pointer disabled:cursor-not-allowed"
         >
           <ArrowBackIosOutlinedIcon fontSize="small" />
         </button>
 
         <button
-          className="border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded"
+          className="border dark:bg-dm-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded cursor-pointer"
           onClick={() => gotoPage(0)}
         >
           {" "}
           1{" "}
         </button>
         <button
-          className="border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded"
+          className="border dark:bg-dm-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded cursor-pointer"
           onClick={() => gotoPage(1)}
         >
           {" "}
           2{" "}
         </button>
         <button
-          className="border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded"
+          className="border dark:bg-dm-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded cursor-pointer"
           onClick={() => gotoPage(2)}
         >
           {" "}
           3{" "}
         </button>
         <button
-          className="border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded"
+          className="border dark:bg-dm-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded cursor-pointer"
           onClick={() => gotoPage(3)}
         >
           {" "}
           4{" "}
         </button>
         <button
-          className="border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded"
+          className="border dark:bg-dm-600 dark:border-0 text-[#595959] dark:text-white px-3 rounded cursor-pointer"
           onClick={() => gotoPage(4)}
         >
           {" "}
@@ -226,7 +226,7 @@ export const VehicleIssuesLogsTable = () => {
         <button
           onClick={() => nextPage()}
           disabled={!canNextPage}
-          className="px-2 border dark:bg-gray-600 dark:border-0 text-[#595959] dark:text-white rounded-sm "
+          className="px-2 border dark:bg-dm-600 dark:border-0 text-[#595959] dark:text-white rounded-sm  cursor-pointer disabled:cursor-not-allowed"
         >
           <ArrowForwardIosOutlinedIcon fontSize="small" />
         </button>

@@ -49,7 +49,7 @@ function DriverKYCPop() {
         <div className="">
           <Popover placement="topRight" content={content} trigger="hover">
             <div>
-              <Image className="cursor-pointer w-[14px] h-[14px]" src={resolvedTheme == "light"? info : info} alt="" />
+              <Image className="cursor-pointer w-[14px] h-[14px] dark:brightness-0 dark:invert" src={resolvedTheme == "light"? info : info} alt="" />
             </div>
           </Popover>
         </div>
@@ -78,7 +78,7 @@ function ContractPop() {
         <div className="">
           <Popover placement="topRight" content={contract} trigger="hover">
             <div>
-              <Image className="cursor-pointer w-[14px] h-[14px]" src={resolvedTheme== "light"? info : info} alt="" />
+              <Image className="cursor-pointer w-[14px] h-[14px] dark:brightness-0 dark:invert" src={resolvedTheme== "light"? info : info} alt="" />
             </div>
           </Popover>
         </div>

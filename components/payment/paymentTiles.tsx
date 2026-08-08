@@ -51,7 +51,7 @@ type LastTileProp = {
 
 function PaymentTiles(props: PaymentProp) {
   return (
-    <div className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-gray-700 dark:border-0 h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
+    <div className="border shadow-[0px_1px_2px_0px_#1B283614] dark:bg-dm-700 dark:border-0 h-[8rem] p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
       <div className="flex items-center justify-between ">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />
@@ -98,7 +98,7 @@ function PaymentTiles(props: PaymentProp) {
 
 function MidTiles(props: midTileProp) {
   return (
-    <div className="border shadow-[0px_1px_2px_0px_#1B283614] h-[8rem] dark:bg-gray-700 dark:border-0 p-4 pr-0 pt-3 rounded-lg w-full bg-white grow rounded-t-lg border-[#E9ECEF]">
+    <div className="border shadow-[0px_1px_2px_0px_#1B283614] h-[8rem] dark:bg-dm-700 dark:border-0 p-4 pr-0 pt-3 rounded-lg w-full bg-white grow rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <div>
           <Image src={props.icon} width={30} height={10} alt="" />
@@ -175,7 +175,7 @@ function MidTiles(props: midTileProp) {
 
 function LastTile(props: tileProp2) {
   return (
-    <div className="border shadow-[0px_1px_2px_0px_#1B283614] h-[8rem] dark:bg-gray-700 dark:border-0 p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
+    <div className="border shadow-[0px_1px_2px_0px_#1B283614] h-[8rem] dark:bg-dm-700 dark:border-0 p-4 pt-3 pr-0 rounded-lg grow w-full bg-white rounded-t-lg border-[#E9ECEF]">
       <div className="flex justify-between items-center">
         <Image src={props.icon} width={30} height={10} alt="" />
         <div>
